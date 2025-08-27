@@ -94,9 +94,9 @@
     "sitemap": "^8.0.0"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
+    "*.{js,jsx}": [
+      "eslint --ignore-pattern src/assets/plugins/",
+      "prettier --ignore-path .prettierignore --write"
     ]
   },
   "husky": {
