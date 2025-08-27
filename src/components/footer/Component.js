@@ -12,14 +12,14 @@ const Footer = (props) => {
   return (
     <React.Fragment>
       <footer key="app-footer footer">
-          <div className="row mx-0">
-            <div className="col">
-              <div className="text-center mr-3 mb-0">
-                <Copyright />
-                <BlankSpace />
-              </div>
+        <div className="row mx-0">
+          <div className="col">
+            <div className="text-center mr-3 mb-0">
+              <Copyright />
+              <BlankSpace />
             </div>
           </div>
+        </div>
       </footer>
     </React.Fragment>
   )

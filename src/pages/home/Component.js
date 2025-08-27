@@ -73,8 +73,13 @@ class Home extends Component {
                   </div>
                   <ul>
                     <li>made for large organizations</li>
-                    <li>role based: Prompt engineers in functional areas, IT, Accounting, HR</li>
-                    <li>we offer online and on-premise training and certification programs </li>
+                    <li>
+                      role based: Prompt engineers in functional areas, IT, Accounting, HR
+                    </li>
+                    <li>
+                      we offer online and on-premise training and certification
+                      programs{' '}
+                    </li>
                   </ul>
                 </div>
               </div>
