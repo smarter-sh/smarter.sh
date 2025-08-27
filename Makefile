@@ -12,7 +12,7 @@ init:
 	yarn remove pre-commit
 	rm -rf node_modules yarn.lock
 	yarn cache clean
-	yarn install --force
+	yarn install
 	pre-commit install
 
 lint:
