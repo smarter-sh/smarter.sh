@@ -44,7 +44,6 @@ release:
 	#
 	# Note: requires node v24 or later.
 	#---------------------------------------------------------
-	export AWS_PROFILE=lawrence
 	make build
 
 	# ------------------------
