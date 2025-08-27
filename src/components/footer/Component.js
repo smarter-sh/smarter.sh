@@ -11,14 +11,12 @@ import Copyright from './copyrightComponent'
 const Footer = (props) => {
   return (
     <React.Fragment>
-      <footer key="app-footer">
-        <div className="footer">
-          <div className="row mx-0 react-banner hide-small">
-            <div className="col">
-              <div className="text-center mr-3 mb-0">
-                <Copyright />
-                <BlankSpace />
-              </div>
+      <footer key="app-footer footer">
+        <div className="row mx-0">
+          <div className="col">
+            <div className="text-center mr-3 mb-0">
+              <Copyright />
+              <BlankSpace />
             </div>
           </div>
         </div>

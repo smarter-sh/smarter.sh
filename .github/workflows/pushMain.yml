@@ -1,7 +1,7 @@
 ---
 #---------------------------------------------------------
 # - Create a semantical release
-# - Merge main into next, alpha, beta, and next-major
+# - Merge main into alpha and beta
 #---------------------------------------------------------
 name: Push to main
 
@@ -21,12 +21,12 @@ jobs:
         id: checkout
         uses: actions/checkout@v5
 
-      - name: Merge main into next
+      - name: Merge main into beta
         uses: ./.github/actions/merge-branch
         with:
           github-token: ${{ env.GITHUB_TOKEN }}
           source-branch: main
-          target-branch: next
+          target-branch: beta
 
   semantic-release:
     needs: merge-main-to-dev-branches

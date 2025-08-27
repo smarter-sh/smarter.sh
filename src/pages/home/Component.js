@@ -23,15 +23,73 @@ class Home extends Component {
     return (
       <React.Fragment>
         <Head />
-        <main key="home-page" className="home-page jumbotron dark-background" role="main">
-          <div className="h-100">
-            <div className="row pt-1 m-0 mr-0 px-0">
-              <section className="col pt-5 text-center noselect" aria-label="Profile">
-                <h1 className="pt-2 mb-0">Smarter by Querium</h1>
-                <p className="">an AI resource orchestration platform</p>
-              </section>
+        <main key="home-page" className="home-page" role="main">
+          <section className="landing-section hero-banner" aria-label="Hero">
+            <div className="row justify-content-center py-5">
+              <div className="col-lg-8 text-center">
+                <h1 className="display-4 mb-2 text-white">Smarter by Querium</h1>
+                <p className="lead">An AI resource orchestration platform</p>
+              </div>
             </div>
-          </div>
+            <div className="hero-bg-svg" aria-hidden="true"></div>
+          </section>
+
+          <section className="landing-section what-is-it" aria-label="What is it?">
+            <div className="row justify-content-center py-5">
+              <div className="col-lg-8">
+                <div className="text-center mb-4">
+                  <h2>What is it?</h2>
+                  <p>* video goes here</p>
+                </div>
+                <ul className="list-unstyled">
+                  <li>
+                    AI resource orchestration platform designed for large enterprises
+                  </li>
+                  <li>Kubernetes architecture, runs on-premise or in the cloud</li>
+                  <li>
+                    open source (or mention in-progress ????????). Core committers,
+                    stakeholders, code base governance
+                  </li>
+                  <li>flexible licensing and support schemes</li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="landing-section who-is-it-for" aria-label="Who is it for?">
+            <div className="row justify-content-center py-5">
+              <div className="col-lg-8">
+                <div className="text-center">
+                  <h2>Who is it for?</h2>
+                  <p>[a brilliant message from Kent goes here]</p>
+                </div>
+                <ul>
+                  <li>made for large organizations</li>
+                  <li>
+                    role based: Prompt engineers in functional areas, IT, Accounting, HR
+                  </li>
+                  <li>
+                    we offer online and on-premise training and certification
+                    programs{' '}
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <section
+            className="landing-section how-is-it-sold"
+            aria-label="How is it sold?"
+          >
+            <div className="row justify-content-center py-5">
+              <div className="col-lg-8">
+                <div className="text-center">
+                  <h2>How is it sold?</h2>
+                  <p>[a brilliant message from Kent goes here]</p>
+                </div>
+              </div>
+            </div>
+          </section>
         </main>
       </React.Fragment>
     )

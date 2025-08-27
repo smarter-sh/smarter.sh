@@ -72,6 +72,14 @@ export class Header extends Component {
                   >
                     Platform
                   </Nav.Link>
+                  <Nav.Link
+                    as={NavLink}
+                    to="https://platform.smarter.sh/docs/"
+                    onClick={this.toggleNavItem}
+                    className=""
+                  >
+                    Documentation
+                  </Nav.Link>
                   <Nav.Link as={NavLink} to="/contact" onClick={this.toggleNavItem}>
                     Contact
                   </Nav.Link>

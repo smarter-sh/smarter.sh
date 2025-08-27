@@ -3,22 +3,21 @@
 # Lawrence McDaniel - https://smarter.sh
 # Version Bump Workflow for Python package openai_utils
 #
-# Calculate the version of the 'next' branch based on semantic-release rules.
+# Calculate the version of the main branch based on semantic-release rules.
 # Compares the existing value of version.js to the calculated value.
 # If they are different, it will update version.js and push the changes
 # to the main branch.
 #------------------------------------------------------------------------------
-name: Semantic Version Bump (next)
+name: Semantic Version Bump (main)
 
 on:
   workflow_dispatch:
   push:
     branches:
-      - next
-      - next-major
+      - main
 
 jobs:
-  bump-version-next:
+  bump-version:
     runs-on: ubuntu-latest
     env:
       VERSION_FILE: version.js
@@ -60,7 +59,7 @@ jobs:
         id: null_step1
         run: echo "i ensure that CURRENT_VERSION is set."
 
-      - name: Get next version
+      - name: Get the new version
         # step 2
         # calculate the next version based on semantic-release rules
         # this will return a null string is there in fact is no version bump.
