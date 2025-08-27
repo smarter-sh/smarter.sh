@@ -1,0 +1,49 @@
+footer,
+.footer {
+  background-color: black;
+  color: whitesmoke;
+  margin: 0px auto;
+  padding: 0;
+  font-family: 'Courier New', Courier, monospace;
+}
+footer,
+.footer {
+  font-size: x-small;
+}
+
+footer a,
+.footer a {
+  color: whitesmoke !important;
+  font-style: normal !important;
+}
+
+footer a:hover,
+.footer a:hover {
+  color: #ffa500; /* orange */
+  text-decoration: underline;
+}
+
+.react-banner {
+  background-color: black;
+  color: white;
+  font-size: x-small;
+  text-align: right;
+}
+
+.react-banner a {
+  color: white;
+}
+.react-logo {
+  width: 15px;
+  margin-right: 5px;
+}
+
+.offline-alert {
+  color: tomato;
+  filter: none !important;
+}
+
+.copyright {
+  vertical-align: super;
+  font-size: small;
+}

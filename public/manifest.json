@@ -1,0 +1,52 @@
+{
+  "short_name": "Smarter",
+  "name": "Smarter by Querium",
+  "icons": [
+    {
+      "src": "favicon.jpg",
+      "sizes": "64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon32x32.jpg",
+      "sizes": "32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "favicon180x180.jpg",
+      "sizes": "180x180 64x64 32x32 24x24 16x16",
+      "type": "image/x-icon"
+    },
+    {
+      "src": "logo192.jpg",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.jpg",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#000000",
+  "description": "Smarter by Querium is an AI resource orchestration platform.",
+  "orientation": "portrait",
+  "lang": "en",
+  "scope": "/",
+  "id": "/",
+  "screenshots": [
+    {
+      "src": "/assets/images/screenshot1.png",
+      "type": "image/png",
+      "sizes": "726x399"
+    },
+    {
+      "src": "/assets/images/screenshot2.jpg",
+      "type": "image/jpeg",
+      "sizes": "726x399"
+    }
+  ]
+}
