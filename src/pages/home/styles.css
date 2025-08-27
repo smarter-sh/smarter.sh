@@ -1,3 +1,72 @@
+/* Common landing section styles */
+.landing-section {
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+/* Hero Banner */
+.hero-banner {
+  background: linear-gradient(315deg, #ff9800 0%, #ff5722 100%);
+  position: relative;
+  overflow: hidden;
+  color: #fff;
+}
+
+/* Hero Banner SVG background styles */
+.hero-bg-svg {
+  opacity: 0.3;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  aspect-ratio: 3 / 2;
+  pointer-events: none;
+  z-index: 0;
+  background-image: url('../../assets/images/hero-bw.svg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: bottom right;
+}
+
+/* Remove empty ruleset */
+/* Gradient alpha overlay for hero-banner */
+
+.hero-banner .container {
+  position: relative;
+  z-index: 1;
+}
+
+/* What is it? */
+.what-is-it {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  color: #222;
+}
+
+/* Who is it for? */
+.who-is-it-for {
+  background: linear-gradient(135deg, #43cea2 0%, #185a9d 100%);
+  color: #fff;
+}
+
+/* How is it sold? */
+.how-is-it-sold {
+  background: linear-gradient(135deg, #f7971e 0%, #ffd200 100%);
+  color: #222;
+}
+
+
+h1, h2 {
+  font-weight: 700;
+}
+
+p.lead {
+  font-size: 1.5rem;
+}
+
+
 /*-------------- Responsive Styling -----------------------*/
 
 main.home-page {
