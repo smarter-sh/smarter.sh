@@ -26,10 +26,7 @@ class Home extends Component {
         <main key="home-page" className="home-page jumbotron dark-background" role="main">
           <div className="h-100">
             <div className="row pt-1 m-0 mr-0 px-0">
-              <section
-                className="col pt-5 text-center noselect"
-                aria-label="Profile"
-              >
+              <section className="col pt-5 text-center noselect" aria-label="Profile">
                 <h1 className="pt-2 mb-0">Smarter by Querium</h1>
                 <p className="">an AI resource orchestration platform</p>
               </section>

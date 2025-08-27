@@ -1,0 +1,46 @@
+<svg width="700" height="550" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background gradient -->
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#0f2385; stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000000; stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <rect width="100%" height="100%" fill="url(#bgGradient)" rx="20" />
+
+  <!-- Layer 1: No-Code Manifests -->
+  <rect x="120" y="40" width="460" height="90" rx="20" fill="#F6821B" />
+  <text x="350" y="75" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+    No-Code Manifests
+  </text>
+  <text x="350" y="100" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">
+    for AI orchestration
+  </text>
+
+  <!-- Layer 2: Unified AI Access -->
+  <rect x="100" y="160" width="500" height="90" rx="20" fill="#FDC20E" />
+  <text x="350" y="195" font-family="Arial, sans-serif" font-size="24" fill="black" text-anchor="middle">
+    Unified AI Access
+  </text>
+  <text x="350" y="220" font-family="Arial, sans-serif" font-size="16" fill="black" text-anchor="middle">
+    governance &amp; cost control
+  </text>
+
+  <!-- Layer 3: Secure Orchestration -->
+  <rect x="80" y="280" width="540" height="100" rx="20" fill="#F6821B" />
+  <text x="350" y="320" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+    Secure Orchestration
+  </text>
+  <text x="350" y="345" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">
+    scalable • logged • enterprise-ready
+  </text>
+
+  <!-- Layer 4: Kubernetes Native -->
+  <rect x="60" y="420" width="580" height="90" rx="20" fill="#0f2385" />
+  <text x="350" y="455" font-family="Arial, sans-serif" font-size="24" fill="white" text-anchor="middle">
+    Kubernetes Native
+  </text>
+  <text x="350" y="480" font-family="Arial, sans-serif" font-size="16" fill="white" text-anchor="middle">
+    runs on-prem &amp; in the cloud
+  </text>
+</svg>
