@@ -24,20 +24,16 @@ class Home extends Component {
       <React.Fragment>
         <Head />
         <main key="home-page" className="home-page" role="main">
-          <div className=" px-0">
-            {/* Hero Banner */}
             <section className="landing-section hero-banner" aria-label="Hero">
               <div className="row justify-content-center py-5">
                 <div className="col-lg-8 text-center">
-                  <h1 className="display-4 mb-2">Smarter by Querium</h1>
+                  <h1 className="display-4 mb-2 text-white">Smarter by Querium</h1>
                   <p className="lead">An AI resource orchestration platform</p>
                 </div>
               </div>
-              {/* SVG background pinned bottom-right, 2/3 width & height via CSS */}
               <div className="hero-bg-svg" aria-hidden="true"></div>
             </section>
 
-            {/* What is it? */}
             <section className="landing-section what-is-it" aria-label="What is it?">
               <div className="row justify-content-center py-5">
                 <div className="col-lg-8">
@@ -60,7 +56,6 @@ class Home extends Component {
               </div>
             </section>
 
-            {/* Who is it for? */}
             <section
               className="landing-section who-is-it-for"
               aria-label="Who is it for?"
@@ -85,7 +80,6 @@ class Home extends Component {
               </div>
             </section>
 
-            {/* How is it sold? */}
             <section
               className="landing-section how-is-it-sold"
               aria-label="How is it sold?"
@@ -99,7 +93,6 @@ class Home extends Component {
                 </div>
               </div>
             </section>
-          </div>
         </main>
       </React.Fragment>
     )

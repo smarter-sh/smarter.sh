@@ -1,13 +1,3 @@
-html,
-.not-selectable {
-  user-select: none;
-}
-.smarter-title-bar {
-}
-.smarter-by-querium {
-  font-size: small;
-  color: gray;
-}
 
 body {
   height: 100%;
@@ -21,34 +11,15 @@ body {
   /* padding-top: 59px; */
 }
 
-.online {
-}
-.offline {
-  filter: grayscale(100%);
-}
 
 /* Page Insights recommendation for font awesome */
 @font-face {
   font-display: swap;
 }
 
-.site-page {
-  padding-bottom: 25px;
-}
-
 .navbar-dark .navbar-nav .nav-link {
   font-family: 'Courier New', Courier, monospace;
   font-size: large;
-}
-
-.noselect {
-  -webkit-touch-callout: none; /* iOS Safari */
-  -webkit-user-select: none; /* Safari */
-  -khtml-user-select: none; /* Konqueror HTML */
-  -moz-user-select: none; /* Old versions of Firefox */
-  -ms-user-select: none; /* Internet Explorer/Edge */
-  user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
 }
 
 p a:not(.btn-danger) {

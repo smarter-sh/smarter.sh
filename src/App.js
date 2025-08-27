@@ -43,13 +43,11 @@ class App extends Component {
       <React.Fragment>
         <Head />
         <BrowserRouter>
-          <main className="d-flex flex-column flex-root app-root" id="kt_app_root">
-            <div className="smarter-root-page-content">
-              <Header />
-              <Home />
-              <Footer />
-            </div>
-          </main>
+          <div className="container d-flex flex-column flex-root app-root" id="kt_app_root">
+            <Header />
+            <Home />
+            <Footer />
+          </div>
         </BrowserRouter>
       </React.Fragment>
     )
