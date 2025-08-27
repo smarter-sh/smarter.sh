@@ -692,23 +692,10 @@ main.home-page {
 
 /********** Small devices only **********/
 @media (min-width: 768px) and (max-width: 991px) {
-  .jumbotron-spacer {
-    margin-top: 0 !important;
-  }
 }
 
 /********** Extra small devices only **********/
 @media (max-width: 767px) {
-  .super-bold,
-  .jumbotron-subtitle {
-    font-size: 24px !important;
-    letter-spacing: initial !important;
-    font-weight: initial !important;
-  }
-
-  .jumbotron-spacer {
-    margin-top: 0 !important;
-  }
 }
 /********** Super extra small devices Only :-) (e.g., iPhone 4) **********/
 @media (max-width: 479px) {
