@@ -95,7 +95,7 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "eslint --ignore-pattern src/assets/plugins/",
+      "eslint --ignore-pattern src/assets/",
       "prettier --ignore-path .prettierignore --write"
     ]
   },
