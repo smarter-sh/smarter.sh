@@ -40,6 +40,8 @@
   },
   "scripts": {
     "audit": "yarn audit",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
     "lint:fix": "eslint src/**/*.js --fix",
     "lint": "eslint src/**/*.js",
     "prettify": "prettier src/**/*.js --write",
