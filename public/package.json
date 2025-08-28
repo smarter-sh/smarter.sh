@@ -19,13 +19,13 @@
     "react-bootstrap": "^2.10.10",
     "react-dom": "^19.1.1",
     "react-helmet": "^6.1.0",
-    "react-loader-spinner": "^6.1.6",
     "react-mdr": "^0.1.5",
     "react-redux": "^9.2.0",
     "react-router": "^7.8.1",
     "react-router-dom": "^7.8.1",
     "react-scripts": "^5.0.1",
     "react-simple-animate": "^3.5.3",
+    "react-spinners": "^0.17.0",
     "react-tabs": "^6.1.0",
     "redux": "^5.0.1",
     "redux-logger": "^3.0.6",
@@ -42,12 +42,11 @@
     "audit": "yarn audit",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject",
-    "sitemap": "node ./src/components/sitemap/generator.js",
     "lint:fix": "eslint src/**/*.js --fix",
     "lint": "eslint src/**/*.js",
     "prettify": "prettier src/**/*.js --write",
-    "prepare": "husky"
+    "prepare": "husky install",
+    "release": "node release.js"
   },
   "eslintConfig": {
     "extends": [
@@ -94,9 +93,9 @@
     "sitemap": "^8.0.0"
   },
   "lint-staged": {
-    "*.js": [
-      "eslint --fix",
-      "prettier --write"
+    "*.{js,jsx}": [
+      "eslint --ignore-pattern src/assets/",
+      "prettier --ignore-path .prettierignore --write"
     ]
   },
   "husky": {
@@ -105,30 +104,36 @@
     }
   },
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=22.0.0"
   },
   "main": "index.js",
   "license": "MIT",
   "author": "Lawrence McDaniel",
   "bugs": {
-    "url": "https://github.com/lpm0073/smarter.sh/issues"
+    "url": "https://github.com/smarter-sh/smarter.sh/issues"
   },
   "homepage": "/",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/lpm0073/smarter.sh.git"
-  },
+  "repository": "https://github.com/smarter-sh/smarter.sh.git",
   "keywords": [
-    "personal",
-    "website",
-    "Lawrence McDaniel",
-    "portfolio"
+    "Smarter",
+    "Querium",
+    "AI"
   ],
   "contributors": [
     {
       "name": "Lawrence McDaniel",
-      "email": "lawrence@example.com",
-      "url": "https://smarter.sh"
+      "email": "lpm0073@gmail.com",
+      "url": "https://lawrencemcdaniel.com"
+    },
+    {
+      "name": "Kent Fuka",
+      "email": "kent@querium.com",
+      "url": "https://www.querium.com/"
+    },
+    {
+      "name": "Shalim Mora",
+      "email": "shalimhoms@gmail.com",
+      "url": "https://www.shalimmora.com/"
     }
   ],
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
