@@ -1,3 +1,10 @@
+## [0.1.2](https://github.com/smarter-sh/smarter.sh/compare/v0.1.1...v0.1.2) (2025-08-28)
+
+
+### Bug Fixes
+
+* swap out react-loader-spinner (abandoned) with react-spinners ([ac21447](https://github.com/smarter-sh/smarter.sh/commit/ac21447a8cb7b6272f581577cfa8e9e46523489b))
+
 ## [0.1.1](https://github.com/smarter-sh/smarter.sh/compare/v0.1.0...v0.1.1) (2025-08-28)
 
 
