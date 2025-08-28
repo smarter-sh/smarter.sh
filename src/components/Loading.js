@@ -5,9 +5,8 @@ const Loading = () => {
   return (
     <div className="col-12 text-center">
       <ClipLoader
-        color={color}
-        loading={loading}
-        cssOverride={override}
+        color="#ffffff"
+        loading={true}
         size={150}
         aria-label="Loading Spinner"
         data-testid="loader"
