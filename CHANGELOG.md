@@ -1,3 +1,10 @@
+## [0.1.3](https://github.com/smarter-sh/smarter.sh/compare/v0.1.2...v0.1.3) (2025-08-28)
+
+
+### Bug Fixes
+
+* add index.html ([a5a0a7c](https://github.com/smarter-sh/smarter.sh/commit/a5a0a7ca1d3682b764d86c705058434023e6ab8c))
+
 ## [0.1.2](https://github.com/smarter-sh/smarter.sh/compare/v0.1.1...v0.1.2) (2025-08-28)
 
 
