@@ -51,6 +51,7 @@ class Home extends Component {
                     stakeholders, code base governance
                   </li>
                   <li>flexible licensing and support schemes</li>
+                  <li>kent new content</li>
                 </ul>
               </div>
             </div>
