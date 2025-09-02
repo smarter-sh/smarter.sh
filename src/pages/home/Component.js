@@ -41,17 +41,14 @@ class Home extends Component {
                   <h2>What is it?</h2>
                   <p>* video goes here</p>
                 </div>
-                <ul className="list-unstyled">
+                <ul>
                   <li>
-                    AI resource orchestration platform designed for large enterprises
+                    An AI resource orchestration platform designed for large enterprises
                   </li>
-                  <li>Kubernetes architecture, runs on-premise or in the cloud</li>
-                  <li>
-                    open source (or mention in-progress ????????). Core committers,
-                    stakeholders, code base governance
-                  </li>
-                  <li>flexible licensing and support schemes</li>
-                  <li>kent new content</li>
+                  <li>Kubernetes architecture</li>
+                  <li>Runs on-premise or in the cloud</li>
+                  <li>Flexible licensing and support schemes</li>
+                  <li>Open source access</li>
                 </ul>
               </div>
             </div>
@@ -62,17 +59,12 @@ class Home extends Component {
               <div className="col-lg-8">
                 <div className="text-center">
                   <h2>Who is it for?</h2>
-                  <p>[a brilliant message from Kent goes here]</p>
+                  <p>For organizations that need to protect their trade secrets and sensitive data.</p>
                 </div>
                 <ul>
-                  <li>made for large organizations</li>
-                  <li>
-                    role based: Prompt engineers in functional areas, IT, Accounting, HR
-                  </li>
-                  <li>
-                    we offer online and on-premise training and certification
-                    programs{' '}
-                  </li>
+                  <li>Scalable for large organizations</li>
+                  <li>Role based authorization</li>
+                  <li>Supports prompt engineers in functional areas: IT, Accounting, HR, Marketing, Support, etc.</li>
                 </ul>
               </div>
             </div>
@@ -86,7 +78,13 @@ class Home extends Component {
               <div className="col-lg-8">
                 <div className="text-center">
                   <h2>How is it sold?</h2>
-                  <p>[a brilliant message from Kent goes here]</p>
+                  <p>We are easy to do business with.</p>
+                  <ul>
+                    <li>Usage-based pricing</li>
+                    <li>No long-term contracts</li>
+                    <li>Supports on-premises or cloud-hosted environmnts</li>
+                    <li> We offer online and on-premise training and certification programs{' '}</li>
+                  </ul>
                 </div>
               </div>
             </div>
