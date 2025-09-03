@@ -1,6 +1,7 @@
 /* eslint-disable */
+export const domainName = 'smarter.sh'
+
 const protocol = 'https'
-const domainName = 'smarter.sh'
 const URL_CDN = protocol + '://cdn.' + domainName
 const URL_SITE = protocol + '://' + domainName
 
