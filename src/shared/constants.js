@@ -18,5 +18,5 @@ export const APP_CONFIG = {
     cdn: URL_CDN,
     site: URL_SITE,
   },
-  root_domain: domainName
+  root_domain: domainName,
 }
