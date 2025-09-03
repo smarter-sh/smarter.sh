@@ -35,7 +35,9 @@ if (branch === 'alpha') {
 }
 
 execSync('yarn build', { stdio: 'inherit' })
-execSync(`aws s3 sync ./build/ ${s3Path} --acl public-read --delete`, { stdio: 'inherit' })
+execSync(`aws s3 sync ./build/ ${s3Path} --acl public-read --delete`, {
+  stdio: 'inherit',
+})
 execSync(
   `aws cloudfront create-invalidation --distribution-id ${distributionID} --paths "${cloudfrontPaths}"`,
   { stdio: 'inherit' }
