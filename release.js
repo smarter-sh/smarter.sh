@@ -15,7 +15,6 @@ const { domainName } = require('./src/shared/constants')
 
 console.log(`Domain Name: ${domainName}`)
 
-
 const branch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
 console.log(`Releasing branch: ${branch}`)
 

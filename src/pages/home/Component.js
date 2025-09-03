@@ -59,12 +59,18 @@ class Home extends Component {
               <div className="col-lg-8">
                 <div className="text-center">
                   <h2>Who is it for?</h2>
-                  <p>For organizations that need to protect their trade secrets and sensitive data.</p>
+                  <p>
+                    For organizations that need to protect their trade secrets and
+                    sensitive data.
+                  </p>
                 </div>
                 <ul>
                   <li>Scalable for large organizations</li>
                   <li>Role based authorization</li>
-                  <li>Supports prompt engineers in functional areas: IT, Accounting, HR, Marketing, Support, etc.</li>
+                  <li>
+                    Supports prompt engineers in functional areas: IT, Accounting, HR,
+                    Marketing, Support, etc.
+                  </li>
                 </ul>
               </div>
             </div>
@@ -83,7 +89,11 @@ class Home extends Component {
                     <li>Usage-based pricing</li>
                     <li>No long-term contracts</li>
                     <li>Supports on-premises or cloud-hosted environmnts</li>
-                    <li> We offer online and on-premise training and certification programs{' '}</li>
+                    <li>
+                      {' '}
+                      We offer online and on-premise training and certification
+                      programs{' '}
+                    </li>
                   </ul>
                 </div>
               </div>
