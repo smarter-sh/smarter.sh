@@ -11,14 +11,14 @@
  * Note: requires node v24 or later.
  *---------------------------------------------------------*/
 const { execSync } = require('child_process')
-const { domainName } = require('./src/shared/constants')
+const { APP_CONFIG } = require('./src/shared/constants')
 
-console.log(`Domain Name: ${domainName}`)
+console.log(`Domain Name: ${APP_CONFIG.root_domain}`)
 
 const branch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
 console.log(`Releasing branch: ${branch}`)
 
-let s3Path = 's3://reactjs.' + branch + '.' + domainName + '/'
+let s3Path = 's3://reactjs.' + branch + '.' + APP_CONFIG.root_domain + '/'
 console.log(`S3 Path: ${s3Path}`)
 
 let cloudfrontPaths = '/*'
