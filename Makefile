@@ -32,4 +32,4 @@ serve:
 	yarn start
 
 release:
-	node release.js
+	yarn release

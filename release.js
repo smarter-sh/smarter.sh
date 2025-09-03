@@ -34,8 +34,9 @@ if (branch === 'alpha') {
   throw new Error(`Unknown branch: ${branch}`)
 }
 
-execSync('yarn build')
-execSync(`aws s3 sync ./build/ ${s3Path} --acl public-read --delete`)
+execSync('yarn build', { stdio: 'inherit' })
+execSync(`aws s3 sync ./build/ ${s3Path} --acl public-read --delete`, { stdio: 'inherit' })
 execSync(
-  `aws cloudfront create-invalidation --distribution-id ${distributionID} --paths "${cloudfrontPaths}"`
+  `aws cloudfront create-invalidation --distribution-id ${distributionID} --paths "${cloudfrontPaths}"`,
+  { stdio: 'inherit' }
 )
