@@ -5,6 +5,7 @@ const URL_CDN = protocol + '://cdn.' + domainName
 const URL_SITE = protocol + '://' + domainName
 
 export const APP_CONFIG = {
+  root_domain: domainName,
   debug: false,
   static: {
     images: {

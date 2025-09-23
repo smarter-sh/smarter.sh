@@ -1,0 +1,8 @@
+export const currency = '$'
+export const currentYear = new Date().getFullYear()
+export const developedByLink = 'https://github.com/smarter-sh/'
+export const developedBy = 'Lawrence McDaniel'
+export const contactUs = ''
+export const buyLink = ''
+export const basePath = ''
+export const DEFAULT_PAGE_TITLE = 'Smarter.sh - AI Resource Management Platform'
