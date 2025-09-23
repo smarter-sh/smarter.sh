@@ -5,7 +5,6 @@ import Hero from './components/Hero'
 import About from './components/About'
 import ProfessionalServices from './components/ProfessionalServices'
 import PremiumServices from './components/PremiumServices'
-import Pricing from './components/Pricing'
 import Faqs from './components/Faqs'
 import Footer from './components/Footer'
 const Home = () => {

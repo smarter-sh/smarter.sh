@@ -18,15 +18,13 @@ const About = () => {
               Manage AI resources without coding.
             </h2>
             <p className="text-sm font-medium text-default-200">
-              Empower your enterprise domain experts to build AI workflows—without writing
-              Python. Smarter uses YAML manifests to standardize database and API
-              integrations, enforce resource limits, logging, and moderation controls, and
-              provide the foundation for creating safe, auditable agentic AI capabilities
-              across teams.
+              Empower your enterprise domain experts to build AI workflows—without writing Python.
+Smarter uses intuitive YAML manifests to standardize database and API integrations for RAG and advanced function calling, while enforcing resource limits, logging, and moderation controls.
+It provides the foundation for safe, secure, scalable, and auditable agentic AI across teams.
             </p>
           </div>
         </div>
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {about.map((tool, idx) => (
             <div className="rounded-xl bg-default-950/40 backdrop-blur-3xl" key={idx}>
               <div className="p-6">
@@ -41,12 +39,13 @@ const About = () => {
                   </div>
                   <h3 className="text-xl font-medium text-default-200">{tool.name}</h3>
                 </div>
+                  <div className="mb-6"><p>{tool.detail}</p></div>
                 <Link
                   to={tool.url}
                   className="group relative inline-flex items-center gap-2 text-primary"
                 >
                   <span className="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w-full" />
-                  Select &amp; try{' '}
+                  {tool.link_text}{' '}
                   <IconifyIcon icon="lucide:move-right" className="h-4 w-4" />
                 </Link>
               </div>

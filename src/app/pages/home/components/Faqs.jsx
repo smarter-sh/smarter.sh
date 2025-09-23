@@ -8,11 +8,10 @@ const Faqs = () => {
         <div className="mb-10 flex items-end justify-between">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-medium capitalize text-white">
-              Any questions
+              FAQ
             </h2>
             <p className="text-sm font-medium text-default-200">
-              Start working with Tailwindcss It allows you to compose complex designs{' '}
-              <br /> by combining and customizing utility classes..
+              Got questions? We’ve got answers!
             </p>
           </div>
         </div>
