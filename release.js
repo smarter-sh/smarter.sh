@@ -30,7 +30,7 @@ if (branch === 'alpha') {
 } else if (branch === 'beta') {
   distributionID = 'E12GP2JL74BU7K'
 } else if (branch === 'main') {
-  distributionID = 'SET-ME-PLEASE'
+  distributionID = 'E29VD2O44QR728'
 } else {
   throw new Error(`Unknown branch: ${branch}`)
 }
