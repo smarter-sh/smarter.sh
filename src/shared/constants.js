@@ -1,10 +1,11 @@
 /* eslint-disable */
-const domainName = 'smarter.sh'
 const protocol = 'https'
+const domainName = 'smarter.sh'
 const URL_CDN = protocol + '://cdn.' + domainName
 const URL_SITE = protocol + '://' + domainName
 
 export const APP_CONFIG = {
+  root_domain: domainName,
   debug: false,
   static: {
     images: {
@@ -18,5 +19,4 @@ export const APP_CONFIG = {
     cdn: URL_CDN,
     site: URL_SITE,
   },
-  root_domain: domainName,
 }
