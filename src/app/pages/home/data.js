@@ -29,23 +29,26 @@ export const about = [
     name: 'Api docs',
     icon: 'lucide:book-open',
     iconClass: 'bg-white/20 text-white',
-    detail: 'Getting started with the Smarter API is easy. Also checkout the Swagger documentation for each end point.',
-  link_text: 'View API Docs',
+    detail:
+      'Getting started with the Smarter API is easy. Also checkout the Swagger documentation for each end point.',
+    link_text: 'View API Docs',
     url: 'https://platform.smarter.sh/docs/api/',
   },
   {
     name: 'CLI',
     icon: 'lucide:terminal',
     iconClass: 'bg-sky-500/20 text-sky-500',
-    detail: 'The Smarter CLI runs on Windows, MacOS, and Linux and works just like kubectl. It is the fastest way to get started.',
-  link_text: 'Try the CLI',
+    detail:
+      'The Smarter CLI runs on Windows, MacOS, and Linux and works just like kubectl. It is the fastest way to get started.',
+    link_text: 'Try the CLI',
     url: 'https://platform.smarter.sh/docs/api/',
   },
   {
     name: 'PyPi',
     icon: 'lucide:package',
     iconClass: 'bg-default-500/20 text-default-500',
-    detail: 'Write Python? The Smarter Python SDK makes it easy to integrate Smarter into your existing Python applications and workflows.',
+    detail:
+      'Write Python? The Smarter Python SDK makes it easy to integrate Smarter into your existing Python applications and workflows.',
     link_text: 'Get it on PyPi',
     url: 'https://pypi.org/project/smarter-api/',
   },
@@ -53,7 +56,8 @@ export const about = [
     name: 'NPM',
     icon: 'lucide:package',
     iconClass: 'bg-indigo-500/20 text-indigo-500',
-    detail: 'The Smarter NPM package makes it easy to integrate Smarter into your customer-facing chat applications.',
+    detail:
+      'The Smarter NPM package makes it easy to integrate Smarter into your customer-facing chat applications.',
     link_text: 'Get it on NPM',
     url: 'https://www.npmjs.com/package/@smarter.sh/ui-chat',
   },
@@ -62,7 +66,8 @@ export const about = [
     icon: 'lucide:github',
     iconClass: 'bg-yellow-500/20 text-yellow-500',
     link_text: 'Fork on GitHub',
-  detail: 'Get involved! Smarter is open source under the GNU Affero General Public License Version 3, 19 November 2007.',
+    detail:
+      'Get involved! Smarter is open source under the GNU Affero General Public License Version 3, 19 November 2007.',
     url: 'https://github.com/smarter-sh/smarter',
   },
   {
@@ -77,7 +82,8 @@ export const about = [
     name: 'Contributing',
     icon: 'lucide:git-pull-request',
     iconClass: 'bg-pink-500/20 text-pink-500',
-    detail: 'We welcome contributions from the community! Please read our guidelines and watch the developer onboarding guides before getting started.',
+    detail:
+      'We welcome contributions from the community! Please read our guidelines and watch the developer onboarding guides before getting started.',
     link_text: 'Create a pull request',
     url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
   },
@@ -137,29 +143,34 @@ export const faqsData = [
   {
     id: 7,
     question: 'How do I get started? What’s the onboarding process?',
-    answer: 'You can start by writing simple YAML manifests, using existing templates, or following our quickstart guide. We provide documentation, training, and examples so domain experts can get up and running without jumping into code.'
+    answer:
+      'You can start by writing simple YAML manifests, using existing templates, or following our quickstart guide. We provide documentation, training, and examples so domain experts can get up and running without jumping into code.',
   },
-{
-  id: 8,
-  question: 'What if I need customization or enterprise support?',
-  answer: 'See our providers list. They offer services such as consulting, custom integration setup, installation assistance, and training to ensure Smarter fits your organization’s requirements and standards.',
-},
-{
-  id: 9,
-  question: 'How is Smarter different from writing custom pipelines in Python, or using other orchestration tools?',
-  answer: 'Unlike custom Python pipelines, Smarter reduces boilerplate, removes the need for direct LLM API calls, standardizes governance, and lets you define workflows declaratively. This reduces complexity and learning curves for non-developers.'
-},
-{
-  id: 10,
-  question: 'What deployment options are available?',
-  answer: 'Smarter can be deployed to your AWS account, or on-premises. You control credentials, resource limits, and compliance based on your environment. For evaluation purposes, a hosted SaaS option is also available.',
-},
-{
-  id: 11,
-  question: "What is Smarter's technology stack?",
-  answer: 'The Smarter Api and prompt engineer web console are both developed on Python-Django and leverage Pydantic for manifest processing and Django Rest Framework for the Api. The platform is containerized using Docker and orchestrated with Kubernete. User-facing chats are implemented with React. The command-line interface (CLI) is written in Golang.',
-},
-
+  {
+    id: 8,
+    question: 'What if I need customization or enterprise support?',
+    answer:
+      'See our providers list. They offer services such as consulting, custom integration setup, installation assistance, and training to ensure Smarter fits your organization’s requirements and standards.',
+  },
+  {
+    id: 9,
+    question:
+      'How is Smarter different from writing custom pipelines in Python, or using other orchestration tools?',
+    answer:
+      'Unlike custom Python pipelines, Smarter reduces boilerplate, removes the need for direct LLM API calls, standardizes governance, and lets you define workflows declaratively. This reduces complexity and learning curves for non-developers.',
+  },
+  {
+    id: 10,
+    question: 'What deployment options are available?',
+    answer:
+      'Smarter can be deployed to your AWS account, or on-premises. You control credentials, resource limits, and compliance based on your environment. For evaluation purposes, a hosted SaaS option is also available.',
+  },
+  {
+    id: 11,
+    question: "What is Smarter's technology stack?",
+    answer:
+      'The Smarter Api and prompt engineer web console are both developed on Python-Django and leverage Pydantic for manifest processing and Django Rest Framework for the Api. The platform is containerized using Docker and orchestrated with Kubernete. User-facing chats are implemented with React. The command-line interface (CLI) is written in Golang.',
+  },
 ]
 export const footerLinks = [
   {

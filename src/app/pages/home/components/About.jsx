@@ -18,9 +18,12 @@ const About = () => {
               Manage AI resources without coding.
             </h2>
             <p className="text-sm font-medium text-default-200">
-              Empower your enterprise domain experts to build AI workflows—without writing Python.
-Smarter uses intuitive YAML manifests to standardize database and API integrations for RAG and advanced function calling, while enforcing resource limits, logging, and moderation controls.
-It provides the foundation for safe, secure, scalable, and auditable agentic AI across teams.
+              Empower your enterprise domain experts to build AI workflows—without writing
+              Python. Smarter uses intuitive YAML manifests to standardize database and
+              API integrations for RAG and advanced function calling, while enforcing
+              resource limits, logging, and moderation controls. It provides the
+              foundation for safe, secure, scalable, and auditable agentic AI across
+              teams.
             </p>
           </div>
         </div>
@@ -39,7 +42,9 @@ It provides the foundation for safe, secure, scalable, and auditable agentic AI 
                   </div>
                   <h3 className="text-xl font-medium text-default-200">{tool.name}</h3>
                 </div>
-                  <div className="mb-6"><p>{tool.detail}</p></div>
+                <div className="mb-6">
+                  <p>{tool.detail}</p>
+                </div>
                 <Link
                   to={tool.url}
                   className="group relative inline-flex items-center gap-2 text-primary"

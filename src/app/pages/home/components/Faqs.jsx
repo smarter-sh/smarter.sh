@@ -7,9 +7,7 @@ const Faqs = () => {
       <div className="container">
         <div className="mb-10 flex items-end justify-between">
           <div className="mx-auto max-w-2xl text-center">
-            <h2 className="mb-4 text-3xl font-medium capitalize text-white">
-              FAQ
-            </h2>
+            <h2 className="mb-4 text-3xl font-medium capitalize text-white">FAQ</h2>
             <p className="text-sm font-medium text-default-200">
               Got questions? We’ve got answers!
             </p>
