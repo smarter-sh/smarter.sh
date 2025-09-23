@@ -1,11 +1,11 @@
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
-import { tools } from '../data'
+import { about } from '../data'
 import { Link } from 'react-router-dom'
 import { cn } from '@/helpers/cn'
-const BusinessTools = () => {
+const About = () => {
   return (
     <section
-      id="tools"
+      id="about"
       className="py-20"
       data-aos="zoom-in"
       data-aos-easing="ease"
@@ -27,7 +27,7 @@ const BusinessTools = () => {
           </div>
         </div>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {tools.map((tool, idx) => (
+          {about.map((tool, idx) => (
             <div className="rounded-xl bg-default-950/40 backdrop-blur-3xl" key={idx}>
               <div className="p-6">
                 <div className="mb-4 flex items-center gap-4">
@@ -62,4 +62,4 @@ const BusinessTools = () => {
     </section>
   )
 }
-export default BusinessTools
+export default About

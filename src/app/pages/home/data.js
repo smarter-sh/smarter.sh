@@ -1,4 +1,4 @@
-export const tools = [
+export const about = [
   {
     name: 'Documentation',
     icon: 'lucide:file-text',
@@ -61,82 +61,6 @@ export const saas = [
     title: 'Support',
     description:
       'Expert assistance whenever you need it—keeping your AI workflows running smoothly and securely.',
-  },
-]
-export const pricingPlans = [
-  {
-    name: 'Essential',
-    description: 'Our new Customers for a free one month of service offers.',
-    price: 19.0,
-    features: [
-      {
-        name: 'All limited links',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Own analytics platform',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Chat support',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Optimize hashtags',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Mobile app',
-        icon: 'lucide:circle-x',
-        variant: 'text-red-500',
-      },
-      {
-        name: 'Unlimited users',
-        icon: 'lucide:circle-x',
-        variant: 'text-red-500',
-      },
-    ],
-  },
-  {
-    name: 'Premium',
-    description: 'Our new Customers for a free one month of service offers.',
-    price: 29.0,
-    features: [
-      {
-        name: 'All limited links',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Own analytics platform',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Chat support',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Optimize hashtags',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Mobile app',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-      {
-        name: 'Unlimited users',
-        icon: 'lucide:circle-check',
-        variant: 'text-primary',
-      },
-    ],
   },
 ]
 export const faqsData = [
@@ -225,19 +149,91 @@ export const navLinks = [
     link: '#home',
   },
   {
-    label: 'Tools',
-    link: '#tools',
+    label: 'About',
+    link: '#about',
   },
   {
-    label: 'Features',
-    link: '#features',
-  },
-  {
-    label: 'Price',
-    link: '#price',
+    label: 'Services',
+    link: '#services',
   },
   {
     label: 'Faq',
     link: '#faq',
+  },
+]
+export const pricingPlans = [
+  {
+    name: 'Essential',
+    description: 'Our new Customers for a free one month of service offers.',
+    price: 19.0,
+    features: [
+      {
+        name: 'All limited links',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Own analytics platform',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Chat support',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Optimize hashtags',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Mobile app',
+        icon: 'lucide:circle-x',
+        variant: 'text-red-500',
+      },
+      {
+        name: 'Unlimited users',
+        icon: 'lucide:circle-x',
+        variant: 'text-red-500',
+      },
+    ],
+  },
+  {
+    name: 'Premium',
+    description: 'Our new Customers for a free one month of service offers.',
+    price: 29.0,
+    features: [
+      {
+        name: 'All limited links',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Own analytics platform',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Chat support',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Optimize hashtags',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Mobile app',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+      {
+        name: 'Unlimited users',
+        icon: 'lucide:circle-check',
+        variant: 'text-primary',
+      },
+    ],
   },
 ]

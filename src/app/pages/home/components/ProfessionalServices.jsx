@@ -1,5 +1,5 @@
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
-const PostGenerator = () => {
+const ProfessionalServices = () => {
   return (
     <section
       className="py-20"
@@ -7,7 +7,7 @@ const PostGenerator = () => {
       data-aos-easing="ease"
       data-aos-duration={1000}
     >
-      <div className="container">
+      <div id='services' className="container">
         <div className="mb-10 flex items-end justify-between">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="mb-4 text-3xl font-medium capitalize text-white">
@@ -97,4 +97,4 @@ const PostGenerator = () => {
     </section>
   )
 }
-export default PostGenerator
+export default ProfessionalServices

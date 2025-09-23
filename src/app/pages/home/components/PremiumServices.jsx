@@ -19,7 +19,7 @@ const FeatureCard = ({ description, icon, title }) => {
     </div>
   )
 }
-const Features = () => {
+const PremiumServices = () => {
   return (
     <section id="features" className="py-20">
       <div className="container">
@@ -43,4 +43,4 @@ const Features = () => {
     </section>
   )
 }
-export default Features
+export default PremiumServices
