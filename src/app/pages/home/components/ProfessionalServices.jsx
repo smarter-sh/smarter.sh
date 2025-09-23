@@ -14,8 +14,7 @@ const ProfessionalServices = () => {
               Professional Services
             </h2>
             <p className="text-sm font-medium text-default-200">
-              Expert services to get Smarter up and running—tailored, trained, and
-              optimized for your team.
+              Accelerate your path to production with the help of a Smarter-certified partner. Our experts provide tailored installation, training, and optimization services to ensure your deployment runs smoothly and delivers value quickly.
             </p>
           </div>
         </div>
