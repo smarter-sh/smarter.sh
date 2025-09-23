@@ -87,6 +87,15 @@ export const about = [
     link_text: 'Create a pull request',
     url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
   },
+  {
+    name: 'Terraforms',
+    icon: 'lucide:server',
+    iconClass: 'bg-purple-500/20 text-purple-500',
+    detail:
+      'Use our Terraform module to build Smarter cloud infrastructure in your AWS account. It takes just a few minutes to get started.',
+    link_text: 'View on GitHub',
+    url: 'https://github.com/smarter-sh/smarter-infrastructure',
+  },
 ]
 export const saas = [
   {
