@@ -5,7 +5,7 @@ const PageMetaData = ({ title }) => {
     <Helmet>
       <title>
         {title
-          ? `${title} | WebAI React - AI Startup & Technology Landing Page Template`
+          ? `Smarter | ${title}`
           : DEFAULT_PAGE_TITLE}
       </title>
     </Helmet>
