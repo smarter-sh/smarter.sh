@@ -3,11 +3,7 @@ import { Helmet } from 'react-helmet-async'
 const PageMetaData = ({ title }) => {
   return (
     <Helmet>
-      <title>
-        {title
-          ? `Smarter | ${title}`
-          : DEFAULT_PAGE_TITLE}
-      </title>
+      <title>{title ? `Smarter | ${title}` : DEFAULT_PAGE_TITLE}</title>
     </Helmet>
   )
 }

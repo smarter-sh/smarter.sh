@@ -1,4 +1,3 @@
-
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faApple, faWindows, faLinux } from '@fortawesome/free-brands-svg-icons'
 
@@ -61,7 +60,7 @@ const CommandLineInterface = () => {
         </div>
       </div>
     </section>
-  );
+  )
 }
 
-export default CommandLineInterface;
+export default CommandLineInterface

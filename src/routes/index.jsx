@@ -28,7 +28,7 @@ const StaticPages = [
     path: '/cli',
     name: 'CLI',
     element: <Cli />,
-  }
+  },
 ]
 
 const AuthPages = [
