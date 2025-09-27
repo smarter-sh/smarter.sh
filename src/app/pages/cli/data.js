@@ -40,8 +40,8 @@ export const about = [
     iconClass: 'bg-sky-500/20 text-sky-500',
     detail:
       'The Smarter CLI runs on Windows, MacOS, and Linux and works just like kubectl. It is the fastest way to get started.',
-    link_text: 'Download',
-    url: '/cli/',
+    link_text: 'Try the CLI',
+    url: 'https://platform.smarter.sh/docs/api/',
   },
   {
     name: 'PyPi',

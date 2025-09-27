@@ -2,6 +2,7 @@ import { lazy } from 'react'
 
 //pages
 const Home = lazy(() => import('@/app/pages/home/page'))
+const Cli = lazy(() => import('@/app/pages/cli/page'))
 
 //auth pages
 const Login = lazy(() => import('@/app/auth/login/page'))
@@ -22,6 +23,14 @@ const LandingPages = [
     element: <Home />,
   },
 ]
+const StaticPages = [
+  {
+    path: '/cli',
+    name: 'CLI',
+    element: <Cli />,
+  },
+]
+
 const AuthPages = [
   {
     path: '/auth/login',
@@ -54,4 +63,4 @@ const AuthPages = [
     element: <Logout />,
   },
 ]
-export const appRoutes = [...LandingPages, ...AuthPages]
+export const appRoutes = [...LandingPages, ...StaticPages]
