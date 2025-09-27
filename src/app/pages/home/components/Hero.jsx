@@ -25,7 +25,7 @@ const Hero = () => {
           </div>
           <div>
             <GlightBox
-              href="https://www.youtube.com/embed/5wOhrU2V-SI?si=vCWHEfjx8d-ZgKVp"
+              href="https://www.youtube.com/embed/4DMyHgOXYmQ"
               title="YouTube video player"
             >
               <button

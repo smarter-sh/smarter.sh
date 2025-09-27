@@ -18,9 +18,6 @@ const Hero = () => {
               <h1 className="mb-6 text-5xl/tight font-medium text-default-100">
                 Download the smarter.sh CLI
               </h1>
-              <p className="mx-auto text-base font-medium text-default-300 lg:max-w-md">
-                For Windows, macOS and Linux.
-              </p>
             </div>
           </div>
         </div>
