@@ -26,7 +26,6 @@ dist-ssr
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 webai*
-yarn.lock
 passwords.js
 public/schema.json
 public/data/
