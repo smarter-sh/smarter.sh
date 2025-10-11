@@ -1,3 +1,10 @@
+## [0.2.2](https://github.com/smarter-sh/smarter.sh/compare/v0.2.1...v0.2.2) (2025-10-11)
+
+
+### Bug Fixes
+
+* add github data points ([557c1db](https://github.com/smarter-sh/smarter.sh/commit/557c1dbb8f237519d53d870cfabc298a46fd737d))
+
 ## [0.2.1](https://github.com/smarter-sh/smarter.sh/compare/v0.2.0...v0.2.1) (2025-10-11)
 
 
