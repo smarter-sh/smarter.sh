@@ -8,7 +8,7 @@ import CommandLineInterface from './components/CommandLineInterface'
 const Cli = () => {
   return (
     <>
-      <PageMetaData title="Home" />
+      <PageMetaData title="CLI" />
       <Background1 />
       <TopNavbar navLinks={navLinks} />
       <main>

@@ -22,7 +22,7 @@ const TopNavbar = ({ navLinks }) => {
   return (
     <>
       <header id="navbar-sticky" className={`navbar ${scrollY >= 50 && 'nav-sticky'}`}>
-        <div className="container">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav>
             <Link to="/" className="logo">
               <img src={logo} className="h-16" alt="Smarter" />

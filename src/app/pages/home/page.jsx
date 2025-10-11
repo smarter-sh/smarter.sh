@@ -9,10 +9,10 @@ import Faqs from './components/Faqs'
 import Footer from './components/Footer'
 const Home = () => {
   return (
-    <>
+    <div>
       <Background2 />
       <TopNavbar navLinks={navLinks} />
-      <main>
+      <main className="w-full">
         <Hero />
         <About />
         <ProfessionalServices />
@@ -20,7 +20,7 @@ const Home = () => {
         <Faqs />
       </main>
       <Footer />
-    </>
+    </div>
   )
 }
 export default Home
