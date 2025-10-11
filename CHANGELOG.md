@@ -1,3 +1,11 @@
+# [0.2.0](https://github.com/smarter-sh/smarter.sh/compare/v0.1.4...v0.2.0) (2025-09-27)
+
+
+### Features
+
+* add cli download page ([ec5e69c](https://github.com/smarter-sh/smarter.sh/commit/ec5e69c665dd2dabadaa7458c64f68c896b7303d))
+* add cli download page ([f9eca07](https://github.com/smarter-sh/smarter.sh/commit/f9eca07530db5b5ae7fa4d9a36b475fd5fe57937))
+
 ## [0.1.4](https://github.com/smarter-sh/smarter.sh/compare/v0.1.3...v0.1.4) (2025-09-23)
 
 ### Bug Fixes
