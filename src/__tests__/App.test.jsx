@@ -10,7 +10,6 @@ test('renders app component', async () => {
     </MemoryRouter>
   );
 
-  // Wait for the component to finish loading
   await waitFor(() => {
     // Just test that the app renders without crashing
     expect(document.querySelector('div')).toBeInTheDocument();

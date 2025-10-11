@@ -28,6 +28,9 @@ build:
 	cp package.json public/package.json
 	yarn build
 
+test:
+	yarn test
+
 serve:
 	yarn start
 
