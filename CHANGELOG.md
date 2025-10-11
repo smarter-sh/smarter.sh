@@ -1,3 +1,10 @@
+## [0.2.3](https://github.com/smarter-sh/smarter.sh/compare/v0.2.2...v0.2.3) (2025-10-11)
+
+
+### Bug Fixes
+
+* version bumps ([cb6491c](https://github.com/smarter-sh/smarter.sh/commit/cb6491c89b5734f90cb875e9cac5967181261f29))
+
 ## [0.2.2](https://github.com/smarter-sh/smarter.sh/compare/v0.2.1...v0.2.2) (2025-10-11)
 
 
