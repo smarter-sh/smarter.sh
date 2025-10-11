@@ -1,11 +1,11 @@
 ---
 #------------------------------------------------------------------------------
 # Lawrence McDaniel - https://smarter.sh
-# Version Bump Workflow for Python package openai_utils
+# Version Bump Workflow for Node.js package smarter.sh
 #
 # Calculate the version of the main branch based on semantic-release rules.
-# Compares the existing value of version.js to the calculated value.
-# If they are different, it will update version.js and push the changes
+# Compares the existing value of package.json to the calculated value.
+# If they are different, it will update package.json and push the changes
 # to the main branch.
 #------------------------------------------------------------------------------
 name: Semantic Version Bump (main)
