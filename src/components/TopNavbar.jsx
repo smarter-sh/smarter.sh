@@ -63,6 +63,43 @@ const TopNavbar = ({ navLinks }) => {
               </div>
             </div>
             <div className="hidden items-center lg:flex">
+              <div className="me-6 flex items-center">
+              <a
+                href="https://github.com/smarter-sh/smarter"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+              >
+                <IconifyIcon icon="lucide:github" className="h-6 w-6" />
+                <span>smarter-sh/smarter</span>
+              </a>
+              <div className="ml-4 flex items-center gap-3">
+                <a
+                  href="https://github.com/smarter-sh/smarter/releases"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  <img src="https://img.shields.io/github/v/release/smarter-sh/smarter?style=flat&color=ea580c" alt="Latest Release" />
+                </a>
+                <a
+                  href="https://github.com/smarter-sh/smarter/stargazers"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  <img src="https://img.shields.io/github/stars/smarter-sh/smarter?style=flat&color=ea580c" alt="GitHub Stars" />
+                </a>
+                <a
+                  href="https://github.com/smarter-sh/smarter/network/members"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-sm text-white/80 hover:text-white transition-colors"
+                >
+                  <img src="https://img.shields.io/github/forks/smarter-sh/smarter?style=flat&color=ea580c" alt="GitHub Forks" />
+                </a>
+              </div>
+              </div>
               <a
                 href="https://platform.smarter.sh/dashboard/"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-white transition-all duration-300 hover:bg-primary-hover"
