@@ -22,29 +22,69 @@ const Hero = () => {
                 An open source, declarative platform for AI resource management.
               </p>
               <div className="flex flex-wrap justify-center gap-2 mt-4">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/smarter-sh/smarter/actions/workflows/build.yml">
-                  <img src="https://github.com/smarter-sh/smarter/actions/workflows/build.yml/badge.svg?branch=main" alt="Build Status" style={{ maxWidth: '100%' }} />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/smarter-sh/smarter/actions/workflows/build.yml"
+                >
+                  <img
+                    src="https://github.com/smarter-sh/smarter/actions/workflows/build.yml/badge.svg?branch=main"
+                    alt="Build Status"
+                    style={{ maxWidth: '100%' }}
+                  />
                 </a>
 
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/smarter-sh/smarter/actions/workflows/deploy.yml">
-                  <img src="https://github.com/smarter-sh/smarter/actions/workflows/deploy.yml/badge.svg?branch=main" alt="Release Status" style={{ maxWidth: '100%' }} />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/smarter-sh/smarter/actions/workflows/deploy.yml"
+                >
+                  <img
+                    src="https://github.com/smarter-sh/smarter/actions/workflows/deploy.yml/badge.svg?branch=main"
+                    alt="Release Status"
+                    style={{ maxWidth: '100%' }}
+                  />
                 </a>
 
                 <a href="https://www.gnu.org/licenses/agpl-3.0" rel="nofollow">
-                  <img src="https://img.shields.io/badge/License-AGPL_v3-blue.svg" alt="License: GNU AGPL v3" style={{ maxWidth: '100%' }} />
+                  <img
+                    src="https://img.shields.io/badge/License-AGPL_v3-blue.svg"
+                    alt="License: GNU AGPL v3"
+                    style={{ maxWidth: '100%' }}
+                  />
                 </a>
               </div>
               <div className="flex flex-wrap justify-center gap-2 mt-4">
-                <a target="_blank" rel="noopener noreferrer" href="https://github.com/smarter-sh/smarter/blob/main/pyproject.toml">
-                  <img src="https://img.shields.io/badge/python-3.10%2B-blue" alt="Python 3.10+" style={{ maxWidth: '100%' }} />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://github.com/smarter-sh/smarter/blob/main/pyproject.toml"
+                >
+                  <img
+                    src="https://img.shields.io/badge/python-3.10%2B-blue"
+                    alt="Python 3.10+"
+                    style={{ maxWidth: '100%' }}
+                  />
                 </a>
 
                 <a target="_blank" rel="noopener noreferrer" href="https://pydantic.dev/">
-                  <img src="https://img.shields.io/badge/pydantic-2.9-green" alt="Pydantic 2.9" style={{ maxWidth: '100%' }} />
+                  <img
+                    src="https://img.shields.io/badge/pydantic-2.9-green"
+                    alt="Pydantic 2.9"
+                    style={{ maxWidth: '100%' }}
+                  />
                 </a>
 
-                <a target="_blank" rel="noopener noreferrer" href="https://www.django-rest-framework.org/">
-                  <img src="https://img.shields.io/badge/DRF-3.15-orange" alt="Django REST Framework 3.15" style={{ maxWidth: '100%' }} />
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://www.django-rest-framework.org/"
+                >
+                  <img
+                    src="https://img.shields.io/badge/DRF-3.15-orange"
+                    alt="Django REST Framework 3.15"
+                    style={{ maxWidth: '100%' }}
+                  />
                 </a>
               </div>
             </div>
