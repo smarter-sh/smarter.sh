@@ -1,39 +1,31 @@
 /** @type {import('tailwindcss').Config} */
-import colors from 'tailwindcss/colors'
-import prelinePlugin from 'preline/plugin'
-import formPlugin from '@tailwindcss/forms'
-
 export default {
   content: [
-    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
-    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
-    'node_modules/preline/dist/*.js',
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx,vue,html}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: {
-        DEFAULT: '1rem',
-        sm: '2rem',
-        lg: '4rem',
-        xl: '5rem',
-        '2xl': '10rem',
-      },
-    },
-
-    fontFamily: {
-      jost: ['Jost', 'sans-serif'],
-    },
-
     extend: {
+      fontFamily: {
+        jost: ['Jost', 'sans-serif'],
+      },
       colors: {
-        primary: colors.orange['600'],
-        'primary-hover': colors.orange['700'],
-
-        default: colors.slate,
+        primary: '#ea580c',
+        default: {
+          50: '#f8fafc',
+          100: '#f1f5f9',
+          200: '#e2e8f0',
+          300: '#cbd5e1',
+          400: '#94a3b8',
+          500: '#64748b',
+          600: '#475569',
+          700: '#334155',
+          800: '#1e293b',
+          900: '#0f172a',
+          950: '#020617',
+        },
       },
     },
   },
-  plugins: [prelinePlugin, formPlugin],
+  plugins: [],
 }
