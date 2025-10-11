@@ -22,13 +22,13 @@ jobs:
         with:
           persist-credentials: false
 
-      - name: Cache NPM dependencies
+      - name: Cache Yarn dependencies
         uses: actions/cache@v4
         with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-yarn-${{ hashFiles('**/package.json') }}
           restore-keys: |
-            ${{ runner.os }}-node
+            ${{ runner.os }}-yarn-
 
       - name: Setup Node.js environment
         uses: actions/setup-node@v5
