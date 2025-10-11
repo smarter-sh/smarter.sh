@@ -8,7 +8,12 @@ html {
 
 body {
     font-size: 15px;
+    margin: 0 auto;
     @apply font-jost overflow-x-hidden text-default-500;
+}
+
+#root {
+    @apply w-full max-w-7xl mx-auto min-h-screen;
 }
 
 input,
