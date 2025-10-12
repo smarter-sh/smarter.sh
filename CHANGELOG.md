@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/smarter-sh/smarter.sh/compare/v0.2.3...v0.3.0) (2025-10-12)
+
+
+### Features
+
+* add platform feature blocks to landing page ([5fe3ed8](https://github.com/smarter-sh/smarter.sh/commit/5fe3ed873bf771a7a9675bd8a35dec80ef1e9d3c))
+
 ## [0.2.3](https://github.com/smarter-sh/smarter.sh/compare/v0.2.2...v0.2.3) (2025-10-11)
 
 
