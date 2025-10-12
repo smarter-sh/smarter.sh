@@ -39,9 +39,9 @@ const FeatureBlock = ({
   }, [isImageModalOpen])
 
 
-  const textContent = (
+const textContent = (
     <div className={`col-span-${textColWidth}`}>
-      <div className="p-10">
+      <div className="p-4 md:p-10">
         <p className="text-sm font-medium text-default-100 leading-relaxed mb-4 whitespace-pre-line">
           {featureText}
         </p>
@@ -61,53 +61,53 @@ const FeatureBlock = ({
     </div>
   )
 
-const imageContent = (
-    <>
-      <div className={`col-span-${imageColWidth}`}>
-        <div className="p-6">
-          <img
-            src={imgUrl}
-            alt={heading}
-            className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => setIsImageModalOpen(true)}
-            title="Click to enlarge"
-          />
-        </div>
-      </div>
-
-      {isImageModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
-          onClick={() => setIsImageModalOpen(false)}
-        >
-          <div className="relative max-w-[90vw] max-h-[90vh]">
-            <button
-              onClick={() => setIsImageModalOpen(false)}
-              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
-              title="Close (Esc)"
-            >
-              <IconifyIcon icon="lucide:x" className="h-8 w-8" />
-            </button>
+  const imageContent = (
+      <>
+        <div className={`col-span-${imageColWidth}`}>
+          <div className="p-6">
             <img
               src={imgUrl}
               alt={heading}
-              className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
-              onClick={(e) => e.stopPropagation()}
+              className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => setIsImageModalOpen(true)}
+              title="Click to enlarge"
             />
           </div>
         </div>
-      )}
-    </>
-  )
+
+        {isImageModalOpen && (
+          <div
+            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
+            onClick={() => setIsImageModalOpen(false)}
+          >
+            <div className="relative max-w-[90vw] max-h-[90vh]">
+              <button
+                onClick={() => setIsImageModalOpen(false)}
+                className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+                title="Close (Esc)"
+              >
+                <IconifyIcon icon="lucide:x" className="h-8 w-8" />
+              </button>
+              <img
+                src={imgUrl}
+                alt={heading}
+                className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
+                onClick={(e) => e.stopPropagation()}
+              />
+            </div>
+          </div>
+        )}
+      </>
+    )
 
   return (
-    <div className="hover:-translate-y-2 rounded-xl border-s-2 border-primary bg-default-950/40 backdrop-blur-3xl transition-all duration-500 mb-12">
-      <div className="p-10 pb-0">
+    <div className="hover:-translate-y-2 rounded-xl border-s-2 border-primary bg-default-950/40 backdrop-blur-3xl transition-all duration-500 mb-6 md:mb-12">
+      <div className="p-4 pb-0 md:p-10 md:pb-0">
         <h3 className="mb-2 text-2xl font-medium text-white">{heading}</h3>
         <h4 className="mb-6 text-lg font-medium text-primary">{subHeading}</h4>
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {orientation === 'left' ? (
           <>
             {imageContent}
