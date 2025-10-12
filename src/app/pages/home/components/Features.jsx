@@ -217,7 +217,7 @@ const SmarterEnterprise = () => {
 
 const Features = () => {
   return (
-    <div className="w-full px-4 sm:px-6 lg:px-0">
+    <div id="features" className="w-full px-4 sm:px-6 lg:px-0">
       <FeatureYaml />
       <FeaturePromptEngineerWorkbench />
       <UnifiedLLMInterface />
