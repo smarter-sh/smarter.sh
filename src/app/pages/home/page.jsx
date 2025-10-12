@@ -3,6 +3,7 @@ import TopNavbar from '@/components/TopNavbar'
 import { navLinks } from './data'
 import Hero from './components/Hero'
 import About from './components/About'
+import Features from './components/Features'
 import ProfessionalServices from './components/ProfessionalServices'
 import PremiumServices from './components/PremiumServices'
 import Faqs from './components/Faqs'
@@ -15,6 +16,7 @@ const Home = () => {
       <main className="w-full">
         <Hero />
         <About />
+        <Features />
         <ProfessionalServices />
         <PremiumServices />
         <Faqs />
