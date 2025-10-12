@@ -15,7 +15,7 @@ const FeatureBlock = ({
   imgUrl,
   orientation = 'left',
   boxLayout = 6,
-  link
+  link,
 }) => {
   const imageColWidth = boxLayout
   const textColWidth = 12 - boxLayout
@@ -38,10 +38,9 @@ const FeatureBlock = ({
     }
   }, [isImageModalOpen])
 
-
   const textContent = (
     <div className={`col-span-${textColWidth}`}>
-      <div className="p-10">
+      <div className="p-4 md:p-10">
         <p className="text-sm font-medium text-default-100 leading-relaxed mb-4 whitespace-pre-line">
           {featureText}
         </p>
@@ -53,15 +52,14 @@ const FeatureBlock = ({
             className="group relative inline-flex items-center gap-2 text-primary"
           >
             <span className="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w-full" />
-            {link.text}{' '}
-            <IconifyIcon icon={link.lucide_icon} className="h-4 w-4" />
+            {link.text} <IconifyIcon icon={link.lucide_icon} className="h-4 w-4" />
           </Link>
         )}
       </div>
     </div>
   )
 
-const imageContent = (
+  const imageContent = (
     <>
       <div className={`col-span-${imageColWidth}`}>
         <div className="p-6">
@@ -101,13 +99,13 @@ const imageContent = (
   )
 
   return (
-    <div className="hover:-translate-y-2 rounded-xl border-s-2 border-primary bg-default-950/40 backdrop-blur-3xl transition-all duration-500 mb-12">
-      <div className="p-10 pb-0">
+    <div className="hover:-translate-y-2 rounded-xl border-s-2 border-primary bg-default-950/40 backdrop-blur-3xl transition-all duration-500 mb-6 md:mb-12">
+      <div className="p-4 pb-0 md:p-10 md:pb-0">
         <h3 className="mb-2 text-2xl font-medium text-white">{heading}</h3>
         <h4 className="mb-6 text-lg font-medium text-primary">{subHeading}</h4>
       </div>
 
-      <div className="grid grid-cols-2 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {orientation === 'left' ? (
           <>
             {imageContent}
@@ -125,7 +123,6 @@ const imageContent = (
 }
 
 const FeatureYaml = () => {
-
   return (
     <FeatureBlock
       heading="YAML-First Configuration"
@@ -134,7 +131,11 @@ const FeatureYaml = () => {
       imgUrl={img_yaml_nocode}
       orientation="left"
       boxLayout={6}
-      link={{ url: 'https://platform.smarter.sh/docs/manifests/', text: 'Learn More', lucide_icon: 'lucide:book-open' }}
+      link={{
+        url: 'https://platform.smarter.sh/docs/manifests/',
+        text: 'Learn More',
+        lucide_icon: 'lucide:book-open',
+      }}
     />
   )
 }
@@ -187,7 +188,11 @@ const SmarterChat = () => {
       imgUrl={img_smarter_chat}
       orientation="left"
       boxLayout={6}
-      link={{ url: 'https://github.com/smarter-sh/smarter-chat', text: 'Learn More', lucide_icon: 'lucide:book-open' }}
+      link={{
+        url: 'https://github.com/smarter-sh/smarter-chat',
+        text: 'Learn More',
+        lucide_icon: 'lucide:book-open',
+      }}
     />
   )
 }
@@ -201,7 +206,11 @@ const SmarterEnterprise = () => {
       imgUrl={img_smarter_enterprise}
       orientation="right"
       boxLayout={6}
-      link={{ url: 'https://platform.smarter.sh/docs/', text: 'Learn More', lucide_icon: 'lucide:book-open' }}
+      link={{
+        url: 'https://platform.smarter.sh/docs/',
+        text: 'Learn More',
+        lucide_icon: 'lucide:book-open',
+      }}
     />
   )
 }
