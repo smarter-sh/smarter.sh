@@ -15,7 +15,7 @@ const FeatureBlock = ({
   imgUrl,
   orientation = 'left',
   boxLayout = 6,
-  link
+  link,
 }) => {
   const imageColWidth = boxLayout
   const textColWidth = 12 - boxLayout
@@ -38,8 +38,7 @@ const FeatureBlock = ({
     }
   }, [isImageModalOpen])
 
-
-const textContent = (
+  const textContent = (
     <div className={`col-span-${textColWidth}`}>
       <div className="p-4 md:p-10">
         <p className="text-sm font-medium text-default-100 leading-relaxed mb-4 whitespace-pre-line">
@@ -53,8 +52,7 @@ const textContent = (
             className="group relative inline-flex items-center gap-2 text-primary"
           >
             <span className="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w-full" />
-            {link.text}{' '}
-            <IconifyIcon icon={link.lucide_icon} className="h-4 w-4" />
+            {link.text} <IconifyIcon icon={link.lucide_icon} className="h-4 w-4" />
           </Link>
         )}
       </div>
@@ -62,43 +60,43 @@ const textContent = (
   )
 
   const imageContent = (
-      <>
-        <div className={`col-span-${imageColWidth}`}>
-          <div className="p-6">
+    <>
+      <div className={`col-span-${imageColWidth}`}>
+        <div className="p-6">
+          <img
+            src={imgUrl}
+            alt={heading}
+            className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
+            onClick={() => setIsImageModalOpen(true)}
+            title="Click to enlarge"
+          />
+        </div>
+      </div>
+
+      {isImageModalOpen && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
+          onClick={() => setIsImageModalOpen(false)}
+        >
+          <div className="relative max-w-[90vw] max-h-[90vh]">
+            <button
+              onClick={() => setIsImageModalOpen(false)}
+              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
+              title="Close (Esc)"
+            >
+              <IconifyIcon icon="lucide:x" className="h-8 w-8" />
+            </button>
             <img
               src={imgUrl}
               alt={heading}
-              className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => setIsImageModalOpen(true)}
-              title="Click to enlarge"
+              className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
+              onClick={(e) => e.stopPropagation()}
             />
           </div>
         </div>
-
-        {isImageModalOpen && (
-          <div
-            className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
-            onClick={() => setIsImageModalOpen(false)}
-          >
-            <div className="relative max-w-[90vw] max-h-[90vh]">
-              <button
-                onClick={() => setIsImageModalOpen(false)}
-                className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
-                title="Close (Esc)"
-              >
-                <IconifyIcon icon="lucide:x" className="h-8 w-8" />
-              </button>
-              <img
-                src={imgUrl}
-                alt={heading}
-                className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
-                onClick={(e) => e.stopPropagation()}
-              />
-            </div>
-          </div>
-        )}
-      </>
-    )
+      )}
+    </>
+  )
 
   return (
     <div className="hover:-translate-y-2 rounded-xl border-s-2 border-primary bg-default-950/40 backdrop-blur-3xl transition-all duration-500 mb-6 md:mb-12">
@@ -125,7 +123,6 @@ const textContent = (
 }
 
 const FeatureYaml = () => {
-
   return (
     <FeatureBlock
       heading="YAML-First Configuration"
@@ -134,7 +131,11 @@ const FeatureYaml = () => {
       imgUrl={img_yaml_nocode}
       orientation="left"
       boxLayout={6}
-      link={{ url: 'https://platform.smarter.sh/docs/manifests/', text: 'Learn More', lucide_icon: 'lucide:book-open' }}
+      link={{
+        url: 'https://platform.smarter.sh/docs/manifests/',
+        text: 'Learn More',
+        lucide_icon: 'lucide:book-open',
+      }}
     />
   )
 }
@@ -187,7 +188,11 @@ const SmarterChat = () => {
       imgUrl={img_smarter_chat}
       orientation="left"
       boxLayout={6}
-      link={{ url: 'https://github.com/smarter-sh/smarter-chat', text: 'Learn More', lucide_icon: 'lucide:book-open' }}
+      link={{
+        url: 'https://github.com/smarter-sh/smarter-chat',
+        text: 'Learn More',
+        lucide_icon: 'lucide:book-open',
+      }}
     />
   )
 }
@@ -201,7 +206,11 @@ const SmarterEnterprise = () => {
       imgUrl={img_smarter_enterprise}
       orientation="right"
       boxLayout={6}
-      link={{ url: 'https://platform.smarter.sh/docs/', text: 'Learn More', lucide_icon: 'lucide:book-open' }}
+      link={{
+        url: 'https://platform.smarter.sh/docs/',
+        text: 'Learn More',
+        lucide_icon: 'lucide:book-open',
+      }}
     />
   )
 }
