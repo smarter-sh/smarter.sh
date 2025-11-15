@@ -100,6 +100,15 @@ export const about = [
     link_text: 'View on GitHub',
     url: 'https://github.com/smarter-sh/smarter-infrastructure',
   },
+  {
+    name: 'Helm Charts',
+    icon: 'lucide:ship',
+    iconClass: 'bg-blue-500/20 text-blue-500',
+    detail:
+      'Use our Helm Charts to deploy Smarter cloud infrastructure in your Kubernetes cluster.',
+    link_text: 'View on ArtifactHUB',
+    url: 'https://artifacthub.io/packages/helm/project-smarter/smarter',
+  },
 ]
 export const saas = [
   {
