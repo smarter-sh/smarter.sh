@@ -22,6 +22,14 @@ export const navLinks = [
 ]
 export const about = [
   {
+    name: 'Getting Started',
+    icon: 'lucide:rocket',
+    iconClass: 'bg-teal-500/20 text-teal-500',
+    detail: 'The jumping off point for new prompt engineers and AI enthusiasts.',
+    link_text: 'Read our Docs',
+    url: 'https://platform.smarter.sh/docs/learn/',
+  },
+  {
     name: 'Documentation',
     icon: 'lucide:file-text',
     iconClass: 'bg-red-500/20 text-red-500',
@@ -39,13 +47,31 @@ export const about = [
     url: 'https://platform.smarter.sh/docs/api/',
   },
   {
-    name: 'CLI',
+    name: 'Command-Line Interface',
     icon: 'lucide:terminal',
     iconClass: 'bg-sky-500/20 text-sky-500',
     detail:
       'The Smarter CLI runs on Windows, MacOS, and Linux and works just like kubectl. It is the fastest way to get started.',
     link_text: 'Download',
     url: '/cli/',
+  },
+  {
+    name: 'Helm Charts',
+    icon: 'lucide:ship',
+    iconClass: 'bg-blue-500/20 text-blue-500',
+    detail:
+      'Use our official Helm Charts to deploy Smarter cloud infrastructure in your Kubernetes cluster.',
+    link_text: 'View on ArtifactHUB',
+    url: 'https://artifacthub.io/packages/helm/project-smarter/smarter',
+  },
+  {
+    name: 'Terraforms',
+    icon: 'lucide:server',
+    iconClass: 'bg-purple-500/20 text-purple-500',
+    detail:
+      'Use our Terraform module to build Smarter cloud infrastructure in your AWS account. It takes just a few minutes to get started.',
+    link_text: 'View on GitHub',
+    url: 'https://github.com/smarter-sh/smarter-infrastructure',
   },
   {
     name: 'PyPi',
@@ -75,14 +101,6 @@ export const about = [
     url: 'https://github.com/smarter-sh/smarter',
   },
   {
-    name: 'Getting Started',
-    icon: 'lucide:rocket',
-    iconClass: 'bg-teal-500/20 text-teal-500',
-    detail: 'The jumping off point for new prompt engineers and AI enthusiasts.',
-    link_text: 'Read our Docs',
-    url: 'https://platform.smarter.sh/docs/learn/',
-  },
-  {
     name: 'Contributing',
     icon: 'lucide:git-pull-request',
     iconClass: 'bg-pink-500/20 text-pink-500',
@@ -90,24 +108,6 @@ export const about = [
       'We welcome contributions from the community! Please read our guidelines and watch the developer onboarding guides before getting started.',
     link_text: 'Create a pull request',
     url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
-  },
-  {
-    name: 'Terraforms',
-    icon: 'lucide:server',
-    iconClass: 'bg-purple-500/20 text-purple-500',
-    detail:
-      'Use our Terraform module to build Smarter cloud infrastructure in your AWS account. It takes just a few minutes to get started.',
-    link_text: 'View on GitHub',
-    url: 'https://github.com/smarter-sh/smarter-infrastructure',
-  },
-  {
-    name: 'Helm Charts',
-    icon: 'lucide:ship',
-    iconClass: 'bg-blue-500/20 text-blue-500',
-    detail:
-      'Use our official Helm Charts to deploy Smarter cloud infrastructure in your Kubernetes cluster.',
-    link_text: 'View on ArtifactHUB',
-    url: 'https://artifacthub.io/packages/helm/project-smarter/smarter',
   },
 ]
 export const saas = [
