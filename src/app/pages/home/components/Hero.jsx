@@ -87,6 +87,15 @@ const Hero = () => {
                   />
                 </a>
               </div>
+              <div className="flex flex-wrap justify-center gap-2 mt-4">
+                <a href="https://artifacthub.io/packages/helm/project-smarter/smarter" rel="nofollow">
+                  <img
+                    src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/project-smarter"
+                    alt="Artifact Hub"
+                    style={{ maxWidth: '100%' }}
+                  />
+                </a>
+              </div>
             </div>
           </div>
           <div>
