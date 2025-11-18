@@ -65,6 +65,15 @@ export const about = [
     url: 'https://artifacthub.io/packages/helm/project-smarter/smarter',
   },
   {
+    name: 'Docker Hub',
+    icon: 'lucide:box',
+    iconClass: 'bg-cyan-500/20 text-cyan-500',
+    detail:
+      'Use our official Docker images to deploy Smarter cloud infrastructure in your containerized environments.',
+    link_text: 'View on Docker Hub',
+    url: 'https://hub.docker.com/r/mcdaniel0073/smarter',
+  },
+  {
     name: 'Terraforms',
     icon: 'lucide:server',
     iconClass: 'bg-purple-500/20 text-purple-500',
