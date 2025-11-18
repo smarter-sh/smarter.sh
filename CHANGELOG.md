@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/smarter-sh/smarter.sh/compare/v0.3.0...v0.3.1) (2025-11-18)
+
+
+### Bug Fixes
+
+* add docker hub ([b165f04](https://github.com/smarter-sh/smarter.sh/commit/b165f04bc5d226ff853a59a7ebd0cdd6b7b9c1b2))
+
 # [0.3.0](https://github.com/smarter-sh/smarter.sh/compare/v0.2.3...v0.3.0) (2025-10-12)
 
 
