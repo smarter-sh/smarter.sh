@@ -118,6 +118,15 @@ export const about = [
     link_text: 'Create a pull request',
     url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
   },
+  {
+    name: 'VS Code Extension',
+    icon: 'lucide:code',
+    iconClass: 'bg-blue-600/20 text-blue-600',
+    detail:
+      'Boost your productivity with the official Smarter VS Code extension. Write, validate, and deploy Smarter manifests directly from your editor—no context switching required.',
+    link_text: 'Get the Extension',
+    url: 'https://marketplace.visualstudio.com/items?itemName=querium.smarter-manifest',
+  },
 ]
 export const saas = [
   {
