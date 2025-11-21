@@ -14,7 +14,7 @@ const Hero = () => {
       <div className="container">
         <div className="text-center">
           <div className="mt-6 flex justify-center">
-            <div className="max-w-2xl">
+            <div className="max-w-6xl">
               <h1 className="mb-6 text-5xl/tight font-medium text-default-100">
                 Project: <span className="text-primary">smarter</span>
               </h1>
@@ -88,6 +88,13 @@ const Hero = () => {
                 </a>
               </div>
               <div className="flex flex-wrap justify-center gap-2 mt-4">
+                <a href="https://hub.docker.com/r/mcdaniel0073/smarter" rel="nofollow">
+                  <img
+                    src="https://img.shields.io/docker/pulls/mcdaniel0073/smarter.svg?logo=docker&label=DockerHub"
+                    alt="DockerHub"
+                    style={{ maxWidth: '100%' }}
+                  />
+                </a>
                 <a href="https://artifacthub.io/packages/helm/project-smarter/smarter" rel="nofollow">
                   <img
                     src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/project-smarter"
