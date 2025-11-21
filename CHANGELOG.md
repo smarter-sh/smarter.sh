@@ -1,3 +1,10 @@
+## [0.3.2](https://github.com/smarter-sh/smarter.sh/compare/v0.3.1...v0.3.2) (2025-11-18)
+
+
+### Bug Fixes
+
+* add VS Code extension ([7bb18f8](https://github.com/smarter-sh/smarter.sh/commit/7bb18f8837a1e57afecd3272f356439bbd4536fb))
+
 ## [0.3.1](https://github.com/smarter-sh/smarter.sh/compare/v0.3.0...v0.3.1) (2025-11-18)
 
 
