@@ -1,6 +1,6 @@
 {
   "name": "smarter.sh",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "An AI resource orchestration platform.",
   "private": true,
   "type": "module",
