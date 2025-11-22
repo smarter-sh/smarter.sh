@@ -2,19 +2,20 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faApple, faWindows, faLinux } from '@fortawesome/free-brands-svg-icons'
 
 const OSCard = ({ icon, operating_system, download_instructions, more_link }) => (
-  <div className="w-auto grow border-b border-white/10 md:w-1/3 md:border-e:last md:border-b-0">
+  <div className="flex-1 min-w-0 border-b border-white/10 md:border-e last:md:border-e-0 md:border-b-0">
     <div className="p-8 sm:p-10">
-      <div className="mb-10 inline-flex h-16 w-16 items-center justify-center rounded-xl bg-primary/10 text-primary">
-        <FontAwesomeIcon icon={icon} className="h-10 w-10" />
+      <div className="mb-10 flex w-full items-center justify-center">
+        <div className="h-16 w-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary mx-auto">
+          <FontAwesomeIcon icon={icon} className="h-10 w-10" />
+        </div>
       </div>
-      <h2 className="mb-4 text-2xl font-medium text-white">{operating_system}</h2>
-      <p className="mb-6 text-base text-default-200">{download_instructions}</p>
-      <a
-        href={more_link}
-        className="inline-flex items-center justify-center gap-2 rounded-full border border-white/10 px-6 py-2 text-white transition-all duration-300 hover:bg-primary-hover"
-      >
-        More Tools
-      </a>
+      <h2 className="mb-4 text-2xl font-medium text-white text-center">{operating_system}</h2>
+<pre
+  className="mb-6 text-xs text-default-200 w-full px-6 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 rounded-xl bg-default-900/60 font-mono leading-normal overflow-x-auto"
+  style={{ whiteSpace: 'pre', fontFamily: 'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace' }}
+>
+  {download_instructions}
+</pre>
     </div>
   </div>
 )
@@ -38,23 +39,25 @@ const CommandLineInterface = () => {
             </p>
           </div>
         </div>
+      </div>
+      <div>
         <div className="flex flex-wrap items-center rounded-3xl bg-default-950/40 backdrop-blur-3xl">
           <OSCard
             icon={faApple}
             operating_system="Mac"
-            download_instructions="Download and install the latest smarter.sh for macOS."
+            download_instructions={`choco install smarter`}
             more_link="#mac"
           />
           <OSCard
             icon={faWindows}
             operating_system="Windows"
-            download_instructions="Download and install the latest smarter.sh for Windows."
+            download_instructions={`brew tap smarter-sh/homebrew-tap\nbrew install smarter`}
             more_link="#windows"
           />
           <OSCard
             icon={faLinux}
             operating_system="Linux"
-            download_instructions="Download and install the latest smarter.sh for Linux."
+            download_instructions={`brew tap smarter-sh/homebrew-tap\nbrew install smarter`}
             more_link="#linux"
           />
         </div>
