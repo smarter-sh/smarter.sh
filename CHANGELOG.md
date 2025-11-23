@@ -1,3 +1,10 @@
+## [0.3.5](https://github.com/smarter-sh/smarter.sh/compare/v0.3.4...v0.3.5) (2025-11-23)
+
+
+### Bug Fixes
+
+* make os cards more responsive ([f0276c7](https://github.com/smarter-sh/smarter.sh/commit/f0276c731425a57fcc715a3202849b5b57d07248))
+
 ## [0.3.4](https://github.com/smarter-sh/smarter.sh/compare/v0.3.3...v0.3.4) (2025-11-22)
 
 
