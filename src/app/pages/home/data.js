@@ -243,6 +243,10 @@ export const footerLinks = [
         url: 'https://github.com/orgs/smarter-sh/repositories',
       },
       {
+        name: 'Code of Conduct',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/CODE_OF_CONDUCT.md'
+      },
+      {
         name: 'Contributing Guide',
         url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
       },
@@ -254,11 +258,27 @@ export const footerLinks = [
         name: 'Report an Issue',
         url: 'https://github.com/smarter-sh/smarter/issues',
       },
+      {
+        name: 'Release Notes',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/CHANGELOG.md'
+        },
     ],
   },
   {
     title: 'Technical Guides',
     links: [
+      {
+        name: 'Developer Onboarding Guide - Part I',
+        url: 'https://www.youtube.com/watch?v=YtVxkjHzZrE'
+      },
+      {
+        name: 'Developer Onboarding Guide - Part II',
+        url: 'https://www.youtube.com/watch?v=G2RSCzxxupE'
+      },
+      {
+        name: 'Architecture Overview',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/ARCHITECTURE.md'
+      },
       {
         name: 'Semantic Versioning Guide',
         url: 'https://github.com/smarter-sh/smarter/blob/main/docs/SEMANTIC_VERSIONING.md',
