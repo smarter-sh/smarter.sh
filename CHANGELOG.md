@@ -1,3 +1,10 @@
+## [0.3.6](https://github.com/smarter-sh/smarter.sh/compare/v0.3.5...v0.3.6) (2025-11-23)
+
+
+### Bug Fixes
+
+* footer links. Add docker based quickstart and web integration example ([76bcbe8](https://github.com/smarter-sh/smarter.sh/commit/76bcbe87276723f998a0feebac2258c75e1369ab))
+
 ## [0.3.5](https://github.com/smarter-sh/smarter.sh/compare/v0.3.4...v0.3.5) (2025-11-23)
 
 
