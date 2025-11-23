@@ -1,3 +1,10 @@
+## [0.3.7](https://github.com/smarter-sh/smarter.sh/compare/v0.3.6...v0.3.7) (2025-11-23)
+
+
+### Bug Fixes
+
+* add more links for Code of Conduct, release notes, etc. ([d7813dd](https://github.com/smarter-sh/smarter.sh/commit/d7813ddb126d0ee551a0b8d0662e62f92a65cb25))
+
 ## [0.3.6](https://github.com/smarter-sh/smarter.sh/compare/v0.3.5...v0.3.6) (2025-11-23)
 
 
