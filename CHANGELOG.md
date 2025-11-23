@@ -1,3 +1,10 @@
+## [0.3.4](https://github.com/smarter-sh/smarter.sh/compare/v0.3.3...v0.3.4) (2025-11-22)
+
+
+### Bug Fixes
+
+* re-add install commands to cli page ([a7d967a](https://github.com/smarter-sh/smarter.sh/commit/a7d967a86368f90f53daf97080ee5dabb8ae97eb))
+
 ## [0.3.3](https://github.com/smarter-sh/smarter.sh/compare/v0.3.2...v0.3.3) (2025-11-22)
 
 

@@ -1,6 +1,6 @@
 {
   "name": "smarter.sh",
-  "version": "0.3.3",
+  "version": "0.3.4",
   "description": "An AI resource orchestration platform.",
   "private": true,
   "type": "module",
@@ -30,8 +30,8 @@
     "gumshoejs": "^5.1.2",
     "preline": "^2.5.1",
     "prettier": "^3.3.3",
-    "react": "19.2.0",
-    "react-dom": "19.1.1",
+  "react": "19.2.0",
+  "react-dom": "19.2.0",
     "react-helmet-async": "^2.0.5",
     "react-router-dom": "^7.9.3",
     "react-text-typist": "^1.1.8",
