@@ -4,11 +4,13 @@ const Footer = () => {
   return (
     <div className="border-t border-white/10 py-6">
       <div className="container flex h-full flex-wrap items-center justify-center gap-4 text-center md:justify-between md:text-start lg:px-20">
-        <p className="text-base font-medium text-default-400">
-          {currentYear} © Project: smarter
+        <p className="text-sm font-mono font-medium text-default-400">
+          2023 - {currentYear} © Project: smarter
         </p>
-        <p className="text-base font-medium text-default-400">
-          <Link to="">Terms Conditions &amp; Policy</Link>
+        <p className="text-sm font-mono font-medium text-default-400 flex flex-col md:flex-row gap-2">
+          <a href="https://www.patreon.com/fullstackwithlawrence" className="hover:underline" target="_blank" rel="noopener noreferrer">
+            Donate
+          </a>
         </p>
       </div>
     </div>
