@@ -22,12 +22,31 @@ export const navLinks = [
 ]
 export const about = [
   {
-    name: 'Getting Started',
-    icon: 'lucide:rocket',
-    iconClass: 'bg-teal-500/20 text-teal-500',
-    detail: 'The jumping off point for new prompt engineers and AI enthusiasts.',
-    link_text: 'Read our Docs',
-    url: 'https://platform.smarter.sh/docs/learn/',
+    name: 'Quickstart',
+    icon: 'lucide:settings',
+    iconClass: 'bg-orange-500/20 text-orange-500',
+    detail:
+      'A 1-click Docker deployment that gets Smarter running on your desktop in less than 10 minutes.',
+    link_text: 'Get started',
+    url: 'https://github.com/smarter-sh/smarter-deploy',
+  },
+  {
+    name: 'Command-Line Interface',
+    icon: 'lucide:terminal',
+    iconClass: 'bg-sky-500/20 text-sky-500',
+    detail:
+      'The Smarter CLI runs on Windows, MacOS, and Linux and works just like kubectl. It is the fastest way to get started.',
+    link_text: 'Download',
+    url: '/cli/',
+  },
+  {
+    name: 'Web Integrations',
+    icon: 'lucide:globe-2',
+    iconClass: 'bg-teal-700/20 text-teal-700',
+    detail:
+      'An example web integration using the Smarter NPM package to build customer-facing chat applications.',
+    link_text: 'View on GitHub',
+    url: 'https://github.com/smarter-sh/web-integration-example',
   },
   {
     name: 'Documentation',
@@ -45,15 +64,6 @@ export const about = [
       'Getting started with the Smarter API is easy. Also checkout the Swagger documentation for each end point.',
     link_text: 'View API Docs',
     url: 'https://platform.smarter.sh/docs/api/',
-  },
-  {
-    name: 'Command-Line Interface',
-    icon: 'lucide:terminal',
-    iconClass: 'bg-sky-500/20 text-sky-500',
-    detail:
-      'The Smarter CLI runs on Windows, MacOS, and Linux and works just like kubectl. It is the fastest way to get started.',
-    link_text: 'Download',
-    url: '/cli/',
   },
   {
     name: 'Helm Charts',
@@ -220,36 +230,54 @@ export const footerLinks = [
         name: 'Project Origins',
       },
       {
-        name: 'Source Code',
-        url: 'https://github.com/smarter-sh',
-      },
-      {
         name: 'About the creator',
         url: 'https://lawrencemcdaniel.com',
-      },
-      {
-        name: 'Contributing',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
-      },
-      {
-        name: 'Terms & Conditions',
       },
     ],
   },
   {
-    title: 'My Account',
+    title: 'Community & Resources',
     links: [
       {
-        name: 'Press Inquiries',
+        name: 'GitHub Repositories',
+        url: 'https://github.com/orgs/smarter-sh/repositories',
       },
       {
-        name: 'Social Media Directories',
+        name: 'Contributing Guide',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
       },
       {
-        name: 'Images & B-roll',
+        name: 'Discussions & Support',
+        url: 'https://github.com/smarter-sh/smarter/discussions',
       },
       {
-        name: 'Site Map',
+        name: 'Report an Issue',
+        url: 'https://github.com/smarter-sh/smarter/issues',
+      },
+    ],
+  },
+  {
+    title: 'Technical Guides',
+    links: [
+      {
+        name: 'Semantic Versioning Guide',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/SEMANTIC_VERSIONING.md',
+      },
+      {
+        name: 'Good Coding Practices',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/GOOD_CODING_PRACTICE.md',
+      },
+      {
+        name: 'OpenAI Getting Started Guide',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/OPENAI_API_GETTING_STARTED_GUIDE.md',
+      },
+      {
+        name: 'Django-React Integration Guide',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/DJANGO-REACT-INTEGRATION.md',
+      },
+      {
+        name: '12-Factor App Methodology',
+        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/12-FACTOR.md',
       },
     ],
   },
