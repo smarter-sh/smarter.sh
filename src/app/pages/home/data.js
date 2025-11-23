@@ -276,6 +276,10 @@ export const footerLinks = [
         url: 'https://www.youtube.com/watch?v=G2RSCzxxupE'
       },
       {
+        name: 'Terraform Getting Started Guide',
+        url: 'https://github.com/smarter-sh/smarter-infrastructure/blob/main/doc/TERRAFORM_GETTING_STARTED_GUIDE.md',
+      },
+      {
         name: 'Architecture Overview',
         url: 'https://github.com/smarter-sh/smarter/blob/main/docs/ARCHITECTURE.md'
       },
