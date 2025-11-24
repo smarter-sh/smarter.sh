@@ -1,3 +1,11 @@
+# [0.4.0](https://github.com/smarter-sh/smarter.sh/compare/v0.3.7...v0.4.0) (2025-11-24)
+
+
+### Features
+
+* add About page ([2ac0a66](https://github.com/smarter-sh/smarter.sh/commit/2ac0a662b906dd866bde1e08be2f218fca370662))
+* work on new page text ([e560a47](https://github.com/smarter-sh/smarter.sh/commit/e560a473b78d104bdde7d2785ddd5de0d5189e57))
+
 ## [0.3.7](https://github.com/smarter-sh/smarter.sh/compare/v0.3.6...v0.3.7) (2025-11-23)
 
 
