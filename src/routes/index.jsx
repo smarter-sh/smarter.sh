@@ -3,6 +3,7 @@ import { lazy } from 'react'
 //pages
 const Home = lazy(() => import('@/app/pages/home/page'))
 const Cli = lazy(() => import('@/app/pages/cli/page'))
+const About = lazy(() => import('@/app/pages/about/page'))
 
 //auth pages
 const Login = lazy(() => import('@/app/auth/login/page'))
@@ -28,6 +29,11 @@ const StaticPages = [
     path: '/cli',
     name: 'CLI',
     element: <Cli />,
+  },
+  {
+    path: '/about',
+    name: 'About',
+    element: <About />,
   },
 ]
 

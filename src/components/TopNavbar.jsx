@@ -6,7 +6,32 @@ import IconifyIcon from './wrappers/IconifyIcon'
 import { Link } from 'react-router-dom'
 import logo from '@/assets/images/logo.png'
 import useScrollEvent from '@/hooks/useScrollEvent'
-const TopNavbar = ({ navLinks }) => {
+
+const navLinks = [
+  {
+    label: 'Home',
+    link: '/',
+  },
+  {
+    label: 'About',
+    link: '/about',
+  },
+  {
+    label: 'CLI',
+    link: '/cli',
+  },
+  {
+    label: 'Services',
+    link: '/#services',
+  },
+  {
+    label: 'Faq',
+    link: '/#faq',
+  },
+]
+
+
+const TopNavbar = () => {
   const navRef = useRef(null)
   const { scrollY } = useScrollEvent()
   useEffect(() => {

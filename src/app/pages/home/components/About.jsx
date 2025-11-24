@@ -5,7 +5,7 @@ import { cn } from '@/helpers/cn'
 const About = () => {
   return (
     <section
-      id="about"
+      id=""
       className="py-20"
       data-aos="zoom-in"
       data-aos-easing="ease"
