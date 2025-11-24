@@ -22,7 +22,7 @@ const About = () => {
               capabilities of OpenAI's newly published{' '}
               <a
                 href="https://platform.openai.com/docs/api-reference/introduction"
-                className="text-primary underline"
+                className="text-primary hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -47,11 +47,10 @@ const About = () => {
                 project is available at{' '}
                 <a
                   href="https://github.com/FullStackWithLawrence/aws-openai"
-                  className="group relative inline-flex items-center gap-2 text-primary"
+                  className="group relative inline-flex items-center gap-2 text-primary hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w-full"></span>
                   github.com/FullStackWithLawrence/aws-openai
                 </a>
                 .
@@ -60,11 +59,10 @@ const About = () => {
                 An implementation of OpenAI's two dozen or so example LLM applications —{' '}
                 <a
                   href="https://platform.openai.com/docs/examples"
-                  className="group relative inline-flex items-center gap-2 text-primary"
+                  className="group relative inline-flex items-center gap-2 text-primary hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w-full"></span>
                   OpenAI Examples
                 </a>
               </li>
@@ -72,14 +70,22 @@ const About = () => {
                 An implementation of OpenAI's tool call example, "get_weather()"{' '}
                 <a
                   href="https://platform.openai.com/docs/guides/function-calling"
-                  className="group relative inline-flex items-center gap-2 text-primary"
+                  className="group relative inline-flex items-center gap-2 text-primary hover:underline"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <span className="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w-full"></span>
                   Function Calling Guide
                 </a>{' '}
-                to which they refer, but oddly, they never actually implement.
+                to which they refer, but oddly, they never actually implement. If that's what you're looking
+                for, then follow this link{' '}
+                <a
+                  href="https://github.com/smarter-sh/smarter/blob/main/smarter/smarter/apps/prompt/functions/function_weather.py"
+                  className="group relative inline-flex items-center gap-2 text-primary hover:underline"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  function_weather.py
+                </a>{' '}and god speed on your journey.
               </li>
             </ol>
             <p>
@@ -147,7 +153,7 @@ const About = () => {
               {' '}
               <a
                 href="https://kubernetes.io/"
-                className="text-primary underline"
+                className="text-primary hover:underline"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -212,7 +218,7 @@ const About = () => {
             {' '}
             <a
               href="https://lawrencemcdaniel.com"
-              className="text-primary underline"
+              className="text-primary hover:underline"
               target="_blank"
               rel="noopener noreferrer"
             >
