@@ -2,7 +2,6 @@ import PageMetaData from '@/components/PageMetaData'
 import Background1 from '@/components/Background1'
 import TopNavbar from '@/components/TopNavbar'
 import Footer from '@/components/Footer'
-import { navLinks } from './data'
 import Hero from './components/Hero'
 import CommandLineInterface from './components/CommandLineInterface'
 const Cli = () => {
@@ -10,7 +9,7 @@ const Cli = () => {
     <>
       <PageMetaData title="CLI" />
       <Background1 />
-      <TopNavbar navLinks={navLinks} />
+      <TopNavbar />
       <main>
         <Hero />
         <CommandLineInterface />

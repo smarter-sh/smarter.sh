@@ -1,6 +1,5 @@
 import Background2 from '@/components/Background2'
 import TopNavbar from '@/components/TopNavbar'
-import { navLinks } from './data'
 import Hero from './components/Hero'
 import About from './components/About'
 import Features from './components/Features'
@@ -12,7 +11,7 @@ const Home = () => {
   return (
     <div>
       <Background2 />
-      <TopNavbar navLinks={navLinks} />
+      <TopNavbar />
       <main className="w-full">
         <Hero />
         <About />
