@@ -11,7 +11,7 @@ const About = () => {
       <PageMetaData title="About" />
       <Background1 />
       <TopNavbar />
-      <main className="max-w-3xl mx-auto px-4 py-12">
+      <main className="max-w-3xl mx-auto px-4 py-12 text-default-400">
         <Hero />
         <section className="problem">
           <h2 className="text-3xl mb-6">The Original Problem</h2>

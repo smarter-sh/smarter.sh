@@ -1,3 +1,32 @@
+# [0.4.0](https://github.com/smarter-sh/smarter.sh/compare/v0.3.7...v0.4.0) (2025-11-24)
+
+
+### Features
+
+* add About page ([2ac0a66](https://github.com/smarter-sh/smarter.sh/commit/2ac0a662b906dd866bde1e08be2f218fca370662))
+* work on new page text ([e560a47](https://github.com/smarter-sh/smarter.sh/commit/e560a473b78d104bdde7d2785ddd5de0d5189e57))
+
+## [0.3.7](https://github.com/smarter-sh/smarter.sh/compare/v0.3.6...v0.3.7) (2025-11-23)
+
+
+### Bug Fixes
+
+* add more links for Code of Conduct, release notes, etc. ([d7813dd](https://github.com/smarter-sh/smarter.sh/commit/d7813ddb126d0ee551a0b8d0662e62f92a65cb25))
+
+## [0.3.6](https://github.com/smarter-sh/smarter.sh/compare/v0.3.5...v0.3.6) (2025-11-23)
+
+
+### Bug Fixes
+
+* footer links. Add docker based quickstart and web integration example ([76bcbe8](https://github.com/smarter-sh/smarter.sh/commit/76bcbe87276723f998a0feebac2258c75e1369ab))
+
+## [0.3.5](https://github.com/smarter-sh/smarter.sh/compare/v0.3.4...v0.3.5) (2025-11-23)
+
+
+### Bug Fixes
+
+* make os cards more responsive ([f0276c7](https://github.com/smarter-sh/smarter.sh/commit/f0276c731425a57fcc715a3202849b5b57d07248))
+
 ## [0.3.4](https://github.com/smarter-sh/smarter.sh/compare/v0.3.3...v0.3.4) (2025-11-22)
 
 
