@@ -108,7 +108,8 @@ const About = () => {
               This lived experience inspired the Smarter project. I wanted to abstract
               away all of the React, Python, Terraform, and network engineering, leaving
               only the LLM prompt and tool calls, editable in real-time in a
-              classroom-friendly environment. Other goals included:
+              classroom-friendly environment. And after careful thought I realized there
+              was a laundry list of pretty big secondary goals as well, including:
             </p>
             <ul className="list-disc my-4 space-y-4 pl-6">
               <li>
@@ -120,6 +121,18 @@ const About = () => {
                 Adding a tool 'selector' technology that can dynamically choose which
                 tools to include in a prompt based on a variety of factors, kind of like
                 how CSS selectors work.
+              </li>
+              <li>
+                Providing more visibility into the inner workings of LLM function calling,
+                especially in cases where complex 'selectors' are employed, and multiple
+                tools are being presented in a single chat session, and remote data
+                sources are being integrated to these tools. Ideally, I wanted to extend
+                the traditional chat interface to include a kind of 'debug mode' that
+                introduces additional roles into the chat thread, showing how the LLM is
+                reasoning about which tools to call, what data is being returned from
+                these tools, and how this data is being integrated into the final
+                response. And importantly, providing visibility into costing on a
+                per-request basis.
               </li>
               <li>Tightly controlling API key access, because, y'know, students 🤷🏼‍♂️</li>
               <li>
