@@ -27,6 +27,14 @@ export const about = [
     url: 'https://github.com/smarter-sh/web-integration-example',
   },
   {
+    name: 'Read the Docs',
+    icon: 'lucide:file-text',
+    iconClass: 'bg-red-500/20 text-red-500',
+    detail: 'Official Smarter documentation to help you get started quickly.',
+    link_text: 'Go to ReadTheDocs',
+    url: 'https://smarter.readthedocs.io/',
+  },
+  {
     name: 'Documentation',
     icon: 'lucide:file-text',
     iconClass: 'bg-red-500/20 text-red-500',
