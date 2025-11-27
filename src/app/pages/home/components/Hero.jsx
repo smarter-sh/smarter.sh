@@ -19,7 +19,7 @@ const Hero = () => {
                 Project: <span className="text-primary">smarter</span>
               </h1>
               <p className="mx-auto text-base font-medium text-default-300 lg:max-w-md">
-                An open source, declarative platform for AI resource management.
+                An extensible, declarative AI resource management system.
               </p>
               <div className="flex flex-wrap justify-center gap-2 mt-4">
                 <a
