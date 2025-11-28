@@ -9,6 +9,23 @@ export const about = [
     url: 'https://github.com/smarter-sh/smarter-deploy',
   },
   {
+    name: 'Read the Docs',
+    icon: 'lucide:file-text',
+    iconClass: 'bg-red-500/20 text-red-500',
+    detail: 'Official Smarter documentation to help you get started quickly.',
+    link_text: 'Go to ReadTheDocs',
+    url: 'https://smarter.readthedocs.io/',
+  },
+  {
+    name: 'Swagger API docs',
+    icon: 'lucide:book-open',
+    iconClass: 'bg-white/20 text-white',
+    detail:
+      'Getting started with the Smarter API is easy with Swagger.',
+    link_text: 'View API Docs',
+    url: 'https://platform.smarter.sh/docs/swagger/',
+  },
+  {
     name: 'Command-Line Interface',
     icon: 'lucide:terminal',
     iconClass: 'bg-sky-500/20 text-sky-500',
@@ -25,23 +42,6 @@ export const about = [
       'An example web integration using the Smarter NPM package to build customer-facing chat applications.',
     link_text: 'View on GitHub',
     url: 'https://github.com/smarter-sh/web-integration-example',
-  },
-  {
-    name: 'Read the Docs',
-    icon: 'lucide:file-text',
-    iconClass: 'bg-red-500/20 text-red-500',
-    detail: 'Official Smarter documentation to help you get started quickly.',
-    link_text: 'Go to ReadTheDocs',
-    url: 'https://smarter.readthedocs.io/',
-  },
-  {
-    name: 'Swagger API docs',
-    icon: 'lucide:book-open',
-    iconClass: 'bg-white/20 text-white',
-    detail:
-      'Getting started with the Smarter API is easy with Swagger.',
-    link_text: 'View API Docs',
-    url: 'https://platform.smarter.sh/docs/swagger/',
   },
   {
     name: 'Helm Charts',
