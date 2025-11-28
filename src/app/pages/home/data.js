@@ -35,21 +35,13 @@ export const about = [
     url: 'https://smarter.readthedocs.io/',
   },
   {
-    name: 'Documentation',
-    icon: 'lucide:file-text',
-    iconClass: 'bg-red-500/20 text-red-500',
-    detail: 'We do our best to document everything. Enter here to get started.',
-    link_text: 'Read our Docs',
-    url: 'https://platform.smarter.sh/docs/',
-  },
-  {
-    name: 'Api docs',
+    name: 'Swagger API docs',
     icon: 'lucide:book-open',
     iconClass: 'bg-white/20 text-white',
     detail:
-      'Getting started with the Smarter API is easy. Also checkout the Swagger documentation for each end point.',
+      'Getting started with the Smarter API is easy with Swagger.',
     link_text: 'View API Docs',
-    url: 'https://platform.smarter.sh/docs/api/',
+    url: 'https://platform.smarter.sh/docs/swagger/',
   },
   {
     name: 'Helm Charts',
