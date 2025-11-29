@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="mt-6 flex justify-center">
             <div className="max-w-6xl">
               <h1 className="mb-6 text-5xl/tight font-medium text-default-100">
-                Project: <span className="text-primary">smarter</span>
+                The <span className="text-primary">Smarter</span> Project
               </h1>
               <p className="mx-auto text-base font-medium text-default-300 lg:max-w-md">
                 An extensible, declarative AI resource management system.
