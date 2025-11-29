@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/smarter-sh/smarter.sh/compare/v0.4.0...v0.5.0) (2025-11-29)
+
+
+### Features
+
+* rebrand ([684346e](https://github.com/smarter-sh/smarter.sh/commit/684346e40ae3f262ce5f25ea8dd02e9b9642bcca))
+
 # [0.4.0](https://github.com/smarter-sh/smarter.sh/compare/v0.3.7...v0.4.0) (2025-11-24)
 
 
