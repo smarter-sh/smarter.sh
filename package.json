@@ -29,7 +29,7 @@
     "glightbox": "^3.3.0",
     "gumshoejs": "^5.1.2",
     "preline": "^2.5.1",
-    "prettier": "^3.3.3",
+    "prettier": "^3.7.3",
     "react": "19.2.0",
     "react-dom": "19.2.0",
     "react-helmet-async": "^2.0.5",
