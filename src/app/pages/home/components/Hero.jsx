@@ -66,7 +66,26 @@ const Hero = () => {
                   />
                 </a>
               </div>
-              <div className="flex flex-wrap justify-center gap-2 mt-4">
+              <div className="dockerhub flex flex-wrap justify-center gap-2 mt-4">
+                <a href="https://hub.docker.com/r/mcdaniel0073/smarter" rel="nofollow">
+                  <img
+                    src="https://img.shields.io/docker/pulls/mcdaniel0073/smarter.svg?logo=docker&label=DockerHub"
+                    alt="DockerHub"
+                    style={{ maxWidth: '100%' }}
+                  />
+                </a>
+                <a
+                  href="https://artifacthub.io/packages/helm/project-smarter/smarter"
+                  rel="nofollow"
+                >
+                  <img
+                    src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/project-smarter"
+d                     alt="Artifact Hub"
+                    style={{ maxWidth: '100%' }}
+                  />
+                </a>
+              </div>
+              <div className="python flex flex-wrap justify-center gap-2 mt-4">
                 <a
                   target="_blank"
                   rel="noopener noreferrer"
@@ -99,21 +118,15 @@ const Hero = () => {
                   />
                 </a>
               </div>
-              <div className="flex flex-wrap justify-center gap-2 mt-4">
-                <a href="https://hub.docker.com/r/mcdaniel0073/smarter" rel="nofollow">
-                  <img
-                    src="https://img.shields.io/docker/pulls/mcdaniel0073/smarter.svg?logo=docker&label=DockerHub"
-                    alt="DockerHub"
-                    style={{ maxWidth: '100%' }}
-                  />
-                </a>
+              <div className="readthedocs flex flex-wrap justify-center gap-2 mt-4">
                 <a
-                  href="https://artifacthub.io/packages/helm/project-smarter/smarter"
-                  rel="nofollow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://docs.smarter.sh/"
                 >
                   <img
-                    src="https://img.shields.io/endpoint?url=https://artifacthub.io/badge/repository/project-smarter"
-                    alt="Artifact Hub"
+                    src="https://img.shields.io/badge/Read%20the%20Docs-Smarter-blue?logo=readthedocs"
+                    alt="Read the Docs"
                     style={{ maxWidth: '100%' }}
                   />
                 </a>
