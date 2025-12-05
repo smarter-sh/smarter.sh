@@ -17,6 +17,14 @@ export const about = [
     url: 'https://smarter.readthedocs.io/',
   },
   {
+    name: 'Support Smarter!',
+    icon: 'lucide:heart',
+    iconClass: 'bg-pink-500/20 text-pink-500',
+    detail: 'Donate to the Smarter Project and help us keep improving.',
+    link_text: 'Support Smarter',
+    url: 'https://github.com/sponsors/lpm0073',
+  },
+  {
     name: 'Swagger API docs',
     icon: 'lucide:book-open',
     iconClass: 'bg-white/20 text-white',
