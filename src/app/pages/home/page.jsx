@@ -4,8 +4,6 @@ import Hero from './components/Hero'
 import About from './components/About'
 import Features from './components/Features'
 import ProfessionalServices from './components/ProfessionalServices'
-import PremiumServices from './components/PremiumServices'
-import Faqs from './components/Faqs'
 import Footer from './components/Footer'
 const Home = () => {
   return (
@@ -17,8 +15,6 @@ const Home = () => {
         <About />
         <Features />
         <ProfessionalServices />
-        <PremiumServices />
-        <Faqs />
       </main>
       <Footer />
     </div>
