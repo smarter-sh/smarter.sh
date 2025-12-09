@@ -19,7 +19,7 @@ const Hero = () => {
                 The <span className="text-primary">Smarter</span> Project
               </h1>
               <p className="mx-auto text-base font-medium text-default-300 lg:max-w-xl">
-                A declarative AI resource management system and developer framework.
+                A declarative AI resource management platform and developer framework.
               </p>
               <div className="flex flex-wrap justify-center gap-2 mt-4">
                 <a
