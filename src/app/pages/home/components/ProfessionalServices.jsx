@@ -42,7 +42,7 @@ const services = [
   {
     icon: "lucide:server",
     title: "Hosting",
-    description: "We offer cost effective hosting solutions with service level agreements.",
+    description: "We offer reliable and cost effective hosting solutions with service level agreements.",
     link: "https://lawrencemcdaniel.com/contact",
   },
 ]
