@@ -135,7 +135,7 @@ d                     alt="Artifact Hub"
           </div>
           <div>
             <GlightBox
-              href="https://www.youtube.com/embed/4DMyHgOXYmQ"
+              href="https://www.youtube.com/embed/KmhkZ6TN32I"
               title="YouTube video player"
             >
               <button
