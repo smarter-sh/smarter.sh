@@ -210,13 +210,22 @@ export const faqsData = [
 ]
 export const footerLinks = [
   {
-    title: 'Links',
+    title: 'Sponsorship & About',
     links: [
       {
-        name: 'Project Origins',
+        name: 'Patreon Page',
+        url: 'https://patreon.com/FullStackWithLawrence?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink'
       },
       {
-        name: 'About the creator',
+        name: 'Donate to Smarter',
+        url: 'https://github.com/sponsors/lpm0073'
+      },
+      {
+        name: 'Project Origins',
+        url: '/about'
+      },
+      {
+        name: 'About the author',
         url: 'https://lawrencemcdaniel.com',
       },
     ],
@@ -229,12 +238,12 @@ export const footerLinks = [
         url: 'https://github.com/orgs/smarter-sh/repositories',
       },
       {
-        name: 'Code of Conduct',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/CODE_OF_CONDUCT.md'
+        name: 'Contributing Guide',
+        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/contributing.html'
       },
       {
-        name: 'Contributing Guide',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
+        name: 'Code of Conduct',
+        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/code-of-conduct.html',
       },
       {
         name: 'Discussions & Support',
@@ -254,40 +263,36 @@ export const footerLinks = [
     title: 'Technical Guides',
     links: [
       {
-        name: 'Developer Onboarding Guide - Part I',
-        url: 'https://www.youtube.com/watch?v=YtVxkjHzZrE'
+        name: 'Smarter Platform Overview',
+        url: 'https://docs.smarter.sh/en/latest/smarter-platform.html'
       },
       {
-        name: 'Developer Onboarding Guide - Part II',
-        url: 'https://www.youtube.com/watch?v=G2RSCzxxupE'
+        name: 'Smarter Resources Overview',
+        url: 'https://docs.smarter.sh/en/latest/smarter-resources.html'
       },
       {
-        name: 'Terraform Getting Started Guide',
-        url: 'https://github.com/smarter-sh/smarter-infrastructure/blob/main/doc/TERRAFORM_GETTING_STARTED_GUIDE.md',
+        name: 'Smarter Framework Overview',
+        url: 'https://docs.smarter.sh/en/latest/smarter-framework.html'
       },
       {
-        name: 'Architecture Overview',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/ARCHITECTURE.md'
-      },
-      {
-        name: 'Semantic Versioning Guide',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/SEMANTIC_VERSIONING.md',
-      },
-      {
-        name: 'Good Coding Practices',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/GOOD_CODING_PRACTICE.md',
+        name: 'React UI Integration Guide',
+        url: 'https://docs.smarter.sh/en/latest/smarter-framework/smarter-react-ui.html',
       },
       {
         name: 'OpenAI Getting Started Guide',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/OPENAI_API_GETTING_STARTED_GUIDE.md',
+        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/openai-api-getting-started-guide.html',
       },
       {
-        name: 'Django-React Integration Guide',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/DJANGO-REACT-INTEGRATION.md',
+        name: 'Semantic Versioning Guide',
+        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/semantic-versioning.html',
+      },
+      {
+        name: 'Good Coding Practices',
+        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/developer-guidelines.html',
       },
       {
         name: '12-Factor App Methodology',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/docs/12-FACTOR.md',
+        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/12-factor-app.html',
       },
     ],
   },
