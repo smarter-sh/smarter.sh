@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import { Link } from 'react-router-dom'
 import img_yaml_nocode from '@/assets/images/home/features/yaml-nocode.png'
-import img_prompt_workbench from '@/assets/images/home/features/prompt-workbench.png'
+//import img_prompt_workbench from '@/assets/images/home/features/prompt-workbench.png'
 import img_llm_providers from '@/assets/images/home/features/llm-providers.png'
 import img_plugin from '@/assets/images/home/features/plugin.png'
 import img_smarter_chat from '@/assets/images/home/features/smarter-chat.png'
 import img_smarter_enterprise from '@/assets/images/home/features/smarter-enterprise.png'
+
+const img_prompt_workbench = "https://cdn.smarter.sh/videos/read-the-docs2.mp4"
 
 const FeatureBlock = ({
   heading,
@@ -59,17 +61,34 @@ const FeatureBlock = ({
     </div>
   )
 
+  // Determine if the file is an mp4 video
+  const isVideo = typeof imgUrl === 'string' && imgUrl.toLowerCase().endsWith('.mp4')
+
   const imageContent = (
     <>
       <div className={`col-span-${imageColWidth}`}>
         <div className="p-6">
-          <img
-            src={imgUrl}
-            alt={heading}
-            className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
-            onClick={() => setIsImageModalOpen(true)}
-            title="Click to enlarge"
-          />
+          {isVideo ? (
+            <video
+              src={imgUrl}
+              className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => setIsImageModalOpen(true)}
+              title="Click to enlarge"
+              controls={false}
+              poster=""
+              autoPlay
+              loop
+              muted
+            />
+          ) : (
+            <img
+              src={imgUrl}
+              alt={heading}
+              className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
+              onClick={() => setIsImageModalOpen(true)}
+              title="Click to enlarge"
+            />
+          )}
         </div>
       </div>
 
@@ -86,12 +105,24 @@ const FeatureBlock = ({
             >
               <IconifyIcon icon="lucide:x" className="h-8 w-8" />
             </button>
-            <img
-              src={imgUrl}
-              alt={heading}
-              className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
-              onClick={(e) => e.stopPropagation()}
-            />
+            {isVideo ? (
+              <video
+                src={imgUrl}
+                className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
+                onClick={(e) => e.stopPropagation()}
+                controls
+                autoPlay
+                loop
+                muted
+              />
+            ) : (
+              <img
+                src={imgUrl}
+                alt={heading}
+                className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
+                onClick={(e) => e.stopPropagation()}
+              />
+            )}
           </div>
         </div>
       )}
