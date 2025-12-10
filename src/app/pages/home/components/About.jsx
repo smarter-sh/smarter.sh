@@ -20,7 +20,7 @@ const About = () => {
             <p className="text-sm font-medium text-default-200">
               Empower your enterprise domain experts to build AI workflows—without writing
               Python. Smarter uses intuitive YAML manifests to standardize database and
-              API integrations for RAG and advanced function calling, while enforcing
+              API integrations for RAG and advanced Tool calls, while enforcing
               resource limits, logging, and moderation controls. It provides the
               foundation for safe, secure, scalable, and auditable agentic AI across
               teams.
