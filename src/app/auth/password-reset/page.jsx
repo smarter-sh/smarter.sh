@@ -49,7 +49,7 @@ const ForgotPassword = () => {
                       className="bg-primary-600/90 hover:bg-primary-600 group mt-5 inline-flex w-full items-center justify-center rounded-lg px-6 py-2 text-white backdrop-blur-2xl transition-all duration-500"
                       type="submit"
                     >
-                      <span className="fw-bold">Log In</span>
+                      <span className="fw-bold">Reset Password</span>
                     </button>
                   </div>
                 </form>
@@ -60,7 +60,7 @@ const ForgotPassword = () => {
         <div className="mt-5 w-full text-center">
           <p className="text-base font-medium leading-6 text-default-300">
             Back To
-            <Link to="/auth/login" className="ms-1 font-semibold text-primary">
+            <Link to="/login" className="ms-1 font-semibold text-primary">
               Log In
             </Link>
           </p>

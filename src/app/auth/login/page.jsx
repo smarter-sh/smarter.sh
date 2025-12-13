@@ -76,7 +76,7 @@ const Login = () => {
                         </label>
                       </div>
                       <a
-                        href="auth-forgotpw.html"
+                        href="/password-reset"
                         className="border-b border-dashed text-default-200"
                       >
                         <small>Forgot your password?</small>
@@ -100,8 +100,8 @@ const Login = () => {
         <div className="mt-5 w-full text-center">
           <p className="text-base font-medium leading-6 text-default-300">
             Don&apos;t have an account?{' '}
-            <Link to="/auth/register" className="ms-1 font-semibold text-primary">
-              Sign Up
+            <Link to="/register" className="ms-1 font-semibold text-primary">
+              Register
             </Link>
           </p>
         </div>

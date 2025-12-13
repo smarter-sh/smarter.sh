@@ -5,6 +5,7 @@ import Background2 from '@/components/Background2'
 import { Suspense, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import FallbackLoading from './FallbackLoading'
+import { default as BaseFooter } from '@/components/Footer'
 const AuthLayout = ({ children }) => {
   useEffect(() => {
     document.body.classList.add('bg-slate-900', 'relative', 'h-full')
@@ -20,13 +21,8 @@ const AuthLayout = ({ children }) => {
           <Suspense fallback={<FallbackLoading />}>{children}</Suspense>
         </div>
       </section>
-      <footer className="bottom-0 end-0 start-0 py-3 2xl:fixed">
-        <div className="container">
-          <p className="text-center text-base font-medium text-default-200">
-            {currentYear} © Smarter -{' '}
-            <Link to="">Design &amp; Crafted ❤️ by Coderthemes</Link>
-          </p>
-        </div>
+      <footer>
+        <BaseFooter />
       </footer>
     </>
   )

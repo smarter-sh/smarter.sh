@@ -10,7 +10,7 @@ const Login = lazy(() => import('@/app/auth/login/page'))
 const LoginWithQr = lazy(() => import('@/app/auth/qr-login/page'))
 const LockScreen = lazy(() => import('@/app/auth/lock-screen/page'))
 const Register = lazy(() => import('@/app/auth/register/page'))
-const ForgotPassword = lazy(() => import('@/app/auth/forgot-pw/page'))
+const ForgotPassword = lazy(() => import('@/app/auth/password-reset/page'))
 const Logout = lazy(() => import('@/app/auth/logout/page'))
 const LandingPages = [
   {
@@ -39,34 +39,34 @@ const StaticPages = [
 
 const AuthPages = [
   {
-    path: '/auth/login',
+    path: '/login',
     name: 'Login',
     element: <Login />,
   },
   {
-    path: '/auth/qr-login',
+    path: '/qr-login',
     name: 'Login with Qr',
     element: <LoginWithQr />,
   },
   {
-    path: '/auth/lock-screen',
+    path: '/lock-screen',
     name: 'LockScreen',
     element: <LockScreen />,
   },
   {
-    path: '/auth/register',
+    path: '/register',
     name: 'Register',
     element: <Register />,
   },
   {
-    path: '/auth/forgot-pw',
+    path: '/password-reset',
     name: 'ForgotPassword',
     element: <ForgotPassword />,
   },
   {
-    path: '/auth/logout',
+    path: '/logout',
     name: 'Logout',
     element: <Logout />,
   },
 ]
-export const appRoutes = [...LandingPages, ...StaticPages]
+export const appRoutes = [...LandingPages, ...StaticPages, ...AuthPages]

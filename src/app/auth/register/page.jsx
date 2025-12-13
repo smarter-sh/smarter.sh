@@ -104,7 +104,7 @@ const Register = () => {
         <div className="mt-5 w-full text-center">
           <p className="text-base font-medium leading-6 text-default-300">
             Already have an account?
-            <Link to="/auth/login" className="ms-1 font-semibold text-primary">
+            <Link to="/login" className="ms-1 font-semibold text-primary">
               Sign In
             </Link>
           </p>
