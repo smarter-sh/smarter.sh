@@ -4,9 +4,10 @@ export const featuresList = [
   'User accounts',
   'AI resources',
   'Command-line interface',
-  'Django admin console',
   'app logs',
   'Journal access',
+  'Django admin console',
+  'MySQL database',
   'Pod ssh access',
   'Custom domain',
   'Kubernetes Control Plane',
@@ -21,7 +22,7 @@ export const plans = [
     description: 'A single account on platform.smarter.sh. Good for prototyping and proof of concept.',
     price: '$00',
     period: 'month',
-    features: ['N/A', 'Unlimited', 'Unlimited', 'included', '* read-only', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A' ],
+    features: ['N/A', 'Unlimited', 'Unlimited', 'included', 'N/A', 'N/A', '* read-only', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'],
     cta: 'Buy',
   },
   {
@@ -29,7 +30,7 @@ export const plans = [
     description: 'A single installation of the smarter platform that runs on the subdomain of your choice: myorg.smarter.sh. Or, your custom domain: app.myorg.com.',
     price: '$000',
     period: 'month',
-    features: ['Included', 'Unlimited', 'Unlimited', 'Included', 'Full Access', 'Customizable', 'Full Access', 'Included', 'Included', 'N/A', 'N/A', 'N/A'],
+    features: ['Included', 'Unlimited', 'Unlimited', 'Included', 'Customizable', 'Included', 'Included', 'Included', 'Included', 'Included', 'N/A', 'N/A', 'N/A'],
     cta: 'Buy',
   },
   {
@@ -37,7 +38,7 @@ export const plans = [
     description: 'We manage your dedicated installation, running inside your AWS account. Includes support, maintenance and SLA.',
     price: '$000',
     period: 'month',
-    features: ['Included', 'Unlimited', 'Unlimited', 'Included', 'Full Access', 'Customizable', 'Full Access', 'Included', 'Included', 'Included', 'Included', 'Customizable'],
+    features: ['Included', 'Unlimited', 'Unlimited', 'Included', 'Customizable', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included'],
     cta: 'Contact Sales',
   },
 ];
