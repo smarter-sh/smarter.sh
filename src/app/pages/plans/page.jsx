@@ -25,6 +25,13 @@ const Plans = () => {
             </div>
           </div>
         </div>
+        <div className="text-neutral-200 mt-8 ml-8 font-normal">
+          <h6 className="underline mb-2">Notes:</h6>
+          <ul className="ml-10 list-disc">
+            <li>Custom Settings: Any Smarter or Django setting value can be customized for your deployment.</li>
+            <li>Support hours: 9am - 5pm GMT-6, Monday thru Friday. Call for information about emergency support.</li>
+          </ul>
+        </div>
       </AuthLayout>
     </>
   )

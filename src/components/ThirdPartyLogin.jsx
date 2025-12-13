@@ -5,6 +5,7 @@ const ThirdPartyLogin = ({ label = 'Sign in with' }) => {
     <div>
       <div className="text-center">
         <p className="mb-4 text-lg font-semibold text-white">{label}</p>
+        <hr className="my-4 border-t border-white/30 mx-20" />
         <ul className="flex flex-wrap items-center justify-center gap-2">
           <li>
             <Link
