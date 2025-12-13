@@ -3,7 +3,7 @@ import AuthHeader from '@/components/AuthHeader'
 import AuthLayout from '@/components/AuthLayout'
 import PageMetaData from '@/components/PageMetaData'
 import Plan from './Plan'
-import { plans, featuresList } from './data'
+import { plans, featuresList, footnotes } from './data'
 import FeaturesList from './FeaturesList'
 
 const Plans = () => {
@@ -25,11 +25,12 @@ const Plans = () => {
             </div>
           </div>
         </div>
-        <div className="text-neutral-200 mt-8 ml-8 font-normal">
+        <div className="text-neutral-200 mt-8 ml-8 mr-8 font-normal">
           <h6 className="underline mb-2">Notes:</h6>
           <ul className="ml-10 list-disc">
-            <li>Custom Settings: Any Smarter or Django setting value can be customized for your deployment.</li>
-            <li>Support hours: 9am - 5pm GMT-6, Monday thru Friday. Call for information about emergency support.</li>
+            {footnotes.map((note, index) => (
+              <li key={index}><em>{note}</em></li>
+            ))}
           </ul>
         </div>
       </AuthLayout>

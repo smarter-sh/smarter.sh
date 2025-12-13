@@ -22,7 +22,7 @@ export const plans = [
     description: 'A single account on platform.smarter.sh. Good for prototyping and proof of concept.',
     price: '$00',
     period: 'month',
-    features: ['N/A', 'Unlimited', 'Unlimited', 'included', 'N/A', 'N/A', '* read-only', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'],
+    features: ['Community', 'Unlimited', 'Unlimited', 'included', 'N/A', 'N/A', '* read-only', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'],
     cta: 'Buy',
   },
   {
@@ -30,7 +30,7 @@ export const plans = [
     description: 'A single installation of the smarter platform that runs on the subdomain of your choice: myorg.smarter.sh. Or, your custom domain: app.myorg.com.',
     price: '$000',
     period: 'month',
-    features: ['Included', 'Unlimited', 'Unlimited', 'Included', 'Customizable', 'Included', 'Included', 'Included', 'Included', 'Included', 'N/A', 'N/A', 'N/A'],
+    features: ['Standard', 'Unlimited', 'Unlimited', 'Included', 'Customizable', 'Included', 'Included', 'Included', 'Included', 'Included', 'N/A', 'N/A', 'N/A'],
     cta: 'Buy',
   },
   {
@@ -38,7 +38,15 @@ export const plans = [
     description: 'We manage your dedicated installation, running inside your AWS account. Includes support, maintenance and SLA.',
     price: '$000',
     period: 'month',
-    features: ['Included', 'Unlimited', 'Unlimited', 'Included', 'Customizable', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included'],
+    features: ['Standard', 'Unlimited', 'Unlimited', 'Included', 'Customizable', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included', 'Included'],
     cta: 'Contact Sales',
   },
+];
+
+export const footnotes = [
+  'Standard Support: 9am - 5pm GMT-6, Monday thru Friday, first come first served. Call for support escalation options.',
+  'Custom Settings: Any Smarter or Django setting value can be customized for your deployment.',
+  'MySQL database access: Standard TCP/IP over SSH',
+  'Kubernetes pod access: Certificate Auth over SSH tunnel with kubectl',
+  'Managed Platform: TODO - describe AWS IAM role requirements. https://github.com/smarter-sh/smarter-infrastructure',
 ];
