@@ -1,7 +1,5 @@
 import { Link } from 'react-router-dom'
-import aiImg from '@/assets/images/ai/auth-img.jpg'
 import qrCode from '@/assets/images/ai/code-qr.png'
-import logo from '@/assets/images/logo.png'
 import AuthHeader from '@/components/AuthHeader'
 import ThirdPartyLogin from '@/components/ThirdPartyLogin'
 import AuthLayout from '@/components/AuthLayout'
