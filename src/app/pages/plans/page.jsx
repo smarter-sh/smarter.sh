@@ -17,7 +17,7 @@ const Plans = () => {
             {/* Right column: Plans */}
             <div className="right-column flex-1">
               <h2 className="mb-6 text-3xl text-white text-center">Hosting Plans</h2>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
+              <div className="grid grid-cols-1 gap-8 lg:grid-cols-3">
                 {plans.map((plan) => (
                   <Plan key={plan.title} plan={plan} featuresList={featuresList} />
                 ))}
