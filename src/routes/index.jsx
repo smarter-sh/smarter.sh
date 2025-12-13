@@ -8,10 +8,10 @@ const About = lazy(() => import('@/app/pages/about/page'))
 //auth pages
 const Login = lazy(() => import('@/app/auth/login/page'))
 const LoginWithQr = lazy(() => import('@/app/auth/qr-login/page'))
-const LockScreen = lazy(() => import('@/app/auth/lock-screen/page'))
 const Register = lazy(() => import('@/app/auth/register/page'))
 const ForgotPassword = lazy(() => import('@/app/auth/password-reset/page'))
 const Logout = lazy(() => import('@/app/auth/logout/page'))
+const Plans = lazy(() => import('@/app/pages/plans/page'))
 const LandingPages = [
   {
     path: '/',
@@ -35,6 +35,11 @@ const StaticPages = [
     name: 'About',
     element: <About />,
   },
+  {
+    path: '/plans',
+    name: 'Plans',
+    element: <Plans />,
+  }
 ]
 
 const AuthPages = [
