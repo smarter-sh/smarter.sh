@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import aiImg from '@/assets/images/ai/auth-img.jpg'
 import qrCode from '@/assets/images/ai/code-qr.png'
 import logo from '@/assets/images/logo.png'
+import AuthHeader from '@/components/AuthHeader'
 import ThirdPartyLogin from '@/components/ThirdPartyLogin'
 import AuthLayout from '@/components/AuthLayout'
 import PageMetaData from '@/components/PageMetaData'
@@ -9,16 +10,12 @@ const QrLogin = () => {
   return (
     <>
       <PageMetaData title="Login With Qr" />
+        <AuthHeader />
       <AuthLayout>
         <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl bg-default-950/40 backdrop-blur-2xl">
           <div className="grid gap-10 lg:grid-cols-2">
             <div className="hidden py-4 ps-4 lg:block">
               <div className="relative h-full w-full overflow-hidden rounded-xl">
-                <img
-                  src={aiImg}
-                  alt="logo"
-                  className="h-full w-full -scale-x-100 transform"
-                />
                 <div className="absolute inset-0 bg-default-950/40">
                   <div className="flex h-full items-center justify-center">
                     <div className="text-center">
@@ -43,19 +40,8 @@ const QrLogin = () => {
               </div>
             </div>
             <div className="flex h-full flex-col p-10 lg:ps-0">
-              <div className="pb-10">
-                <Link to="/" className="flex">
-                  <img
-                    width={124}
-                    height={40}
-                    src={logo}
-                    alt="dark logo"
-                    className="h-10"
-                  />
-                </Link>
-              </div>
               <div className="pb6 my-auto">
-                <h4 className="mb-4 text-2xl font-bold text-white">Get Started Now</h4>
+                <h4 className="mb-4 text-2xl font-bold text-white">Login</h4>
                 <p className="mb-8 max-w-sm text-default-300">
                   Enter your email address and password to access account.
                 </p>

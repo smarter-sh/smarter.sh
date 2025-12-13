@@ -1,5 +1,6 @@
 import AuthImage from '@/components/AuthImage'
 import { Link } from 'react-router-dom'
+import AuthHeader from '@/components/AuthHeader'
 import logo from '@/assets/images/logo.png'
 import AuthLayout from '@/components/AuthLayout'
 import PageMetaData from '@/components/PageMetaData'
@@ -7,22 +8,11 @@ const ForgotPassword = () => {
   return (
     <>
       <PageMetaData title="Forgot Password" />
+      <AuthHeader />
       <AuthLayout>
         <div className="mx-auto max-w-5xl overflow-hidden rounded-2xl bg-default-950/40 backdrop-blur-2xl">
           <div className="grid gap-10 lg:grid-cols-2">
-            <AuthImage />
             <div className="flex h-full flex-col p-10 lg:ps-0">
-              <div className="pb-10">
-                <Link to="/" className="flex">
-                  <img
-                    src={logo}
-                    width={124}
-                    height={40}
-                    alt="dark logo"
-                    className="h-10"
-                  />
-                </Link>
-              </div>
               <div className="my-auto">
                 <h4 className="mb-3 text-2xl font-bold text-white">Forgot Password?</h4>
                 <p className="mb-8 max-w-sm text-default-300">

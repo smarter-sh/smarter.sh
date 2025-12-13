@@ -49,11 +49,6 @@ const AuthPages = [
     element: <LoginWithQr />,
   },
   {
-    path: '/lock-screen',
-    name: 'LockScreen',
-    element: <LockScreen />,
-  },
-  {
     path: '/register',
     name: 'Register',
     element: <Register />,
