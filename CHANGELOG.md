@@ -1,3 +1,10 @@
+## [0.6.1](https://github.com/smarter-sh/smarter.sh/compare/v0.6.0...v0.6.1) (2026-02-10)
+
+
+### Bug Fixes
+
+* add redirects ([f120327](https://github.com/smarter-sh/smarter.sh/commit/f12032718ede8347ce5f466094f032bd4154ed19))
+
 # [0.6.0](https://github.com/smarter-sh/smarter.sh/compare/v0.5.0...v0.6.0) (2026-02-10)
 
 
