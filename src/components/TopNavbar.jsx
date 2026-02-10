@@ -25,8 +25,8 @@ const navLinks = [
     link: '/#services',
   },
   {
-    label: 'Faq',
-    link: '/#faq',
+    label: 'Legal',
+    link: '/legal',
   },
 ]
 
@@ -36,10 +36,16 @@ const TopNavbar = () => {
   const { scrollY } = useScrollEvent()
   useEffect(() => {
     document.body.classList.add('bg-default-900')
-    if (navRef.current)
-      new Gumshoe('.navbar-nav a', {
-        offset: 80,
-      })
+    // Only initialize Gumshoe for in-page anchor links
+    if (navRef.current) {
+      // Select only <a> tags with href starting with '#'
+      const anchorLinks = navRef.current.querySelectorAll('.navbar-nav a[href^="#"]')
+      if (anchorLinks.length > 0) {
+        new Gumshoe('.navbar-nav a[href^="#"]', {
+          offset: 80,
+        })
+      }
+    }
     return () => {
       document.body.classList.remove('bg-default-900')
     }

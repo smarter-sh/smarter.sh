@@ -4,6 +4,9 @@ import { lazy } from 'react'
 const Home = lazy(() => import('@/app/pages/home/page'))
 const Cli = lazy(() => import('@/app/pages/cli/page'))
 const About = lazy(() => import('@/app/pages/about/page'))
+const TOS = lazy(() => import('@/app/pages/tos/page'))
+const Privacy = lazy(() => import('@/app/pages/privacy/page'))
+const Legal = lazy(() => import('@/app/pages/legal/page'))
 
 //auth pages
 const Login = lazy(() => import('@/app/auth/login/page'))
@@ -39,6 +42,21 @@ const StaticPages = [
     path: '/plans',
     name: 'Plans',
     element: <Plans />,
+  },
+  {
+    path: '/tos',
+    name: 'Terms of Service',
+    element: <TOS />,
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy Policy',
+    element: <Privacy />,
+  },
+  {
+    path: '/legal',
+    name: 'Legal Information',
+    element: <Legal />,
   }
 ]
 
