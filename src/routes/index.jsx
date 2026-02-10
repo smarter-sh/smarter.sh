@@ -4,14 +4,17 @@ import { lazy } from 'react'
 const Home = lazy(() => import('@/app/pages/home/page'))
 const Cli = lazy(() => import('@/app/pages/cli/page'))
 const About = lazy(() => import('@/app/pages/about/page'))
+const TOS = lazy(() => import('@/app/pages/tos/page'))
+const Privacy = lazy(() => import('@/app/pages/privacy/page'))
+const Legal = lazy(() => import('@/app/pages/legal/page'))
 
 //auth pages
 const Login = lazy(() => import('@/app/auth/login/page'))
 const LoginWithQr = lazy(() => import('@/app/auth/qr-login/page'))
-const LockScreen = lazy(() => import('@/app/auth/lock-screen/page'))
 const Register = lazy(() => import('@/app/auth/register/page'))
-const ForgotPassword = lazy(() => import('@/app/auth/forgot-pw/page'))
+const ForgotPassword = lazy(() => import('@/app/auth/password-reset/page'))
 const Logout = lazy(() => import('@/app/auth/logout/page'))
+const Plans = lazy(() => import('@/app/pages/plans/page'))
 const LandingPages = [
   {
     path: '/',
@@ -35,38 +38,53 @@ const StaticPages = [
     name: 'About',
     element: <About />,
   },
+  {
+    path: '/plans',
+    name: 'Plans',
+    element: <Plans />,
+  },
+  {
+    path: '/tos',
+    name: 'Terms of Service',
+    element: <TOS />,
+  },
+  {
+    path: '/privacy',
+    name: 'Privacy Policy',
+    element: <Privacy />,
+  },
+  {
+    path: '/legal',
+    name: 'Legal Information',
+    element: <Legal />,
+  }
 ]
 
 const AuthPages = [
   {
-    path: '/auth/login',
+    path: '/login',
     name: 'Login',
     element: <Login />,
   },
   {
-    path: '/auth/qr-login',
+    path: '/qr-login',
     name: 'Login with Qr',
     element: <LoginWithQr />,
   },
   {
-    path: '/auth/lock-screen',
-    name: 'LockScreen',
-    element: <LockScreen />,
-  },
-  {
-    path: '/auth/register',
+    path: '/register',
     name: 'Register',
     element: <Register />,
   },
   {
-    path: '/auth/forgot-pw',
+    path: '/password-reset',
     name: 'ForgotPassword',
     element: <ForgotPassword />,
   },
   {
-    path: '/auth/logout',
+    path: '/logout',
     name: 'Logout',
     element: <Logout />,
   },
 ]
-export const appRoutes = [...LandingPages, ...StaticPages]
+export const appRoutes = [...LandingPages, ...StaticPages, ...AuthPages]

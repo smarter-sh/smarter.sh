@@ -7,8 +7,9 @@ import img_llm_providers from '@/assets/images/home/features/llm-providers.png'
 import img_plugin from '@/assets/images/home/features/plugin.png'
 import img_smarter_chat from '@/assets/images/home/features/smarter-chat.png'
 import img_smarter_enterprise from '@/assets/images/home/features/smarter-enterprise.png'
+import { CDN } from '@/common/constants'
 
-const img_prompt_workbench = "https://cdn.smarter.sh/videos/read-the-docs2.mp4"
+const img_prompt_workbench = `${CDN}/videos/read-the-docs2.mp4`
 
 const FeatureBlock = ({
   heading,
