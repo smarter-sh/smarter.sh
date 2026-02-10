@@ -12,7 +12,6 @@ const StaticCDNPage = ({ title, url }) => {
 
   useEffect(() => {
     if (!url) return
-    console.log(`Fetching content from: ${url}`)
     setContent('Loading...')
     setError(null)
     fetch(url)
@@ -23,7 +22,6 @@ const StaticCDNPage = ({ title, url }) => {
         return res.text()
       })
       .then(text => {
-        console.log(`Fetched content: ${text.substring(0, 100)}...`)
         setContent(text)
       })
       .catch(err => setError(err.message))
