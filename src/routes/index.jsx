@@ -1,4 +1,5 @@
 import { lazy } from 'react'
+import { Navigate } from 'react-router-dom'
 
 //pages
 const Home = lazy(() => import('@/app/pages/home/page'))
@@ -49,9 +50,25 @@ const StaticPages = [
     element: <TOS />,
   },
   {
+    path: '/terms-of-service/',
+    element: <Navigate to="/tos" replace />,
+  },
+  {
+    path: '/terms-of-service',
+    element: <Navigate to="/tos" replace />,
+  },
+  {
     path: '/privacy',
     name: 'Privacy Policy',
     element: <Privacy />,
+  },
+  {
+    path: '/privacy-policy/',
+    element: <Navigate to="/privacy" replace />,
+  },
+  {
+    path: '/privacy-policy',
+    element: <Navigate to="/privacy" replace />,
   },
   {
     path: '/legal',
