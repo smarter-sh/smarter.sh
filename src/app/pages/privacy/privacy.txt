@@ -1,16 +1,16 @@
 The Smarter Project Privacy Policy
 
 1. Information Collection & Use
-Unless otherwise agreed in a separate written agreement between you and The Smarter Project ("TSP"), TSP is the sole owner of the information collected on our websites. TSP collects but does not publicly share or disclose personally identifiable information from our users at several different points on our websites.
+Unless otherwise agreed in a separate written agreement between you and The Smarter Project ("Smarter"), Smarter is the sole owner of the information collected on our websites. Smarter collects but does not publicly share or disclose personally identifiable information from our users at several different points on our websites.
 
 2. FERPA Statement – Family Educational Rights and Privacy Act
 The Family Educational Rights and Privacy Act (FERPA) is a Federal law that protects the privacy of student education records. The law applies to all schools and institutions that receive funds under an applicable program of the U.S. Department of Education.
-The U.S. Department of Education released changes to FERPA effective December 9, 2008, to provide a more detailed map as educators and administrators navigate through emergency decisions and day-to-day management. TSP maintains compliance with the FERPA laws on each of the points below.
+The U.S. Department of Education released changes to FERPA effective December 9, 2008, to provide a more detailed map as educators and administrators navigate through emergency decisions and day-to-day management. Smarter maintains compliance with the FERPA laws on each of the points below.
 
 3. Registration
-In order to use our online products, and unless this was done for you by TSP administrators, you must first complete a registration form on our website and possibly create a password. TSP will use your email address as your login name. During the registration process for TSP products, you may be required to give personal information (such as your name, your educational institution, your date of birth, your student ID, your phone number, and/or your email address).
+In order to use our online products, and unless this was done for you by Smarter administrators, you must first complete a registration form on our website and possibly create a password. Smarter will use your email address as your login name. During the registration process for Smarter products, you may be required to give personal information (such as your name, your educational institution, your date of birth, your student ID, your phone number, and/or your email address).
 We ask customers who register with us to provide us with their email address in order to (1) complete the registration of your copy of our product, (2) enable us to send you information as described below, (3) so we can verify your role in a course as either a registered student or as the instructor, (4) respond to your technical support questions. We may also send you a "Welcome" email message after you register.
-Passwords are encrypted at the moment of persistence and are stored in this encrypted format. We do NOT distribute passwords to anyone except (1) an educational institution that purchases TSP products on their student's behalf, or (2) to an outside service provider if the password is strictly necessary to provide the products and services you have purchased. If you forget your password, you can reset it from your computer. If you forget your user name, you can contact TSP Technical Support: support@tsp.com. You may not share your password. You are responsible for protecting the security and confidentiality of your password except solely when it is in our possession and control.
+Passwords are encrypted at the moment of persistence and are stored in this encrypted format. We do NOT distribute passwords to anyone except (1) an educational institution that purchases Smarter products on their student's behalf, or (2) to an outside service provider if the password is strictly necessary to provide the products and services you have purchased. If you forget your password, you can reset it from your computer. If you forget your user name, you can contact Smarter Technical Support: support@tsp.com. You may not share your password. You are responsible for protecting the security and confidentiality of your password except solely when it is in our possession and control.
 We may require your telephone number so that we can contact you if there is a problem with delivering emails to you regarding your technical support requests. We do not disclose your telephone number to third parties other than our own service providers. We do not use your telephone number for any marketing purposes.
 
 4. Surveys or Contests
@@ -21,7 +21,7 @@ We may use a third-party service provider to conduct these surveys or contests; 
 5. Test Administration
 In the event that you use our products or services in connection with your enrollment at a school where the use of our products is required, by using such product or services you agree and consent to the following:
 We may store and share with your school or its authorized representatives any and all information related to you, including, but not limited to, information about your progress through our materials, all personally identifiable information related to you, which information you viewed, and the results of any assessment questions you complete.
-We have no control over a school's use of any personal information provided to such school by us, and TSP shall have no liability related to a school's use or misuse of any information provided to such school by us.
+We have no control over a school's use of any personal information provided to such school by us, and Smarter shall have no liability related to a school's use or misuse of any information provided to such school by us.
 In the event that we are provided with information relating to a student by an educational agency or institution and such student or parent of such student desires to obtain such information pursuant to FERPA, all requests for disclosure of such information by the student or such student's parents should be directed to the applicable educational agency or institution.
 We may use your information to send you progress reminder emails if you choose to receive these.
 
@@ -33,7 +33,7 @@ Our website and our products are intended for general audiences. Our website and
 Please note that if you grant consent for your child to provide us with personal information, this may include the child's name, address, educational institution, telephone number, and email address. This information will be used to deliver our products and services to your child and may potentially be made publicly available through the child's use of discussion forums or blogs. We will also collect cookies from your child. A more detailed discussion of our use of cookies may be found below.
 For issues regarding the collection or maintenance of children's personal information, please contact us using the contact information below.
 
-8. Communications from TSP
+8. Communications from Smarter
 a. Special Offers and Updates
 We will occasionally send you information on products, services, special deals, and promotions. You can sign up to receive these emails from us on our website and product registration pages. Out of respect for your privacy, we present the option not to receive these types of communications. Please see the Choice/Opt-Out section.
 b. Service-related Announcements
@@ -45,7 +45,7 @@ Based on the personally identifiable information you provide us, we will send yo
 We store information that we collect through cookies and log files to create a "profile" of your preferences. We tie your personally identifiable information to information in the profile in order to provide tailored promotions and marketing offers, improve the content of the site for you, and report on your progress to your educational institution (if any).
 
 10. Information Sharing and Disclosure
-Except as provided herein and to implement the information uses described in this Privacy Policy, TSP never sells, rents, or lends email addresses or other personally-identifiable information or profiles of users to another organization.
+Except as provided herein and to implement the information uses described in this Privacy Policy, Smarter never sells, rents, or lends email addresses or other personally-identifiable information or profiles of users to another organization.
 
 11. Aggregate Information (non-personally identifiable)
 We share aggregated demographic information about our user base with other companies who market our products or who incorporate our educational content into their products or services. This information does not identify individual users.
@@ -59,7 +59,7 @@ We may use other third parties to provide email list management and email delive
 We reserve the right to disclose your personally identifiable information as required by law and when we believe that disclosure is necessary to protect our rights; investigate or prevent fraud, illegal activities, or breach of our terms and conditions of use; and/or to comply with a judicial proceeding, government investigation, court order, or legal process served on our Website.
 
 14. Choice/Opt-out
-We provide you with the opportunity to "opt out" from receiving email messages from TSP.
+We provide you with the opportunity to "opt out" from receiving email messages from Smarter.
 For example, if you purchase a product/service but do not wish to receive any additional communication from us. If you no longer wish to receive our e-mails, you may opt-out of receiving them by following the instructions included in each communication or by emailing us at support@smarter.sh. You may also opt out by writing to us at:
 Querium Corporation
 Attention: Customer Support
@@ -79,20 +79,20 @@ We may use either session ID cookies or persistent cookies. A session ID cookie 
 If you reject cookies in your web browser, you will not be able to authenticate to our website, nor register for the use of our products purchased at a university bookstore, or use the website-based products and services you purchase. You will need to enable cookies for our website in order to register and use our online products and services.
 
 17. Clear Gifs (Web Beacons)
-TSP may employ a software technology called clear gifs (a.k.a. Web Beacons), that help us better manage the content of our email newsletters and marketing offers by informing us what content is effective. Clear gifs are tiny graphics with a unique identifier, similar in function to cookies, and are used to track which messages are read by the subscribers to our email messages. In contrast to cookies, which are stored on a user's computer hard drive, clear gifs are embedded invisibly in email messages and are about the size of the period at the end of this sentence.
+Smarter may employ a software technology called clear gifs (a.k.a. Web Beacons), that help us better manage the content of our email newsletters and marketing offers by informing us what content is effective. Clear gifs are tiny graphics with a unique identifier, similar in function to cookies, and are used to track which messages are read by the subscribers to our email messages. In contrast to cookies, which are stored on a user's computer hard drive, clear gifs are embedded invisibly in email messages and are about the size of the period at the end of this sentence.
 We do not tie the information gathered by clear gifs to our customer's personally identifiable information.
 We may use clear gifs in our HTML-based emails to let us know which emails recipients have opened. This allows us to gauge the effectiveness of certain email communications and the effectiveness of our marketing campaigns. If you would like to opt out of these emails, please see Choice/Opt-Out above.
 
 18. Third Party Advertisers
-Our websites and email sent to you from TSP do not currently contain third-party, paid advertising of any kind, but may do so in the future.
+Our websites and email sent to you from Smarter do not currently contain third-party, paid advertising of any kind, but may do so in the future.
 
 19. Links to Other Sites
-The website for our products contains links to other sites that are not owned or controlled by TSP, including a website for educational institutions. Please be aware that we, Querium Corporation, are not responsible for the privacy practices of such other sites.
+The website for our products contains links to other sites that are not owned or controlled by Smarter, including a website for educational institutions. Please be aware that we, Querium Corporation, are not responsible for the privacy practices of such other sites.
 We encourage you to be aware when you leave our site and to read the privacy statements of each and every Website that collects personally identifiable information.
 This privacy statement applies only to information collected by this Website.
 
 20. Access to Personally Identifiable Information
-If your Personally Identifiable Information changes, you may update this information by accessing your Account. If you no longer desire to use the services of our website, you no longer wish to receive communications from TSP, or if you wish us to delete your information from our records, you may also email your request to our Customer Support staff at support@smarter.sh or by making your request using any of the methods described above under Choice/Opt-Out.
+If your Personally Identifiable Information changes, you may update this information by accessing your Account. If you no longer desire to use the services of our website, you no longer wish to receive communications from Smarter, or if you wish us to delete your information from our records, you may also email your request to our Customer Support staff at support@smarter.sh or by making your request using any of the methods described above under Choice/Opt-Out.
 
 21. Security
 We follow generally accepted industry standards designed to protect the personal information of the nature submitted to us, both during transmission and once we receive it. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, while we strive to use commercially reasonable means to protect your personal information, we cannot guarantee its security.
