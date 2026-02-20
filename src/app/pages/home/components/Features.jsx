@@ -164,7 +164,7 @@ const FeatureYaml = () => {
       orientation="left"
       boxLayout={6}
       link={{
-        url: 'https://platform.smarter.sh/docs/manifests/',
+        url: 'https://ubc.smarter.sh/docs/manifests/',
         text: 'Learn More',
         lucide_icon: 'lucide:book-open',
       }}
@@ -239,7 +239,7 @@ const SmarterEnterprise = () => {
       orientation="right"
       boxLayout={6}
       link={{
-        url: 'https://platform.smarter.sh/docs/',
+        url: 'https://ubc.smarter.sh/docs/',
         text: 'Learn More',
         lucide_icon: 'lucide:book-open',
       }}

@@ -94,7 +94,7 @@ const TopNavbar = () => {
                   <span>smarter-sh/smarter</span>
                 </a>
                 <a
-                  href="https://platform.smarter.sh/dashboard/"
+                  href="https://ubc.smarter.sh/dashboard/"
                   className="duration-3 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-white transition-all hover:bg-primary-hover"
                 >
                   <IconifyIcon icon="lucide:layout-dashboard" className="me-2 h-5 w-5" />{' '}
@@ -150,7 +150,7 @@ const TopNavbar = () => {
                 </div>
               </div>
               <a
-                href="https://platform.smarter.sh/dashboard/"
+                href="https://ubc.smarter.sh/dashboard/"
                 className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-white transition-all duration-300 hover:bg-primary-hover"
               >
                 <IconifyIcon icon="lucide:layout-dashboard" className="me-2 h-5 w-5" />{' '}
