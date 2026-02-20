@@ -19,7 +19,7 @@ export const featuresList = [
 export const plans = [
   {
     title: 'Account',
-    description: 'A single account on platform.smarter.sh. Good for prototyping and proof of concept.',
+    description: 'A single account on ubc.smarter.sh. Good for prototyping and proof of concept.',
     price: '$00',
     period: 'month',
     features: ['Community', 'Unlimited', 'Unlimited', 'included', 'N/A', 'N/A', 'read-only', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A', 'N/A'],

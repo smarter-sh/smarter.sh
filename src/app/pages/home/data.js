@@ -31,7 +31,7 @@ export const about = [
     detail:
       'Getting started with the Smarter API is easy with Swagger.',
     link_text: 'View API Docs',
-    url: 'https://platform.smarter.sh/docs/swagger/',
+    url: 'https://ubc.smarter.sh/docs/swagger/',
   },
   {
     name: 'Command-Line Interface',
