@@ -1,3 +1,24 @@
+## [0.6.1](https://github.com/smarter-sh/smarter.sh/compare/v0.6.0...v0.6.1) (2026-02-10)
+
+
+### Bug Fixes
+
+* add redirects ([f120327](https://github.com/smarter-sh/smarter.sh/commit/f12032718ede8347ce5f466094f032bd4154ed19))
+
+# [0.6.0](https://github.com/smarter-sh/smarter.sh/compare/v0.5.0...v0.6.0) (2026-02-10)
+
+
+### Features
+
+* create pages for legal, tos, privacy ([d348bbb](https://github.com/smarter-sh/smarter.sh/commit/d348bbb66c14928838ce9800227fcd3c09b556da))
+* scaffold authentication pages ([f58b7e5](https://github.com/smarter-sh/smarter.sh/commit/f58b7e53d0d996630ba44d699dc8d7338494db4f))
+* scaffold plan page ([b66b95c](https://github.com/smarter-sh/smarter.sh/commit/b66b95c7141bbdcdb2be9bafc844edcabd9404fc))
+* style auth pages and create marketing msg scaffolding ([62b210f](https://github.com/smarter-sh/smarter.sh/commit/62b210f4ebdba786a2eb4faa5762387489667a34))
+* work on feature list ([e7266df](https://github.com/smarter-sh/smarter.sh/commit/e7266df67844c7efc1454449da64b6f8c2318cfa))
+* work on feature list ([044fa04](https://github.com/smarter-sh/smarter.sh/commit/044fa049502e048a0d7af20d8c5d5b5304fe86c9))
+* work on features footnotes ([2817149](https://github.com/smarter-sh/smarter.sh/commit/281714980249945bf04df1bb32cf7e94e1b78b36))
+* work on responsiveness ([b2e4187](https://github.com/smarter-sh/smarter.sh/commit/b2e4187fea15989a89cad8c6687fa2936199ee8c))
+
 # [0.5.0](https://github.com/smarter-sh/smarter.sh/compare/v0.4.0...v0.5.0) (2025-11-29)
 
 
