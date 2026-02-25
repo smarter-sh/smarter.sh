@@ -23,10 +23,10 @@ let s3Path = 's3://reactjs.' + branch + '.' + APP_CONFIG.root_domain + '/'
 console.log(`S3 Path: ${s3Path}`)
 
 let cloudfrontPaths = '/*'
-let distributionID = 'EHJG59RPCPN0Z'
+let distributionID = 'E2C4U4X1Z0FNSI'
 
 if (branch === 'alpha') {
-  distributionID = 'EHJG59RPCPN0Z'
+  distributionID = 'E2C4U4X1Z0FNSI'
 } else if (branch === 'beta') {
   distributionID = 'E12GP2JL74BU7K'
 } else if (branch === 'main') {
