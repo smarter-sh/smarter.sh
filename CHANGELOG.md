@@ -1,3 +1,13 @@
+## [0.6.2](https://github.com/smarter-sh/smarter.sh/compare/v0.6.1...v0.6.2) (2026-02-20)
+
+
+### Bug Fixes
+
+* add live privacy policy legal text ([21cb262](https://github.com/smarter-sh/smarter.sh/commit/21cb26215b4a795a8bc025ed1def28941068ec26))
+* publish tos legal text ([b6fde03](https://github.com/smarter-sh/smarter.sh/commit/b6fde0369c61abfc4389acb42bc4d3667a0e98e7))
+* publish tos legal text ([b15a36e](https://github.com/smarter-sh/smarter.sh/commit/b15a36e331c2fa200504599d3858ba6c8967942e))
+* update platform button link ([67eb5c5](https://github.com/smarter-sh/smarter.sh/commit/67eb5c59b3977d096c1dca16c0e5c65a5e2389bb))
+
 ## [0.6.1](https://github.com/smarter-sh/smarter.sh/compare/v0.6.0...v0.6.1) (2026-02-10)
 
 
