@@ -61,11 +61,10 @@ We reserve the right to disclose your personally identifiable information as req
 14. Choice/Opt-out
 We provide you with the opportunity to "opt out" from receiving email messages from Smarter.
 For example, if you purchase a product/service but do not wish to receive any additional communication from us. If you no longer wish to receive our e-mails, you may opt-out of receiving them by following the instructions included in each communication or by emailing us at support@smarter.sh. You may also opt out by writing to us at:
-Querium Corporation
+OpenCogent LLC
 Attention: Customer Support
-1700 South Lamar Blvd
-Suite 338
-Austin, TX USA 78704
+21 Remedios Road
+Lamy, NM USA 87540
 
 15. Log Files
 As is true of most Websites, we gather certain information automatically and store it in log files. This information includes internet protocol (IP) addresses, browser type, internet service provider (ISP), referring/exit pages, operating system, date/time stamp, and clickstream data.
@@ -87,7 +86,7 @@ We may use clear gifs in our HTML-based emails to let us know which emails recip
 Our websites and email sent to you from Smarter do not currently contain third-party, paid advertising of any kind, but may do so in the future.
 
 19. Links to Other Sites
-The website for our products contains links to other sites that are not owned or controlled by Smarter, including a website for educational institutions. Please be aware that we, Querium Corporation, are not responsible for the privacy practices of such other sites.
+The website for our products contains links to other sites that are not owned or controlled by Smarter, including a website for educational institutions. Please be aware that we, OpenCogent LLC, are not responsible for the privacy practices of such other sites.
 We encourage you to be aware when you leave our site and to read the privacy statements of each and every Website that collects personally identifiable information.
 This privacy statement applies only to information collected by this Website.
 
@@ -96,11 +95,11 @@ If your Personally Identifiable Information changes, you may update this informa
 
 21. Security
 We follow generally accepted industry standards designed to protect the personal information of the nature submitted to us, both during transmission and once we receive it. No method of transmission over the Internet, or method of electronic storage, is 100% secure, however. Therefore, while we strive to use commercially reasonable means to protect your personal information, we cannot guarantee its security.
-QUERIUM MAKES NO WARRANTIES AS TO THE SECURITY OF YOUR DATA COMMUNICATIONS, OR THAT THIRD PARTIES WILL NOT GAIN UNAUTHORIZED ACCESS TO OR MONITOR YOUR COMPUTER(S) OR YOUR ONLINE COMMUNICATIONS. YOU AGREE THAT QUERIUM WILL NOT BE LIABLE FOR ANY SUCH ACCESS.
+OPENCOGENT LLC MAKES NO WARRANTIES AS TO THE SECURITY OF YOUR DATA COMMUNICATIONS, OR THAT THIRD PARTIES WILL NOT GAIN UNAUTHORIZED ACCESS TO OR MONITOR YOUR COMPUTER(S) OR YOUR ONLINE COMMUNICATIONS. YOU AGREE THAT OPENCOGENT LLC WILL NOT BE LIABLE FOR ANY SUCH ACCESS.
 If you have any questions about security on our Website, you can email us at support@smarter.sh.
 
 22. Business Transitions
-In the event Querium goes through a business transition, such as a merger, acquisition by another company, or sale of all or a portion of its assets, your personally identifiable information will likely be among the assets transferred. You may be notified via email of any such change in ownership or control of your personal information.
+In the event OpenCogent LLC goes through a business transition, such as a merger, acquisition by another company, or sale of all or a portion of its assets, your personally identifiable information will likely be among the assets transferred. You may be notified via email of any such change in ownership or control of your personal information.
 
 23. Changes in this Privacy Statement
 We reserve the right to modify this privacy statement at any time, so please review it frequently. If we make material changes to this policy, we will notify you here, by email, or by means of a notice on our home page.
@@ -110,8 +109,7 @@ If you have any questions or suggestions regarding our privacy policy, please co
 Email: support@smarter.sh
 Phone: 1 617 834-6172
 Mail:
-Querium Corporation
+OpenCogent LLC
 Attention: Customer Support
-1700 South Lamar Blvd.
-Suite 338
-Austin, TX 78704
+21 Remedios Road
+Lamy, NM 87540
