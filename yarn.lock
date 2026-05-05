@@ -37,7 +37,7 @@
   resolved "https://registry.yarnpkg.com/@babel/compat-data/-/compat-data-7.29.0.tgz#00d03e8c0ac24dd9be942c5370990cbe1f17d88d"
   integrity sha512-T1NCJqT/j9+cn8fvkt7jtwbLBfLC/1y1c7NtCeXFRgzGTsafi68MRv8yzkYSapBnFA6L3U2VSc02ciDzoAJhJg==
 
-"@babel/core@^7.23.9", "@babel/core@^7.24.4", "@babel/core@^7.27.4", "@babel/core@^7.28.0":
+"@babel/core@^7.23.9", "@babel/core@^7.24.4", "@babel/core@^7.27.4", "@babel/core@^7.29.0":
   version "7.29.0"
   resolved "https://registry.yarnpkg.com/@babel/core/-/core-7.29.0.tgz#5286ad785df7f79d656e88ce86e650d16ca5f322"
   integrity sha512-CGOfOJqWjg2qW/Mb6zNsDm+u5vFQ8DxXfbM09z69p5Z6+mE1ikP2jUXw+j42Pf1XTYED2Rni5f95npYeuwMDQA==
@@ -1856,6 +1856,13 @@
   dependencies:
     "@octokit/types" "^15.0.1"
 
+"@octokit/plugin-paginate-rest@^14.0.0":
+  version "14.0.0"
+  resolved "https://registry.yarnpkg.com/@octokit/plugin-paginate-rest/-/plugin-paginate-rest-14.0.0.tgz#44dc9fff2dacb148d4c5c788b573ddc044503026"
+  integrity sha512-fNVRE7ufJiAA3XUrha2omTA39M6IXIc6GIZLvlbsm8QOQCYvpq/LkMNGyFlB1d8hTDzsAXa3OKtybdMAYsV/fw==
+  dependencies:
+    "@octokit/types" "^16.0.0"
+
 "@octokit/plugin-retry@^8.0.0":
   version "8.1.0"
   resolved "https://registry.yarnpkg.com/@octokit/plugin-retry/-/plugin-retry-8.1.0.tgz#e25c2fb5e0a09cfe674ef9df75d7ca4fafa16c11"
@@ -1942,10 +1949,10 @@
   resolved "https://registry.yarnpkg.com/@popperjs/core/-/core-2.11.8.tgz#6b79032e760a0899cd4204710beede972a3a185f"
   integrity sha512-P1st0aksCrn9sGZhp8GMYwBnQsbvAWsZAX44oXNNvLHGqAOcoVxmjZiohstwQ7SqKnbR47akdNi+uleWD8+g6A==
 
-"@rolldown/pluginutils@1.0.0-beta.27":
-  version "1.0.0-beta.27"
-  resolved "https://registry.yarnpkg.com/@rolldown/pluginutils/-/pluginutils-1.0.0-beta.27.tgz#47d2bf4cef6d470b22f5831b420f8964e0bf755f"
-  integrity sha512-+d0F4MKMCbeVUJwG96uQ4SgAznZNSq93I3V+9NHA4OpvqG8mRCpGdKmK8l/dl02h2CCDHwW2FqilnTyDcAnqjA==
+"@rolldown/pluginutils@1.0.0-rc.3":
+  version "1.0.0-rc.3"
+  resolved "https://registry.yarnpkg.com/@rolldown/pluginutils/-/pluginutils-1.0.0-rc.3.tgz#8a88cc92a0f741befc7bc109cb1a4c6b9408e1c5"
+  integrity sha512-eybk3TjzzzV97Dlj5c+XrBFW57eTNhzod66y9HrBlzJ6NsCrWCp/2kaPS3K9wJmurBC0Tdw4yPjXKZqlznim3Q==
 
 "@rollup/rollup-android-arm-eabi@4.60.1":
   version "4.60.1"
@@ -2125,7 +2132,7 @@
     micromatch "^4.0.0"
     p-reduce "^2.0.0"
 
-"@semantic-release/github@^11.0.0", "@semantic-release/github@^11.0.6":
+"@semantic-release/github@^11.0.0":
   version "11.0.6"
   resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-11.0.6.tgz#3320c373334858a3aefb11cf75abccb7cc438040"
   integrity sha512-ctDzdSMrT3H+pwKBPdyCPty6Y47X8dSrjd3aPZ5KKIKKWTwZBE9De8GtsH3TyAlw3Uyo2stegMx6rJMXKpJwJA==
@@ -2145,6 +2152,29 @@
     mime "^4.0.0"
     p-filter "^4.0.0"
     tinyglobby "^0.2.14"
+    url-join "^5.0.0"
+
+"@semantic-release/github@^12.0.2":
+  version "12.0.6"
+  resolved "https://registry.yarnpkg.com/@semantic-release/github/-/github-12.0.6.tgz#c60c556e7087938be988d0be3de6d70e8cbaced8"
+  integrity sha512-aYYFkwHW3c6YtHwQF0t0+lAjlU+87NFOZuH2CvWFD0Ylivc7MwhZMiHOJ0FMpIgPpCVib/VUAcOwvrW0KnxQtA==
+  dependencies:
+    "@octokit/core" "^7.0.0"
+    "@octokit/plugin-paginate-rest" "^14.0.0"
+    "@octokit/plugin-retry" "^8.0.0"
+    "@octokit/plugin-throttling" "^11.0.0"
+    "@semantic-release/error" "^4.0.0"
+    aggregate-error "^5.0.0"
+    debug "^4.3.4"
+    dir-glob "^3.0.1"
+    http-proxy-agent "^7.0.0"
+    https-proxy-agent "^7.0.0"
+    issue-parser "^7.0.0"
+    lodash-es "^4.17.21"
+    mime "^4.0.0"
+    p-filter "^4.0.0"
+    tinyglobby "^0.2.14"
+    undici "^7.0.0"
     url-join "^5.0.0"
 
 "@semantic-release/npm@^12.0.2":
@@ -2665,17 +2695,17 @@
   resolved "https://registry.yarnpkg.com/@unrs/resolver-binding-win32-x64-msvc/-/resolver-binding-win32-x64-msvc-1.11.1.tgz#538b1e103bf8d9864e7b85cc96fa8d6fb6c40777"
   integrity sha512-lrW200hZdbfRtztbygyaq/6jP6AKE8qQN2KvPcJ+x7wiD038YtnYtZ82IMNJ69GJibV7bwL3y9FgK+5w/pYt6g==
 
-"@vitejs/plugin-react@^4.3.2":
-  version "4.7.0"
-  resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-4.7.0.tgz#647af4e7bb75ad3add578e762ad984b90f4a24b9"
-  integrity sha512-gUu9hwfWvvEDBBmgtAowQCojwZmJ5mcLn3aufeCsitijs3+f2NsrPtlAWIR6OPiqljl96GVCUbLe0HyqIpVaoA==
+"@vitejs/plugin-react@^5.2.0":
+  version "5.2.0"
+  resolved "https://registry.yarnpkg.com/@vitejs/plugin-react/-/plugin-react-5.2.0.tgz#108bd0f566f288ce3566982df4eff137ded7b15f"
+  integrity sha512-YmKkfhOAi3wsB1PhJq5Scj3GXMn3WvtQ/JC0xoopuHoXSdmtdStOpFrYaT1kie2YgFBcIe64ROzMYRjCrYOdYw==
   dependencies:
-    "@babel/core" "^7.28.0"
+    "@babel/core" "^7.29.0"
     "@babel/plugin-transform-react-jsx-self" "^7.27.1"
     "@babel/plugin-transform-react-jsx-source" "^7.27.1"
-    "@rolldown/pluginutils" "1.0.0-beta.27"
+    "@rolldown/pluginutils" "1.0.0-rc.3"
     "@types/babel__core" "^7.20.5"
-    react-refresh "^0.17.0"
+    react-refresh "^0.18.0"
 
 abbrev@^3.0.0, abbrev@^3.0.1:
   version "3.0.1"
@@ -6324,10 +6354,10 @@ react-is@^18.3.1:
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-18.3.1.tgz#e83557dc12eae63a99e003a46388b1dcbb44db7e"
   integrity sha512-/LLMVyas0ljjAtoYiPqYiL8VWXzUUdThrmU5+n20DZv+a+ClRoevUzw5JxU+Ieh5/c87ytoTBV9G1FiKfNJdmg==
 
-react-refresh@^0.17.0:
-  version "0.17.0"
-  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.17.0.tgz#b7e579c3657f23d04eccbe4ad2e58a8ed51e7e53"
-  integrity sha512-z6F7K9bV85EfseRCp2bzrpyQ0Gkw1uLoCel9XBVWPg/TjRj94SkJzUTGfOa4bs7iJvBWtQG0Wq7wnI0syw3EBQ==
+react-refresh@^0.18.0:
+  version "0.18.0"
+  resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.18.0.tgz#2dce97f4fe932a4d8142fa1630e475c1729c8062"
+  integrity sha512-QgT5//D3jfjJb6Gsjxv0Slpj23ip+HtOpnNgnb2S5zU3CB26G/IDPGoy4RJB42wzFE46DRsstbW6tKHoKbhAxw==
 
 react-router-dom@^7.9.3:
   version "7.14.0"
@@ -7247,6 +7277,11 @@ undici-types@~7.18.0:
   version "7.18.2"
   resolved "https://registry.yarnpkg.com/undici-types/-/undici-types-7.18.2.tgz#29357a89e7b7ca4aef3bf0fd3fd0cd73884229e9"
   integrity sha512-AsuCzffGHJybSaRrmr5eHr81mwJU3kjw6M+uprWvCXiNeN9SOGwQ3Jn8jb8m3Z6izVgknn1R0FTCEAP2QrLY/w==
+
+undici@^7.0.0:
+  version "7.25.0"
+  resolved "https://registry.yarnpkg.com/undici/-/undici-7.25.0.tgz#7d72fc429a0421769ca2966fd07cac875c85b781"
+  integrity sha512-xXnp4kTyor2Zq+J1FfPI6Eq3ew5h6Vl0F/8d9XU5zZQf1tX9s2Su1/3PiMmUANFULpmksxkClamIZcaUqryHsQ==
 
 unicode-canonical-property-names-ecmascript@^2.0.0:
   version "2.0.1"
