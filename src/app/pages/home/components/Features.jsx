@@ -2,157 +2,15 @@ import { useState, useEffect } from 'react'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import { Link } from 'react-router-dom'
 import img_yaml_nocode from '@/assets/images/home/features/yaml-nocode.png'
-//import img_prompt_workbench from '@/assets/images/home/features/prompt-workbench.png'
 import img_llm_providers from '@/assets/images/home/features/llm-providers.png'
 import img_plugin from '@/assets/images/home/features/plugin.png'
 import img_smarter_chat from '@/assets/images/home/features/smarter-chat.png'
 import img_smarter_enterprise from '@/assets/images/home/features/smarter-enterprise.png'
 import { CDN } from '@/common/constants'
 
-const img_prompt_workbench = `${CDN}/videos/read-the-docs2.mp4`
+import FeatureBlock from './FeatureBlock'
 
-const FeatureBlock = ({
-  heading,
-  subHeading,
-  featureText,
-  imgUrl,
-  orientation = 'left',
-  boxLayout = 6,
-  link,
-}) => {
-  const imageColWidth = boxLayout
-  const textColWidth = 12 - boxLayout
-  const [isImageModalOpen, setIsImageModalOpen] = useState(false)
 
-  // Handle escape key
-  useEffect(() => {
-    const handleEscape = (event) => {
-      if (event.key === 'Escape') {
-        setIsImageModalOpen(false)
-      }
-    }
-
-    if (isImageModalOpen) {
-      document.addEventListener('keydown', handleEscape)
-    }
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape)
-    }
-  }, [isImageModalOpen])
-
-  const textContent = (
-    <div className={`col-span-${textColWidth}`}>
-      <div className="p-4 md:p-10">
-        <p className="text-sm font-medium text-default-100 leading-relaxed mb-4 whitespace-pre-line">
-          {featureText}
-        </p>
-        {link && (
-          <Link
-            to={link.url}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="group relative inline-flex items-center gap-2 text-primary"
-          >
-            <span className="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w-full" />
-            {link.text} <IconifyIcon icon={link.lucide_icon} className="h-4 w-4" />
-          </Link>
-        )}
-      </div>
-    </div>
-  )
-
-  // Determine if the file is an mp4 video
-  const isVideo = typeof imgUrl === 'string' && imgUrl.toLowerCase().endsWith('.mp4')
-
-  const imageContent = (
-    <>
-      <div className={`col-span-${imageColWidth}`}>
-        <div className="p-6">
-          {isVideo ? (
-            <video
-              src={imgUrl}
-              className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => setIsImageModalOpen(true)}
-              title="Click to enlarge"
-              controls={false}
-              poster=""
-              autoPlay
-              loop
-              muted
-            />
-          ) : (
-            <img
-              src={imgUrl}
-              alt={heading}
-              className="w-full h-auto rounded-lg object-cover cursor-pointer hover:opacity-90 transition-opacity"
-              onClick={() => setIsImageModalOpen(true)}
-              title="Click to enlarge"
-            />
-          )}
-        </div>
-      </div>
-
-      {isImageModalOpen && (
-        <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-80 p-4"
-          onClick={() => setIsImageModalOpen(false)}
-        >
-          <div className="relative max-w-[90vw] max-h-[90vh]">
-            <button
-              onClick={() => setIsImageModalOpen(false)}
-              className="absolute -top-10 right-0 text-white hover:text-gray-300 transition-colors"
-              title="Close (Esc)"
-            >
-              <IconifyIcon icon="lucide:x" className="h-8 w-8" />
-            </button>
-            {isVideo ? (
-              <video
-                src={imgUrl}
-                className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
-                onClick={(e) => e.stopPropagation()}
-                controls
-                autoPlay
-                loop
-                muted
-              />
-            ) : (
-              <img
-                src={imgUrl}
-                alt={heading}
-                className="w-full h-auto rounded-lg object-contain border-8 border-yellow-400"
-                onClick={(e) => e.stopPropagation()}
-              />
-            )}
-          </div>
-        </div>
-      )}
-    </>
-  )
-
-  return (
-    <div className="hover:-translate-y-2 rounded-xl border-s-2 border-primary bg-default-950/40 backdrop-blur-3xl transition-all duration-500 mb-6 md:mb-12">
-      <div className="p-4 pb-0 md:p-10 md:pb-0">
-        <h3 className="mb-2 text-2xl font-medium text-white">{heading}</h3>
-        <h4 className="mb-6 text-lg font-medium text-primary">{subHeading}</h4>
-      </div>
-
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {orientation === 'left' ? (
-          <>
-            {imageContent}
-            {textContent}
-          </>
-        ) : (
-          <>
-            {textContent}
-            {imageContent}
-          </>
-        )}
-      </div>
-    </div>
-  )
-}
 
 const FeatureYaml = () => {
   return (
@@ -173,14 +31,54 @@ const FeatureYaml = () => {
 }
 
 const FeaturePromptEngineerWorkbench = () => {
+
+const vid_prompt_workbench = `${CDN}/videos/read-the-docs2.mp4`
+const img_dashboard = `${CDN}/images/web-console-dashboard.png`
+const vid_prompt_passthrough = `${CDN}/videos/prompt_passthrough.mp4`
+const vid_server_logs = `${CDN}/videos/server-logs.mp4`
+
+
+const featureText=[
+    "Explore message flows, prompt metadata, token usage, tool calls, and raw responses — all in real time. " +
+    "Watch server logs stream live and inspect complete JSON request and response objects. It’s the ultimate " +
+    "workspace for designing, debugging, and perfecting AI behavior, BEFORE you deploy.",
+
+    "Smarter's ReactJS based customizable web console dashboard provides prompt engineers " +
+    "with an interactive view into the AI resources that are at their disposal, " +
+    "along with platform key performance metrics, and real-time system status. The dashboard " +
+    "also provides engineers with a roadmap to the Smarter ecosystem, with quick access to " +
+    "documentation, sdks, training materials, and support channels — all designed to help you get the most out of Smarter.",
+
+    "Smarter's prompt pass-through feature provides engineers with direct access to LLM APIs. " +
+    "This is ideal for classroom lab exercises as well as for helping professional prompt " +
+    "engineers gather diagnostic and debug information on complex prompting problems. The " +
+    "convenience templates enable new users to instantly setup common, working JSON patterns for " +
+    "everything from a 'Hello world!' prompt to complex multi-step tool calls.",
+
+    "Smarter's web console server logs features provides prompt engineers with a personalized, live, " +
+    "real-time stream of all backend activity — from incoming requests to security " +
+    "checks, resource provisioning, prompt preparation, interim LLM API responses, and outgoing responses. " +
+    "Each log entry includes detailed metadata, such as timestamps, request IDs, user information, and execution details. " +
+    "This comprehensive logging allows you to monitor performance, troubleshoot issues, and gain deep insights into how your " +
+    "prompts are being processed and executed — all within the Prompt Engineer Workbench."
+  ];
+
+  const imgUrl=[
+    vid_prompt_workbench,
+    img_dashboard,
+    vid_prompt_passthrough,
+    vid_server_logs,
+  ]
+
   return (
     <FeatureBlock
       heading="See how your prompts really work"
       subHeading="Smarter’s Prompt Engineer Workbench gives you a live, transparent view into every part of a conversation — before you deploy."
-      featureText="Explore message flows, prompt metadata, token usage, tool calls, and raw responses — all in real time. Watch server logs stream live and inspect complete JSON request and response objects. It’s the ultimate workspace for designing, debugging, and perfecting AI behavior, BEFORE you deploy."
-      imgUrl={img_prompt_workbench}
+      featureText={featureText}
+      imgUrl={imgUrl}
       orientation="right"
       boxLayout={6}
+      delay={7000}
     />
   )
 }
