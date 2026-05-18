@@ -72,7 +72,7 @@ const FeaturePromptEngineerWorkbench = () => {
   }
 
   const feature4 = {
-    text: "Smarter's web console server logs features provides prompt engineers with a personalized, live, " +
+    text: "Smarter's web console server logs feature provides prompt engineers with a personalized, live, " +
     "real-time stream of all backend activity — from incoming requests to security " +
     "checks, resource provisioning, prompt preparation, interim LLM API responses, and outgoing responses. " +
     "Each log entry includes detailed metadata, such as timestamps, request IDs, user information, and execution details. " +
