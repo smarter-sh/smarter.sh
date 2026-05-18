@@ -17,6 +17,10 @@ const navLinks = [
     link: '/about',
   },
   {
+    label: 'Developers',
+    link: '/developers',
+  },
+  {
     label: 'CLI',
     link: '/cli',
   },
