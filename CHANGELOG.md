@@ -1,3 +1,10 @@
+# [0.8.0](https://github.com/smarter-sh/smarter.sh/compare/v0.7.0...v0.8.0) (2026-05-18)
+
+
+### Features
+
+* add more features ([554e342](https://github.com/smarter-sh/smarter.sh/commit/554e342eb5b31d1cdaee873e06c3895d9b6d167f))
+
 # [0.7.0](https://github.com/smarter-sh/smarter.sh/compare/v0.6.2...v0.7.0) (2026-05-18)
 
 
