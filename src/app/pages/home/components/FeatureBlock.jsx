@@ -15,11 +15,9 @@ const img_prompt_workbench = `${CDN}/videos/read-the-docs2.mp4`
 const FeatureBlock = ({
   heading,
   subHeading,
-  featureText,
-  imgUrl,
+  features,
   orientation = 'left',
   boxLayout = 6,
-  link,
   delay = 5000,
 }) => {
   const imageColWidth = boxLayout
@@ -27,11 +25,16 @@ const FeatureBlock = ({
   const [isImageModalOpen, setIsImageModalOpen] = useState(false)
 
   // Treat as lists internally
-  const [featureTextList] = useState(() => Array.isArray(featureText) ? featureText : [featureText])
-  const [imgUrlList] = useState(() => Array.isArray(imgUrl) ? imgUrl : [imgUrl])
+  const [featureTextList] = useState(() => Array.isArray(features) ? features.map(f => f.text) : [features.text])
+  const [imgUrlList] = useState(() => Array.isArray(features) ? features.map(f => f.imgUrl) : [features.imgUrl])
   const [featureIndex, setFeatureIndex] = useState(0)
   const [timerKey, setTimerKey] = useState(0)
   const [isHovering, setIsHovering] = useState(false)
+
+
+  // featureText,
+  // imgUrl,
+  // link,
 
 
   useEffect(() => {
@@ -77,15 +80,15 @@ const FeatureBlock = ({
         <p className="text-sm font-medium text-default-100 leading-relaxed mb-4 whitespace-pre-line">
           {featureTextList[featureIndex]}
         </p>
-        {link && (
+        {features[featureIndex].link && (
           <Link
-            to={link.url}
+            to={features[featureIndex].link.url}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center gap-2 text-primary"
           >
             <span className="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w/full" />
-            {link.text} <IconifyIcon icon={link.lucide_icon} className="h-4 w-4" />
+            {features[featureIndex].link.text} <IconifyIcon icon={features[featureIndex].link.lucide_icon} className="h-4 w-4" />
           </Link>
         )}
       </div>
