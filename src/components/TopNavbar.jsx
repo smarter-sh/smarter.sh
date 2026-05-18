@@ -9,10 +9,6 @@ import useScrollEvent from '@/hooks/useScrollEvent'
 
 const navLinks = [
   {
-    label: 'Home',
-    link: '/',
-  },
-  {
     label: 'About',
     link: '/about',
   },
