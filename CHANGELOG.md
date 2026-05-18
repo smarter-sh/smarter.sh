@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/smarter-sh/smarter.sh/compare/v0.6.2...v0.7.0) (2026-05-18)
+
+
+### Features
+
+* a carousel to features box ([1f0c246](https://github.com/smarter-sh/smarter.sh/commit/1f0c24644c4e76c6c9b19086c501ea0ef2bf51dc))
+
 ## [0.6.2](https://github.com/smarter-sh/smarter.sh/compare/v0.6.1...v0.6.2) (2026-02-20)
 
 
