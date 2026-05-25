@@ -21,8 +21,8 @@ const navLinks = [
     link: '/cli',
   },
   {
-    label: 'Services',
-    link: '/#services',
+    label: 'Blog',
+    link: 'https://blog.smarter.sh/',
   },
   {
     label: 'Legal',
@@ -77,7 +77,7 @@ const TopNavbar = () => {
               <ul id="navbar-navlist" className="navbar-nav">
                 {navLinks.map((item, idx) => (
                   <li key={item.link + idx} className="nav-item">
-                    <a href={item.link} className="nav-link">
+                    <a href={item.link} className="nav-link" target={item.link.startsWith('http') ? '_blank' : '_self'} rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}>
                       {item.label}
                     </a>
                   </li>
