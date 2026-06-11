@@ -173,23 +173,49 @@ const SmarterChat = () => {
   )
 }
 
-const SmarterEnterprise = () => {
+const EnterpriseGovernance = () => {
 
   const feature = {
-    text: "Designed for real-world organizations, Smarter runs natively in Kubernetes across on-prem, AWS, and Azure. Each team operates within its own secure workspace — engineers, PMs, designers, and prompt specialists collaborating on shared ChatBots and Agents. With configurable logging, built-in cost accounting, and environment-aware CI/CD, Smarter makes it easy to move from design to production safely. The optional Journal archives every production prompt for long-term storage and legal compliance — ensuring you always have a verifiable record of AI activity.",
-    imgUrl: img_smarter_enterprise,
+    text: "Smarter gives organizations a centralized framework for managing AI at scale. Enforce resource limits, moderation policies, and approval workflows across teams while maintaining complete auditability. Track costs, monitor usage, archive production prompts, and maintain a verifiable history of every AI interaction. Whether you’re deploying a single chatbot or hundreds of AI-powered services, Smarter helps ensure consistent, compliant, and accountable operations.",
+    imgUrl: img_smarter_chat,
     link: {
-        url: 'https://ubc.smarter.sh/docs/',
+        url: 'https://github.com/smarter-sh/smarter-chat',
         text: 'Learn More',
         lucide_icon: 'lucide:book-open',
       }
   }
+
   return (
     <FeatureBlock
-      heading="Built for teams. Ready for the enterprise."
-      subHeading="Smarter brings production-grade governance, visibility, and control to every AI resource — from design to deployment."
+      heading="Enterprise Governance Built In"
+      subHeading="Bring visibility, accountability, and control to every AI resource—from design to deployment."
       features={[feature]}
-      orientation="right"
+      orientation="left"
+      boxLayout={6}
+    />
+  )
+}
+
+const ServerLogView = () => {
+
+  const vid_log_view = `${CDN}/videos/terminal-emulator-logs.mp4`
+
+  const feature = {
+    text: "Smarter server log view provides prompt engineers with a personalized, live, real-time stream of their backend activity — from incoming requests to security checks, resource provisioning, prompt preparation, interim LLM API responses, and outgoing responses. Each log entry includes detailed metadata, such as timestamps, request IDs, user information, and execution details.",
+    imgUrl: vid_log_view,
+    link: {
+        url: 'https://docs.smarter.sh/smarter-framework/developer-reference/smarter-dashboard/views/logs/api/streams.html',
+        text: 'Learn More',
+        lucide_icon: 'lucide:book-open',
+      }
+  }
+
+  return (
+    <FeatureBlock
+      heading="Live Server Log View"
+      subHeading="Monitor and analyze server logs in real-time with our integrated terminal emulator."
+      features={[feature]}
+      orientation="left"
       boxLayout={6}
     />
   )
@@ -199,11 +225,12 @@ const Features = () => {
   return (
     <div id="features" className="w-full px-4 sm:px-6 lg:px-0">
       <FeatureYaml />
-      <FeaturePromptEngineerWorkbench />
-      <UnifiedLLMInterface />
       <PluginIntegrations />
+      <EnterpriseGovernance />
+      <FeaturePromptEngineerWorkbench />
+      <ServerLogView />
+      <UnifiedLLMInterface />
       <SmarterChat />
-      <SmarterEnterprise />
     </div>
   )
 }
