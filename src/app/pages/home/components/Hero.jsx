@@ -31,9 +31,17 @@ const Hero = () => {
                   The <span className="text-primary">Smarter</span> Project
                 </h1>
                 <p className="mx-auto text-base font-medium text-default-300 lg:max-w-xl">
-                  An open source, no-code AI authoring platform and developer framework.
+                  Open source AI infrastructure for teams that need governance, control, and scale.
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 mt-4">
+                  <a href="https://www.gnu.org/licenses/agpl-3.0" rel="nofollow">
+                    <img
+                      src="https://img.shields.io/badge/License-AGPL_v3-blue.svg"
+                      alt="License: GNU AGPL v3"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  </a>
+
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -58,25 +66,6 @@ const Hero = () => {
                     />
                   </a>
 
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://smarter.readthedocs.io/"
-                  >
-                    <img
-                      src="https://readthedocs.org/projects/smarter/badge/?version=latest"
-                      alt="Documentation Status"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
-
-                  <a href="https://www.gnu.org/licenses/agpl-3.0" rel="nofollow">
-                    <img
-                      src="https://img.shields.io/badge/License-AGPL_v3-blue.svg"
-                      alt="License: GNU AGPL v3"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
                 </div>
                 <div className="dockerhub flex flex-wrap justify-center gap-2 mt-4">
                   <a href="https://hub.docker.com/r/mcdaniel0073/smarter" rel="nofollow">
