@@ -5,7 +5,7 @@
 .PHONY: analyze init update build serve release
 
 analyze:
-	cloc . --exclude-ext=svg,zip --fullpath --not-match-d=smarter/smarter/static/assets/ --vcs=git
+	cloc . --exclude-ext=svg,zip,css --fullpath --not-match-d=smarter/smarter/static/assets/ --vcs=git
 
 init:
 	rm -rf .git/hooks/pre-commit .git/hooks/pre-commit.legacy
