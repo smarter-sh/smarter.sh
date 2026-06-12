@@ -48,7 +48,7 @@ const Hero = () => {
                     href="https://docs.smarter.sh/contributors.html"
                   >
                     <img
-                      src="https://img.shields.io/badge/Made%20by-Contributors-blue?logo=github"
+                      src="https://img.shields.io/badge/Community-20%2B%20Contributors-blue?logo=github"
                       alt="Made with ❤️ by Contributors"
                       style={{ maxWidth: '100%' }}
                     />
