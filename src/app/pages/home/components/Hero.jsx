@@ -45,6 +45,18 @@ const Hero = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://docs.smarter.sh/contributors.html"
+                  >
+                    <img
+                      src="https://img.shields.io/badge/Made%20by-Contributors-blue?logo=github"
+                      alt="Made with ❤️ by Contributors"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/smarter-sh/smarter/actions/workflows/build.yml"
                   >
                     <img
