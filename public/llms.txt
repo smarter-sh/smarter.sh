@@ -14,6 +14,8 @@ Official website: https://smarter.sh/
 
 - https://docs.smarter.sh/smarter-resources.html
 
+- https://docs.smarter.sh/contributors.html
+
 
 ## Developer Resources
 
@@ -28,6 +30,8 @@ Official website: https://smarter.sh/
 - https://pypi.org/project/smarter-api/
 
 - https://www.npmjs.com/package/@smarter.sh/ui-chat
+
+- https://www.youtube.com/@project-smarter
 
 
 

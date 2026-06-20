@@ -2,23 +2,16 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/x-icon" href="/favicon.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Smarter</title>
+    <link rel="canonical" href="https://smarter.sh/" />
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <title>The Smarter Project | Open Source AI Authoring Platform</title>
 
     <meta name="robots" content="index, follow" />
-    <meta name="revisit-after" content="10 days" />
     <meta name="author" content="Lawrence McDaniel" />
-    <meta name="author-url" content="https://lawrencemcdaniel.com" />
-    <meta name="generator" content="ReactJS" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
       content="Smarter is a Kubernetes-inspired AI platform that uses declarative manifests, reusable plugins, and Git-friendly workflows to securely connect AI to private enterprise data."
-    />
-    <meta
-      name="keywords"
-      content="Smarter, Kubernetes, AI platform, declarative manifests, reusable plugins, Git-friendly workflows, private enterprise data"
     />
     <meta
       property="og:image"
@@ -27,18 +20,23 @@
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Smarter" />
+    <meta property="og:image:alt" content="The Smarter Project" />
     <meta property="og:locale" content="en_US" />
-    <meta property="og:type" content="article" />
-    <meta property="og:title" content="Smarter" />
-    <meta property="og:site_name" content="Smarter" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="The Smarter Project" />
+    <meta property="og:site_name" content="The Smarter Project" />
+    <meta property="og:url" content="https://smarter.sh/" />
+    <meta
+      property="og:description"
+      content="Smarter is an open source Kubernetes-inspired AI authoring and orchestration platform that uses declarative manifests, reusable plugins, and Git-friendly workflows to securely connect AI to private enterprise data."
+    />
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:site" content="@smarter" />
-    <meta name="twitter:title" content="Smarter" />
+    <meta name="twitter:title" content="The Smarter Project" />
     <meta
       name="twitter:description"
-      content="Smarter is a Kubernetes-inspired AI platform that uses declarative manifests, reusable plugins, and Git-friendly workflows to securely connect AI to private enterprise data."
+      content="Smarter is an open source Kubernetes-inspired AI authoring and orchestration platform that uses declarative manifests, reusable plugins, and Git-friendly workflows to securely connect AI to private enterprise data."
     />
     <meta
       name="twitter:image"
@@ -88,6 +86,24 @@
       new MutationObserver(() => {
         document.querySelector('#splash-screen')?.classList.add('remove')
       }).observe(rootEl, { childList: true })
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "The Smarter Project",
+        "url": "https://smarter.sh",
+        "logo": "https://cdn.smarter.sh/images/logo/smarter-crop.png",
+        "description": "Open source Kubernetes-inspired AI authoring and orchestration platform using declarative manifests and reusable plugins.",
+        "sameAs": [
+          "https://docs.smarter.sh/",
+          "https://github.com/smarter-sh/",
+          "https://hub.docker.com/r/mcdaniel0073/smarter",
+          "https://pypi.org/project/smarter-api/",
+          "https://www.npmjs.com/package/@smarter.sh/ui-chat",
+          "https://www.youtube.com/@project-smarter"
+        ]
+      }
     </script>
   </body>
 </html>
