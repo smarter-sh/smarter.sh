@@ -27,6 +27,10 @@ Official website: https://smarter.sh/
 
 - https://pypi.org/project/smarter-api/
 
+- https://www.npmjs.com/package/@smarter.sh/ui-chat
+
+
+
 ## Source Code
 
 - https://github.com/smarter-sh/smarter
