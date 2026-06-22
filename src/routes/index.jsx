@@ -9,6 +9,7 @@ const DeveloperResources = lazy(() => import('@/app/pages/developers/page'))
 const TOS = lazy(() => import('@/app/pages/tos/page'))
 const Privacy = lazy(() => import('@/app/pages/privacy/page'))
 const Legal = lazy(() => import('@/app/pages/legal/page'))
+const Partners = lazy(() => import('@/app/pages/partners/page'))
 
 //auth pages
 const Login = lazy(() => import('@/app/auth/login/page'))
@@ -77,9 +78,9 @@ const StaticPages = [
     element: <Navigate to="/privacy" replace />,
   },
   {
-    path: '/legal',
-    name: 'Legal Information',
-    element: <Legal />,
+    path: '/partners',
+    name: 'Partners',
+    element: <Partners />,
   }
 ]
 
