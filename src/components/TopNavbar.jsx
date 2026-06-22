@@ -25,8 +25,8 @@ const navLinks = [
     link: 'https://blog.smarter.sh/',
   },
   {
-    label: 'Legal',
-    link: '/legal',
+    label: 'Partners',
+    link: '/partners',
   },
 ]
 

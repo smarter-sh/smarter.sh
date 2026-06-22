@@ -231,6 +231,23 @@ export const footerLinks = [
     ],
   },
   {
+    title: 'Legal',
+    links: [
+      {
+        name: 'Legal Home',
+        url: '/legal'
+      },
+      {
+        name: 'Privacy Policy',
+        url: '/privacy'
+      },
+      {
+        name: 'Terms of Service',
+        url: '/tos'
+      },
+    ],
+  },
+  {
     title: 'Community & Resources',
     links: [
       {
