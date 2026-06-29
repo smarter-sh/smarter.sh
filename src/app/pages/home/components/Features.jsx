@@ -135,7 +135,7 @@ const UnifiedLLMInterface = () => {
 
 const PluginIntegrations = () => {
   const feature = {
-    text: `Smarter Plugins give AI access to the specialized knowledge, live data, and business capabilities that make your organization unique. Whether that’s querying employee records, retrieving current weather, calculating complex mathematical equations, executing business logic, or interacting with proprietary systems, Plugins let your AI do what a foundation model cannot.
+    text: `Smarter Plugins give AI access to the specialized knowledge, live data, and business skills that make your organization unique. Whether that’s querying employee records, retrieving current weather, calculating complex mathematical equations, executing business logic, or interacting with proprietary systems, Plugins let your AI do what a foundation model cannot.
 
 Define Plugins declaratively in simple YAML—no custom framework or glue code required. Connect to SQL databases, REST APIs, static knowledge, or secure sandboxed Python. Control exactly when each Plugin is available using flexible selectors, from keyword matching to always-on capabilities.
 
