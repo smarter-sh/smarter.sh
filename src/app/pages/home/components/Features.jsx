@@ -10,15 +10,11 @@ import { CDN } from '@/common/constants'
 
 import FeatureBlock from './FeatureBlock'
 
-
-
 const FeatureYaml = () => {
-
   const feature = {
     text: "Leverage the power of YAML to define and manage your AI workflows with ease. Smarter's intuitive YAML-first approach allows you to create, modify, and deploy complex AI processes without writing a single line of code. Streamline your operations and enhance collaboration across teams with clear, human-readable configurations.",
     imgUrl: img_yaml_nocode,
   }
-
 
   return (
     <FeatureBlock
@@ -37,7 +33,6 @@ const FeatureYaml = () => {
 }
 
 const FeaturePromptEngineerWorkbench = () => {
-
   const vid_prompt_workbench = `${CDN}/videos/read-the-docs2.mp4`
   const img_dashboard = `${CDN}/images/web-console-dashboard.png`
   const vid_prompt_passthrough = `${CDN}/videos/prompt_passthrough.mp4`
@@ -45,60 +40,65 @@ const FeaturePromptEngineerWorkbench = () => {
   const vid_apply_manifest = `${CDN}/videos/apply-manifest.mp4`
   const vid_everything_is_a_manifest = `${CDN}/videos/everything-is-a-manifest.mp4`
 
-
   const feature1 = {
-    text: "Explore message flows, prompt metadata, token usage, tool calls, and raw responses — all in real time. " +
-    "Watch server logs stream live and inspect complete JSON request and response objects. It’s the ultimate " +
-    "workspace for designing, debugging, and perfecting AI behavior, BEFORE you deploy.",
+    text:
+      'Explore message flows, prompt metadata, token usage, tool calls, and raw responses — all in real time. ' +
+      'Watch server logs stream live and inspect complete JSON request and response objects. It’s the ultimate ' +
+      'workspace for designing, debugging, and perfecting AI behavior, BEFORE you deploy.',
     imgUrl: vid_prompt_workbench,
   }
 
   const feature2 = {
-    text: "Smarter's ReactJS based customizable web console dashboard provides prompt engineers " +
-    "with an interactive view into the AI resources that are at their disposal, " +
-    "along with platform key performance metrics, and real-time system status. The dashboard " +
-    "also provides engineers with a roadmap to the Smarter ecosystem, with quick access to " +
-    "documentation, sdks, training materials, and support channels — all designed to help you get the most out of Smarter.",
+    text:
+      "Smarter's ReactJS based customizable web console dashboard provides prompt engineers " +
+      'with an interactive view into the AI resources that are at their disposal, ' +
+      'along with platform key performance metrics, and real-time system status. The dashboard ' +
+      'also provides engineers with a roadmap to the Smarter ecosystem, with quick access to ' +
+      'documentation, sdks, training materials, and support channels — all designed to help you get the most out of Smarter.',
     imgUrl: img_dashboard,
   }
 
   const feature3 = {
-    text: "Smarter's prompt pass-through feature provides engineers with direct access to LLM APIs. " +
-    "This is ideal for classroom lab exercises as well as for helping professional prompt " +
-    "engineers gather diagnostic and debug information on complex prompting problems. The " +
-    "convenience templates enable new users to instantly setup common, working JSON patterns for " +
-    "everything from a 'Hello world!' prompt to complex multi-step tool calls.",
+    text:
+      "Smarter's prompt pass-through feature provides engineers with direct access to LLM APIs. " +
+      'This is ideal for classroom lab exercises as well as for helping professional prompt ' +
+      'engineers gather diagnostic and debug information on complex prompting problems. The ' +
+      'convenience templates enable new users to instantly setup common, working JSON patterns for ' +
+      "everything from a 'Hello world!' prompt to complex multi-step tool calls.",
     imgUrl: vid_prompt_passthrough,
   }
 
   const feature4 = {
-    text: "Smarter's web console server logs feature provides prompt engineers with a personalized, live, " +
-    "real-time stream of all backend activity — from incoming requests to security " +
-    "checks, resource provisioning, prompt preparation, interim LLM API responses, and outgoing responses. " +
-    "Each log entry includes detailed metadata, such as timestamps, request IDs, user information, and execution details. " +
-    "This comprehensive logging allows you to monitor performance, troubleshoot issues, and gain deep insights into how your " +
-    "prompts are being processed and executed — all within the Prompt Engineer Workbench.",
+    text:
+      "Smarter's web console server logs feature provides prompt engineers with a personalized, live, " +
+      'real-time stream of all backend activity — from incoming requests to security ' +
+      'checks, resource provisioning, prompt preparation, interim LLM API responses, and outgoing responses. ' +
+      'Each log entry includes detailed metadata, such as timestamps, request IDs, user information, and execution details. ' +
+      'This comprehensive logging allows you to monitor performance, troubleshoot issues, and gain deep insights into how your ' +
+      'prompts are being processed and executed — all within the Prompt Engineer Workbench.',
     imgUrl: vid_server_logs,
   }
 
   const feature5 = {
-    text: "Use Smarter's VS Code extension to help you effortlessly create AI solutions. Every Smarter AI resource is " +
-    "declarable as a YAML manifest. Design your ChatBots, Plugins, Connections, Secrets and more in YAML, " +
-    "and then simply drag-and-drop your manifest into the web console to apply it to your workspace. " +
-    "It's that simple!",
+    text:
+      "Use Smarter's VS Code extension to help you effortlessly create AI solutions. Every Smarter AI resource is " +
+      'declarable as a YAML manifest. Design your ChatBots, Plugins, Connections, Secrets and more in YAML, ' +
+      'and then simply drag-and-drop your manifest into the web console to apply it to your workspace. ' +
+      "It's that simple!",
     imgUrl: vid_apply_manifest,
     link: {
-        url: 'https://marketplace.visualstudio.com/items?itemName=querium.smarter-manifest',
-        text: 'Get the VS Code Extension',
-        lucide_icon: 'lucide:book-open',
-      }
+      url: 'https://marketplace.visualstudio.com/items?itemName=querium.smarter-manifest',
+      text: 'Get the VS Code Extension',
+      lucide_icon: 'lucide:book-open',
+    },
   }
 
   const feature6 = {
-    text: "Every Smarter AI resource is defined with a YAML manifest. " +
-    "This unified approach eliminates any need for programming skills. It means that your students and prompt engineers " +
-    "are instantaneously productive. It simplifies management, enhances visibility, and promotes best practices across " +
-    "your AI projects. Everyone is able to focus on strategic outcomes instead of getting bogged down in code.",
+    text:
+      'Every Smarter AI resource is defined with a YAML manifest. ' +
+      'This unified approach eliminates any need for programming skills. It means that your students and prompt engineers ' +
+      'are instantaneously productive. It simplifies management, enhances visibility, and promotes best practices across ' +
+      'your AI projects. Everyone is able to focus on strategic outcomes instead of getting bogged down in code.',
     imgUrl: vid_everything_is_a_manifest,
   }
 
@@ -118,7 +118,7 @@ const FeaturePromptEngineerWorkbench = () => {
 
 const UnifiedLLMInterface = () => {
   const feature = {
-    text: "Just declare your provider and model in YAML — Smarter handles the rest: authentication, request formatting, and routing. Instantly swap between OpenAI, Anthropic, Mistral, or others in real time. Compare results, split-test performance, and keep your agents provider-agnostic by design.",
+    text: 'Just declare your provider and model in YAML — Smarter handles the rest: authentication, request formatting, and routing. Instantly swap between OpenAI, Anthropic, Mistral, or others in real time. Compare results, split-test performance, and keep your agents provider-agnostic by design.',
     imgUrl: img_llm_providers,
   }
 
@@ -135,14 +135,18 @@ const UnifiedLLMInterface = () => {
 
 const PluginIntegrations = () => {
   const feature = {
-    text: "Smarter’s Plugin system gives you a no-code, YAML-based way to create fully functional LLM tools. Each Plugin defines how and when it’s invoked, using selectors that work like CSS — from keyword triggers to unconditional inclusion. Connect your ChatBots and Agents to live databases, REST APIs, or sandboxed Python code — safely, seamlessly, and without glue scripts.",
+    text: `Smarter Plugins give AI access to the specialized knowledge, live data, and business capabilities that make your organization unique. Whether that’s querying employee records, retrieving current weather, calculating complex mathematical equations, executing business logic, or interacting with proprietary systems, Plugins let your AI do what a foundation model cannot.
+
+Define Plugins declaratively in simple YAML—no custom framework or glue code required. Connect to SQL databases, REST APIs, static knowledge, or secure sandboxed Python. Control exactly when each Plugin is available using flexible selectors, from keyword matching to always-on capabilities.
+
+The result is an AI that doesn’t just answer questions—it understands your business, works with your data, and performs real tasks.`,
     imgUrl: img_plugin,
   }
 
   return (
     <FeatureBlock
-      heading="Extend your LLM with real-world power."
-      subHeading="Smarter Plugins let any model call SQL, APIs, static data, or secure Python — all defined declaratively."
+      heading="Extend your LLM with real-world expertise."
+      subHeading="LLMs are trained on general knowledge. Your business isn’t."
       features={[feature]}
       orientation="right"
       boxLayout={6}
@@ -151,15 +155,14 @@ const PluginIntegrations = () => {
 }
 
 const SmarterChat = () => {
-
   const feature = {
-    text: "The same chat interface that powers the Prompt Engineer Workbench is available as a standalone npm package. Add it to any website — from SharePoint to Salesforce, from WordPress to custom apps — and instantly connect users to your Smarter ChatBots. It’s fully configurable, works with any Smarter deployment, and blends seamlessly with your existing design system.",
+    text: 'The same chat interface that powers the Prompt Engineer Workbench is available as a standalone npm package. Add it to any website — from SharePoint to Salesforce, from WordPress to custom apps — and instantly connect users to your Smarter ChatBots. It’s fully configurable, works with any Smarter deployment, and blends seamlessly with your existing design system.',
     imgUrl: img_smarter_chat,
     link: {
-        url: 'https://github.com/smarter-sh/smarter-chat',
-        text: 'Learn More',
-        lucide_icon: 'lucide:book-open',
-      }
+      url: 'https://github.com/smarter-sh/smarter-chat',
+      text: 'Learn More',
+      lucide_icon: 'lucide:book-open',
+    },
   }
 
   return (
@@ -174,15 +177,14 @@ const SmarterChat = () => {
 }
 
 const EnterpriseGovernance = () => {
-
   const feature = {
-    text: "Smarter gives organizations a centralized framework for managing AI at scale. Enforce resource limits, moderation policies, and approval workflows across teams while maintaining complete auditability. Track costs, monitor usage, archive production prompts, and maintain a verifiable history of every AI interaction. Whether you’re deploying a single chatbot or hundreds of AI-powered services, Smarter helps ensure consistent, compliant, and accountable operations.",
+    text: 'Smarter gives organizations a centralized framework for managing AI at scale. Enforce resource limits, moderation policies, and approval workflows across teams while maintaining complete auditability. Track costs, monitor usage, archive production prompts, and maintain a verifiable history of every AI interaction. Whether you’re deploying a single chatbot or hundreds of AI-powered services, Smarter helps ensure consistent, compliant, and accountable operations.',
     imgUrl: img_smarter_chat,
     link: {
-        url: 'https://github.com/smarter-sh/smarter-chat',
-        text: 'Learn More',
-        lucide_icon: 'lucide:book-open',
-      }
+      url: 'https://github.com/smarter-sh/smarter-chat',
+      text: 'Learn More',
+      lucide_icon: 'lucide:book-open',
+    },
   }
 
   return (
@@ -197,17 +199,16 @@ const EnterpriseGovernance = () => {
 }
 
 const ServerLogView = () => {
-
   const vid_log_view = `${CDN}/videos/terminal-emulator-logs.mp4`
 
   const feature = {
-    text: "Smarter server log view provides prompt engineers with a personalized, live, real-time stream of their backend activity — from incoming requests to security checks, resource provisioning, prompt preparation, interim LLM API responses, and outgoing responses. Each log entry includes detailed metadata, such as timestamps, request IDs, user information, and execution details.",
+    text: 'Smarter server log view provides prompt engineers with a personalized, live, real-time stream of their backend activity — from incoming requests to security checks, resource provisioning, prompt preparation, interim LLM API responses, and outgoing responses. Each log entry includes detailed metadata, such as timestamps, request IDs, user information, and execution details.',
     imgUrl: vid_log_view,
     link: {
-        url: 'https://docs.smarter.sh/smarter-framework/developer-reference/smarter-dashboard/views/logs/api/streams.html',
-        text: 'Learn More',
-        lucide_icon: 'lucide:book-open',
-      }
+      url: 'https://docs.smarter.sh/smarter-framework/developer-reference/smarter-dashboard/views/logs/api/streams.html',
+      text: 'Learn More',
+      lucide_icon: 'lucide:book-open',
+    },
   }
 
   return (
