@@ -137,7 +137,7 @@ const PluginIntegrations = () => {
   const feature = {
     text: `Smarter Plugins give AI access to the specialized knowledge, live data, and business skills that make your organization unique. Whether that’s querying employee records, retrieving current weather, calculating complex mathematical equations, executing business logic, or interacting with proprietary systems, Plugins let your AI do what a foundation model cannot.
 
-Define Plugins declaratively in simple YAML—no custom framework or glue code required. Connect to SQL databases, REST APIs, static knowledge, or secure sandboxed Python. Control exactly when each Plugin is available using flexible selectors, from keyword matching to always-on capabilities.
+Under the hood, Smarter provides the execution harness that manages tool selection, parameter binding, authentication, execution, and response handling. You simply declare each Plugin in YAML—no custom framework, orchestration code, or glue scripts required. Connect to SQL databases, REST APIs, static knowledge, or secure sandboxed Python, and control exactly when each Plugin is available using flexible selectors, from keyword matching to always-on capabilities.
 
 The result is an AI that doesn’t just answer questions—it understands your business, works with your data, and performs real tasks.`,
     imgUrl: img_plugin,
