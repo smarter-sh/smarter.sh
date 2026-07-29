@@ -93,13 +93,6 @@ const TopNavbar = () => {
                   <IconifyIcon icon="lucide:github" className="h-5 w-5" />
                   <span>smarter-sh/smarter</span>
                 </a>
-                <a
-                  href="https://ubc.smarter.sh/dashboard/"
-                  className="duration-3 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-white transition-all hover:bg-primary-hover"
-                >
-                  <IconifyIcon icon="lucide:layout-dashboard" className="me-2 h-5 w-5" />{' '}
-                  Platform
-                </a>
               </div>
             </div>
             <div className="hidden items-center lg:flex">
@@ -149,13 +142,6 @@ const TopNavbar = () => {
                   </a>
                 </div>
               </div>
-              <a
-                href="https://ubc.smarter.sh/dashboard/"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-white transition-all duration-300 hover:bg-primary-hover"
-              >
-                <IconifyIcon icon="lucide:layout-dashboard" className="me-2 h-5 w-5" />{' '}
-                Platform
-              </a>
             </div>
           </nav>
         </div>
