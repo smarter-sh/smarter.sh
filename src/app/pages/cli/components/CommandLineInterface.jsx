@@ -1,8 +1,8 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faApple, faWindows, faLinux } from '@fortawesome/free-brands-svg-icons'
+import { faApple, faWindows, faLinux, faUbuntu } from '@fortawesome/free-brands-svg-icons'
 
 const OSCard = ({ icon, operating_system, download_instructions, more_link }) => (
-  <div className="flex-1 min-w-0 w-full lg:w-1/3 border-b border-white/10 md:border-e last:md:border-e-0 md:border-b-0">
+  <div className="min-w-0 w-full border-b border-white/10 last:border-b-0 sm:border-b-0 sm:[&:nth-child(-n+2)]:border-b sm:[&:nth-child(-n+2)]:border-white/10 sm:[&:nth-child(odd)]:border-e sm:[&:nth-child(odd)]:border-white/10">
     <div className="p-6 sm:p-8 md:p-10">
       <div className="mb-8 sm:mb-10 flex w-full items-center justify-center">
         <div className="h-14 w-14 sm:h-16 sm:w-16 flex items-center justify-center rounded-xl bg-primary/10 text-primary mx-auto">
@@ -41,7 +41,7 @@ const CommandLineInterface = () => {
         </div>
       </div>
       <div>
-  <div className="flex flex-col lg:flex-row flex-wrap items-stretch rounded-3xl bg-default-950/40 backdrop-blur-3xl">
+  <div className="grid grid-cols-1 sm:grid-cols-2 items-stretch rounded-3xl bg-default-950/40 backdrop-blur-3xl">
           <OSCard
             icon={faApple}
             operating_system="Mac"
@@ -55,8 +55,14 @@ const CommandLineInterface = () => {
             more_link="#windows"
           />
           <OSCard
+            icon={faUbuntu}
+            operating_system="Linux (Ubuntu)"
+            download_instructions={`sudo add-apt-repository ppa:lpm0073/smarter-cli\nsudo apt-get update\nsudo apt-get install smarter-cli`}
+            more_link="#ubuntu"
+          />
+          <OSCard
             icon={faLinux}
-            operating_system="Linux"
+            operating_system="Linux (other)"
             download_instructions={`brew tap smarter-sh/homebrew-tap\nbrew install smarter`}
             more_link="#linux"
           />
