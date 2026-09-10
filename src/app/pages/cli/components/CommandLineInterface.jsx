@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faApple, faWindows, faLinux, faUbuntu } from '@fortawesome/free-brands-svg-icons'
+import { faApple, faWindows, faLinux, faUbuntu, faDochub } from '@fortawesome/free-brands-svg-icons'
 
 const OSCard = ({ icon, operating_system, download_instructions, more_link }) => (
   <div className="min-w-0 w-full border-b border-white/10 last:border-b-0 sm:border-b-0 sm:[&:nth-child(-n+2)]:border-b sm:[&:nth-child(-n+2)]:border-white/10 sm:[&:nth-child(odd)]:border-e sm:[&:nth-child(odd)]:border-white/10">
@@ -45,7 +45,7 @@ const CommandLineInterface = () => {
           <OSCard
             icon={faApple}
             operating_system="Mac"
-            download_instructions={`brew tap smarter-sh/homebrew-tap\nbrew install smarter`}
+            download_instructions={`brew tap smarter-sh/homebrew-tap\nbrew trust smarter-sh/tap\nbrew install smarter`}
             more_link="#mac"
           />
           <OSCard
@@ -65,6 +65,12 @@ const CommandLineInterface = () => {
             operating_system="Linux (other)"
             download_instructions={`brew tap smarter-sh/homebrew-tap\nbrew install smarter`}
             more_link="#linux"
+          />
+          <OSCard
+            icon={faDochub}
+            operating_system="DockerHub"
+            download_instructions={`docker pull mcdaniel0073/smarter-cli:latest\ndocker run --rm mcdaniel0073/smarter-cli:latest --help`}
+            more_link="#docker"
           />
         </div>
       </div>
