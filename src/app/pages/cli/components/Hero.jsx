@@ -16,7 +16,7 @@ const Hero = () => {
           <div className="mt-6 flex justify-center">
             <div className="max-w-2xl">
               <h1 className="mb-6 text-5xl/tight font-medium text-default-100">
-                Download the smarter.sh CLI
+                Download the smarter Command-line Interface
               </h1>
             </div>
           </div>

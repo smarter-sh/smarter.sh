@@ -35,7 +35,7 @@ const CommandLineInterface = () => {
               Operating Systems
             </h2>
             <p className="text-sm font-medium text-default-200">
-              Download smarter.sh for your OS below.
+              (see also: https://github.com/smarter-sh/smarter-cli/)
             </p>
           </div>
         </div>
