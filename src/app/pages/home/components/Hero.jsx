@@ -1,6 +1,12 @@
 import GlightBox from '@/components/GlightBox'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 
+const highlights = [
+  { icon: 'lucide:github', text: 'Open source' },
+  { icon: 'lucide:badge-dollar-sign', text: 'Free' },
+  { icon: 'lucide:server', text: 'Self-hosted' },
+]
+
 const Hero = () => {
   return (
     <>
@@ -23,17 +29,72 @@ const Hero = () => {
       >
         <div className="-z-1 absolute start-80 top-1/2 h-14 w-14 animate-[spin_10s_linear_infinite] rounded-2xl rounded-br-none rounded-tl-none bg-primary/10" />
         <div className="-z-1 absolute end-80 top-1/2 h-14 w-14 animate-ping rounded-full bg-primary/20" />
-        <div className="conainer">
+        <div className="container">
           <div className="text-center">
             <div className="mt-6 flex justify-center">
-              <div className="max-w-6xl">
+              <div className="max-w-4xl">
                 <h1 className="mb-6 text-5xl/tight font-medium text-default-100">
                   The <span className="text-primary">Smarter</span> Project
                 </h1>
-                <p className="mx-auto text-base font-medium text-default-300 lg:max-w-xl">
-                  Open source AI infrastructure for teams that need governance, control, and scale.
+                <p className="mx-auto mb-4 text-xl font-medium text-default-200 lg:max-w-2xl">
+                  Secure, declarative AI resource management for teams that
+                  runs at scale.
                 </p>
-                <div className="flex flex-wrap justify-center gap-2 mt-4">
+                <p className="mx-auto text-base text-default-300 lg:max-w-2xl">
+                  Build sophisticated AI applications — chatbots, assistants
+                  and agents that work with your own data — by describing them
+                  in a short text file. No programming required.
+                </p>
+
+                <div className="mt-6 flex flex-wrap justify-center gap-3">
+                  {highlights.map((item) => (
+                    <span
+                      key={item.text}
+                      className="inline-flex items-center gap-2 rounded-full border border-primary/40 bg-primary/10 px-4 py-1.5 text-sm font-medium text-default-100"
+                    >
+                      <IconifyIcon icon={item.icon} className="h-4 w-4 text-primary" />
+                      {item.text}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
+                  <a
+                    href="https://docs.smarter.sh/smarter-platform/installation/quick-start.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-base font-medium text-white transition-all duration-300 hover:bg-primary/80"
+                  >
+                    <IconifyIcon icon="lucide:rocket" className="h-5 w-5" />
+                    Get started
+                  </a>
+                  <a
+                    href="https://docs.smarter.sh/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 rounded-full border border-default-200/40 px-6 py-3 text-base font-medium text-default-100 transition-all duration-300 hover:border-primary hover:text-primary"
+                  >
+                    <IconifyIcon icon="lucide:book-open" className="h-5 w-5" />
+                    Read the docs
+                  </a>
+                  <GlightBox
+                    href="https://youtu.be/bfePkGzKAvw?si=HleMgMYnZMz_wuX2"
+                    title="Smarter LLM Tool Integrations for SQL"
+                    autoplayVideos={true}
+                    type="video"
+                    description="Smarter is an open source, self-hosted platform for building secure AI applications from declarative YAML manifests."
+                  >
+                    <button
+                      data-hs-overlay="#watchvideomodal"
+                      className="inline-flex items-center gap-2 rounded-full bg-primary/40 px-6 py-3 text-base font-medium text-white ring-4 ring-primary/25 transition-all duration-300 hover:bg-primary"
+                    >
+                      <IconifyIcon icon="lucide:play" className="h-5 w-5" />
+                      Watch video
+                    </button>
+                  </GlightBox>
+                </div>
+
+                <div className="mt-10 flex flex-wrap justify-center gap-2 opacity-80">
                   <a href="https://www.gnu.org/licenses/agpl-3.0" rel="nofollow">
                     <img
                       src="https://img.shields.io/badge/License-AGPL_v3-blue.svg"
@@ -41,19 +102,6 @@ const Hero = () => {
                       style={{ maxWidth: '100%' }}
                     />
                   </a>
-
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://docs.smarter.sh/contributors.html"
-                  >
-                    <img
-                      src="https://img.shields.io/badge/Community-20%2B%20Contributors-blue?logo=github"
-                      alt="Made with ❤️ by Contributors"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
-
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
@@ -65,21 +113,6 @@ const Hero = () => {
                       style={{ maxWidth: '100%' }}
                     />
                   </a>
-
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/smarter-sh/smarter/actions/workflows/deploy.yml"
-                  >
-                    <img
-                      src="https://github.com/smarter-sh/smarter/actions/workflows/deploy.yml/badge.svg?branch=main"
-                      alt="Release Status"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
-
-                </div>
-                <div className="dockerhub flex flex-wrap justify-center gap-2 mt-4">
                   <a href="https://hub.docker.com/r/mcdaniel0073/smarter" rel="nofollow">
                     <img
                       src="https://img.shields.io/docker/pulls/mcdaniel0073/smarter.svg?logo=docker&label=DockerHub"
@@ -98,74 +131,7 @@ const Hero = () => {
                     />
                   </a>
                 </div>
-                <div className="python flex flex-wrap justify-center gap-2 mt-4">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://github.com/smarter-sh/smarter/blob/main/pyproject.toml"
-                  >
-                    <img
-                      src="https://img.shields.io/badge/python-3.10%2B-blue"
-                      alt="Python 3.10+"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
-
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://pydantic.dev/"
-                  >
-                    <img
-                      src="https://img.shields.io/badge/pydantic-2.9-green"
-                      alt="Pydantic 2.9"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
-
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://www.django-rest-framework.org/"
-                  >
-                    <img
-                      src="https://img.shields.io/badge/DRF-3.15-orange"
-                      alt="Django REST Framework 3.15"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
-                </div>
-                <div className="readthedocs flex flex-wrap justify-center gap-2 mt-4">
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://docs.smarter.sh/"
-                  >
-                    <img
-                      src="https://img.shields.io/badge/Read%20the%20Docs-Smarter-blue?logo=readthedocs"
-                      alt="Read the Docs"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
-                </div>
               </div>
-            </div>
-            <div>
-              <GlightBox
-                href="https://youtu.be/bfePkGzKAvw?si=HleMgMYnZMz_wuX2"
-                title="Smarter LLM Tool Integrations for SQL"
-                autoplayVideos={true}
-                type="video"
-                description="Smarter is an open-source, Docker-based extensible open-source AI resource management platform and application development framework that runs natively in Kubernetes."
-              >
-                <button
-                  data-hs-overlay="#watchvideomodal"
-                  className="relative mx-auto mt-10 flex items-center justify-center gap-2.5 rounded-full bg-primary/40 px-6 py-3.5 text-base font-medium text-white ring-4 ring-primary/25 transition-all duration-300 hover:bg-primary"
-                >
-                  <IconifyIcon icon="lucide:play" className="h-6 w-6" />
-                  Watch Video
-                </button>
-              </GlightBox>
             </div>
           </div>
         </div>
