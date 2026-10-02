@@ -1,3 +1,10 @@
+# [0.10.0](https://github.com/smarter-sh/smarter.sh/compare/v0.9.0...v0.10.0) (2026-09-30)
+
+
+### Features
+
+* version 0.15 release ([505c563](https://github.com/smarter-sh/smarter.sh/commit/505c5633a47a31a5f4cb309fd38b50defc02bbbc))
+
 # [0.9.0](https://github.com/smarter-sh/smarter.sh/compare/v0.8.0...v0.9.0) (2026-06-22)
 
 
