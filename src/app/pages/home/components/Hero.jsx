@@ -113,6 +113,17 @@ const Hero = () => {
                       style={{ maxWidth: '100%' }}
                     />
                   </a>
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://github.com/smarter-sh/smarter/actions/workflows/test.yml"
+                  >
+                    <img
+                      src="https://github.com/smarter-sh/smarter/actions/workflows/test.yml/badge.svg?branch=main"
+                      alt="Test Status"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  </a>
                   <a href="https://hub.docker.com/r/mcdaniel0073/smarter" rel="nofollow">
                     <img
                       src="https://img.shields.io/docker/pulls/mcdaniel0073/smarter.svg?logo=docker&label=DockerHub"
