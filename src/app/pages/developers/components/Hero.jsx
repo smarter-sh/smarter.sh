@@ -49,6 +49,18 @@ const Hero = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://github.com/smarter-sh/smarter/actions/workflows/test.yml"
+                  >
+                    <img
+                      src="https://github.com/smarter-sh/smarter/actions/workflows/test.yml/badge.svg?branch=main"
+                      alt="Test Status"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/smarter-sh/smarter/actions/workflows/deploy.yml"
                   >
                     <img
