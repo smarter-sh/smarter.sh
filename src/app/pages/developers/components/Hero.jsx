@@ -70,18 +70,6 @@ const Hero = () => {
                     />
                   </a>
 
-                  <a
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    href="https://smarter.readthedocs.io/"
-                  >
-                    <img
-                      src="https://readthedocs.org/projects/smarter/badge/?version=latest"
-                      alt="Documentation Status"
-                      style={{ maxWidth: '100%' }}
-                    />
-                  </a>
-
                   <a href="https://www.gnu.org/licenses/agpl-3.0" rel="nofollow">
                     <img
                       src="https://img.shields.io/badge/License-AGPL_v3-blue.svg"
