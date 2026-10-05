@@ -61,6 +61,18 @@ const Hero = () => {
                   <a
                     target="_blank"
                     rel="noopener noreferrer"
+                    href="https://codecov.io/gh/smarter-sh/smarter"
+                  >
+                    <img
+                      src="https://codecov.io/gh/smarter-sh/smarter/branch/main/graph/badge.svg"
+                      alt="Code Coverage"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
                     href="https://github.com/smarter-sh/smarter/actions/workflows/deploy.yml"
                   >
                     <img

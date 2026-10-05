@@ -124,6 +124,19 @@ const Hero = () => {
                       style={{ maxWidth: '100%' }}
                     />
                   </a>
+
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href="https://codecov.io/gh/smarter-sh/smarter"
+                  >
+                    <img
+                      src="https://codecov.io/gh/smarter-sh/smarter/branch/main/graph/badge.svg"
+                      alt="Code Coverage"
+                      style={{ maxWidth: '100%' }}
+                    />
+                  </a>
+
                   <a href="https://hub.docker.com/r/mcdaniel0073/smarter" rel="nofollow">
                     <img
                       src="https://img.shields.io/docker/pulls/mcdaniel0073/smarter.svg?logo=docker&label=DockerHub"
