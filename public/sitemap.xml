@@ -1,31 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://smarter.sh/</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
-    <loc>https://smarter.sh/about</loc>
-    <lastmod>2026-06-20</lastmod>
+    <loc>https://smarter.sh/platform</loc>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://smarter.sh/education</loc>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://smarter.sh/integrations</loc>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://smarter.sh/extensions</loc>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://smarter.sh/sdks</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://smarter.sh/developers</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://smarter.sh/cli</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://smarter.sh/about</loc>
+    <lastmod>2026-10-16</lastmod>
+  </url>
+  <url>
+    <loc>https://smarter.sh/partners</loc>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://smarter.sh/legal</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://smarter.sh/privacy</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
   <url>
     <loc>https://smarter.sh/tos</loc>
-    <lastmod>2026-06-20</lastmod>
+    <lastmod>2026-10-16</lastmod>
   </url>
- </urlset>
+</urlset>

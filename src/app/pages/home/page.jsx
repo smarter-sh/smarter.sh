@@ -1,25 +1,35 @@
-import Background2 from '@/components/Background2'
-import TopNavbar from '@/components/TopNavbar'
+import PageShell from '@/components/site/PageShell'
+import CtaBand from '@/components/site/CtaBand'
+import { LogoMarquee, WordMarquee } from '@/components/site/Marquee'
 import Hero from './components/Hero'
-import About from './components/About'
-import WhySmarter from './components/WhySmarter'
-import Features from './components/Features'
-import GetStarted from './components/GetStarted'
-import Footer from './components/Footer'
+import { Problem, WhatIsSmarter } from './components/Story'
+import TryIt from './components/TryIt'
+import { ErpForAi, Extend, SafeByDefault, WhatYouBuild } from './components/Governance'
+import { Faqs, Pilot, WhoItsFor, WhyOpenSource } from './components/Adoption'
+import { logos, words } from './data'
+
 const Home = () => {
   return (
-    <div>
-      <Background2 />
-      <TopNavbar />
-      <main className="w-full">
-        <Hero />
-        <About />
-        <WhySmarter />
-        <Features />
-        <GetStarted />
-      </main>
-      <Footer />
-    </div>
+    <PageShell>
+      <Hero />
+      <LogoMarquee
+        title="Works with the AI and the platforms you already use"
+        logos={logos}
+      />
+      <Problem />
+      <WhatIsSmarter />
+      <WordMarquee rows={words} />
+      <TryIt />
+      <WhatYouBuild />
+      <SafeByDefault />
+      <Extend />
+      <ErpForAi />
+      <WhyOpenSource />
+      <WhoItsFor />
+      <Pilot />
+      <Faqs />
+      <CtaBand />
+    </PageShell>
   )
 }
 export default Home

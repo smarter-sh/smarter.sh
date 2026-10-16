@@ -3,37 +3,26 @@
 import { useEffect, useRef } from 'react'
 import Gumshoe from 'gumshoejs'
 import IconifyIcon from './wrappers/IconifyIcon'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+import SmartLink from './site/SmartLink'
+import { BLOG, QUICK_START } from '@/common/constants'
 import logo from '@/assets/images/logo.png'
 import useScrollEvent from '@/hooks/useScrollEvent'
 
 const navLinks = [
-  {
-    label: 'About',
-    link: '/about',
-  },
-  {
-    label: 'Developers',
-    link: '/developers',
-  },
-  {
-    label: 'CLI',
-    link: '/cli',
-  },
-  {
-    label: 'Blog',
-    link: 'https://blog.smarter.sh/',
-  },
-  {
-    label: 'Partners',
-    link: '/partners',
-  },
+  { label: 'Platform', link: '/platform' },
+  { label: 'Education', link: '/education' },
+  { label: 'Integrations', link: '/integrations' },
+  { label: 'Extensions', link: '/extensions' },
+  { label: 'SDKs', link: '/sdks' },
+  { label: 'Developers', link: '/developers' },
+  { label: 'Blog', link: BLOG },
 ]
-
 
 const TopNavbar = () => {
   const navRef = useRef(null)
   const { scrollY } = useScrollEvent()
+  const { pathname } = useLocation()
   useEffect(() => {
     document.body.classList.add('bg-default-900')
     // Only initialize Gumshoe for in-page anchor links
@@ -76,72 +65,54 @@ const TopNavbar = () => {
             >
               <ul id="navbar-navlist" className="navbar-nav">
                 {navLinks.map((item, idx) => (
-                  <li key={item.link + idx} className="nav-item">
-                    <a href={item.link} className="nav-link" target='_self' rel={item.link.startsWith('http') ? 'noopener noreferrer' : undefined}>
+                  <li
+                    key={item.link + idx}
+                    className={`nav-item ${pathname.startsWith(item.link) ? 'active' : ''}`}
+                  >
+                    <SmartLink href={item.link} className="nav-link">
                       {item.label}
-                    </a>
+                    </SmartLink>
                   </li>
                 ))}
               </ul>
               <div className="mt-4 flex items-center border-t border-white/10 pt-4 lg:mt-0 lg:hidden lg:border-none lg:pt-0">
                 <a
-                  href="https://github.com/smarter-sh/smarter"
+                  href={QUICK_START}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="duration-3 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-white transition-all hover:bg-primary-hover mr-2"
+                  className="mr-2 inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-2 text-white transition-all hover:bg-primary/80"
                 >
-                  <IconifyIcon icon="lucide:github" className="h-5 w-5" />
-                  <span>smarter-sh/smarter</span>
+                  Get started
                 </a>
-              </div>
-            </div>
-            <div className="hidden items-center lg:flex">
-              <div className="me-6 flex items-center">
                 <a
                   href="https://github.com/smarter-sh/smarter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 text-white hover:text-primary transition-colors"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-white"
                 >
-                  <IconifyIcon icon="lucide:github" className="h-6 w-6" />
-                  <span>smarter-sh/smarter</span>
+                  <IconifyIcon icon="lucide:github" className="h-5 w-5" />
+                  <span>GitHub</span>
                 </a>
-                <div className="ml-4 flex items-center gap-3">
-                  <a
-                    href="https://github.com/smarter-sh/smarter/releases"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    <img
-                      src="https://img.shields.io/github/v/release/smarter-sh/smarter?style=flat&color=ea580c"
-                      alt="Latest Release"
-                    />
-                  </a>
-                  <a
-                    href="https://github.com/smarter-sh/smarter/stargazers"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    <img
-                      src="https://img.shields.io/github/stars/smarter-sh/smarter?style=flat&color=ea580c"
-                      alt="GitHub Stars"
-                    />
-                  </a>
-                  <a
-                    href="https://github.com/smarter-sh/smarter/network/members"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-sm text-white/80 hover:text-white transition-colors"
-                  >
-                    <img
-                      src="https://img.shields.io/github/forks/smarter-sh/smarter?style=flat&color=ea580c"
-                      alt="GitHub Forks"
-                    />
-                  </a>
-                </div>
               </div>
+            </div>
+            <div className="hidden items-center gap-5 lg:flex">
+              <a
+                href="https://github.com/smarter-sh/smarter"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Smarter on GitHub"
+                className="text-white transition-colors hover:text-primary"
+              >
+                <IconifyIcon icon="lucide:github" className="h-6 w-6" />
+              </a>
+              <a
+                href={QUICK_START}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center rounded-full bg-primary px-5 py-2 text-sm font-medium text-white transition-all hover:bg-primary/80"
+              >
+                Get started
+              </a>
             </div>
           </nav>
         </div>

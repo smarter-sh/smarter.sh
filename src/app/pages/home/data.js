@@ -1,316 +1,295 @@
-export const about = [
+import { DOCS } from '@/common/constants'
+
+export const situation = [
   {
-    name: 'Quickstart',
-    icon: 'lucide:settings',
-    iconClass: 'bg-orange-500/20 text-orange-500',
-    detail:
-      'A 1-click Docker deployment that gets Smarter running on your desktop in less than 10 minutes.',
-    link_text: 'Get started',
-    url: 'https://github.com/smarter-sh/smarter-deploy',
+    icon: 'lucide:smartphone',
+    text: 'Staff use public AI tools with work information, often on personal accounts.',
   },
   {
-    name: 'Read the Docs',
-    icon: 'lucide:file-text',
-    iconClass: 'bg-red-500/20 text-red-500',
-    detail: 'Official Smarter documentation to help you get started quickly.',
-    link_text: 'Go to ReadTheDocs',
-    url: 'https://smarter.readthedocs.io/',
+    icon: 'lucide:shopping-cart',
+    text: 'Departments buy AI features one vendor at a time, each with its own rules.',
   },
   {
-    name: 'Support Smarter!',
-    icon: 'lucide:heart',
-    iconClass: 'bg-pink-500/20 text-pink-500',
-    detail: 'Donate to the Smarter Project and help us keep improving.',
-    link_text: 'Support Smarter',
-    url: 'https://github.com/sponsors/lpm0073',
+    icon: 'lucide:circle-help',
+    text: 'Few leaders can say what it all costs, what data it saw, or what it said.',
+  },
+]
+
+export const gaps = [
+  {
+    icon: 'lucide:graduation-cap',
+    title: 'The literacy gap',
+    accent: 'emerald',
+    text: 'Most people don’t yet know what AI can do, what it can’t, or how to use it safely with real information.',
   },
   {
-    name: 'Swagger API docs',
+    icon: 'lucide:eye-off',
+    title: 'The control gap',
+    accent: 'sky',
+    text: 'Leadership can’t see which AI is in use, who owns it, what data it touches, or what it costs.',
+  },
+]
+
+export const journey = [
+  {
+    step: 'Phase 1',
     icon: 'lucide:book-open',
-    iconClass: 'bg-white/20 text-white',
-    detail:
-      'Getting started with the Smarter API is easy with Swagger.',
-    link_text: 'View API Docs',
-    url: 'https://ubc.smarter.sh/docs/swagger/',
+    title: 'Literacy',
+    accent: 'emerald',
+    text: 'Staff learn how AI works by building with it, from the first class. No programming required.',
   },
   {
-    name: 'Command-Line Interface',
-    icon: 'lucide:terminal',
-    iconClass: 'bg-sky-500/20 text-sky-500',
-    detail:
-      'The Smarter CLI runs on Windows, MacOS, and Linux and works just like kubectl. It is the fastest way to get started.',
-    link_text: 'Download',
-    url: '/cli/',
+    step: 'Phase 2',
+    icon: 'lucide:rocket',
+    title: 'Production',
+    accent: 'violet',
+    text: 'The same people build real solutions for the organization, on the same platform. Nothing is rewritten.',
   },
   {
-    name: 'Web Integrations',
-    icon: 'lucide:globe-2',
-    iconClass: 'bg-teal-700/20 text-teal-700',
-    detail:
-      'An example web integration using the Smarter NPM package to build customer-facing chat applications.',
-    link_text: 'View on GitHub',
-    url: 'https://github.com/smarter-sh/web-integration-example',
-  },
-  {
-    name: 'Helm Charts',
-    icon: 'lucide:ship',
-    iconClass: 'bg-blue-500/20 text-blue-500',
-    detail:
-      'Use our official Helm Charts to deploy Smarter cloud infrastructure in your Kubernetes cluster.',
-    link_text: 'View on ArtifactHUB',
-    url: 'https://artifacthub.io/packages/helm/project-smarter/smarter',
-  },
-  {
-    name: 'Docker Hub',
-    icon: 'lucide:box',
-    iconClass: 'bg-cyan-500/20 text-cyan-500',
-    detail:
-      'Use our official Docker images to deploy Smarter cloud infrastructure in your containerized environments.',
-    link_text: 'View on Docker Hub',
-    url: 'https://hub.docker.com/r/mcdaniel0073/smarter',
-  },
-  {
-    name: 'Terraforms',
-    icon: 'lucide:server',
-    iconClass: 'bg-purple-500/20 text-purple-500',
-    detail:
-      'Use our Terraform module to build Smarter cloud infrastructure in your AWS account. It takes just a few minutes to get started.',
-    link_text: 'View on GitHub',
-    url: 'https://github.com/smarter-sh/smarter-infrastructure',
-  },
-  {
-    name: 'PyPi',
-    icon: 'lucide:package',
-    iconClass: 'bg-default-500/20 text-default-500',
-    detail:
-      'Write Python? The Smarter Python SDK makes it easy to integrate Smarter into your existing Python applications and workflows.',
-    link_text: 'Get it on PyPi',
-    url: 'https://pypi.org/project/smarter-api/',
-  },
-  {
-    name: 'NPM',
-    icon: 'lucide:package',
-    iconClass: 'bg-indigo-500/20 text-indigo-500',
-    detail:
-      'The Smarter NPM package makes it easy to integrate Smarter into your customer-facing chat applications.',
-    link_text: 'Get it on NPM',
-    url: 'https://www.npmjs.com/package/@smarter.sh/ui-chat',
-  },
-  {
-    name: 'Source Code',
-    icon: 'lucide:github',
-    iconClass: 'bg-yellow-500/20 text-yellow-500',
-    link_text: 'Fork on GitHub',
-    detail:
-      'Get involved! Smarter is open source under the GNU Affero General Public License Version 3, 19 November 2007.',
-    url: 'https://github.com/smarter-sh/smarter',
-  },
-  {
-    name: 'Contributing',
-    icon: 'lucide:git-pull-request',
-    iconClass: 'bg-pink-500/20 text-pink-500',
-    detail:
-      'We welcome contributions from the community! Please read our guidelines and watch the developer onboarding guides before getting started.',
-    link_text: 'Create a pull request',
-    url: 'https://github.com/smarter-sh/smarter/blob/main/.github/CONTRIBUTING.md',
-  },
-  {
-    name: 'VS Code Extension',
-    icon: 'lucide:code',
-    iconClass: 'bg-blue-600/20 text-blue-600',
-    detail:
-      'Boost your productivity with the official Smarter VS Code extension. Write, validate, and deploy Smarter manifests directly from your editor—no context switching required.',
-    link_text: 'Get the Extension',
-    url: 'https://marketplace.visualstudio.com/items?itemName=querium.smarter-manifest',
+    step: 'The result',
+    icon: 'lucide:layout-grid',
+    title: 'An ERP for AI',
+    accent: 'sky',
+    text: 'One system of record for every AI resource you own: who built it, what it reaches, what it costs.',
   },
 ]
-export const saas = [
+
+export const examples = [
   {
-    icon: 'lucide:cloud',
-    title: 'SaaS',
-    description:
-      'Smarter as a Service: scalable, secure, and ready for your enterprise AI workflows.',
-    url: '#',
+    icon: 'lucide:book-marked',
+    title: 'Policy assistant',
+    iconClass: 'bg-sky-500/20 text-sky-400',
+    text: 'Answers staff questions from your own handbooks and policies, and cites them.',
   },
   {
-    icon: 'lucide:headset',
-    title: 'Support',
-    description:
-      'Expert assistance whenever you need it—keeping your AI workflows running smoothly and securely.',
+    icon: 'lucide:user-round-check',
+    title: 'Student or customer advisor',
+    iconClass: 'bg-emerald-500/20 text-emerald-400',
+    text: 'Lives on your website, under your own name and web address, in your colors.',
+  },
+  {
+    icon: 'lucide:database',
+    title: 'Data assistant',
+    iconClass: 'bg-violet-500/20 text-violet-400',
+    text: 'Answers plain-English questions from approved databases and business systems.',
+  },
+  {
+    icon: 'lucide:search',
+    title: 'Research assistant',
+    iconClass: 'bg-amber-500/20 text-amber-400',
+    text: 'Searches the web and your sources, and shows where its answers came from.',
   },
 ]
+
+export const safety = [
+  {
+    icon: 'lucide:shield-check',
+    title: 'Guardrails on every message',
+    text: 'Personal data, leaked secrets, manipulation attempts, invented citations and harmful content are checked on the way in and on the way out.',
+    href: `${DOCS}/smarter-resources/smarter-guardrail.html`,
+  },
+  {
+    icon: 'lucide:key-round',
+    title: 'The AI never holds the passwords',
+    text: 'Credentials for your systems are encrypted and stay with the platform. Neither the AI model nor the user ever sees them.',
+    href: `${DOCS}/smarter-resources/smarter-secret.html`,
+  },
+  {
+    icon: 'lucide:wallet',
+    title: 'Spending caps',
+    text: 'Budgets in dollars or tokens, per hour, day, week or month, for every person, team and application. Hard stops, not surprise invoices.',
+    href: `${DOCS}/smarter-resources/smarter-budget.html`,
+  },
+  {
+    icon: 'lucide:scroll-text',
+    title: 'A complete record',
+    text: 'Every conversation is recorded, and traceable to the person and budget that allowed it.',
+    href: `${DOCS}/smarter-resources/smarter-prompt.html`,
+  },
+]
+
+export const resources = [
+  'AI models and vendors',
+  'Credentials',
+  'Data sources',
+  'Tools',
+  'Guardrails',
+  'Budgets',
+  'AI assistants',
+  'Conversations',
+]
+
+export const erp = [
+  ['Approved suppliers', 'Approved AI vendors, and models you host yourself'],
+  [
+    'Budgets and cost centers',
+    'Spending caps, and the cost of every conversation by team',
+  ],
+  ['Roles and permissions', 'Who may build, use and change each AI resource'],
+  ['Asset register', 'Every assistant, data connection and tool, each with an owner'],
+  ['Audit trail', 'Every conversation, traced to who authorized it and what it cost'],
+]
+
+export const questions = [
+  'What AI are we running, and who owns it?',
+  'What data can each assistant reach?',
+  'What did it say, and why?',
+  'What is it costing us, and where?',
+  'Which vendors do we depend on, and could we switch?',
+  'Is it following our policies?',
+]
+
+export const openSource = [
+  {
+    icon: 'lucide:badge-dollar-sign',
+    title: 'Free',
+    accent: 'primary',
+    text: 'No license fees or seat counts. You pay AI vendors only for what you use.',
+  },
+  {
+    icon: 'lucide:building-2',
+    title: 'Yours',
+    accent: 'teal',
+    text: 'Runs on your own computers or cloud account. Your data stays where you put it.',
+  },
+  {
+    icon: 'lucide:shuffle',
+    title: 'Portable',
+    accent: 'violet',
+    text: 'Works with OpenAI, Anthropic, Google, Meta, DeepSeek and others, or with models you host.',
+  },
+  {
+    icon: 'lucide:scan-eye',
+    title: 'Open',
+    accent: 'sky',
+    text: 'Every line of code is public, so your security team can inspect it.',
+  },
+]
+
+export const audiences = [
+  {
+    icon: 'lucide:graduation-cap',
+    title: 'Universities and schools',
+    accent: 'emerald',
+    text: 'Teach AI by building it, with 21 free course designs, and give students and staff assistants that run on your own infrastructure.',
+    href: '/education',
+    linkText: 'Smarter for education',
+  },
+  {
+    icon: 'lucide:landmark',
+    title: 'Organizations',
+    accent: 'sky',
+    text: 'Bring scattered AI pilots onto one governed platform, with budgets, guardrails and a full audit trail.',
+    href: '/platform',
+    linkText: 'Tour the platform',
+  },
+  {
+    icon: 'lucide:globe',
+    title: 'Websites and stores',
+    accent: 'violet',
+    text: 'Put an assistant on WordPress, Drupal, Shopify, a documentation site, or any web page, with no code.',
+    href: '/integrations',
+    linkText: 'See integrations',
+  },
+  {
+    icon: 'lucide:code-xml',
+    title: 'Software developers',
+    accent: 'amber',
+    text: 'Call Smarter from Python, Node.js or Go, extend it with your own tools, and contribute to the project.',
+    href: '/sdks',
+    linkText: 'SDKs and APIs',
+  },
+]
+
+export const pilot = [
+  {
+    when: 'Weeks 1–4',
+    title: 'Pilot cohort',
+    accent: 'emerald',
+    text: '20–30 staff from several departments take one course on a shared installation.',
+  },
+  {
+    when: 'Weeks 5–10',
+    title: 'First real solution',
+    accent: 'violet',
+    text: 'The cohort builds one assistant for a problem they chose, and puts it in front of real users.',
+  },
+  {
+    when: 'Week 12',
+    title: 'Governance review',
+    accent: 'sky',
+    text: 'Leadership reviews actual costs, usage and the audit trail, and decides how far to scale.',
+  },
+]
+
 export const faqsData = [
   {
-    id: 1,
-    question: 'What does “declarative AI orchestration” mean?',
+    question: 'What is Smarter, in plain terms?',
     answer:
-      'It means describing what you want in a YAML file — like database queries, API calls, or function definitions — instead of writing imperative code. Smarter sets up and runs your workflow based on those declarations.',
+      'Smarter is free, open-source software that your organization installs and runs itself. People use it to learn how AI works, to build AI assistants that work with your own documents and systems, and to put those assistants in front of staff, students or customers. Leadership uses it to see and control everything AI-related: who built what, what it can reach, what it said, and what it cost.',
   },
   {
-    id: 2,
-    question: 'Who can use Smarter? Do I need to be a developer or know Python?',
+    question: 'Do our people need to know how to program?',
     answer:
-      'No. Smarter is designed so that enterprise domain experts (analysts, product owners, etc.) can define AI workflows with YAML, without writing Python or interacting directly with LLM APIs. New prompt engineers can write their first workflow around an hour.',
+      'No. An assistant is described in a short, readable text file, a “manifest”, that names the AI model to use, the documents and tools it may use, and the safety rules it must follow. A business analyst, an administrator or a faculty member can write one in the first class. Programmers can do more, but they aren’t required.',
   },
   {
-    id: 3,
-    question: 'What kind of integrations are supported (databases, APIs, etc.)?',
+    question: 'Is it really free?',
     answer:
-      'Smarter supports a wide range of native integrations, including popular databases (including PostgreSQL, MySQL, MS SQL Server, Oracle, Sybase, DB2 and others), It works natively with any REST APIs, and GraphQL endpoints. If you have a specific integration in mind, feel free to ask!',
+      'Yes. Smarter is a community open-source project under the AGPL-3.0 license, and nothing is for sale: no license fees, no seat counts, no paid edition. Like any software you run yourself, it needs a computer or cloud account to run on, and the AI vendors you choose charge for their own usage, which Smarter’s budgets cap and its records report.',
   },
   {
-    id: 4,
-    question: 'How is security, logging, and moderation handled?',
+    question: 'Where does our data go?',
     answer:
-      'Smarter follows industry best practices for VPCs, Kubernetees infrastructure and generic ingress and egress configurations. Smarter incorporates security, configurable logging, and moderation at every layer. All data is encrypted in transit and at rest, and access controls are enforced through role-based permissions. Detailed logs are maintained for all actions and are suitable for long-term cold storage, and automated moderation tools are in place to ensure compliance with organizational policies.',
+      'Smarter runs on your own computers or in your own cloud account, so conversations, documents and credentials stay there. Questions are sent only to the AI vendors you approve, and, for sensitive work, Smarter can use AI models that you host yourself, so the data never leaves your network.',
   },
   {
-    id: 5,
-    question: 'Can I build agentic AI workflows with Smarter?',
+    question: 'Which AI vendors does it work with?',
     answer:
-      'Yes. Smarter provides the building blocks — like chaining API calls, querying databases, and function calling — so you can create workflows that resemble agent behavior. Safety, auditability, and governance are built in.',
+      'OpenAI, Anthropic, Google, Meta and DeepSeek, plus open models you run yourself with vLLM or Ollama. Applications talk to Smarter rather than to a vendor, so changing vendors is a one-line change, not a rewrite.',
   },
   {
-    id: 6,
-    question: 'How scalable and multi-tenant is the platform?',
+    question: 'Who supports it?',
     answer:
-      'Smarter is built for enterprise scale and runs on Kubernetes. It natively supports multi-tenant setups where different teams/projects can share infrastructure but maintain isolated cost accounting, permissions, and governance.',
+      'Smarter is community supported: the documentation, GitHub discussions and issues, and independent partners who offer installation, hosting, training and customization. There is no vendor support desk or service-level agreement, so an organization needs either in-house IT capacity or a partner.',
   },
   {
-    id: 7,
-    question: 'How do I get started? What’s the onboarding process?',
+    question: 'How mature is it?',
     answer:
-      'You can start by writing simple YAML manifests, using existing templates, or following our quickstart guide. We provide documentation, training, and examples so domain experts can get up and running without jumping into code.',
-  },
-  {
-    id: 8,
-    question: 'What if I need customization or enterprise support?',
-    answer:
-      'See our providers list. They offer services such as consulting, custom integration setup, installation assistance, and training to ensure Smarter fits your organization’s requirements and standards.',
-  },
-  {
-    id: 9,
-    question:
-      'How is Smarter different from writing custom pipelines in Python, or using other orchestration tools?',
-    answer:
-      'Unlike custom Python pipelines, Smarter reduces boilerplate, removes the need for direct LLM API calls, standardizes governance, and lets you define workflows declaratively. This reduces complexity and learning curves for non-developers.',
-  },
-  {
-    id: 10,
-    question: 'What deployment options are available?',
-    answer:
-      'Smarter can be deployed to your AWS account, or on-premises. You control credentials, resource limits, and compliance based on your environment. For evaluation purposes, a hosted SaaS option is also available.',
-  },
-  {
-    id: 11,
-    question: "What is Smarter's technology stack?",
-    answer:
-      'The Smarter Api and prompt engineer web console are both developed on Python-Django and leverage Pydantic for manifest processing and Django Rest Framework for the Api. The platform is containerized using Docker and orchestrated with Kubernete. User-facing chats are implemented with React. The command-line interface (CLI) is written in Golang.',
+      'Smarter has been open source since 2024 and is in teaching use at the University of British Columbia. It is pre-1.0, with semantic-versioned releases, automated tests with published coverage, monthly patched container images and full documentation. Single sign-on with SAML or OIDC providers, and automated provisioning on clouds other than AWS, need integration work today.',
   },
 ]
-export const footerLinks = [
-  {
-    title: 'Sponsorship & About',
-    links: [
-      {
-        name: 'Patreon Page',
-        url: 'https://patreon.com/FullStackWithLawrence?utm_medium=unknown&utm_source=join_link&utm_campaign=creatorshare_creator&utm_content=copyLink'
-      },
-      {
-        name: 'Donate to Smarter',
-        url: 'https://github.com/sponsors/lpm0073'
-      },
-      {
-        name: 'Project Origins',
-        url: '/about'
-      },
-      {
-        name: 'About the author',
-        url: 'https://lawrencemcdaniel.com',
-      },
-    ],
-  },
-  {
-    title: 'Legal',
-    links: [
-      {
-        name: 'Legal Home',
-        url: '/legal'
-      },
-      {
-        name: 'Privacy Policy',
-        url: '/privacy'
-      },
-      {
-        name: 'Terms of Service',
-        url: '/tos'
-      },
-    ],
-  },
-  {
-    title: 'Community & Resources',
-    links: [
-      {
-        name: 'GitHub Repositories',
-        url: 'https://github.com/orgs/smarter-sh/repositories',
-      },
-      {
-        name: 'Contributing Guide',
-        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/contributing.html'
-      },
-      {
-        name: 'Code of Conduct',
-        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/code-of-conduct.html',
-      },
-      {
-        name: 'Discussions & Support',
-        url: 'https://github.com/smarter-sh/smarter/discussions',
-      },
-      {
-        name: 'Report an Issue',
-        url: 'https://github.com/smarter-sh/smarter/issues',
-      },
-      {
-        name: 'Release Notes',
-        url: 'https://github.com/smarter-sh/smarter/blob/main/CHANGELOG.md'
-        },
-    ],
-  },
-  {
-    title: 'Technical Guides',
-    links: [
-      {
-        name: 'Smarter Platform Overview',
-        url: 'https://docs.smarter.sh/en/latest/smarter-platform.html'
-      },
-      {
-        name: 'Smarter Resources Overview',
-        url: 'https://docs.smarter.sh/en/latest/smarter-resources.html'
-      },
-      {
-        name: 'Smarter Framework Overview',
-        url: 'https://docs.smarter.sh/en/latest/smarter-framework.html'
-      },
-      {
-        name: 'React UI Integration Guide',
-        url: 'https://docs.smarter.sh/en/latest/smarter-framework/smarter-react-ui.html',
-      },
-      {
-        name: 'OpenAI Getting Started Guide',
-        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/openai-api-getting-started-guide.html',
-      },
-      {
-        name: 'Semantic Versioning Guide',
-        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/semantic-versioning.html',
-      },
-      {
-        name: 'Good Coding Practices',
-        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/developer-guidelines.html',
-      },
-      {
-        name: '12-Factor App Methodology',
-        url: 'https://docs.smarter.sh/en/latest/smarter-framework/guides/12-factor-app.html',
-      },
-    ],
-  },
+
+export const logos = [
+  { icon: 'simple-icons:openai', label: 'OpenAI' },
+  { icon: 'simple-icons:anthropic', label: 'Anthropic' },
+  { icon: 'simple-icons:googlegemini', label: 'Google Gemini' },
+  { icon: 'simple-icons:meta', label: 'Meta' },
+  { icon: 'simple-icons:deepseek', label: 'DeepSeek' },
+  { icon: 'simple-icons:ollama', label: 'Ollama' },
+  { icon: 'simple-icons:kubernetes', label: 'Kubernetes' },
+  { icon: 'simple-icons:amazonwebservices', label: 'AWS' },
+  { icon: 'simple-icons:wordpress', label: 'WordPress' },
+  { icon: 'simple-icons:drupal', label: 'Drupal' },
+  { icon: 'simple-icons:shopify', label: 'Shopify' },
+  { icon: 'simple-icons:postgresql', label: 'PostgreSQL' },
+]
+
+export const words = [
+  [
+    'Guardrails',
+    'Budgets',
+    'Audit trail',
+    'Your documents',
+    'Your databases',
+    'Your website',
+  ],
+  [
+    'Any AI vendor',
+    'Self-hosted models',
+    'MCP servers',
+    'Extensions',
+    'No code',
+    'Open source',
+  ],
 ]

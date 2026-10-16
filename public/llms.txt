@@ -1,49 +1,59 @@
-# Smarter
+# The Smarter Project
 
-Smarter is an open-source framework for authoring and managing AI resources.
+> Smarter is a free, open-source (AGPL-3.0) platform where an organization's people learn to build AI applications, and then build the real ones, on infrastructure the organization owns and governs. Every AI resource — models and vendors, credentials, data sources, tools, guardrails, budgets, assistants and conversations — is a named, owned, recorded item, declared in a YAML manifest: an ERP for AI resources.
 
 Official website: https://smarter.sh/
 
-## Primary Documentation
+## For decision makers
+
+- https://smarter.sh/: what Smarter is, the problem it solves, and a 12-week pilot
+- https://smarter.sh/platform: the platform's capabilities
+- https://smarter.sh/education: teaching AI with Smarter, and 21 free course designs
+- https://smarter.sh/integrations: WordPress, Drupal, Shopify, Google Tag Manager, Docusaurus, MkDocs, Sphinx, VitePress and any web page
+- https://smarter.sh/partners: installation, hosting, training and customization partners
+
+## For developers
+
+- https://smarter.sh/sdks: the Python, Node.js and Go SDKs, the CLI and the OpenAPI contract
+- https://smarter.sh/extensions: no-code plugins, installable Python extensions and MCP servers
+- https://smarter.sh/developers: contributing to Smarter
+- https://smarter.sh/cli: download the command-line interface
+- https://ubc.smarter.sh/docs/openapi/: the Smarter API's OpenAPI 3.1 document
+
+## Documentation
 
 - https://docs.smarter.sh/
-
 - https://docs.smarter.sh/smarter-platform/installation.html
-
-- https://docs.smarter.sh/smarter-framework.html
-
 - https://docs.smarter.sh/smarter-resources.html
+- https://docs.smarter.sh/smarter-framework.html
+- https://docs.smarter.sh/smarter-framework/apis-and-sdks.html
+- https://docs.smarter.sh/smarter-framework/extensibility.html
+- https://docs.smarter.sh/smarter-instructors/example-courses/index.html
 
-- https://docs.smarter.sh/contributors.html
-
-
-## Developer Resources
-
-- https://smarter.sh/developers
-
-- https://smarter.sh/cli
-
-- https://hub.docker.com/r/mcdaniel0073/smarter
-
-- https://github.com/smarter-sh/smarter-python
-
-- https://pypi.org/project/smarter-api/
-
-- https://www.npmjs.com/package/@smarter.sh/ui-chat
-
-- https://www.youtube.com/@project-smarter
-
-
-
-## Source Code
+## Source code
 
 - https://github.com/smarter-sh/smarter
-
+- https://github.com/smarter-sh/smarter-cli
+- https://github.com/smarter-sh/smarter-python
+- https://github.com/smarter-sh/smarter-nodejs
+- https://github.com/smarter-sh/smarter-golang
+- https://github.com/smarter-sh/smarter-chat
+- https://github.com/smarter-sh/extensions-registry
+- https://github.com/smarter-sh/smarter-wordpress
+- https://github.com/smarter-sh/smarter-drupal
+- https://github.com/smarter-sh/smarter-shopify
+- https://github.com/smarter-sh/smarter-gtm-template
+- https://github.com/smarter-sh/smarter-docs-site-generators
 - https://github.com/smarter-sh/smarter-infrastructure
-
 - https://github.com/smarter-sh/smarter-deploy
 
-- https://github.com/smarter-sh/smarter-chat
+## Packages
+
+- https://pypi.org/project/smarter-api/
+- https://www.npmjs.com/package/@smarter.sh/ui-chat
+- https://hub.docker.com/r/mcdaniel0073/smarter
+- https://artifacthub.io/packages/helm/project-smarter/smarter
+- https://marketplace.visualstudio.com/items?itemName=querium.smarter-manifest
 
 ## Blog
 
@@ -52,5 +62,4 @@ Official website: https://smarter.sh/
 ## Legal
 
 - https://smarter.sh/privacy
-
 - https://smarter.sh/tos
