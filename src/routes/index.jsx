@@ -10,6 +10,11 @@ const TOS = lazy(() => import('@/app/pages/tos/page'))
 const Privacy = lazy(() => import('@/app/pages/privacy/page'))
 const Legal = lazy(() => import('@/app/pages/legal/page'))
 const Partners = lazy(() => import('@/app/pages/partners/page'))
+const Platform = lazy(() => import('@/app/pages/platform/page'))
+const Education = lazy(() => import('@/app/pages/education/page'))
+const Extensions = lazy(() => import('@/app/pages/extensions/page'))
+const Integrations = lazy(() => import('@/app/pages/integrations/page'))
+const Sdks = lazy(() => import('@/app/pages/sdks/page'))
 
 //auth pages
 const Login = lazy(() => import('@/app/auth/login/page'))
@@ -31,6 +36,31 @@ const LandingPages = [
   },
 ]
 const StaticPages = [
+  {
+    path: '/platform',
+    name: 'Platform',
+    element: <Platform />,
+  },
+  {
+    path: '/education',
+    name: 'Education',
+    element: <Education />,
+  },
+  {
+    path: '/extensions',
+    name: 'Extensions',
+    element: <Extensions />,
+  },
+  {
+    path: '/integrations',
+    name: 'Integrations',
+    element: <Integrations />,
+  },
+  {
+    path: '/sdks',
+    name: 'SDKs',
+    element: <Sdks />,
+  },
   {
     path: '/cli',
     name: 'CLI',
@@ -78,10 +108,15 @@ const StaticPages = [
     element: <Navigate to="/privacy" replace />,
   },
   {
+    path: '/legal',
+    name: 'Legal',
+    element: <Legal />,
+  },
+  {
     path: '/partners',
     name: 'Partners',
     element: <Partners />,
-  }
+  },
 ]
 
 const AuthPages = [

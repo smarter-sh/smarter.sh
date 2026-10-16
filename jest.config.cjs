@@ -4,6 +4,8 @@ module.exports = {
   setupFilesAfterEnv: ['<rootDir>/setupTests.js'],
   moduleNameMapper: {
     '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(png|jpe?g|gif|svg|webp|ico|mp4)$': '<rootDir>/src/__mocks__/fileMock.js',
+    '^@iconify/react$': '<rootDir>/src/__mocks__/iconify.jsx',
     '^@/(.*)$': '<rootDir>/src/$1',
   },
   transform: {

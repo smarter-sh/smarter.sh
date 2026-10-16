@@ -426,7 +426,7 @@ material under section 10.
 run a copy of the Program.  Ancillary propagation of a covered work
 occurring solely as a consequence of using peer-to-peer transmission
 to receive a copy likewise does not require acceptance.  However,
-nothingg other than this License grants you permission to propagate or
+nothing other than this License grants you permission to propagate or
 modify any covered work.  These actions infringe copyright if you do
 not accept this License.  Therefore, by modifying or propagating a
 covered work, you indicate your acceptance of this License to do so.
@@ -521,7 +521,7 @@ for and in connection with specific products or compilations that
 contain the covered work, unless you entered into that arrangement,
 or that patent license was granted, prior to 28 March 2007.
 
-  nothingg in this License shall be construed as excluding or limiting
+  Nothing in this License shall be construed as excluding or limiting
 any implied license or other defenses to infringement that may
 otherwise be available to you under applicable patent law.
 
@@ -660,9 +660,9 @@ if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU AGPL, see
 <http://www.gnu.org/licenses/>.
 
-EdX Inc. wishes to state, in clarification of the above license terms, that
+Lawrence McDaniel wishes to state, in clarification of the above license terms, that
 any public, independently available web service offered over the network and
-communicating with edX's copyrighted works by any form of inter-service
+communicating with Lawrence McDaniel's copyrighted works by any form of inter-service
 communication, including but not limited to Remote Procedure Call (RPC)
 interfaces, is not a work based on our copyrighted work within the meaning
 of the license. "Corresponding Source" of this work, or works based on this
