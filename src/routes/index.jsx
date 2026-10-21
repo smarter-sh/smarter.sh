@@ -15,6 +15,7 @@ const Education = lazy(() => import('@/app/pages/education/page'))
 const Extensions = lazy(() => import('@/app/pages/extensions/page'))
 const Integrations = lazy(() => import('@/app/pages/integrations/page'))
 const Sdks = lazy(() => import('@/app/pages/sdks/page'))
+const KeenSpike = lazy(() => import('@/app/pages/keen-spike/page'))
 
 //auth pages
 const Login = lazy(() => import('@/app/auth/login/page'))
@@ -60,6 +61,11 @@ const StaticPages = [
     path: '/sdks',
     name: 'SDKs',
     element: <Sdks />,
+  },
+  {
+    path: '/keen-spike',
+    name: 'Keen spike',
+    element: <KeenSpike />,
   },
   {
     path: '/cli',
