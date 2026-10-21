@@ -1,4 +1,5 @@
 import {
+  DidYouKnow as DidYouKnowWidget,
   Extensions as ExtensionsWidget,
   Instructors as InstructorsWidget,
 } from '@smarter.sh/ui-widgets'
@@ -13,13 +14,17 @@ import './home.css'
 
 // The landing page, laid out as the Smarter web console's dashboard, in its default light mode:
 // rows of cards on the console's grid, with the console's own widgets (@smarter.sh/ui-widgets)
-// where the story calls for them.
+// where the story calls for them. Below the hero, as below the console's title, is the fact of the
+// day: the same Did you know? fact that the console shows today.
 const Home = () => {
   return (
     <PageShell>
       <ConsoleDashboard className="home">
         <div className="row g-5 g-xl-10">
           <Hero />
+          <div className="col-12">
+            <DidYouKnowWidget />
+          </div>
           <WorksWith />
           <Problem />
           <WhatIsSmarter />
