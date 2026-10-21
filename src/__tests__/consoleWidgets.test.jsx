@@ -29,7 +29,7 @@ beforeEach(() => {
 
 describe('console widgets', () => {
   test.each([
-    ['/', Home, ['Self Host', 'Instructors', 'Extensions']],
+    ['/', Home, ['Did you know?', 'Self Host', 'Instructors', 'Extensions']],
     ['/sdks', Sdks, ['VS Code Extension', 'MCP Server']],
     ['/cli', Cli, ['CLI']],
     ['/extensions', Extensions, ['Extensions']],
