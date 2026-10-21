@@ -12,6 +12,7 @@ import useScrollEvent from '@/hooks/useScrollEvent'
 const navLinks = [
   { label: 'Platform', link: '/platform' },
   { label: 'Education', link: '/education' },
+  { label: 'Case Study', link: '/case-studies/stackademy' },
   { label: 'Integrations', link: '/integrations' },
   { label: 'Extensions', link: '/extensions' },
   { label: 'SDKs', link: '/sdks' },
@@ -43,7 +44,7 @@ const TopNavbar = () => {
       <header id="navbar-sticky" className={`navbar ${scrollY >= 50 && 'nav-sticky'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav>
-            <Link to="/" className="logo">
+            <Link to="/" className="logo shrink-0">
               <img src={logo} className="h-16" alt="Smarter" />
             </Link>
             <div className="ms-auto flex items-center px-2.5 lg:hidden">
@@ -95,7 +96,7 @@ const TopNavbar = () => {
                 </a>
               </div>
             </div>
-            <div className="hidden items-center gap-5 lg:flex">
+            <div className="hidden items-center gap-4 lg:flex xl:gap-5">
               <a
                 href="https://github.com/smarter-sh/smarter"
                 target="_blank"
@@ -109,7 +110,7 @@ const TopNavbar = () => {
                 href={QUICK_START}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center rounded-full bg-primary px-5 py-2 text-sm font-medium text-white transition-all hover:bg-primary/80"
+                className="inline-flex items-center whitespace-nowrap rounded-full bg-primary px-4 py-2 text-sm font-medium text-white transition-all hover:bg-primary/80 xl:px-5"
               >
                 Get started
               </a>

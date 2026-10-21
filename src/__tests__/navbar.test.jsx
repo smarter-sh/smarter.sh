@@ -22,4 +22,15 @@ describe('navigation bar', () => {
     await user.click(button)
     expect(menu).toHaveClass('hidden')
   })
+
+  test('links to the Stackademy case study, marked active on its page', () => {
+    render(
+      <MemoryRouter initialEntries={['/case-studies/stackademy']}>
+        <TopNavbar />
+      </MemoryRouter>
+    )
+    const link = screen.getByRole('link', { name: 'Case Study' })
+    expect(link).toHaveAttribute('href', '/case-studies/stackademy')
+    expect(link.closest('li')).toHaveClass('active')
+  })
 })
