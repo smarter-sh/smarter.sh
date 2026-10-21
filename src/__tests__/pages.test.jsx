@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Home from '@/app/pages/home/page'
@@ -8,6 +8,7 @@ import Extensions from '@/app/pages/extensions/page'
 import Integrations from '@/app/pages/integrations/page'
 import Sdks from '@/app/pages/sdks/page'
 import Developers from '@/app/pages/developers/page'
+import StackademyCaseStudy from '@/app/pages/case-studies/stackademy/page'
 import { appRoutes } from '@/routes/index'
 import { footerLinks } from '@/components/SiteFooter'
 
@@ -52,6 +53,24 @@ describe('pages', () => {
   ])('the %s page renders its title', (path, Page, title) => {
     renderPage(Page, `/${path}`)
     expect(screen.getByRole('heading', { level: 1, name: title })).toBeInTheDocument()
+  })
+
+  test('the Stackademy case study teaches the case, with both advisors and its manifests', async () => {
+    renderPage(StackademyCaseStudy, '/case-studies/stackademy')
+    expect(
+      screen.getByRole('heading', { level: 1, name: 'Stackademy Online Coding Academy' })
+    ).toBeInTheDocument()
+    expect(screen.getByText('Learning objectives')).toBeInTheDocument()
+    expect(
+      screen.getByRole('heading', { name: 'Lab 2: The manifest editor' })
+    ).toBeInTheDocument()
+    expect(await screen.findByTestId('chat-preview-stackademy_sql')).toBeInTheDocument()
+    expect(await screen.findByTestId('chat-preview-stackademy_api')).toBeInTheDocument()
+    // GitHub doesn't answer in tests either: the lab offers the file on GitHub
+    expect(await screen.findByText(/GitHub didn’t answer/)).toBeInTheDocument()
+    // a card of the architecture opens its manifest
+    fireEvent.click(screen.getByRole('button', { name: /Budget\s*stackademy_project/ }))
+    expect(screen.getByRole('dialog')).toHaveTextContent('The project’s spending limit')
   })
 
   test('the pages that embed a chatbot show it', async () => {
