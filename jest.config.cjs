@@ -14,19 +14,16 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx)$': 'babel-jest',
   },
-  moduleFileExtensions: ['js', 'jsx'],
+  moduleFileExtensions: ['js', 'jsx', 'json'],
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx}',
-    '<rootDir>/src/**/*.{test,spec}.{js,jsx}'
+    '<rootDir>/src/**/*.{test,spec}.{js,jsx}',
   ],
   // Fix for naming collisions
-  modulePathIgnorePatterns: [
-    '<rootDir>/dist/',
-    '<rootDir>/webai/'
-  ],
+  modulePathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/webai/'],
   testPathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/dist/',
-    '<rootDir>/webai/'
-  ]
-};
+    '<rootDir>/webai/',
+  ],
+}

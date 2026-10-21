@@ -13,7 +13,20 @@ import { PurgeCSS } from 'purgecss'
 
 const DIST = 'dist'
 const CSS = `${DIST}/keen/style.scoped.css`
-const TONES = 'primary|success|info|warning|danger'
+const TONES = 'primary|secondary|success|info|warning|danger|dark'
+
+// The keenicons of the architecture trees' cards (src/app/pages/home/components/TryIt.jsx): the
+// widget's ResourceCard builds `ki-${node.icon}` from the tree's data, and a locked card's lock-3; the
+// tree's toggles, plus-square and minus-square.
+const ARCHITECTURES = 'src/common/architectures'
+const icons = new Set(['lock-3', 'plus-square', 'minus-square'])
+const collectIcons = (node) => {
+  icons.add(node.icon)
+  node.children.forEach(collectIcons)
+}
+for (const file of fs.readdirSync(ARCHITECTURES).filter((f) => f.endsWith('.json'))) {
+  collectIcons(JSON.parse(fs.readFileSync(`${ARCHITECTURES}/${file}`, 'utf8')))
+}
 
 const before = fs.statSync(CSS).size
 const [result] = await new PurgeCSS().purge({
@@ -24,6 +37,7 @@ const [result] = await new PurgeCSS().purge({
       new RegExp(`^(btn-light|bg-light|bg|text|badge-light|btn)-(${TONES})$`),
       /^symbol-\d+px$/,
       'keen',
+      ...[...icons].map((icon) => `ki-${icon}`),
     ],
     // the theme's light and dark modes, which pages and widgets set with data-bs-theme
     greedy: [/data-bs-theme/],

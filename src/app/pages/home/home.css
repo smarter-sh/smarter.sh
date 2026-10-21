@@ -111,53 +111,139 @@
   background-color: #eef0f5;
   color: #181c32;
 }
-.home-hero-shot {
-  position: relative;
-}
-.home-hero-shot img {
-  display: block;
-  width: 100%;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 1rem;
-  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.5);
-}
-.home-callout {
-  position: absolute;
+/* the hero's picture of the platform: a card for each of the headline's words, learn, build and
+   govern, stacked and offset like the console's cards */
+.home-platform {
   display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.6rem 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 0.75rem;
-  background-color: rgba(21, 23, 28, 0.9);
-  color: #ffffff;
-  font-size: 0.85rem;
-  font-weight: 600;
-  box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.4);
-}
-.home-callout svg {
-  color: #3dd68c;
-}
-.home-callout-top {
-  top: 1.25rem;
-  left: -1rem;
-}
-.home-callout-bottom {
-  right: 1.25rem;
-  bottom: -1rem;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0;
+  gap: 1rem;
 }
-.home-callout-label {
+.home-platform-card {
+  padding: 0.9rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--home-platform-accent);
+  border-radius: 0.85rem;
+  background-color: rgba(21, 23, 28, 0.88);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+}
+.home-platform-learn {
+  --home-platform-accent: #3dd68c;
+}
+.home-platform-build {
+  --home-platform-accent: #f59e0b;
+}
+.home-platform-govern {
+  --home-platform-accent: #4fa3ff;
+}
+@media (min-width: 992px) {
+  .home-platform-learn {
+    margin-right: 3rem;
+  }
+  .home-platform-build {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  .home-platform-govern {
+    margin-left: 3rem;
+  }
+}
+.home-platform-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin-bottom: 0.75rem;
   color: var(--bs-gray-500);
-  font-size: 0.7rem;
-  letter-spacing: 0.06em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
   text-transform: uppercase;
 }
-@media (max-width: 767.98px) {
-  .home-callout {
-    display: none;
+.home-platform-head > span:first-child {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.home-platform-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-platform-courses a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 0.5rem;
+  background-color: rgba(61, 214, 140, 0.12);
+  color: #a7f3d0;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+.home-platform-courses a:hover,
+.home-platform-courses a:focus-visible {
+  background-color: rgba(61, 214, 140, 0.24);
+  color: #ffffff;
+}
+.home-platform-yaml {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  background: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--bs-font-monospace), monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+.home-yaml-key {
+  color: #fdba74;
+}
+.home-yaml-value {
+  color: #e5e7eb;
+}
+.home-yaml-command {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+.home-yaml-prompt {
+  color: #3dd68c;
+}
+.home-platform-record {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1.25rem;
+  margin: 0;
+}
+.home-platform-record dt {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--bs-gray-500);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.home-platform-record dt svg {
+  color: #4fa3ff;
+}
+.home-platform-record dd {
+  margin: 0.1rem 0 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .home-platform-record {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
@@ -320,6 +406,59 @@
   margin-bottom: 0 !important;
 }
 
+/* an assistant's resources, above its chat and its tree */
+.home-resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-resources li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.home-resources .badge {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.home-resource-name {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--bs-gray-900);
+  font-family: var(--bs-font-monospace), monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+.home-panel-title {
+  margin-bottom: 0.75rem;
+  color: var(--bs-gray-500);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* the tree, on the console's dot-grid canvas, as tall as the chat beside it */
+.home-architecture {
+  height: 600px;
+  padding: 1.5rem;
+  overflow: auto;
+  border: 1px solid var(--bs-gray-200);
+  border-radius: 0.75rem;
+  background-color: var(--bs-gray-100);
+  background-image: radial-gradient(var(--bs-gray-300) 1px, transparent 1px);
+  background-size: 1.25rem 1.25rem;
+}
+@media (max-width: 1199.98px) {
+  .home-architecture {
+    height: auto;
+    max-height: 600px;
+  }
+}
+
 /* the leadership questions, like the console's colored widgets */
 .home-questions {
   background:
@@ -422,4 +561,12 @@
       rgba(251, 191, 36, 0) 50%
     ),
     linear-gradient(135deg, #1a1c24 0%, #2a1f1a 100%);
+}
+
+/* a tool's or resource's name inside a sentence */
+.home-inline-name {
+  color: var(--bs-gray-900);
+  font-family: var(--bs-font-monospace), monospace;
+  font-size: 0.9em;
+  font-weight: 600;
 }

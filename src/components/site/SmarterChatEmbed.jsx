@@ -13,6 +13,11 @@ export const loadEmbedScript = (doc = document) => {
   doc.head.appendChild(script)
 }
 
+// The cookie in which a chatbot's chat saves its session. The embed's default, session_key, is one cookie
+// for the page, so that every chatbot on it would continue the first one's conversation: each chatbot has
+// its own cookie, and so its own session.
+export const sessionCookieName = (bot) => `smarter_chat_session_${bot.name}`
+
 // What the chatbot looks like, for a chatbot that isn't deployed yet.
 const ChatPreview = ({ bot }) => {
   return (
@@ -74,15 +79,32 @@ const ChatPreview = ({ bot }) => {
   )
 }
 
-// Whether a deployed chatbot answers: the request that the chat itself makes first.
+// The url that the page calls a chatbot at: its deployed url, or, on the dev server, the dev server's
+// proxy of it (see vite.config.js), because a deployed chatbot allows https://smarter.sh only.
+/* global __CHATBOT_PROXY__ */
+export const chatbotUrl = (bot) =>
+  typeof __CHATBOT_PROXY__ !== 'undefined' && __CHATBOT_PROXY__ && bot.chatbot
+    ? `${window.location.origin}/chatbots/${bot.name}/`
+    : bot.chatbot
+
+// Whether a deployed chatbot answers: the request that the chat itself makes first, a POST to
+// its config/ endpoint. A GET isn't enough: a chatbot's host answers it with an html page, with
+// status 200, even when the chatbot would refuse the chat, e.g. because it requires an api key.
 export const isChatbotAvailable = async (bot) => {
   if (!bot.chatbot) return false
   try {
-    const response = await fetch(new URL('config/', bot.chatbot), {
+    const response = await fetch(new URL('config/', chatbotUrl(bot)), {
+      method: 'POST',
       credentials: 'include',
-      headers: bot.apiKey ? { Authorization: `Token ${bot.apiKey}` } : {},
+      headers: {
+        'Content-Type': 'application/json',
+        ...(bot.apiKey ? { Authorization: `Token ${bot.apiKey}` } : {}),
+      },
+      body: JSON.stringify({}),
     })
-    return Boolean(response?.ok)
+    if (!response?.ok) return false
+    const json = await response.json()
+    return Boolean(json?.data)
   } catch {
     return false
   }
@@ -106,11 +128,12 @@ const SmarterChatEmbed = ({ bot, height = '640px' }) => {
   if (!live) return <ChatPreview bot={bot} />
   return (
     <smarter-chat
-      chatbot={bot.chatbot}
+      chatbot={chatbotUrl(bot)}
       api-key={bot.apiKey || undefined}
       mode="inline"
       height={height}
       label={bot.appName}
+      session-cookie-name={sessionCookieName(bot)}
       data-testid={`chat-live-${bot.name}`}
     />
   )
