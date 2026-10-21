@@ -1,3 +1,19 @@
+## [0.11.1](https://github.com/smarter-sh/smarter.sh/compare/v0.11.0...v0.11.1) (2026-10-21)
+
+
+### Bug Fixes
+
+* **home:** lay out the landing page as the web console's dashboard ([03eb23e](https://github.com/smarter-sh/smarter.sh/commit/03eb23ec49959da8bcf3bdd1215e9a0df5edf5ef)), closes [#0F1014](https://github.com/smarter-sh/smarter.sh/issues/0F1014)
+* **home:** show live chats beside their architectures, and a new hero ([5f7d589](https://github.com/smarter-sh/smarter.sh/commit/5f7d589c86cec915212a4ec3a3ac5ba1a8bb2c34))
+* **keen:** match the web console's design on six pages ([4c608bb](https://github.com/smarter-sh/smarter.sh/commit/4c608bb746cf9f0a33d4561be7a1124ab77633e6))
+* **keen:** show the console's widgets on the integrations and platform pages ([9a3d7a6](https://github.com/smarter-sh/smarter.sh/commit/9a3d7a62777536f2997888297b3f0427c21f5ba9))
+* **keen:** use inter, the web console's font, across the site ([db0714b](https://github.com/smarter-sh/smarter.sh/commit/db0714bef013a4ad73616d4f5abae54baa9d5bde))
+
+
+### Performance Improvements
+
+* trim the keen stylesheet in the build, and drop preline ([8a58f60](https://github.com/smarter-sh/smarter.sh/commit/8a58f60c7f35bb6573e3441353a786e1ab045d3c))
+
 # [0.11.0](https://github.com/smarter-sh/smarter.sh/compare/v0.10.0...v0.11.0) (2026-10-16)
 
 
