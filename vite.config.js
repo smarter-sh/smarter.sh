@@ -2,6 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { resolve } from 'path'
 import { chatbots } from './src/common/chatbots.js'
+import { sitemapXml } from './src/routes/pages.js'
 
 /*
  * The dev server's proxy for the Smarter chatbots that the site embeds.
@@ -62,9 +63,27 @@ const chatbotProxy = Object.fromEntries(
   })
 )
 
+/*
+ * The sitemap, generated from the site's pages (src/routes/pages.js), so that it lists every page that
+ * the router serves. It is written to dist/sitemap.xml by `vite build` (which `vite preview` serves),
+ * and served at /sitemap.xml by the dev server.
+ */
+const sitemap = () => ({
+  name: 'smarter-sitemap',
+  configureServer(server) {
+    server.middlewares.use('/sitemap.xml', (req, res) => {
+      res.setHeader('Content-Type', 'application/xml')
+      res.end(sitemapXml())
+    })
+  },
+  generateBundle() {
+    this.emitFile({ type: 'asset', fileName: 'sitemap.xml', source: sitemapXml() })
+  },
+})
+
 // https://vitejs.dev/config/
 export default defineConfig(({ command, isPreview }) => ({
-  plugins: [react()],
+  plugins: [react(), sitemap()],
   define: {
     __CHATBOT_PROXY__: JSON.stringify(command === 'serve' && !isPreview),
   },
