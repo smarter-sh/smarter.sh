@@ -32,11 +32,7 @@ const Home = () => {
             <SafeByDefault />
           </div>
           <div id="extend" className="col-xl-6">
-            {/* @smarter.sh/ui-widgets 0.36.0-alpha.4's Extensions card doesn't pin the light theme
-                itself, so it would turn dark here. Later versions do, which makes this unnecessary. */}
-            <div data-bs-theme="light" className="h-100">
-              <ExtensionsWidget />
-            </div>
+            <ExtensionsWidget />
           </div>
           <ErpForAi />
           <WhyOpenSource />

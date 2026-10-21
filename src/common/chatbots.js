@@ -18,7 +18,7 @@
  */
 
 // the version of @smarter.sh/ui-chat whose embed script the site loads.
-export const UI_CHAT_VERSION = '0.11.0'
+export const UI_CHAT_VERSION = '0.36.0-alpha.5'
 export const UI_CHAT_EMBED_URL = `https://cdn.jsdelivr.net/npm/@smarter.sh/ui-chat@${UI_CHAT_VERSION}/dist/embed.js`
 
 export const chatbots = {
