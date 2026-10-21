@@ -18,41 +18,42 @@ export const loadEmbedScript = (doc = document) => {
 // its own cookie, and so its own session.
 export const sessionCookieName = (bot) => `smarter_chat_session_${bot.name}`
 
-// What the chatbot looks like, for a chatbot that isn't deployed yet.
+// What the chatbot looks like, for a chatbot that isn't deployed yet: Smarter Chat's own light
+// look (@smarter.sh/ui-chat's defaults), a white chat with a pale blue header and incoming messages.
 const ChatPreview = ({ bot }) => {
   return (
     <div
-      className="flex h-full flex-col overflow-hidden rounded-xl border border-default-700 bg-default-950/70"
+      className="flex h-full flex-col overflow-hidden rounded-xl border border-[#d1dbe3] bg-white"
       data-testid={`chat-preview-${bot.name}`}
     >
-      <div className="flex items-center gap-3 border-b border-default-800 bg-default-900/80 px-5 py-4">
-        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-primary/20 text-primary">
+      <div className="flex items-center gap-3 border-b border-[#d1dbe3] bg-[#f6fbff] px-5 py-4">
+        <span className="inline-flex h-9 w-9 items-center justify-center rounded-full bg-orange-50 text-primary">
           <IconifyIcon icon="lucide:sparkles" className="h-5 w-5" />
         </span>
         <div>
-          <p className="font-medium text-white">{bot.appName}</p>
-          <p className="text-xs text-default-400">Built and run on Smarter</p>
+          <p className="font-semibold text-keen-900">{bot.appName}</p>
+          <p className="text-xs text-keen-600">Built and run on Smarter</p>
         </div>
       </div>
       <div className="flex-1 space-y-4 p-5">
-        <div className="max-w-[85%] rounded-2xl rounded-tl-sm bg-default-800 px-4 py-3 text-sm text-default-100">
+        <div className="max-w-[85%] rounded-2xl rounded-tl-sm bg-[#c6e3fa] px-4 py-3 text-sm text-black/[0.87]">
           {bot.welcome}
         </div>
-        <p className="pt-2 text-xs font-semibold uppercase tracking-wider text-default-400">
+        <p className="pt-2 text-xs font-semibold uppercase tracking-wider text-keen-600">
           Try asking
         </p>
         <ul className="space-y-2">
           {bot.examples.map((example) => (
             <li
               key={example}
-              className="rounded-lg border border-default-700 px-4 py-2 text-sm text-default-200"
+              className="rounded-lg border border-[#d1dbe3] px-4 py-2 text-sm text-keen-700"
             >
               {example}
             </li>
           ))}
         </ul>
       </div>
-      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-default-800 px-5 py-4">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-t border-[#d1dbe3] px-5 py-4">
         <a
           href={bot.workbenchUrl}
           target="_blank"
@@ -62,7 +63,7 @@ const ChatPreview = ({ bot }) => {
           <IconifyIcon icon="lucide:message-circle" className="h-4 w-4" />
           Open the live chat
         </a>
-        <p className="text-xs text-default-400">
+        <p className="text-xs text-keen-600">
           Needs a ubc.smarter.sh login.{' '}
           <a
             href={QUICK_START}

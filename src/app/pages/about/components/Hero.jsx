@@ -15,11 +15,12 @@ const Hero = () => {
         <div className="text-center">
           <div className="mt-6 flex justify-center">
             <div className="max-w-2xl">
-              <h1 className="mb-6 text-5xl/tight font-medium text-default-100">
+              <h1 className="mb-6 text-5xl/tight font-semibold text-keen-900">
                 About Smarter
               </h1>
-              <p className="text-lg text-gray-400">
-                The story, inspiration, and goals behind the Smarter project—making AI and LLM tools accessible for everyone, from classrooms to the cloud.
+              <p className="text-lg text-keen-600">
+                The story, inspiration, and goals behind the Smarter project—making AI and
+                LLM tools accessible for everyone, from classrooms to the cloud.
               </p>
             </div>
           </div>

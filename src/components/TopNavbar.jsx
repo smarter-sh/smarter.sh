@@ -27,7 +27,6 @@ const TopNavbar = () => {
   const [menuOpen, setMenuOpen] = useState(false)
   useEffect(() => setMenuOpen(false), [pathname])
   useEffect(() => {
-    document.body.classList.add('bg-default-900')
     // Only initialize Gumshoe for in-page anchor links
     if (navRef.current) {
       // Select only <a> tags with href starting with '#'
@@ -37,9 +36,6 @@ const TopNavbar = () => {
           offset: 80,
         })
       }
-    }
-    return () => {
-      document.body.classList.remove('bg-default-900')
     }
   }, [])
   return (
@@ -52,14 +48,14 @@ const TopNavbar = () => {
             </Link>
             <div className="ms-auto flex items-center px-2.5 lg:hidden">
               <button
-                className="inline-flex h-9 w-12 items-center justify-center rounded-md border border-white/20 bg-default-100/5"
+                className="inline-flex h-9 w-12 items-center justify-center rounded-md border border-keen-300 bg-white"
                 type="button"
                 aria-label="Menu"
                 aria-controls="mobileMenu"
                 aria-expanded={menuOpen}
                 onClick={() => setMenuOpen(!menuOpen)}
               >
-                <IconifyIcon icon="lucide:menu" className="h-5 w-5 stroke-white" />
+                <IconifyIcon icon="lucide:menu" className="h-5 w-5 text-keen-700" />
               </button>
             </div>
             <div
@@ -79,7 +75,7 @@ const TopNavbar = () => {
                   </li>
                 ))}
               </ul>
-              <div className="mt-4 flex items-center border-t border-white/10 pt-4 lg:mt-0 lg:hidden lg:border-none lg:pt-0">
+              <div className="mt-4 flex items-center border-t border-keen-200 pt-4 lg:mt-0 lg:hidden lg:border-none lg:pt-0">
                 <a
                   href={QUICK_START}
                   target="_blank"
@@ -92,7 +88,7 @@ const TopNavbar = () => {
                   href="https://github.com/smarter-sh/smarter"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-4 py-2 text-white"
+                  className="inline-flex items-center gap-2 px-4 py-2 text-keen-700 hover:text-primary"
                 >
                   <IconifyIcon icon="lucide:github" className="h-5 w-5" />
                   <span>GitHub</span>
@@ -105,7 +101,7 @@ const TopNavbar = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Smarter on GitHub"
-                className="text-white transition-colors hover:text-primary"
+                className="text-keen-700 transition-colors hover:text-primary"
               >
                 <IconifyIcon icon="lucide:github" className="h-6 w-6" />
               </a>

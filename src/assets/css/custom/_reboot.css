@@ -10,10 +10,11 @@ html {
     @apply relative scroll-smooth overflow-x-hidden;
 }
 
+/* the web console's light theme: its page color and body text */
 body {
     font-size: 15px;
     margin: 0 auto;
-    @apply font-inter overflow-x-hidden text-default-500;
+    @apply font-inter overflow-x-hidden bg-keen-100 text-keen-700;
 }
 
 #root {

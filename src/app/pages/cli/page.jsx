@@ -1,5 +1,4 @@
 import PageMetaData from '@/components/PageMetaData'
-import Background1 from '@/components/Background1'
 import TopNavbar from '@/components/TopNavbar'
 import Footer from '@/components/SiteFooter'
 import Hero from './components/Hero'
@@ -10,7 +9,6 @@ const Cli = () => {
   return (
     <>
       <PageMetaData title="CLI" />
-      <Background1 />
       <TopNavbar />
       <main>
         <Hero />

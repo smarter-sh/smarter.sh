@@ -1,7 +1,8 @@
 import { COMMUNITY, QUICK_START } from '@/common/constants'
 import Button from './Button'
 
-// The closing call to action of a page.
+// The closing call to action of a page, like the web console's light illustrated widgets (its
+// Contribute card): a warm gradient on white, with dark text.
 const CtaBand = ({
   title = 'Start with a pilot, decide with your own data',
   text = 'Install Smarter yourself and run it for one quarter with a small cohort of your own staff. Leadership reviews real costs, usage and the audit trail before deciding how far to scale.',
@@ -15,9 +16,9 @@ const CtaBand = ({
       data-aos-duration={800}
     >
       <div className="container">
-        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-3xl border border-amber-400/30 bg-gradient-to-br from-primary/30 via-default-950/60 to-amber-500/20 p-8 text-center backdrop-blur-3xl md:p-14">
-          <h2 className="mb-4 text-3xl font-medium text-white">{title}</h2>
-          <p className="mx-auto mb-8 max-w-2xl text-lg text-default-200">{text}</p>
+        <div className="relative mx-auto max-w-5xl overflow-hidden rounded-xl border border-orange-200 bg-gradient-to-br from-orange-50 via-white to-amber-100 p-8 text-center shadow-card md:p-14">
+          <h2 className="mb-4 text-3xl font-semibold text-keen-900">{title}</h2>
+          <p className="mx-auto mb-8 max-w-2xl text-lg text-keen-700">{text}</p>
           <div className="flex flex-wrap items-center justify-center gap-4">
             {children ?? (
               <>

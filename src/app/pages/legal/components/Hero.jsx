@@ -15,7 +15,7 @@ const Hero = () => {
         <div className="text-center">
           <div className="mt-6 flex justify-center">
             <div className="max-w-2xl">
-              <h1 className="mb-6 text-5xl/tight font-medium text-default-100">
+              <h1 className="mb-6 text-5xl/tight font-semibold text-keen-900">
                 Legal Information
               </h1>
             </div>

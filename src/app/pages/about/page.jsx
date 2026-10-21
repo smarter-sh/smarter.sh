@@ -1,5 +1,4 @@
 import PageMetaData from '@/components/PageMetaData'
-import Background1 from '@/components/Background1'
 import TopNavbar from '@/components/TopNavbar'
 import Footer from '@/components/SiteFooter'
 import Hero from './components/Hero'
@@ -9,12 +8,13 @@ const About = () => {
   return (
     <>
       <PageMetaData title="About" />
-      <Background1 />
       <TopNavbar />
-      <main className="max-w-3xl mx-auto px-4 py-12 text-default-400">
+      <main className="max-w-3xl mx-auto px-4 py-12 text-keen-700">
         <Hero />
         <section className="problem">
-          <h2 className="text-3xl mb-6">The Original Problem</h2>
+          <h2 className="text-3xl mb-6 font-semibold text-keen-900">
+            The Original Problem
+          </h2>
           <section className="mb-8">
             <p>
               I teach AI to non-programmers at University of British Columbia. Like most
@@ -166,7 +166,9 @@ const About = () => {
           </section>
         </section>
         <section className="solution">
-          <h2 className="text-3xl mb-6">The Eventual Solution</h2>
+          <h2 className="text-3xl mb-6 font-semibold text-keen-900">
+            The Eventual Solution
+          </h2>
           <section className="mb-8">
             <p>
               {' '}
@@ -236,7 +238,7 @@ const About = () => {
           </section>
         </section>
 
-        <div className="mt-12 text-base text-gray-500 text-right">
+        <div className="mt-12 text-base text-keen-600 text-right">
           <div>
             {' '}
             <a

@@ -1,14 +1,15 @@
-import { useState } from 'react'
+import { useId, useState } from 'react'
 import { ResourceTree, kindInfo } from '@smarter.sh/ui-widgets'
 import SmarterChatEmbed from '@/components/site/SmarterChatEmbed'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
-import { ConsoleCard, toneOf } from '@/components/site/ConsoleCard'
+import { ConsoleCard } from '@/components/site/ConsoleCard'
 import { chatbots } from '@/common/chatbots'
 import { architectures } from '@/common/architectures'
 
 /*
  * Four assistants that ship with Smarter: each one's live chat, beside its architecture, the tree of the
- * Smarter resources that it is built from, and above them, what each of those resources does for it.
+ * Smarter resources that it is built from, and above them, in a box that opens on request, what each
+ * of those resources does for it.
  *
  * The trees are src/common/architectures/<name>.json, written by the platform's
  *   python manage.py export_llmclient_architecture --name <name> --public --output <name>.json
@@ -35,7 +36,9 @@ const tabs = [
     bot: chatbots.weather,
     tree: architectures.weather,
     title: 'A weather forecaster',
-    text: (
+    text: 'Current conditions and the next hours’ forecast for any place, with a picture of it.',
+    // what the box says before the resources, for an assistant with more of a story to tell
+    details: (
       <>
         The <span className="home-inline-name">get_weather</span> tool of OpenAI’s{' '}
         <a
@@ -46,8 +49,7 @@ const tabs = [
         >
           function calling guide
         </a>{' '}
-        is an example that OpenAI never implemented. Smarter did: current conditions and
-        the next hours’ forecast for any place, with a picture of it. One LLMClient that
+        is an example that OpenAI never implemented. Smarter did, with one LLMClient that
         combines four kinds of resources, each a manifest of its own.
       </>
     ),
@@ -187,55 +189,132 @@ const Resources = ({ items }) => (
   </ul>
 )
 
+// What an assistant is made of: its resources, and its longer story if it has one, in a box that
+// is closed until the visitor opens it, like the web console's collapsible card sections. Each
+// assistant's panel has its own, which stays as the visitor left it when they switch tabs.
+const MadeOf = ({ tab }) => {
+  const [open, setOpen] = useState(false)
+  const id = useId()
+  return (
+    <div className={`home-made-of${open ? ' home-made-of-open' : ''}`}>
+      <button
+        type="button"
+        className="home-made-of-toggle"
+        aria-expanded={open}
+        aria-controls={id}
+        onClick={() => setOpen(!open)}
+      >
+        <span>What it’s made of</span>
+        <IconifyIcon
+          icon="lucide:chevron-down"
+          width={18}
+          height={18}
+          className={`home-faq-chevron ms-auto${open ? ' home-faq-chevron-open' : ''}`}
+        />
+      </button>
+      <div id={id} className="home-made-of-body" hidden={!open}>
+        {tab.details && <p className="fs-6 text-gray-700 mb-6">{tab.details}</p>}
+        <Resources items={tab.resources} />
+      </div>
+    </div>
+  )
+}
+
+// One assistant's panel: what it is, what it's made of, its live chat and its architecture.
+const Panel = ({ tab, active }) => (
+  <div
+    role="tabpanel"
+    id={`try-it-panel-${tab.id}`}
+    aria-labelledby={`try-it-tab-${tab.id}`}
+    hidden={!active}
+  >
+    <h3 className="fs-2 fw-bold text-gray-900 mb-3">{tab.title}</h3>
+    <p className="fs-5 text-gray-700 mb-6">{tab.text}</p>
+    <MadeOf tab={tab} />
+    <div className="row g-6 mt-2">
+      <div className="col-xl-6">
+        <h4 className="home-panel-title">The live chat</h4>
+        <div className="home-chat-panel">
+          <SmarterChatEmbed bot={tab.bot} height="600px" />
+        </div>
+      </div>
+      <div className="col-xl-6">
+        <h4 className="home-panel-title">Its architecture</h4>
+        <div className="home-architecture">
+          <ResourceTree
+            tree={tab.tree}
+            label={`The resources that ${tab.bot.appName} is built from`}
+            defaultCollapsed
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+)
+
+// The assistants, as tabs. A panel mounts the first time its tab is selected, so that the page
+// doesn't start four chats at once, and then stays mounted, hidden while another tab is selected:
+// switching back shows the same chat, with its conversation, its scroll position and the tree as
+// the visitor left them, without loading anything again.
 const TryIt = () => {
   const [active, setActive] = useState(tabs[0].id)
-  const tab = tabs.find((item) => item.id === active)
+  const [shown, setShown] = useState(() => new Set([tabs[0].id]))
+  const select = (id) => {
+    setActive(id)
+    setShown((previous) => (previous.has(id) ? previous : new Set(previous).add(id)))
+  }
+  // the arrow keys, Home and End move between the tabs, as in the WAI-ARIA tabs pattern
+  const onKeyDown = (event) => {
+    const index = tabs.findIndex((item) => item.id === active)
+    const next = {
+      ArrowRight: (index + 1) % tabs.length,
+      ArrowLeft: (index - 1 + tabs.length) % tabs.length,
+      Home: 0,
+      End: tabs.length - 1,
+    }[event.key]
+    if (next === undefined) return
+    event.preventDefault()
+    select(tabs[next].id)
+    document.getElementById(`try-it-tab-${tabs[next].id}`)?.focus()
+  }
   return (
     <div className="col-12">
       <ConsoleCard
         id="try-it"
+        className="home-try-it"
         title="Assistants built on Smarter"
         subtitle="Each one is a short manifest that ships with Smarter, built from other Smarter resources. Chat with it live, beside the tree of the resources that it is made of."
       >
-        <div role="tablist" className="d-flex flex-wrap gap-3 mb-8">
+        <div
+          role="tablist"
+          aria-label="Assistants built on Smarter"
+          className="d-flex flex-wrap gap-3 mb-8"
+          onKeyDown={onKeyDown}
+        >
           {tabs.map((item) => (
             <button
               key={item.id}
+              id={`try-it-tab-${item.id}`}
               type="button"
               role="tab"
               aria-selected={item.id === active}
-              onClick={() => setActive(item.id)}
-              className={`btn fw-semibold d-inline-flex align-items-center gap-2 ${
-                item.id === active ? `btn-light-${toneOf(item.accent)}` : 'btn-light'
-              }`}
+              aria-controls={`try-it-panel-${item.id}`}
+              tabIndex={item.id === active ? 0 : -1}
+              onClick={() => select(item.id)}
+              className={`btn btn-bordered fw-semibold d-inline-flex align-items-center gap-2 home-tab home-tab-${
+                item.accent
+              }${item.id === active ? ' home-tab-active' : ''}`}
             >
               <IconifyIcon icon={item.icon} width={18} height={18} />
               {item.label}
             </button>
           ))}
         </div>
-        <div role="tabpanel" aria-label={tab.label}>
-          <h3 className="fs-2 fw-bold text-gray-900 mb-3">{tab.title}</h3>
-          <p className="fs-5 text-gray-700 mb-6">{tab.text}</p>
-          <Resources items={tab.resources} />
-          <div className="row g-6 mt-2">
-            <div className="col-xl-6">
-              <h4 className="home-panel-title">The live chat</h4>
-              <SmarterChatEmbed key={tab.id} bot={tab.bot} height="600px" />
-            </div>
-            <div className="col-xl-6">
-              <h4 className="home-panel-title">Its architecture</h4>
-              <div className="home-architecture">
-                <ResourceTree
-                  key={tab.id}
-                  tree={tab.tree}
-                  label={`The resources that ${tab.bot.appName} is built from`}
-                  defaultCollapsed
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        {tabs
+          .filter((item) => shown.has(item.id))
+          .map((item) => (
+            <Panel key={item.id} tab={item} active={item.id === active} />
+          ))}
       </ConsoleCard>
     </div>
   )

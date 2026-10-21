@@ -3,7 +3,8 @@ import { cn } from '@/helpers/cn'
 import { accent as accentOf } from '@/helpers/accent'
 import SmartLink from './SmartLink'
 
-// A card with an icon, a title, a short text and an optional link, in the color of its topic.
+// A card with an icon, a title, a short text and an optional link, in the color of its topic: the
+// web console's light card, white with a hairline border and a soft shadow.
 const FeatureCard = ({
   icon,
   title,
@@ -29,13 +30,13 @@ const FeatureCard = ({
           </div>
         )}
         {badge && (
-          <span className="rounded-full border border-default-600 px-2.5 py-0.5 text-xs font-medium text-default-300">
+          <span className="rounded-full border border-keen-300 px-2.5 py-0.5 text-xs font-medium text-keen-600">
             {badge}
           </span>
         )}
       </div>
-      <h3 className="mb-2 text-lg font-medium text-white">{title}</h3>
-      <p className="text-sm leading-relaxed text-default-300">{text}</p>
+      <h3 className="mb-2 text-lg font-semibold text-keen-900">{title}</h3>
+      <p className="text-sm leading-relaxed text-keen-600">{text}</p>
       {href && (
         <span
           className={cn(
@@ -50,9 +51,9 @@ const FeatureCard = ({
     </>
   )
   const classes = cn(
-    'group block rounded-xl border-s-2 bg-default-950/40 p-6 backdrop-blur-3xl transition-all duration-500',
-    colors.border,
-    href && 'hover:-translate-y-1 hover:bg-default-950/70',
+    'group block rounded-xl border border-s-2 border-keen-200 bg-white p-6 shadow-card transition-all duration-500',
+    colors.borderStart,
+    href && 'hover:-translate-y-1 hover:shadow-header',
     className
   )
   if (!href) return <div className={classes}>{body}</div>

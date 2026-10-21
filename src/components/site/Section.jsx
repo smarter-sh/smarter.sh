@@ -48,11 +48,11 @@ const Section = ({
               </p>
             )}
             {title && (
-              <h2 className="mb-4 text-3xl font-medium text-white lg:text-4xl">
+              <h2 className="mb-4 text-3xl font-semibold text-keen-900 lg:text-4xl">
                 {title}
               </h2>
             )}
-            {intro && <p className="text-lg text-default-200">{intro}</p>}
+            {intro && <p className="text-lg text-keen-700">{intro}</p>}
           </div>
         )}
         {children}

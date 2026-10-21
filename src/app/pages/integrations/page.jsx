@@ -167,10 +167,10 @@ const Integrations = () => {
         intro="Hugo, Jekyll, Astro, a hand-written page or an intranet portal: paste one tag into the page, and a chat button appears in its corner. Or render the chat inline, in an element of the page."
       >
         <div className="mx-auto max-w-3xl">
-          <pre className="overflow-x-auto rounded-xl border-s-2 border-primary bg-default-950/60 p-5 font-mono text-sm leading-relaxed text-default-100">
+          <pre className="overflow-x-auto rounded-xl border-s-2 border-primary bg-code-bg p-5 font-mono text-sm leading-relaxed text-code-text">
             {embedTag}
           </pre>
-          <p className="mt-6 text-center text-default-300">
+          <p className="mt-6 text-center text-keen-600">
             The assistant’s manifest lists the websites allowed to use it, so nobody else
             can put it on theirs.{' '}
             <a

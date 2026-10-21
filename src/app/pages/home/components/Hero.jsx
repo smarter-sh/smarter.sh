@@ -106,7 +106,7 @@ const Hero = () => {
           <div className="row g-10 align-items-center">
             <div className="col-lg-6">
               <span className="home-eyebrow">The Smarter Project</span>
-              <h1 className="home-hero-title fw-bold text-white mt-5 mb-5">
+              <h1 className="home-hero-title fw-bold home-ink mt-5 mb-5">
                 <span className="home-learn">Learn</span> AI.{' '}
                 <span className="home-build">Build</span> with AI.{' '}
                 <span className="home-govern">Govern</span> AI.

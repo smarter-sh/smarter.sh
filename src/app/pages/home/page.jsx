@@ -11,12 +11,12 @@ import { ErpForAi, SafeByDefault, WhatYouBuild } from './components/Governance'
 import { Cta, Faqs, Pilot, WhoItsFor, WhyOpenSource } from './components/Adoption'
 import './home.css'
 
-// The landing page, laid out as the Smarter web console's dashboard, in its dark mode: rows of
-// cards on the console's grid, with the console's own widgets (@smarter.sh/ui-widgets) where the
-// story calls for them.
+// The landing page, laid out as the Smarter web console's dashboard, in its default light mode:
+// rows of cards on the console's grid, with the console's own widgets (@smarter.sh/ui-widgets)
+// where the story calls for them.
 const Home = () => {
   return (
-    <PageShell console>
+    <PageShell>
       <ConsoleDashboard className="home">
         <div className="row g-5 g-xl-10">
           <Hero />
