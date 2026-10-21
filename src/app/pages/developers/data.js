@@ -1,4 +1,4 @@
-import { DOCS, GITHUB } from '@/common/constants'
+import { DOCS, GITHUB, STACKADEMY } from '@/common/constants'
 
 // Ways to get involved that the Contribute widget (@smarter.sh/ui-widgets) doesn't link to: it has
 // the contributing guide and the open issues.
@@ -25,6 +25,14 @@ export const resources = [
       'Run the whole platform on your own computer with Docker in about ten minutes.',
     link_text: 'Get started',
     url: `${DOCS}/smarter-platform/installation/quick-start.html`,
+  },
+  {
+    name: 'Example project',
+    icon: 'lucide:git-fork',
+    detail:
+      'Course advisors that answer from a database no AI model has seen, with no-code tool calling, kept in GitHub with pull requests and automated checks. Clone or fork it to start your own.',
+    link_text: 'smarter-sh/stackademy',
+    url: STACKADEMY,
   },
   {
     name: 'Documentation',
