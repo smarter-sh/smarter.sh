@@ -1,6 +1,4 @@
-
 import PageMetaData from '@/components/PageMetaData'
-import Background1 from '@/components/Background1'
 import TopNavbar from '@/components/TopNavbar'
 import Footer from '@/components/SiteFooter'
 import Hero from './components/Hero'
@@ -9,7 +7,6 @@ const LegalPage = () => {
   return (
     <>
       <PageMetaData title="Legal Information" />
-      <Background1 />
       <TopNavbar />
       <main>
         <Hero />
@@ -22,19 +19,22 @@ const LegalPage = () => {
           <div id="services" className="container">
             <div className="mb-10 flex items-end justify-between">
               <div className="mx-auto max-w-2xl text-center">
-                <ul className="list-disc list-inside space-y-2">
+                <ul className="legal-links list-disc list-inside space-y-2">
                   <li>
-                    <a href="/privacy" className="">Privacy Policy</a>
+                    <a href="/privacy" className="">
+                      Privacy Policy
+                    </a>
                   </li>
                   <li>
-                    <a href="/tos" className="">Terms of Service</a>
+                    <a href="/tos" className="">
+                      Terms of Service
+                    </a>
                   </li>
                 </ul>
               </div>
             </div>
           </div>
         </section>
-
       </main>
       <Footer />
     </>

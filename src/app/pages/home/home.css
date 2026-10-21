@@ -1,12 +1,17 @@
 /*
  * The landing page, laid out as the Smarter web console's dashboard (src/app/pages/home/page.jsx).
- * The cards are the Keen theme's, in its dark mode (ConsoleDashboard). These rules add what the
- * dashboard's own widgets add to Keen: illustrated gradient cards, steps, tiles and timelines,
- * with the theme's variables, so that they follow it. Every class is prefixed home-.
+ * The cards are the Keen theme's, in its light mode, the console's default (ConsoleDashboard), on
+ * the console's light page color (the body's). These rules add what the dashboard's own widgets
+ * add to Keen: illustrated gradient cards, steps, tiles and timelines, with the theme's
+ * variables, so that they follow it. The hero is a dark illustrated card, like the console's dark
+ * widgets; the leadership questions and the call to action are light ones, like its Extensions,
+ * SDKs and Contribute widgets, and keep their former dark gradients in the dark theme. Every class
+ * is prefixed home-.
  */
 
+/* below the site's fixed navigation bar (6rem tall) */
 .console-dashboard {
-  padding: 7.5rem 0 3rem;
+  padding: 8rem 0 3rem;
   color: var(--bs-gray-700);
   font-family: Inter, sans-serif;
 }
@@ -22,27 +27,55 @@
   scroll-margin-top: 6.5rem;
 }
 
-/* the brand's three words, as in the Smarter logo and the console's widgets */
+/* the brand's three words, as in the Smarter logo and the console's widgets: deep shades on the
+   light theme, pale ones on the dark */
+.console-dashboard {
+  --home-learn: #04b440;
+  --home-govern: #1b84ff;
+  --home-ink: var(--bs-gray-900);
+  --home-text: var(--bs-gray-700);
+  --home-muted: var(--bs-gray-600);
+}
+[data-bs-theme='dark'].console-dashboard,
+[data-bs-theme='dark'] .console-dashboard {
+  --home-learn: #3dd68c;
+  --home-govern: #4fa3ff;
+  --home-ink: #ffffff;
+  --home-text: rgba(255, 255, 255, 0.75);
+  --home-muted: var(--bs-gray-500);
+}
 .home-learn {
-  color: #3dd68c;
+  color: var(--home-learn);
 }
 .home-build {
-  background: linear-gradient(90deg, #ea580c, #fbbf24);
+  background: linear-gradient(90deg, #ea580c, #f59e0b);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 .home-govern {
-  color: #4fa3ff;
+  color: var(--home-govern);
+}
+.home-ink {
+  color: var(--home-ink);
 }
 
-/* the hero, like the console's illustrated widgets (SelfHost, MCP Server) */
+/* the hero: a dark illustrated card on the light page, like the console's dark widgets (SelfHost,
+   MCP Server), in the brand's brick color, rising from its lower left over the near-black. Its
+   text and the three cards on its right keep the dark theme's colors in both themes. */
 .home-hero {
+  --home-learn: #3dd68c;
+  --home-govern: #4fa3ff;
+  --home-ink: #ffffff;
+  --home-text: rgba(255, 255, 255, 0.75);
+  --home-muted: var(--bs-gray-500);
+  border: 0;
   background:
     radial-gradient(
       circle at 12% 115%,
-      rgba(234, 88, 12, 0.35) 0%,
-      rgba(234, 88, 12, 0) 50%
+      rgba(234, 88, 12, 0.55) 0%,
+      rgba(234, 88, 12, 0.2) 45%,
+      rgba(234, 88, 12, 0) 75%
     ),
     radial-gradient(
       circle at 95% 0%,
@@ -51,6 +84,69 @@
     ),
     linear-gradient(135deg, #1a1c24 0%, #24203a 100%);
   overflow: hidden;
+}
+/* on phones and tablets the card is tall and narrow: the brick rises beside the headline */
+@media (max-width: 991.98px) {
+  .home-hero {
+    background:
+      radial-gradient(
+        circle at 0% 40%,
+        rgba(234, 88, 12, 0.55) 0%,
+        rgba(234, 88, 12, 0.2) 35%,
+        rgba(234, 88, 12, 0) 60%
+      ),
+      radial-gradient(
+        circle at 100% 0%,
+        rgba(114, 57, 234, 0.35) 0%,
+        rgba(114, 57, 234, 0) 30%
+      ),
+      linear-gradient(160deg, #1a1c24 0%, #24203a 100%);
+  }
+}
+/* the leadership questions and the call to action: light illustrated cards, like the console's
+   Extensions, SDKs and Contribute widgets */
+.home-questions {
+  border: 1px solid var(--bs-gray-200);
+  background:
+    radial-gradient(
+      circle at 90% 110%,
+      rgba(114, 57, 234, 0.1) 0%,
+      rgba(114, 57, 234, 0) 55%
+    ),
+    linear-gradient(160deg, #e6f4ff 0%, #ffffff 100%);
+}
+.home-cta {
+  border: 1px solid #fed7aa;
+  background:
+    radial-gradient(
+      circle at 90% 100%,
+      rgba(251, 191, 36, 0.25) 0%,
+      rgba(251, 191, 36, 0) 50%
+    ),
+    linear-gradient(135deg, #fff7ed 0%, #ffedd5 60%, #fed7aa 100%);
+}
+[data-bs-theme='dark'] .home-questions {
+  background:
+    radial-gradient(
+      circle at 90% 110%,
+      rgba(114, 57, 234, 0.4) 0%,
+      rgba(114, 57, 234, 0) 55%
+    ),
+    linear-gradient(160deg, #0b2a55 0%, #12346b 100%);
+}
+[data-bs-theme='dark'] .home-cta {
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(234, 88, 12, 0.35) 0%,
+      rgba(234, 88, 12, 0) 50%
+    ),
+    radial-gradient(
+      circle at 90% 100%,
+      rgba(251, 191, 36, 0.25) 0%,
+      rgba(251, 191, 36, 0) 50%
+    ),
+    linear-gradient(135deg, #1a1c24 0%, #2a1f1a 100%);
 }
 .home-hero-title {
   font-size: clamp(2.25rem, 4.2vw, 3.6rem);
@@ -69,11 +165,11 @@
   text-transform: uppercase;
 }
 .home-eyebrow-sky {
-  background-color: rgba(27, 132, 255, 0.2);
-  color: #9cc9ff;
+  background-color: #dbeafe;
+  color: #1d4ed8;
 }
 .home-lede {
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--home-text);
 }
 .home-highlights {
   display: flex;
@@ -82,7 +178,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--home-text);
   font-size: 0.9rem;
 }
 .home-highlights li {
@@ -102,12 +198,24 @@
   background-color: #c2410c;
   color: #ffffff;
 }
+/* the second button: white, with the console's border where it's on a light card */
 .home-btn-white {
+  border: 1px solid var(--bs-gray-300) !important;
   background-color: #ffffff;
-  color: #181c32;
+  color: var(--bs-gray-900);
 }
 .home-btn-white:hover,
 .home-btn-white:focus {
+  border-color: #ea580c !important;
+  background-color: #ffffff;
+  color: #c2410c;
+}
+.home-hero .home-btn-white {
+  border-color: #ffffff !important;
+}
+.home-hero .home-btn-white:hover,
+.home-hero .home-btn-white:focus {
+  border-color: #eef0f5 !important;
   background-color: #eef0f5;
   color: #181c32;
 }
@@ -129,13 +237,13 @@
   font-size: 0.85rem;
 }
 .home-platform-learn {
-  --home-platform-accent: #3dd68c;
+  --home-platform-accent: var(--home-learn);
 }
 .home-platform-build {
   --home-platform-accent: #f59e0b;
 }
 .home-platform-govern {
-  --home-platform-accent: #4fa3ff;
+  --home-platform-accent: var(--home-govern);
 }
 @media (min-width: 992px) {
   .home-platform-learn {
@@ -155,7 +263,7 @@
   align-items: baseline;
   gap: 0.25rem 0.75rem;
   margin-bottom: 0.75rem;
-  color: var(--bs-gray-500);
+  color: var(--home-muted);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.04em;
@@ -227,18 +335,18 @@
   display: flex;
   align-items: center;
   gap: 0.4rem;
-  color: var(--bs-gray-500);
+  color: var(--home-muted);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
 .home-platform-record dt svg {
-  color: #4fa3ff;
+  color: var(--home-govern);
 }
 .home-platform-record dd {
   margin: 0.1rem 0 0;
-  color: #ffffff;
+  color: var(--home-ink);
   font-weight: 600;
 }
 @media (max-width: 575.98px) {
@@ -392,10 +500,10 @@
   margin-top: 0.15rem;
 }
 .home-checks-light li {
-  color: rgba(255, 255, 255, 0.85);
+  color: var(--home-ink);
 }
 .home-checks-light svg {
-  color: #9cc9ff;
+  color: var(--home-govern);
 }
 
 /* the console's widgets: the grid's gutters space them here, not their own bottom margins, and
@@ -441,33 +549,182 @@
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
+/* the assistants' card: outlined, with outlined tabs and panels, in the theme's grays. The dark
+   theme's gray-200 and gray-300 all but vanish on its near-black, so it has lighter ones. */
+.home-try-it {
+  --home-edge: var(--bs-gray-300);
+  --home-edge-strong: var(--bs-gray-400);
+  --home-tab-bg: var(--bs-body-bg);
+  --home-tab-bg-hover: var(--bs-gray-100);
+  --home-tab-color: var(--bs-gray-700);
+  --home-tab-color-strong: var(--bs-gray-900);
+  --home-tree-card-bg: var(--bs-body-bg);
+  --home-tree-card-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--home-edge);
+}
+[data-bs-theme='dark'] .home-try-it {
+  --home-edge: #4a4d59;
+  --home-edge-strong: #6b6e7c;
+  --home-tab-bg: #23252e;
+  --home-tab-bg-hover: #2c2f3a;
+  --home-tab-color: #d4d6e0;
+  --home-tab-color-strong: #ffffff;
+  --home-tree-card-bg: #20222a;
+  --home-tree-card-shadow: 0 0.25rem 0.75rem rgba(0, 0, 0, 0.35);
+}
+/* the tabs: each one outlined (btn-bordered keeps Keen from removing a button's border), the
+   selected one tinted with its assistant's accent and underlined in it */
+.home-try-it .btn.home-tab {
+  border: 1px solid var(--home-edge-strong);
+  background-color: var(--home-tab-bg);
+  color: var(--home-tab-color);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    color 0.15s ease;
+}
+.home-try-it .btn.home-tab:hover,
+.home-try-it .btn.home-tab:focus-visible {
+  border-color: var(--home-tab-accent);
+  background-color: var(--home-tab-bg-hover);
+  color: var(--home-tab-color-strong);
+}
+.home-tab svg {
+  color: var(--home-tab-text);
+}
+.home-try-it .btn.home-tab.home-tab-active {
+  border-color: var(--home-tab-accent);
+  background-color: rgba(var(--home-tab-accent-rgb), 0.12);
+  background-image: linear-gradient(var(--home-tab-accent), var(--home-tab-accent));
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 3px;
+  color: var(--home-tab-color-strong);
+}
+[data-bs-theme='dark'] .home-try-it .btn.home-tab.home-tab-active {
+  background-color: rgba(var(--home-tab-accent-rgb), 0.22);
+}
+/* each assistant's accent, and its icon's color: a deep one on light, a pale one on dark */
+.home-tab-sky {
+  --home-tab-accent: #1b84ff;
+  --home-tab-accent-rgb: 27, 132, 255;
+  --home-tab-text: #1b84ff;
+}
+.home-tab-emerald {
+  --home-tab-accent: #17c653;
+  --home-tab-accent-rgb: 23, 198, 83;
+  --home-tab-text: #04b440;
+}
+.home-tab-amber {
+  --home-tab-accent: #f59e0b;
+  --home-tab-accent-rgb: 245, 158, 11;
+  --home-tab-text: #d97706;
+}
+.home-tab-violet {
+  --home-tab-accent: #7239ea;
+  --home-tab-accent-rgb: 114, 57, 234;
+  --home-tab-text: #7239ea;
+}
+[data-bs-theme='dark'] .home-tab-sky {
+  --home-tab-accent: #4fa3ff;
+  --home-tab-accent-rgb: 79, 163, 255;
+  --home-tab-text: #9cc9ff;
+}
+[data-bs-theme='dark'] .home-tab-emerald {
+  --home-tab-accent: #3dd68c;
+  --home-tab-accent-rgb: 61, 214, 140;
+  --home-tab-text: #a7f3d0;
+}
+[data-bs-theme='dark'] .home-tab-amber {
+  --home-tab-text: #fcd34d;
+}
+[data-bs-theme='dark'] .home-tab-violet {
+  --home-tab-accent: #a78bfa;
+  --home-tab-accent-rgb: 167, 139, 250;
+  --home-tab-text: #c4b5fd;
+}
+/* what an assistant is made of: a box with a toggle, closed at first, like the console's
+   collapsible card sections */
+.home-made-of {
+  border: 1px dashed var(--home-edge-strong, var(--bs-gray-300));
+  border-radius: 0.75rem;
+}
+.home-made-of-toggle {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+  padding: 0.9rem 1.25rem;
+  border: 0;
+  border-radius: 0.75rem;
+  background: none;
+  color: var(--bs-gray-900);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+}
+.home-made-of-toggle:hover,
+.home-made-of-toggle:focus-visible {
+  background-color: var(--bs-gray-100);
+  color: var(--bs-primary);
+}
+.home-made-of-open .home-made-of-toggle {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.home-made-of-body {
+  padding: 0.5rem 1.25rem 1.25rem;
+}
+/* the live chat's frame: the architecture panel's neutral border, instead of the chat's own. The
+   live chat (<smarter-chat>, @smarter.sh/ui-chat) draws an orange border inside its shadow root,
+   which the page can't restyle, and its preview a border of its own: the frame clips both, 1px
+   outside its edge, so that only its own border shows. */
+.home-chat-panel {
+  --smarter-chat-main-container-border-color: transparent;
+  overflow: hidden;
+  border: 1px solid var(--home-edge-strong, var(--bs-gray-400));
+  border-radius: 0.75rem;
+}
+.home-chat-panel smarter-chat {
+  display: block;
+}
+.home-chat-panel > * {
+  width: calc(100% + 2px);
+  margin: -1px;
+  border-radius: 0;
+}
 /* the tree, on the console's dot-grid canvas, as tall as the chat beside it */
 .home-architecture {
   height: 600px;
   padding: 1.5rem;
   overflow: auto;
-  border: 1px solid var(--bs-gray-200);
+  border: 1px solid var(--home-edge-strong, var(--bs-gray-400));
   border-radius: 0.75rem;
   background-color: var(--bs-gray-100);
-  background-image: radial-gradient(var(--bs-gray-300) 1px, transparent 1px);
+  background-image: radial-gradient(var(--bs-gray-400) 1px, transparent 1px);
   background-size: 1.25rem 1.25rem;
+}
+/* @smarter.sh/ui-widgets' tree draws its cards' edges and connecting lines in gray-300, faint on
+   the dot grid and nearly black in the dark theme: the card's edges, without changing the package */
+.home-architecture .architecture-card {
+  border-top-color: var(--home-edge, var(--bs-gray-400));
+  border-right-color: var(--home-edge, var(--bs-gray-400));
+  border-bottom-color: var(--home-edge, var(--bs-gray-400));
+  background-color: var(--home-tree-card-bg, var(--bs-body-bg));
+  box-shadow: var(--home-tree-card-shadow);
+}
+.home-architecture .architecture-card-link:hover,
+.home-architecture .architecture-card-link:focus-within {
+  border-color: var(--architecture-tone);
+}
+.home-architecture .architecture-tree {
+  --architecture-line: var(--home-edge-strong, var(--bs-gray-400));
 }
 @media (max-width: 1199.98px) {
   .home-architecture {
     height: auto;
     max-height: 600px;
   }
-}
-
-/* the leadership questions, like the console's colored widgets */
-.home-questions {
-  background:
-    radial-gradient(
-      circle at 90% 110%,
-      rgba(114, 57, 234, 0.4) 0%,
-      rgba(114, 57, 234, 0) 55%
-    ),
-    linear-gradient(160deg, #0b2a55 0%, #12346b 100%);
 }
 
 /* the audiences: whole cards are links */
@@ -545,22 +802,6 @@
 }
 .home-faq-chevron-open {
   transform: rotate(180deg);
-}
-
-/* the closing call to action */
-.home-cta {
-  background:
-    radial-gradient(
-      circle at 10% 0%,
-      rgba(234, 88, 12, 0.35) 0%,
-      rgba(234, 88, 12, 0) 50%
-    ),
-    radial-gradient(
-      circle at 90% 100%,
-      rgba(251, 191, 36, 0.25) 0%,
-      rgba(251, 191, 36, 0) 50%
-    ),
-    linear-gradient(135deg, #1a1c24 0%, #2a1f1a 100%);
 }
 
 /* a tool's or resource's name inside a sentence */

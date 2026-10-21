@@ -6,7 +6,7 @@ const variants = {
   primary:
     'bg-gradient-brand text-white shadow-lg shadow-primary/20 hover:brightness-110',
   secondary:
-    'border border-default-200/40 text-default-100 hover:border-primary hover:text-primary',
+    'border border-keen-300 bg-white text-keen-800 hover:border-primary hover:text-primary',
 }
 
 const Button = ({ href, icon, variant = 'primary', className, children }) => {

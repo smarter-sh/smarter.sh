@@ -66,11 +66,11 @@ export const Symbol = ({
   </span>
 )
 
-// A dashboard page: the Keen theme in its dark mode, on the console's grid. Children are rows of
-// Bootstrap columns.
+// A dashboard page: the Keen theme in its light mode, the web console's default, on the console's
+// light page color and grid. Children are rows of Bootstrap columns.
 export const ConsoleDashboard = ({ className, children }) => (
   <div className="keen">
-    <div data-bs-theme="dark" className={cn('console-dashboard', className)}>
+    <div data-bs-theme="light" className={cn('console-dashboard', className)}>
       <div className="container-xxl">{children}</div>
     </div>
   </div>

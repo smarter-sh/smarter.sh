@@ -53,12 +53,12 @@ export const footerLinks = [
 
 const SiteFooter = () => {
   return (
-    <footer className="mt-10 bg-default-950/40 backdrop-blur-3xl">
+    <footer className="mt-10 ml-[calc(50%-50vw)] w-screen border-t border-keen-200 bg-white">
       <div className="container py-16 lg:px-20">
         <div className="grid grid-cols-2 gap-10 md:grid-cols-4 lg:gap-16">
           {footerLinks.map((group) => (
             <div key={group.title}>
-              <h5 className="mb-4 font-medium text-default-200 lg:text-lg">
+              <h5 className="mb-4 font-semibold text-keen-900 lg:text-lg">
                 {group.title}
               </h5>
               <ul className="flex flex-col gap-3">
@@ -66,7 +66,7 @@ const SiteFooter = () => {
                   <li key={link.name}>
                     <SmartLink
                       href={link.url}
-                      className="text-sm text-default-300 transition-all hover:text-white"
+                      className="text-sm font-medium text-keen-600 transition-all hover:text-primary"
                     >
                       {link.name}
                     </SmartLink>

@@ -99,7 +99,7 @@ export const ErpForAi = () => (
       >
         <div className="card-body p-8">
           <span className="home-eyebrow home-eyebrow-sky">For leadership</span>
-          <h2 className="fs-2 fw-bold text-white mt-4 mb-6">
+          <h2 className="fs-2 fw-bold home-ink mt-4 mb-6">
             Questions leadership can finally answer
           </h2>
           <ul className="home-checks home-checks-light">

@@ -1,5 +1,5 @@
 const CodeBlock = ({ yaml }) => (
-  <pre className="bg-gray-900 text-gray-400 p-4 rounded text-sm overflow-x-auto mb-4 mt-8">
+  <pre className="bg-code-bg text-code-text p-4 rounded-lg text-sm overflow-x-auto mb-4 mt-8">
     {yaml}
   </pre>
 )

@@ -35,15 +35,15 @@ const Platform = () => {
         intro="An assistant is a short manifest that a trained analyst can read and change. It is versioned, reviewed and approved like any other business document, and the same file works from the web console, the command line or the API."
       >
         <div className="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 md:grid-cols-2">
-          <div className="rounded-xl border-s-2 border-primary bg-default-950/60 backdrop-blur-3xl">
-            <div className="border-b border-default-800 px-5 py-3 font-mono text-xs text-default-400">
+          <div className="rounded-xl border-s-2 border-primary bg-code-bg shadow-card">
+            <div className="border-b border-white/10 px-5 py-3 font-mono text-xs text-keen-500">
               hr-assistant.yaml
             </div>
-            <pre className="overflow-x-auto p-5 font-mono text-sm leading-relaxed text-default-100">
+            <pre className="overflow-x-auto p-5 font-mono text-sm leading-relaxed text-code-text">
               {manifest}
             </pre>
           </div>
-          <div className="space-y-4 text-default-200">
+          <div className="space-y-4 text-keen-700">
             <p>
               This is a complete assistant: it answers HR questions from the company
               handbook, removes personal data before anything reaches the AI vendor,
@@ -55,7 +55,7 @@ const Platform = () => {
               by different people: HR owns the content, security owns the guardrails, and
               IT owns the platform.
             </p>
-            <pre className="overflow-x-auto rounded-lg bg-default-950/60 px-4 py-3 font-mono text-sm text-primary">
+            <pre className="overflow-x-auto rounded-lg bg-code-bg px-4 py-3 font-mono text-sm text-orange-300">
               smarter apply -f hr-assistant.yaml
             </pre>
           </div>

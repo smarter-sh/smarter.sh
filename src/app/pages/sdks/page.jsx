@@ -114,7 +114,7 @@ const SdkTabs = () => {
               'rounded-full px-5 py-2 text-sm font-medium transition-all',
               item.id === active
                 ? 'bg-primary text-white'
-                : 'border border-default-600 text-default-200 hover:border-primary'
+                : 'border border-keen-300 bg-white text-keen-700 hover:border-primary'
             )}
           >
             {item.label}
@@ -123,8 +123,8 @@ const SdkTabs = () => {
       </div>
       <div className="grid grid-cols-1 gap-8 md:grid-cols-5" role="tabpanel">
         <div className="md:col-span-2">
-          <p className="mb-5 text-default-200">{sdk.text}</p>
-          <pre className="mb-6 overflow-x-auto rounded-lg bg-default-950/60 px-4 py-3 font-mono text-sm text-primary">
+          <p className="mb-5 text-keen-700">{sdk.text}</p>
+          <pre className="mb-6 overflow-x-auto rounded-lg bg-code-bg px-4 py-3 font-mono text-sm text-orange-300">
             {sdk.install}
           </pre>
           <div className="flex flex-wrap gap-3">
@@ -136,7 +136,7 @@ const SdkTabs = () => {
             </Button>
           </div>
         </div>
-        <pre className="overflow-x-auto rounded-xl border-s-2 border-primary bg-default-950/60 p-5 font-mono text-sm leading-relaxed text-default-100 md:col-span-3">
+        <pre className="overflow-x-auto rounded-xl border-s-2 border-primary bg-code-bg p-5 font-mono text-sm leading-relaxed text-code-text md:col-span-3">
           {sdk.code}
         </pre>
       </div>

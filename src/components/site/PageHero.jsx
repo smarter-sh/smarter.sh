@@ -26,7 +26,7 @@ const PageHero = ({ eyebrow, title, highlight, lead, accent, children }) => {
               {eyebrow}
             </span>
           )}
-          <h1 className="mb-6 mt-6 text-4xl/tight font-medium text-default-100 lg:text-5xl/tight">
+          <h1 className="mb-6 mt-6 text-4xl/tight font-semibold text-keen-900 lg:text-5xl/tight">
             {title}
             {highlight && (
               <>
@@ -36,7 +36,7 @@ const PageHero = ({ eyebrow, title, highlight, lead, accent, children }) => {
             )}
           </h1>
           {lead && (
-            <p className="mx-auto text-lg text-default-200 lg:max-w-3xl lg:text-xl">
+            <p className="mx-auto text-lg text-keen-700 lg:max-w-3xl lg:text-xl">
               {lead}
             </p>
           )}

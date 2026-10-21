@@ -1,13 +1,15 @@
-ul {
+/* the legal page's list of documents. Scoped to it: a bare ul rule would also restyle the
+   navigation bar's and the footer's lists, on this page and, once loaded, on every other. */
+.legal-links {
   text-align: left;
   padding-left: 1.5rem; /* keeps the disc visible */
 }
 
-ul li a {
-  color: #fff;
+.legal-links li a {
+  color: #071437;
   text-decoration: underline;
 }
 
-ul li a:hover {
-  opacity: 0.85;
+.legal-links li a:hover {
+  color: #ea580c;
 }

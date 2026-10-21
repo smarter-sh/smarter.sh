@@ -146,7 +146,7 @@ export const Cta = () => (
     className="card border-transparent flex-grow-1 home-cta"
   >
     <div className="card-body d-flex flex-column justify-content-center p-10 text-center">
-      <h2 className="fs-2x fw-bold text-white mb-4">
+      <h2 className="fs-2x fw-bold home-ink mb-4">
         Start with a pilot, decide with your own data
       </h2>
       <p className="fs-5 home-lede mx-auto mb-8" style={{ maxWidth: '44rem' }}>

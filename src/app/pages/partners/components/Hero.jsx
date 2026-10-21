@@ -15,10 +15,13 @@ const Hero = () => {
         <div className="text-center">
           <div className="mt-6 flex justify-center">
             <div className="max-w-2xl">
-              <h1 className="mb-6 text-5xl/tight font-medium text-default-100">
+              <h1 className="mb-6 text-5xl/tight font-semibold text-keen-900">
                 Partner Program
               </h1>
-              <p className="text-sm font-medium text-default-200">Contact <a href="mailto:lawrence@opencogent.ai">lawrence@opencogent.ai</a> about partnering with The Smarter Project.</p>
+              <p className="text-sm font-medium text-keen-700">
+                Contact <a href="mailto:lawrence@opencogent.ai">lawrence@opencogent.ai</a>{' '}
+                about partnering with The Smarter Project.
+              </p>
             </div>
           </div>
         </div>

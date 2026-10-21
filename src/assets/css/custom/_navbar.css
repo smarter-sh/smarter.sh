@@ -1,7 +1,9 @@
-/* _navbar.css */
+/* _navbar.css: the site's navigation bar, like the web console's light header (Keen's
+   app-header): white, with the header's soft shadow, dark links and the brand color for the
+   active and hovered one. It is opaque at every scroll position. */
 
 .navbar {
-    @apply block overflow-hidden fixed top-0 inset-x-0 z-40 w-full lg:bg-transparent bg-default-950/60 backdrop-blur-2xl transition-all duration-500 shadow-xl lg:shadow-none;
+    @apply block overflow-hidden fixed top-0 inset-x-0 z-40 w-full bg-white shadow-header transition-all duration-500;
 }
 
 .navbar nav {
@@ -17,7 +19,7 @@
 }
 
 .navbar nav .navbar-nav .nav-item .nav-link {
-    @apply block relative tracking-wide py-1 mx-3.5 text-base capitalize font-semibold cursor-pointer transition-all duration-300 bg-transparent lg:text-white text-default-100 after:transition-all after:duration-500 after:absolute after:-bottom-1 after:h-[2px] after:w-0 after:start-0 after:rounded-full after:bg-transparent;
+    @apply block relative tracking-wide py-1 mx-3.5 text-base capitalize font-semibold cursor-pointer transition-all duration-300 bg-transparent text-keen-700 after:transition-all after:duration-500 after:absolute after:-bottom-1 after:h-[2px] after:w-0 after:start-0 after:rounded-full after:bg-transparent;
 }
 
 .navbar nav .navbar-nav .nav-item .nav-link:active,
@@ -31,9 +33,10 @@
 }
 
 .navbar nav .navbar-nav .nav-btn {
-    @apply py-2 px-4 rounded-lg inline-flex items-center justify-center text-base font-medium transition-all bg-primary text-white lg:bg-white lg:text-primary;
+    @apply py-2 px-4 rounded-lg inline-flex items-center justify-center text-base font-medium transition-all bg-primary text-white;
 }
 
+/* scrolled: the same white bar, with a hairline below it over the page's cards */
 .navbar.nav-sticky {
-    @apply bg-default-950/60 backdrop-blur-2xl transition-all duration-500 shadow-xl;
+    @apply border-b border-keen-200 bg-white shadow-header;
 }

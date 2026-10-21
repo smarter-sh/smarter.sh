@@ -107,7 +107,7 @@ const Education = () => {
           {outcomes.map((outcome) => (
             <li
               key={outcome}
-              className="flex items-start gap-3 rounded-lg bg-default-950/40 p-4 text-default-200"
+              className="flex items-start gap-3 rounded-lg border border-keen-200 bg-white p-4 text-keen-700 shadow-card"
             >
               <IconifyIcon
                 icon="lucide:check"
