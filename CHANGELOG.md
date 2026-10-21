@@ -1,3 +1,10 @@
+## [0.12.1](https://github.com/smarter-sh/smarter.sh/compare/v0.12.0...v0.12.1) (2026-10-21)
+
+
+### Bug Fixes
+
+* **site:** show the Did you know? fact of the day on the landing page ([eaad16b](https://github.com/smarter-sh/smarter.sh/commit/eaad16b1033601f4d08482672086e2b1bc088bde))
+
 # [0.12.0](https://github.com/smarter-sh/smarter.sh/compare/v0.11.1...v0.12.0) (2026-10-21)
 
 
