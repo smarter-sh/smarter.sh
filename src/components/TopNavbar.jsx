@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import Gumshoe from 'gumshoejs'
 import IconifyIcon from './wrappers/IconifyIcon'
 import { Link, useLocation } from 'react-router-dom'
@@ -23,6 +23,9 @@ const TopNavbar = () => {
   const navRef = useRef(null)
   const { scrollY } = useScrollEvent()
   const { pathname } = useLocation()
+  // the menu's open state below the lg breakpoint, where it collapses behind a button
+  const [menuOpen, setMenuOpen] = useState(false)
+  useEffect(() => setMenuOpen(false), [pathname])
   useEffect(() => {
     document.body.classList.add('bg-default-900')
     // Only initialize Gumshoe for in-page anchor links
@@ -49,11 +52,12 @@ const TopNavbar = () => {
             </Link>
             <div className="ms-auto flex items-center px-2.5 lg:hidden">
               <button
-                className="hs-collapse-toggle inline-flex h-9 w-12 items-center justify-center rounded-md border border-white/20 bg-default-100/5"
+                className="inline-flex h-9 w-12 items-center justify-center rounded-md border border-white/20 bg-default-100/5"
                 type="button"
-                id="hs-unstyled-collapse"
-                data-hs-collapse="#mobileMenu"
-                data-hs-type="collapse"
+                aria-label="Menu"
+                aria-controls="mobileMenu"
+                aria-expanded={menuOpen}
+                onClick={() => setMenuOpen(!menuOpen)}
               >
                 <IconifyIcon icon="lucide:menu" className="h-5 w-5 stroke-white" />
               </button>
@@ -61,7 +65,7 @@ const TopNavbar = () => {
             <div
               ref={navRef}
               id="mobileMenu"
-              className="hs-collapse mx-auto mt-2 hidden grow basis-full items-center justify-center transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto"
+              className={`mx-auto mt-2 ${menuOpen ? 'block' : 'hidden'} grow basis-full items-center justify-center transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto`}
             >
               <ul id="navbar-navlist" className="navbar-nav">
                 {navLinks.map((item, idx) => (
