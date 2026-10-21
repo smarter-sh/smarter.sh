@@ -1,171 +1,117 @@
-import Section from '@/components/site/Section'
-import Showcase from '@/components/site/Showcase'
-import Button from '@/components/site/Button'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
-import { cn } from '@/helpers/cn'
-import { accent, accentCycle } from '@/helpers/accent'
-import guardrailsImg from '@/assets/images/screens/guardrails.webp'
-import extensionsImg from '@/assets/images/screens/extensions.webp'
+import { ConsoleCard, Symbol, toneOf } from '@/components/site/ConsoleCard'
+import { accentCycle } from '@/helpers/accent'
 import { erp, examples, questions, resources, safety } from '../data'
 
-// The theme's colored tool tiles.
-export const WhatYouBuild = () => {
-  return (
-    <Section
-      id="what-you-build"
-      accent="violet"
-      eyebrow="Phase 2 · Production"
-      title="What your people will build"
-      intro="These four patterns cover much of what organizations ask for first, and each is something Smarter does today."
-    >
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-        {examples.map((item, idx) => (
-          <div
-            key={item.title}
-            className="group rounded-2xl bg-default-950/40 p-8 backdrop-blur-3xl transition-all duration-500 hover:-translate-y-2 hover:bg-default-950/70"
-            data-aos="fade-up"
-            data-aos-delay={idx * 100}
-          >
-            <div
-              className={cn(
-                'mb-6 inline-flex h-14 w-14 items-center justify-center rounded-xl',
-                item.iconClass
-              )}
-            >
-              <IconifyIcon icon={item.icon} className="h-7 w-7" />
-            </div>
-            <h3 className="mb-3 text-xl font-medium text-white">{item.title}</h3>
-            <p className="text-default-300">{item.text}</p>
+const exampleTones = ['primary', 'success', 'info', 'warning']
+
+// Phase 2: the four patterns that organizations ask for first.
+export const WhatYouBuild = () => (
+  <ConsoleCard
+    id="what-you-build"
+    title="What your people will build"
+    subtitle="Phase 2 · Production. These four patterns cover much of what organizations ask for first."
+  >
+    <div className="row g-6">
+      {examples.map((item, idx) => (
+        <div key={item.title} className="col-sm-6">
+          <div className="home-tile">
+            <Symbol icon={item.icon} tone={exampleTones[idx % exampleTones.length]} />
+            <h3 className="fs-5 fw-bold text-gray-900 mt-5 mb-2">{item.title}</h3>
+            <p className="text-gray-700 fs-7 mb-0">{item.text}</p>
           </div>
-        ))}
-      </div>
-    </Section>
-  )
-}
+        </div>
+      ))}
+    </div>
+  </ConsoleCard>
+)
 
-export const SafeByDefault = () => {
-  return (
-    <Showcase
-      id="safe-by-default"
-      accent="sky"
-      eyebrow="Built in, not bolted on"
-      title="Safe by default, not by policy memo"
-      image={guardrailsImg}
-      alt="The Guardrails page of the Smarter web console, listing input and output guardrails"
-      callouts={['18 ready-made guardrails', 'Checked on every message']}
-    >
-      <p className="mb-8 text-lg text-default-200">
-        A policy memo asks people to remember the rules. Smarter enforces them on every
-        message, for every assistant, whoever built it.
-      </p>
-      <ul className="space-y-5">
-        {safety.map((item) => (
-          <li key={item.title} className="flex gap-4">
-            <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-sky-500/15 text-sky-400">
-              <IconifyIcon icon={item.icon} className="h-5 w-5" />
+// Guardrails, secrets, budgets and records, which apply to every assistant.
+export const SafeByDefault = () => (
+  <ConsoleCard
+    id="safe-by-default"
+    title="Safe by default, not by policy memo"
+    subtitle="A policy memo asks people to remember the rules. Smarter enforces them on every message, for every assistant, whoever built it."
+  >
+    <ul className="home-list">
+      {safety.map((item) => (
+        <li key={item.title}>
+          <Symbol
+            icon={item.icon}
+            tone="primary"
+            size={40}
+            iconSize={20}
+            className="me-4"
+          />
+          <div>
+            <h3 className="fs-6 fw-bold text-gray-900 mb-1">{item.title}</h3>
+            <p className="text-gray-700 fs-7 mb-0">{item.text}</p>
+          </div>
+        </li>
+      ))}
+    </ul>
+  </ConsoleCard>
+)
+
+// The destination: every AI resource, owned and recorded like an ERP's records.
+export const ErpForAi = () => (
+  <>
+    <div className="col-xl-8">
+      <ConsoleCard
+        id="erp-for-ai"
+        title="An ERP for AI resources"
+        subtitle="Anything an organization must own, approve, pay for or answer for in order to use AI is a named, owned, recorded item, like an invoice or an employee record."
+      >
+        <div className="d-flex flex-wrap gap-2 mb-7">
+          {resources.map((name, idx) => (
+            <span
+              key={name}
+              className={`badge badge-light-${toneOf(accentCycle[idx % accentCycle.length])} fs-7 fw-semibold`}
+            >
+              {name}
             </span>
-            <div>
-              <h3 className="font-medium text-white">{item.title}</h3>
-              <p className="text-sm text-default-300">{item.text}</p>
-            </div>
-          </li>
-        ))}
-      </ul>
-    </Showcase>
-  )
-}
-
-export const Extend = () => {
-  return (
-    <Showcase
-      id="extend"
-      accent="violet"
-      reverse
-      eyebrow="Extensible"
-      title="Connect it to everything you already run"
-      image={extensionsImg}
-      alt="The Extensions page of the Smarter web console, with three official extensions installed"
-      callouts={['Installed from a signed registry']}
-    >
-      <p className="mb-6 text-lg text-default-200">
-        Assistants read your documents, query approved databases, call your systems and
-        use any MCP server. When a tool doesn’t exist, a developer packages one in Python
-        and an administrator installs it from the console, the way WordPress installs
-        plugins.
-      </p>
-      <div className="flex flex-wrap gap-4">
-        <Button href="/extensions" icon="lucide:puzzle">
-          Extensions
-        </Button>
-        <Button href="/integrations" variant="secondary" icon="lucide:globe">
-          Website integrations
-        </Button>
-      </div>
-    </Showcase>
-  )
-}
-
-export const ErpForAi = () => {
-  return (
-    <Section
-      id="erp-for-ai"
-      accent="sky"
-      glow
-      eyebrow="The destination"
-      title="An ERP for AI resources"
-      intro="An “AI resource” is anything an organization must own, approve, pay for or answer for in order to use AI. In Smarter, each one is a named, owned, recorded item, like an invoice or an employee record."
-    >
-      <div className="mb-12 flex flex-wrap justify-center gap-3">
-        {resources.map((name, idx) => (
-          <span
-            key={name}
-            className={cn(
-              'rounded-full border px-4 py-1.5 text-sm text-default-100',
-              accent(accentCycle[idx % accentCycle.length]).chip
-            )}
-          >
-            {name}
-          </span>
-        ))}
-      </div>
-      <div className="mx-auto grid max-w-6xl overflow-hidden rounded-2xl border border-white/10 bg-default-950/40 lg:grid-cols-5">
-        <div className="lg:col-span-3">
-          <table className="w-full text-left text-sm md:text-base">
-            <thead className="bg-default-950/70 text-default-200">
-              <tr>
-                <th className="px-6 py-4 font-medium">What your ERP manages</th>
-                <th className="px-6 py-4 font-medium text-sky-400">
-                  What Smarter manages for AI
-                </th>
+          ))}
+        </div>
+        <div className="table-responsive">
+          <table className="table table-row-dashed align-middle gs-0 gy-4 mb-0">
+            <thead>
+              <tr className="fs-7 fw-bold text-gray-500 text-uppercase">
+                <th>What your ERP manages</th>
+                <th className="text-primary">What Smarter manages for AI</th>
               </tr>
             </thead>
-            <tbody className="divide-y divide-white/10">
+            <tbody>
               {erp.map(([left, right]) => (
                 <tr key={left}>
-                  <td className="px-6 py-4 text-default-300">{left}</td>
-                  <td className="px-6 py-4 text-default-100">{right}</td>
+                  <td className="text-gray-600 fs-6">{left}</td>
+                  <td className="text-gray-900 fw-semibold fs-6">{right}</td>
                 </tr>
               ))}
             </tbody>
           </table>
         </div>
-        <div className="border-t border-white/10 bg-gradient-to-br from-sky-500/15 to-violet-500/10 p-8 lg:col-span-2 lg:border-s lg:border-t-0">
-          <h3 className="mb-5 text-xl font-medium text-white">
+      </ConsoleCard>
+    </div>
+    <div className="col-xl-4">
+      <section
+        aria-label="Questions leadership can finally answer"
+        className="card border-transparent h-100 home-questions"
+      >
+        <div className="card-body p-8">
+          <span className="home-eyebrow home-eyebrow-sky">For leadership</span>
+          <h2 className="fs-2 fw-bold text-white mt-4 mb-6">
             Questions leadership can finally answer
-          </h3>
-          <ul className="space-y-3">
+          </h2>
+          <ul className="home-checks home-checks-light">
             {questions.map((question) => (
-              <li key={question} className="flex items-start gap-3 text-default-100">
-                <IconifyIcon
-                  icon="lucide:circle-check"
-                  className="mt-0.5 h-5 w-5 shrink-0 text-sky-400"
-                />
+              <li key={question}>
+                <IconifyIcon icon="lucide:circle-check" width={18} height={18} />
                 {question}
               </li>
             ))}
           </ul>
         </div>
-      </div>
-    </Section>
-  )
-}
+      </section>
+    </div>
+  </>
+)

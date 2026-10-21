@@ -1,205 +1,177 @@
-import Section from '@/components/site/Section'
-import SmartLink from '@/components/site/SmartLink'
-import Button from '@/components/site/Button'
-import IconifyIcon from '@/components/wrappers/IconifyIcon'
-import { cn } from '@/helpers/cn'
-import { accent } from '@/helpers/accent'
-import { COMMUNITY } from '@/common/constants'
-import { audiences, faqsData, openSource, pilot } from '../data'
+import { useState } from 'react'
 import { SelfHost as SelfHostWidget } from '@smarter.sh/ui-widgets'
-import ConsoleWidgets from '@/components/site/ConsoleWidgets'
+import SmartLink from '@/components/site/SmartLink'
+import IconifyIcon from '@/components/wrappers/IconifyIcon'
+import { ConsoleCard, Symbol, toneOf } from '@/components/site/ConsoleCard'
+import { COMMUNITY, QUICK_START } from '@/common/constants'
+import { audiences, faqsData, openSource, pilot } from '../data'
 
-// The open-source points, in the theme's divided 2x2 panel.
-export const WhyOpenSource = () => {
-  return (
-    <Section
-      id="why-open-source"
-      accent="teal"
-      glow
-      eyebrow="Why Smarter"
-      title="Free and open source, for everyone"
-      intro="Smarter is a community project, not a product. There is nothing to buy: organizations, instructors and students use the same software, under the AGPL-3.0 license."
-    >
-      <div className="mx-auto grid max-w-5xl overflow-hidden rounded-2xl border border-white/10 bg-default-950/40 backdrop-blur-3xl sm:grid-cols-2">
-        {openSource.map((item, idx) => (
-          <div
-            key={item.title}
-            className={cn(
-              'p-10',
-              idx % 2 === 1 && 'sm:border-s sm:border-white/10',
-              idx > 0 && 'border-t border-white/10 sm:border-t-0',
-              idx > 1 && 'sm:border-t'
-            )}
-          >
-            <span
-              className={cn(
-                'inline-flex h-16 w-16 items-center justify-center rounded-2xl',
-                accent(item.accent).soft
-              )}
-            >
-              <IconifyIcon icon={item.icon} className="h-8 w-8" />
-            </span>
-            <h3 className="mb-3 mt-6 text-2xl font-medium text-white">{item.title}</h3>
-            <p className="text-default-300">{item.text}</p>
-          </div>
-        ))}
-      </div>
-      <ConsoleWidgets className="mx-auto mt-10 max-w-5xl">
-        <div className="col-12">
-          <SelfHostWidget />
+// Why Smarter is free and open source, beside the console's Self Host widget.
+export const WhyOpenSource = () => (
+  <>
+    <div className="col-xl-6">
+      <ConsoleCard
+        id="why-open-source"
+        title="Free and open source, for everyone"
+        subtitle="Smarter is a community project, not a product. There is nothing to buy: organizations, instructors and students use the same software, under the AGPL-3.0 license."
+      >
+        <div className="row g-6">
+          {openSource.map((item) => (
+            <div key={item.title} className="col-sm-6">
+              <div className="d-flex align-items-start">
+                <Symbol icon={item.icon} tone={toneOf(item.accent)} className="me-4" />
+                <div>
+                  <h3 className="fs-5 fw-bold text-gray-900 mb-1">{item.title}</h3>
+                  <p className="text-gray-700 fs-7 mb-0">{item.text}</p>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
-      </ConsoleWidgets>
-      <p className="mx-auto mt-10 max-w-3xl text-center text-default-300">
-        Smarter is supported by its community. Organizations that want help installing or
-        running it can work with an independent{' '}
-        <SmartLink href="/partners" className="text-primary hover:underline">
-          partner
-        </SmartLink>
-        .
-      </p>
-    </Section>
-  )
-}
-
-// The theme's tool cards, with their blob-shaped icons.
-export const WhoItsFor = () => {
-  return (
-    <Section
-      id="who-its-for"
-      accent="amber"
-      eyebrow="Where to next"
-      title="Smarter for your organization"
-    >
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-        {audiences.map((item) => (
-          <SmartLink
-            key={item.title}
-            href={item.href}
-            className={cn(
-              'group rounded-xl border border-white/10 bg-default-950/40 p-8 text-center transition-all duration-500 hover:-translate-y-2',
-              accent(item.accent).hoverBorder
-            )}
-          >
-            <span
-              className={cn(
-                'inline-flex h-24 w-24 items-center justify-center',
-                accent(item.accent).soft
-              )}
-              style={{ borderRadius: '28% 72% 50% 50%/26% 20% 80% 74%' }}
-            >
-              <IconifyIcon icon={item.icon} className="h-10 w-10" />
-            </span>
-            <h3 className="mt-6 text-xl font-medium text-white">{item.title}</h3>
-            <p className="mb-6 mt-3 text-sm text-default-300">{item.text}</p>
-            <span
-              className={cn(
-                'inline-flex items-center gap-2 rounded-full border border-white/10 px-5 py-2 text-sm text-white transition-colors',
-                accent(item.accent).text
-              )}
-            >
-              {item.linkText}
-              <IconifyIcon icon="lucide:move-right" className="h-4 w-4" />
-            </span>
+        <p className="text-gray-600 fs-7 mt-8 mb-0">
+          Smarter is supported by its community. Organizations that want help installing
+          or running it can work with an independent{' '}
+          <SmartLink href="/partners" className="fw-semibold">
+            partner
           </SmartLink>
-        ))}
-      </div>
-    </Section>
-  )
-}
+          .
+        </p>
+      </ConsoleCard>
+    </div>
+    <div className="col-xl-6">
+      <SelfHostWidget />
+    </div>
+  </>
+)
 
-// The pilot as a timeline.
-export const Pilot = () => {
-  return (
-    <Section
-      id="pilot"
-      accent="emerald"
-      eyebrow="Getting started"
-      title="A practical first step"
-      intro="The pilot follows the same arc as the platform: literacy, then production, then governance, in about one quarter."
-    >
-      <ol className="relative mx-auto max-w-3xl border-s-2 border-violet-400/40">
-        {pilot.map((item, idx) => (
-          <li
-            key={item.title}
-            className="mb-10 ms-10 last:mb-0"
-            data-aos="fade-left"
-            data-aos-delay={idx * 120}
+// Where to go next, for each kind of organization.
+export const WhoItsFor = () =>
+  audiences.map((item) => (
+    <div key={item.title} className="col-md-6 col-xl-3">
+      <SmartLink href={item.href} className="card h-100 home-audience">
+        <div className="card-body d-flex flex-column p-7">
+          <Symbol icon={item.icon} tone={toneOf(item.accent)} size={60} iconSize={28} />
+          <h3 className="fs-4 fw-bold text-gray-900 mt-6 mb-2">{item.title}</h3>
+          <p className="text-gray-700 fs-7 mb-6">{item.text}</p>
+          <span
+            className={`mt-auto d-inline-flex align-items-center gap-2 fw-semibold fs-6 text-${toneOf(item.accent)}`}
           >
-            <span
-              className={cn(
-                'absolute -start-5 flex h-10 w-10 items-center justify-center rounded-full font-semibold ring-8 ring-default-900',
-                accent(item.accent).solid
-              )}
-            >
-              {idx + 1}
+            {item.linkText}
+            <IconifyIcon icon="lucide:move-right" width={16} height={16} />
+          </span>
+        </div>
+      </SmartLink>
+    </div>
+  ))
+
+// The pilot, as a timeline of one quarter.
+export const Pilot = () => (
+  <ConsoleCard
+    id="pilot"
+    fill={false}
+    title="A practical first step"
+    subtitle="The pilot follows the same arc as the platform: literacy, then production, then governance, in about one quarter."
+  >
+    <ol className="home-timeline">
+      {pilot.map((item, idx) => (
+        <li key={item.title}>
+          <span className={`home-timeline-badge bg-${toneOf(item.accent)}`}>
+            {idx + 1}
+          </span>
+          <div>
+            <span className={`fs-7 fw-semibold text-${toneOf(item.accent)}`}>
+              {item.when}
             </span>
-            <div
-              className={cn(
-                'rounded-xl border-s-2 bg-default-950/40 p-6',
-                accent(item.accent).border
-              )}
+            <h3 className="fs-5 fw-bold text-gray-900 mt-1 mb-1">{item.title}</h3>
+            <p className="text-gray-700 fs-7 mb-0">{item.text}</p>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </ConsoleCard>
+)
+
+// Cost, data, vendors, support and maturity, answered plainly. One question is open at a time.
+export const Faqs = () => {
+  const [open, setOpen] = useState(0)
+  return (
+    <ConsoleCard
+      id="faq"
+      title="Common questions"
+      subtitle="Cost, data, vendors, support and maturity, answered plainly."
+      toolbar={
+        <a
+          href={COMMUNITY}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn btn-sm btn-light"
+        >
+          Ask the community
+        </a>
+      }
+    >
+      <div className="home-faqs">
+        {faqsData.map((faq, idx) => (
+          <div key={faq.question} className="home-faq">
+            <button
+              type="button"
+              aria-expanded={open === idx}
+              onClick={() => setOpen(open === idx ? -1 : idx)}
+              className="home-faq-question"
             >
-              <p className={cn('text-sm font-medium', accent(item.accent).text)}>
-                {item.when}
-              </p>
-              <h3 className="mt-1 text-xl font-medium text-white">{item.title}</h3>
-              <p className="mt-2 text-default-300">{item.text}</p>
-            </div>
-          </li>
+              <span>{faq.question}</span>
+              <IconifyIcon
+                icon="lucide:chevron-down"
+                width={18}
+                height={18}
+                className={
+                  open === idx
+                    ? 'home-faq-chevron home-faq-chevron-open'
+                    : 'home-faq-chevron'
+                }
+              />
+            </button>
+            {open === idx && <p className="text-gray-700 fs-6 mb-0 pb-5">{faq.answer}</p>}
+          </div>
         ))}
-      </ol>
-    </Section>
+      </div>
+    </ConsoleCard>
   )
 }
 
-// The theme's split FAQ: the heading on the left, the questions on the right.
-export const Faqs = () => {
-  return (
-    <section id="faq" className="py-16 lg:py-20">
-      <div className="container">
-        <div className="grid gap-10 xl:grid-cols-5">
-          <div className="text-center xl:col-span-2 xl:text-start" data-aos="fade-right">
-            <p className="mb-3 text-sm font-semibold uppercase tracking-widest text-primary">
-              Questions
-            </p>
-            <h2 className="mb-4 text-3xl font-medium text-white lg:text-4xl">
-              Common questions
-            </h2>
-            <p className="text-default-300">
-              Cost, data, vendors, support and maturity, answered plainly.
-            </p>
-            <div className="mt-8">
-              <Button href={COMMUNITY} variant="secondary" icon="lucide:message-circle">
-                Ask the community
-              </Button>
-            </div>
-          </div>
-          <div className="space-y-4 xl:col-span-3" data-aos="fade-left">
-            {faqsData.map((faq, idx) => (
-              <details
-                key={faq.question}
-                open={idx === 0}
-                className="group overflow-hidden rounded-lg border border-white/10 bg-default-950/40 backdrop-blur-3xl"
-              >
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-3 px-6 py-4 text-white">
-                  <span className="flex items-center gap-3 font-semibold">
-                    <IconifyIcon
-                      icon="lucide:circle-help"
-                      className="h-5 w-5 text-primary"
-                    />
-                    {faq.question}
-                  </span>
-                  <IconifyIcon
-                    icon="lucide:chevron-down"
-                    className="h-4 w-4 shrink-0 transition-transform group-open:rotate-180"
-                  />
-                </summary>
-                <p className="px-6 pb-5 text-default-300">{faq.answer}</p>
-              </details>
-            ))}
-          </div>
-        </div>
+// The closing call to action.
+export const Cta = () => (
+  <section
+    aria-label="Get started"
+    className="card border-transparent flex-grow-1 home-cta"
+  >
+    <div className="card-body d-flex flex-column justify-content-center p-10 text-center">
+      <h2 className="fs-2x fw-bold text-white mb-4">
+        Start with a pilot, decide with your own data
+      </h2>
+      <p className="fs-5 home-lede mx-auto mb-8" style={{ maxWidth: '44rem' }}>
+        Install Smarter yourself and run it for one quarter with a small cohort of your
+        own staff. Leadership reviews real costs, usage and the audit trail before
+        deciding how far to scale.
+      </p>
+      <div className="d-flex flex-wrap justify-content-center gap-3">
+        <a
+          href={QUICK_START}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn fw-semibold home-btn-brand"
+        >
+          Get started
+        </a>
+        <a
+          href={COMMUNITY}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn fw-semibold home-btn-white"
+        >
+          Join the community
+        </a>
       </div>
-    </section>
-  )
-}
+    </div>
+  </section>
+)
