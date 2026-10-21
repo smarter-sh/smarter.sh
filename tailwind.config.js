@@ -7,7 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        jost: ['Jost', 'sans-serif'],
+        // The site's font, the web console's (the Keen theme's), loaded in index.html.
+        inter: ['Inter', 'sans-serif'],
         sans: [
           'ui-sans-serif',
           'system-ui',

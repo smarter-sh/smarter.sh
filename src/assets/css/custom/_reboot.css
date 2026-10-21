@@ -1,4 +1,4 @@
-/* Ensure .font-sans uses system sans-serif stack, even if parent uses font-jost */
+/* Ensure .font-sans uses system sans-serif stack, even if parent uses font-inter */
 .font-sans {
     font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji' !important;
 }
@@ -13,7 +13,7 @@ html {
 body {
     font-size: 15px;
     margin: 0 auto;
-    @apply font-jost overflow-x-hidden text-default-500;
+    @apply font-inter overflow-x-hidden text-default-500;
 }
 
 #root {
