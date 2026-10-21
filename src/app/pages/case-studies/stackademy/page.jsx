@@ -159,7 +159,7 @@ const Stackademy = () => {
           title="Stackademy Online"
           highlight="Coding Academy"
           accent="emerald"
-          lead="How an organization that no AI model has ever heard of got AI course advisors that answer from its own private data, without writing code, and how its team keeps ten AI resources reviewed and safe to change."
+          lead="How a fictitious online academy that no AI model has ever heard of gets AI course advisors to accurately answer from its own private data, without writing code."
         >
           <Button href="#try" icon="lucide:message-circle">
             Talk to the advisors
