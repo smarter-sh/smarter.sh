@@ -6,6 +6,8 @@ import Button from '@/components/site/Button'
 import CtaBand from '@/components/site/CtaBand'
 import { DOCS, GITHUB } from '@/common/constants'
 import { UI_CHAT_VERSION } from '@/common/chatbots'
+import { Integrations as IntegrationsWidget } from '@smarter.sh/ui-widgets'
+import ConsoleWidgets from '@/components/site/ConsoleWidgets'
 
 const F = `${DOCS}/smarter-framework`
 
@@ -110,6 +112,12 @@ const Integrations = () => {
           Any web page
         </Button>
       </PageHero>
+
+      <Section className="pb-0 lg:pb-0">
+        <ConsoleWidgets rowClassName="justify-content-center">
+          <IntegrationsWidget className="col-lg-10 col-xl-8" />
+        </ConsoleWidgets>
+      </Section>
 
       <Section
         accent="violet"

@@ -7,6 +7,8 @@ import Cli from '@/app/pages/cli/page'
 import Extensions from '@/app/pages/extensions/page'
 import Education from '@/app/pages/education/page'
 import Developers from '@/app/pages/developers/page'
+import Integrations from '@/app/pages/integrations/page'
+import Platform from '@/app/pages/platform/page'
 import { SMARTER_PROJECT_MCP } from '@/common/constants'
 
 // The pages that show the Smarter web console's widgets, from @smarter.sh/ui-widgets. Each widget
@@ -33,6 +35,8 @@ describe('console widgets', () => {
     ['/extensions', Extensions, ['Extensions']],
     ['/education', Education, ['Instructors']],
     ['/developers', Developers, ['Contribute']],
+    ['/integrations', Integrations, ['Integrations']],
+    ['/platform', Platform, ["What's New"]],
   ])('%s shows its widgets inside the Keen wrapper', (path, Page, labels) => {
     renderPage(Page, path)
     for (const label of labels) {
