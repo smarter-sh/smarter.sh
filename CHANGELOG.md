@@ -1,3 +1,17 @@
+# [0.12.0](https://github.com/smarter-sh/smarter.sh/compare/v0.11.1...v0.12.0) (2026-10-21)
+
+
+### Bug Fixes
+
+* **site:** add the Stackademy case study to the main menu ([ffe5970](https://github.com/smarter-sh/smarter.sh/commit/ffe59706f36c484c0175d17dda755318c037d5ef))
+* **site:** generate the sitemap from the router's list of pages ([acb18f5](https://github.com/smarter-sh/smarter.sh/commit/acb18f55d64afb67913a519410921e89012c6b8e))
+* **site:** match the web console's light theme across the site ([5eb86b7](https://github.com/smarter-sh/smarter.sh/commit/5eb86b733817db5dd20644fa3e89cca7f08189ed))
+
+
+### Features
+
+* **site:** add the Stackademy case study, with a manifest editor ([422e28a](https://github.com/smarter-sh/smarter.sh/commit/422e28acbe2e3430cbf72c1146fca9ad8d5e4d3a))
+
 ## [0.11.1](https://github.com/smarter-sh/smarter.sh/compare/v0.11.0...v0.11.1) (2026-10-21)
 
 
