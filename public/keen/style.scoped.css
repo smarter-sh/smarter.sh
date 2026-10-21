@@ -51559,3 +51559,1759 @@
     color: #ffffff !important;
   }
 }
+
+/* Keen's outline icon font (keenicons-outline), from the web console's
+   smarter/smarter/static/assets/plugins/global/plugins.bundle.css: its @font-face, with the fonts in
+   public/keen/fonts/, and its .ki-outline rules. yarn keen scopes it with style.bundle.css. */
+@font-face {
+  font-family: "keenicons-outline";
+  src: url("/keen/fonts/keenicons-outline.woff") format("woff"), url("/keen/fonts/keenicons-outline.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+:where(.keen) .ki-outline {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "keenicons-outline" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+:where(.keen) .ki-abstract-1.ki-outline:before {
+  content: "\e900";
+}
+:where(.keen) .ki-abstract-2.ki-outline:before {
+  content: "\e901";
+}
+:where(.keen) .ki-abstract-3.ki-outline:before {
+  content: "\e902";
+}
+:where(.keen) .ki-abstract-4.ki-outline:before {
+  content: "\e903";
+}
+:where(.keen) .ki-abstract-5.ki-outline:before {
+  content: "\e904";
+}
+:where(.keen) .ki-abstract-6.ki-outline:before {
+  content: "\e905";
+}
+:where(.keen) .ki-abstract-7.ki-outline:before {
+  content: "\e906";
+}
+:where(.keen) .ki-abstract-8.ki-outline:before {
+  content: "\e907";
+}
+:where(.keen) .ki-abstract-9.ki-outline:before {
+  content: "\e908";
+}
+:where(.keen) .ki-abstract-10.ki-outline:before {
+  content: "\e909";
+}
+:where(.keen) .ki-abstract-11.ki-outline:before {
+  content: "\e90a";
+}
+:where(.keen) .ki-abstract-12.ki-outline:before {
+  content: "\e90b";
+}
+:where(.keen) .ki-abstract-13.ki-outline:before {
+  content: "\e90c";
+}
+:where(.keen) .ki-abstract-14.ki-outline:before {
+  content: "\e90d";
+}
+:where(.keen) .ki-abstract-15.ki-outline:before {
+  content: "\e90e";
+}
+:where(.keen) .ki-abstract-16.ki-outline:before {
+  content: "\e90f";
+}
+:where(.keen) .ki-abstract-17.ki-outline:before {
+  content: "\e910";
+}
+:where(.keen) .ki-abstract-18.ki-outline:before {
+  content: "\e911";
+}
+:where(.keen) .ki-abstract-19.ki-outline:before {
+  content: "\e912";
+}
+:where(.keen) .ki-abstract-20.ki-outline:before {
+  content: "\e913";
+}
+:where(.keen) .ki-abstract-21.ki-outline:before {
+  content: "\e914";
+}
+:where(.keen) .ki-abstract-22.ki-outline:before {
+  content: "\e915";
+}
+:where(.keen) .ki-abstract-23.ki-outline:before {
+  content: "\e916";
+}
+:where(.keen) .ki-abstract-24.ki-outline:before {
+  content: "\e917";
+}
+:where(.keen) .ki-abstract-25.ki-outline:before {
+  content: "\e918";
+}
+:where(.keen) .ki-abstract-26.ki-outline:before {
+  content: "\e919";
+}
+:where(.keen) .ki-abstract-27.ki-outline:before {
+  content: "\e91a";
+}
+:where(.keen) .ki-abstract-28.ki-outline:before {
+  content: "\e91b";
+}
+:where(.keen) .ki-abstract-29.ki-outline:before {
+  content: "\e91c";
+}
+:where(.keen) .ki-abstract-30.ki-outline:before {
+  content: "\e91d";
+}
+:where(.keen) .ki-abstract-31.ki-outline:before {
+  content: "\e91e";
+}
+:where(.keen) .ki-abstract-32.ki-outline:before {
+  content: "\e91f";
+}
+:where(.keen) .ki-abstract-33.ki-outline:before {
+  content: "\e920";
+}
+:where(.keen) .ki-abstract-34.ki-outline:before {
+  content: "\e921";
+}
+:where(.keen) .ki-abstract-35.ki-outline:before {
+  content: "\e922";
+}
+:where(.keen) .ki-abstract-36.ki-outline:before {
+  content: "\e923";
+}
+:where(.keen) .ki-abstract-37.ki-outline:before {
+  content: "\e924";
+}
+:where(.keen) .ki-abstract-38.ki-outline:before {
+  content: "\e925";
+}
+:where(.keen) .ki-abstract-39.ki-outline:before {
+  content: "\e926";
+}
+:where(.keen) .ki-abstract-40.ki-outline:before {
+  content: "\e927";
+}
+:where(.keen) .ki-abstract-41.ki-outline:before {
+  content: "\e928";
+}
+:where(.keen) .ki-abstract-42.ki-outline:before {
+  content: "\e929";
+}
+:where(.keen) .ki-abstract-43.ki-outline:before {
+  content: "\e92a";
+}
+:where(.keen) .ki-abstract-44.ki-outline:before {
+  content: "\e92b";
+}
+:where(.keen) .ki-abstract-45.ki-outline:before {
+  content: "\e92c";
+}
+:where(.keen) .ki-abstract-46.ki-outline:before {
+  content: "\e92d";
+}
+:where(.keen) .ki-abstract-47.ki-outline:before {
+  content: "\e92e";
+}
+:where(.keen) .ki-abstract-48.ki-outline:before {
+  content: "\e92f";
+}
+:where(.keen) .ki-abstract-49.ki-outline:before {
+  content: "\e930";
+}
+:where(.keen) .ki-abstract.ki-outline:before {
+  content: "\e931";
+}
+:where(.keen) .ki-add-files.ki-outline:before {
+  content: "\e932";
+}
+:where(.keen) .ki-add-folder.ki-outline:before {
+  content: "\e933";
+}
+:where(.keen) .ki-add-item.ki-outline:before {
+  content: "\e934";
+}
+:where(.keen) .ki-add-notepad.ki-outline:before {
+  content: "\e935";
+}
+:where(.keen) .ki-address-book.ki-outline:before {
+  content: "\e936";
+}
+:where(.keen) .ki-airplane-square.ki-outline:before {
+  content: "\e937";
+}
+:where(.keen) .ki-airplane.ki-outline:before {
+  content: "\e938";
+}
+:where(.keen) .ki-airpod.ki-outline:before {
+  content: "\e939";
+}
+:where(.keen) .ki-android.ki-outline:before {
+  content: "\e93a";
+}
+:where(.keen) .ki-angular.ki-outline:before {
+  content: "\e93b";
+}
+:where(.keen) .ki-apple.ki-outline:before {
+  content: "\e93c";
+}
+:where(.keen) .ki-archive-tick.ki-outline:before {
+  content: "\e93d";
+}
+:where(.keen) .ki-archive.ki-outline:before {
+  content: "\e93e";
+}
+:where(.keen) .ki-arrow-circle-left.ki-outline:before {
+  content: "\e93f";
+}
+:where(.keen) .ki-arrow-circle-right.ki-outline:before {
+  content: "\e940";
+}
+:where(.keen) .ki-arrow-diagonal.ki-outline:before {
+  content: "\e941";
+}
+:where(.keen) .ki-arrow-down-left.ki-outline:before {
+  content: "\e942";
+}
+:where(.keen) .ki-arrow-down-refraction.ki-outline:before {
+  content: "\e943";
+}
+:where(.keen) .ki-arrow-down-right.ki-outline:before {
+  content: "\e944";
+}
+:where(.keen) .ki-arrow-down.ki-outline:before {
+  content: "\e945";
+}
+:where(.keen) .ki-arrow-left.ki-outline:before {
+  content: "\e946";
+}
+:where(.keen) .ki-arrow-mix.ki-outline:before {
+  content: "\e947";
+}
+:where(.keen) .ki-arrow-right-left.ki-outline:before {
+  content: "\e948";
+}
+:where(.keen) .ki-arrow-right.ki-outline:before {
+  content: "\e949";
+}
+:where(.keen) .ki-arrow-two-diagonals.ki-outline:before {
+  content: "\e94a";
+}
+:where(.keen) .ki-arrow-up-down.ki-outline:before {
+  content: "\e94b";
+}
+:where(.keen) .ki-arrow-up-left.ki-outline:before {
+  content: "\e94c";
+}
+:where(.keen) .ki-arrow-up-refraction.ki-outline:before {
+  content: "\e94d";
+}
+:where(.keen) .ki-arrow-up-right.ki-outline:before {
+  content: "\e94e";
+}
+:where(.keen) .ki-arrow-up.ki-outline:before {
+  content: "\e94f";
+}
+:where(.keen) .ki-arrow-zigzag.ki-outline:before {
+  content: "\e950";
+}
+:where(.keen) .ki-arrows-circle.ki-outline:before {
+  content: "\e951";
+}
+:where(.keen) .ki-arrows-loop.ki-outline:before {
+  content: "\e952";
+}
+:where(.keen) .ki-artificial-intelligence.ki-outline:before {
+  content: "\e953";
+}
+:where(.keen) .ki-auto-brightness.ki-outline:before {
+  content: "\e954";
+}
+:where(.keen) .ki-avalanche.ki-outline:before {
+  content: "\e955";
+}
+:where(.keen) .ki-award.ki-outline:before {
+  content: "\e956";
+}
+:where(.keen) .ki-badge.ki-outline:before {
+  content: "\e957";
+}
+:where(.keen) .ki-bandage.ki-outline:before {
+  content: "\e958";
+}
+:where(.keen) .ki-bank.ki-outline:before {
+  content: "\e959";
+}
+:where(.keen) .ki-barcode.ki-outline:before {
+  content: "\e95a";
+}
+:where(.keen) .ki-basket-ok.ki-outline:before {
+  content: "\e95b";
+}
+:where(.keen) .ki-basket.ki-outline:before {
+  content: "\e95c";
+}
+:where(.keen) .ki-behance.ki-outline:before {
+  content: "\e95d";
+}
+:where(.keen) .ki-bill.ki-outline:before {
+  content: "\e95e";
+}
+:where(.keen) .ki-binance-usd.ki-outline:before {
+  content: "\e95f";
+}
+:where(.keen) .ki-binance.ki-outline:before {
+  content: "\e960";
+}
+:where(.keen) .ki-bitcoin.ki-outline:before {
+  content: "\e961";
+}
+:where(.keen) .ki-black-down.ki-outline:before {
+  content: "\e962";
+}
+:where(.keen) .ki-black-left-line.ki-outline:before {
+  content: "\e963";
+}
+:where(.keen) .ki-black-left.ki-outline:before {
+  content: "\e964";
+}
+:where(.keen) .ki-black-right-line.ki-outline:before {
+  content: "\e965";
+}
+:where(.keen) .ki-black-right.ki-outline:before {
+  content: "\e966";
+}
+:where(.keen) .ki-black-up.ki-outline:before {
+  content: "\e967";
+}
+:where(.keen) .ki-bluetooth.ki-outline:before {
+  content: "\e968";
+}
+:where(.keen) .ki-book-open.ki-outline:before {
+  content: "\e969";
+}
+:where(.keen) .ki-book-square.ki-outline:before {
+  content: "\e96a";
+}
+:where(.keen) .ki-book.ki-outline:before {
+  content: "\e96b";
+}
+:where(.keen) .ki-bookmark-2.ki-outline:before {
+  content: "\e96c";
+}
+:where(.keen) .ki-bookmark.ki-outline:before {
+  content: "\e96d";
+}
+:where(.keen) .ki-bootstrap.ki-outline:before {
+  content: "\e96e";
+}
+:where(.keen) .ki-briefcase.ki-outline:before {
+  content: "\e96f";
+}
+:where(.keen) .ki-brifecase-cros.ki-outline:before {
+  content: "\e970";
+}
+:where(.keen) .ki-brifecase-tick.ki-outline:before {
+  content: "\e971";
+}
+:where(.keen) .ki-brifecase-timer.ki-outline:before {
+  content: "\e972";
+}
+:where(.keen) .ki-brush.ki-outline:before {
+  content: "\e973";
+}
+:where(.keen) .ki-bucket-square.ki-outline:before {
+  content: "\e974";
+}
+:where(.keen) .ki-bucket.ki-outline:before {
+  content: "\e975";
+}
+:where(.keen) .ki-burger-menu-1.ki-outline:before {
+  content: "\e976";
+}
+:where(.keen) .ki-burger-menu-2.ki-outline:before {
+  content: "\e977";
+}
+:where(.keen) .ki-burger-menu-3.ki-outline:before {
+  content: "\e978";
+}
+:where(.keen) .ki-burger-menu-4.ki-outline:before {
+  content: "\e979";
+}
+:where(.keen) .ki-burger-menu-5.ki-outline:before {
+  content: "\e97a";
+}
+:where(.keen) .ki-burger-menu-6.ki-outline:before {
+  content: "\e97b";
+}
+:where(.keen) .ki-burger-menu.ki-outline:before {
+  content: "\e97c";
+}
+:where(.keen) .ki-bus.ki-outline:before {
+  content: "\e97d";
+}
+:where(.keen) .ki-calculator.ki-outline:before {
+  content: "\e97e";
+}
+:where(.keen) .ki-calendar-2.ki-outline:before {
+  content: "\e97f";
+}
+:where(.keen) .ki-calendar-8.ki-outline:before {
+  content: "\e980";
+}
+:where(.keen) .ki-calendar-add.ki-outline:before {
+  content: "\e981";
+}
+:where(.keen) .ki-calendar-edit.ki-outline:before {
+  content: "\e982";
+}
+:where(.keen) .ki-calendar-remove.ki-outline:before {
+  content: "\e983";
+}
+:where(.keen) .ki-calendar-search.ki-outline:before {
+  content: "\e984";
+}
+:where(.keen) .ki-calendar-tick.ki-outline:before {
+  content: "\e985";
+}
+:where(.keen) .ki-calendar.ki-outline:before {
+  content: "\e986";
+}
+:where(.keen) .ki-call.ki-outline:before {
+  content: "\e987";
+}
+:where(.keen) .ki-capsule.ki-outline:before {
+  content: "\e988";
+}
+:where(.keen) .ki-car-2.ki-outline:before {
+  content: "\e989";
+}
+:where(.keen) .ki-car-3.ki-outline:before {
+  content: "\e98a";
+}
+:where(.keen) .ki-car.ki-outline:before {
+  content: "\e98b";
+}
+:where(.keen) .ki-category.ki-outline:before {
+  content: "\e98c";
+}
+:where(.keen) .ki-cd.ki-outline:before {
+  content: "\e98d";
+}
+:where(.keen) .ki-celsius.ki-outline:before {
+  content: "\e98e";
+}
+:where(.keen) .ki-chart-line-down-2.ki-outline:before {
+  content: "\e98f";
+}
+:where(.keen) .ki-chart-line-down.ki-outline:before {
+  content: "\e990";
+}
+:where(.keen) .ki-chart-line-star.ki-outline:before {
+  content: "\e991";
+}
+:where(.keen) .ki-chart-line-up-2.ki-outline:before {
+  content: "\e992";
+}
+:where(.keen) .ki-chart-line-up.ki-outline:before {
+  content: "\e993";
+}
+:where(.keen) .ki-chart-line.ki-outline:before {
+  content: "\e994";
+}
+:where(.keen) .ki-chart-pie-3.ki-outline:before {
+  content: "\e995";
+}
+:where(.keen) .ki-chart-pie-4.ki-outline:before {
+  content: "\e996";
+}
+:where(.keen) .ki-chart-pie-simple.ki-outline:before {
+  content: "\e997";
+}
+:where(.keen) .ki-chart-pie-too.ki-outline:before {
+  content: "\e998";
+}
+:where(.keen) .ki-chart-simple-2.ki-outline:before {
+  content: "\e999";
+}
+:where(.keen) .ki-chart-simple-3.ki-outline:before {
+  content: "\e99a";
+}
+:where(.keen) .ki-chart-simple.ki-outline:before {
+  content: "\e99b";
+}
+:where(.keen) .ki-chart.ki-outline:before {
+  content: "\e99c";
+}
+:where(.keen) .ki-check-circle.ki-outline:before {
+  content: "\e99d";
+}
+:where(.keen) .ki-check-square.ki-outline:before {
+  content: "\e99e";
+}
+:where(.keen) .ki-check.ki-outline:before {
+  content: "\e99f";
+}
+:where(.keen) .ki-cheque.ki-outline:before {
+  content: "\e9a0";
+}
+:where(.keen) .ki-chrome.ki-outline:before {
+  content: "\e9a1";
+}
+:where(.keen) .ki-classmates.ki-outline:before {
+  content: "\e9a2";
+}
+:where(.keen) .ki-click.ki-outline:before {
+  content: "\e9a3";
+}
+:where(.keen) .ki-clipboard.ki-outline:before {
+  content: "\e9a4";
+}
+:where(.keen) .ki-cloud-add.ki-outline:before {
+  content: "\e9a5";
+}
+:where(.keen) .ki-cloud-change.ki-outline:before {
+  content: "\e9a6";
+}
+:where(.keen) .ki-cloud-download.ki-outline:before {
+  content: "\e9a7";
+}
+:where(.keen) .ki-cloud.ki-outline:before {
+  content: "\e9a8";
+}
+:where(.keen) .ki-code.ki-outline:before {
+  content: "\e9a9";
+}
+:where(.keen) .ki-coffee.ki-outline:before {
+  content: "\e9aa";
+}
+:where(.keen) .ki-color-swatch.ki-outline:before {
+  content: "\e9ab";
+}
+:where(.keen) .ki-colors-square.ki-outline:before {
+  content: "\e9ac";
+}
+:where(.keen) .ki-compass.ki-outline:before {
+  content: "\e9ad";
+}
+:where(.keen) .ki-copy-success.ki-outline:before {
+  content: "\e9ae";
+}
+:where(.keen) .ki-copy.ki-outline:before {
+  content: "\e9af";
+}
+:where(.keen) .ki-courier-express.ki-outline:before {
+  content: "\e9b0";
+}
+:where(.keen) .ki-courier.ki-outline:before {
+  content: "\e9b1";
+}
+:where(.keen) .ki-credit-cart.ki-outline:before {
+  content: "\e9b2";
+}
+:where(.keen) .ki-cross-circle.ki-outline:before {
+  content: "\e9b3";
+}
+:where(.keen) .ki-cross-square.ki-outline:before {
+  content: "\e9b4";
+}
+:where(.keen) .ki-cross.ki-outline:before {
+  content: "\e9b5";
+}
+:where(.keen) .ki-crown-2.ki-outline:before {
+  content: "\e9b6";
+}
+:where(.keen) .ki-crown.ki-outline:before {
+  content: "\e9b7";
+}
+:where(.keen) .ki-css.ki-outline:before {
+  content: "\e9b8";
+}
+:where(.keen) .ki-cube-2.ki-outline:before {
+  content: "\e9b9";
+}
+:where(.keen) .ki-cube-3.ki-outline:before {
+  content: "\e9ba";
+}
+:where(.keen) .ki-cup.ki-outline:before {
+  content: "\e9bb";
+}
+:where(.keen) .ki-dash.ki-outline:before {
+  content: "\e9bc";
+}
+:where(.keen) .ki-data.ki-outline:before {
+  content: "\e9bd";
+}
+:where(.keen) .ki-delete-files.ki-outline:before {
+  content: "\e9be";
+}
+:where(.keen) .ki-delete-folder.ki-outline:before {
+  content: "\e9bf";
+}
+:where(.keen) .ki-delivery-2.ki-outline:before {
+  content: "\e9c0";
+}
+:where(.keen) .ki-delivery-3.ki-outline:before {
+  content: "\e9c1";
+}
+:where(.keen) .ki-delivery-24.ki-outline:before {
+  content: "\e9c2";
+}
+:where(.keen) .ki-delivery-door.ki-outline:before {
+  content: "\e9c3";
+}
+:where(.keen) .ki-delivery-geolocation.ki-outline:before {
+  content: "\e9c4";
+}
+:where(.keen) .ki-delivery-time.ki-outline:before {
+  content: "\e9c5";
+}
+:where(.keen) .ki-delivery.ki-outline:before {
+  content: "\e9c6";
+}
+:where(.keen) .ki-design-2.ki-outline:before {
+  content: "\e9c7";
+}
+:where(.keen) .ki-design-frame.ki-outline:before {
+  content: "\e9c8";
+}
+:where(.keen) .ki-design-mask.ki-outline:before {
+  content: "\e9c9";
+}
+:where(.keen) .ki-design.ki-outline:before {
+  content: "\e9ca";
+}
+:where(.keen) .ki-devices-2.ki-outline:before {
+  content: "\e9cb";
+}
+:where(.keen) .ki-devices.ki-outline:before {
+  content: "\e9cc";
+}
+:where(.keen) .ki-diamonds.ki-outline:before {
+  content: "\e9cd";
+}
+:where(.keen) .ki-directbox-default.ki-outline:before {
+  content: "\e9ce";
+}
+:where(.keen) .ki-disconnect.ki-outline:before {
+  content: "\e9cf";
+}
+:where(.keen) .ki-discount.ki-outline:before {
+  content: "\e9d0";
+}
+:where(.keen) .ki-disk.ki-outline:before {
+  content: "\e9d1";
+}
+:where(.keen) .ki-dislike.ki-outline:before {
+  content: "\e9d2";
+}
+:where(.keen) .ki-dj.ki-outline:before {
+  content: "\e9d3";
+}
+:where(.keen) .ki-document.ki-outline:before {
+  content: "\e9d4";
+}
+:where(.keen) .ki-dollar.ki-outline:before {
+  content: "\e9d5";
+}
+:where(.keen) .ki-dots-circle-vertical.ki-outline:before {
+  content: "\e9d6";
+}
+:where(.keen) .ki-dots-circle.ki-outline:before {
+  content: "\e9d7";
+}
+:where(.keen) .ki-dots-horizontal.ki-outline:before {
+  content: "\e9d8";
+}
+:where(.keen) .ki-dots-square-vertical.ki-outline:before {
+  content: "\e9d9";
+}
+:where(.keen) .ki-dots-square.ki-outline:before {
+  content: "\e9da";
+}
+:where(.keen) .ki-dots-vertical.ki-outline:before {
+  content: "\e9db";
+}
+:where(.keen) .ki-double-check-circle.ki-outline:before {
+  content: "\e9dc";
+}
+:where(.keen) .ki-double-check.ki-outline:before {
+  content: "\e9dd";
+}
+:where(.keen) .ki-double-down.ki-outline:before {
+  content: "\e9de";
+}
+:where(.keen) .ki-double-left-arrow.ki-outline:before {
+  content: "\e9df";
+}
+:where(.keen) .ki-double-left.ki-outline:before {
+  content: "\e9e0";
+}
+:where(.keen) .ki-double-right-arrow.ki-outline:before {
+  content: "\e9e1";
+}
+:where(.keen) .ki-double-right.ki-outline:before {
+  content: "\e9e2";
+}
+:where(.keen) .ki-double-up.ki-outline:before {
+  content: "\e9e3";
+}
+:where(.keen) .ki-down-square.ki-outline:before {
+  content: "\e9e4";
+}
+:where(.keen) .ki-down.ki-outline:before {
+  content: "\e9e5";
+}
+:where(.keen) .ki-dribbble.ki-outline:before {
+  content: "\e9e6";
+}
+:where(.keen) .ki-drop.ki-outline:before {
+  content: "\e9e7";
+}
+:where(.keen) .ki-dropbox.ki-outline:before {
+  content: "\e9e8";
+}
+:where(.keen) .ki-educare.ki-outline:before {
+  content: "\e9e9";
+}
+:where(.keen) .ki-electricity.ki-outline:before {
+  content: "\e9ea";
+}
+:where(.keen) .ki-electronic-clock.ki-outline:before {
+  content: "\e9eb";
+}
+:where(.keen) .ki-element-1.ki-outline:before {
+  content: "\e9ec";
+}
+:where(.keen) .ki-element-2.ki-outline:before {
+  content: "\e9ed";
+}
+:where(.keen) .ki-element-3.ki-outline:before {
+  content: "\e9ee";
+}
+:where(.keen) .ki-element-4.ki-outline:before {
+  content: "\e9ef";
+}
+:where(.keen) .ki-element-5.ki-outline:before {
+  content: "\e9f0";
+}
+:where(.keen) .ki-element-6.ki-outline:before {
+  content: "\e9f1";
+}
+:where(.keen) .ki-element-7.ki-outline:before {
+  content: "\e9f2";
+}
+:where(.keen) .ki-element-8.ki-outline:before {
+  content: "\e9f3";
+}
+:where(.keen) .ki-element-9.ki-outline:before {
+  content: "\e9f4";
+}
+:where(.keen) .ki-element-10.ki-outline:before {
+  content: "\e9f5";
+}
+:where(.keen) .ki-element-11.ki-outline:before {
+  content: "\e9f6";
+}
+:where(.keen) .ki-element-12.ki-outline:before {
+  content: "\e9f7";
+}
+:where(.keen) .ki-element-equal.ki-outline:before {
+  content: "\e9f8";
+}
+:where(.keen) .ki-element-plus.ki-outline:before {
+  content: "\e9f9";
+}
+:where(.keen) .ki-emoji-happy.ki-outline:before {
+  content: "\e9fa";
+}
+:where(.keen) .ki-enjin-coin.ki-outline:before {
+  content: "\e9fb";
+}
+:where(.keen) .ki-entrance-left.ki-outline:before {
+  content: "\e9fc";
+}
+:where(.keen) .ki-entrance-right.ki-outline:before {
+  content: "\e9fd";
+}
+:where(.keen) .ki-eraser.ki-outline:before {
+  content: "\e9fe";
+}
+:where(.keen) .ki-euro.ki-outline:before {
+  content: "\e9ff";
+}
+:where(.keen) .ki-exit-down.ki-outline:before {
+  content: "\ea00";
+}
+:where(.keen) .ki-exit-left.ki-outline:before {
+  content: "\ea01";
+}
+:where(.keen) .ki-exit-right-corner.ki-outline:before {
+  content: "\ea02";
+}
+:where(.keen) .ki-exit-right.ki-outline:before {
+  content: "\ea03";
+}
+:where(.keen) .ki-exit-up.ki-outline:before {
+  content: "\ea04";
+}
+:where(.keen) .ki-external-drive.ki-outline:before {
+  content: "\ea05";
+}
+:where(.keen) .ki-eye-slash.ki-outline:before {
+  content: "\ea06";
+}
+:where(.keen) .ki-eye.ki-outline:before {
+  content: "\ea07";
+}
+:where(.keen) .ki-facebook.ki-outline:before {
+  content: "\ea08";
+}
+:where(.keen) .ki-faceid.ki-outline:before {
+  content: "\ea09";
+}
+:where(.keen) .ki-fasten.ki-outline:before {
+  content: "\ea0a";
+}
+:where(.keen) .ki-fat-rows.ki-outline:before {
+  content: "\ea0b";
+}
+:where(.keen) .ki-feather.ki-outline:before {
+  content: "\ea0c";
+}
+:where(.keen) .ki-figma.ki-outline:before {
+  content: "\ea0d";
+}
+:where(.keen) .ki-file-added.ki-outline:before {
+  content: "\ea0e";
+}
+:where(.keen) .ki-file-deleted.ki-outline:before {
+  content: "\ea0f";
+}
+:where(.keen) .ki-file-down.ki-outline:before {
+  content: "\ea10";
+}
+:where(.keen) .ki-file-left.ki-outline:before {
+  content: "\ea11";
+}
+:where(.keen) .ki-file-right.ki-outline:before {
+  content: "\ea12";
+}
+:where(.keen) .ki-file-sheet.ki-outline:before {
+  content: "\ea13";
+}
+:where(.keen) .ki-file-up.ki-outline:before {
+  content: "\ea14";
+}
+:where(.keen) .ki-file.ki-outline:before {
+  content: "\ea15";
+}
+:where(.keen) .ki-files-tablet.ki-outline:before {
+  content: "\ea16";
+}
+:where(.keen) .ki-filter-edit.ki-outline:before {
+  content: "\ea17";
+}
+:where(.keen) .ki-filter-search.ki-outline:before {
+  content: "\ea18";
+}
+:where(.keen) .ki-filter-square.ki-outline:before {
+  content: "\ea19";
+}
+:where(.keen) .ki-filter-tablet.ki-outline:before {
+  content: "\ea1a";
+}
+:where(.keen) .ki-filter-tick.ki-outline:before {
+  content: "\ea1b";
+}
+:where(.keen) .ki-filter.ki-outline:before {
+  content: "\ea1c";
+}
+:where(.keen) .ki-finance-calculator.ki-outline:before {
+  content: "\ea1d";
+}
+:where(.keen) .ki-financial-schedule.ki-outline:before {
+  content: "\ea1e";
+}
+:where(.keen) .ki-fingerprint-scanning.ki-outline:before {
+  content: "\ea1f";
+}
+:where(.keen) .ki-flag.ki-outline:before {
+  content: "\ea20";
+}
+:where(.keen) .ki-flash-circle.ki-outline:before {
+  content: "\ea21";
+}
+:where(.keen) .ki-flask.ki-outline:before {
+  content: "\ea22";
+}
+:where(.keen) .ki-focus.ki-outline:before {
+  content: "\ea23";
+}
+:where(.keen) .ki-folder-added.ki-outline:before {
+  content: "\ea24";
+}
+:where(.keen) .ki-folder-down.ki-outline:before {
+  content: "\ea25";
+}
+:where(.keen) .ki-folder-up.ki-outline:before {
+  content: "\ea26";
+}
+:where(.keen) .ki-folder.ki-outline:before {
+  content: "\ea27";
+}
+:where(.keen) .ki-frame.ki-outline:before {
+  content: "\ea28";
+}
+:where(.keen) .ki-gear.ki-outline:before {
+  content: "\ea29";
+}
+:where(.keen) .ki-general-mouse.ki-outline:before {
+  content: "\ea2a";
+}
+:where(.keen) .ki-geolocation-home.ki-outline:before {
+  content: "\ea2b";
+}
+:where(.keen) .ki-geolocation.ki-outline:before {
+  content: "\ea2c";
+}
+:where(.keen) .ki-ghost.ki-outline:before {
+  content: "\ea2d";
+}
+:where(.keen) .ki-gift.ki-outline:before {
+  content: "\ea2e";
+}
+:where(.keen) .ki-github.ki-outline:before {
+  content: "\ea2f";
+}
+:where(.keen) .ki-glass.ki-outline:before {
+  content: "\ea30";
+}
+:where(.keen) .ki-google-play.ki-outline:before {
+  content: "\ea31";
+}
+:where(.keen) .ki-google.ki-outline:before {
+  content: "\ea32";
+}
+:where(.keen) .ki-graph-2.ki-outline:before {
+  content: "\ea33";
+}
+:where(.keen) .ki-graph-3.ki-outline:before {
+  content: "\ea34";
+}
+:where(.keen) .ki-graph-4.ki-outline:before {
+  content: "\ea35";
+}
+:where(.keen) .ki-graph-up.ki-outline:before {
+  content: "\ea36";
+}
+:where(.keen) .ki-graph.ki-outline:before {
+  content: "\ea37";
+}
+:where(.keen) .ki-grid-2.ki-outline:before {
+  content: "\ea38";
+}
+:where(.keen) .ki-grid-frame.ki-outline:before {
+  content: "\ea39";
+}
+:where(.keen) .ki-grid.ki-outline:before {
+  content: "\ea3a";
+}
+:where(.keen) .ki-handcart.ki-outline:before {
+  content: "\ea3b";
+}
+:where(.keen) .ki-happy-emoji.ki-outline:before {
+  content: "\ea3c";
+}
+:where(.keen) .ki-heart-circle.ki-outline:before {
+  content: "\ea3d";
+}
+:where(.keen) .ki-heart.ki-outline:before {
+  content: "\ea3e";
+}
+:where(.keen) .ki-home-1.ki-outline:before {
+  content: "\ea3f";
+}
+:where(.keen) .ki-home-2.ki-outline:before {
+  content: "\ea40";
+}
+:where(.keen) .ki-home-3.ki-outline:before {
+  content: "\ea41";
+}
+:where(.keen) .ki-home.ki-outline:before {
+  content: "\ea42";
+}
+:where(.keen) .ki-html.ki-outline:before {
+  content: "\ea43";
+}
+:where(.keen) .ki-icon.ki-outline:before {
+  content: "\ea44";
+}
+:where(.keen) .ki-illustrator.ki-outline:before {
+  content: "\ea45";
+}
+:where(.keen) .ki-information-2.ki-outline:before {
+  content: "\ea46";
+}
+:where(.keen) .ki-information-3.ki-outline:before {
+  content: "\ea47";
+}
+:where(.keen) .ki-information-4.ki-outline:before {
+  content: "\ea48";
+}
+:where(.keen) .ki-information-5.ki-outline:before {
+  content: "\ea49";
+}
+:where(.keen) .ki-information.ki-outline:before {
+  content: "\ea4a";
+}
+:where(.keen) .ki-instagram.ki-outline:before {
+  content: "\ea4b";
+}
+:where(.keen) .ki-joystick.ki-outline:before {
+  content: "\ea4c";
+}
+:where(.keen) .ki-js-2.ki-outline:before {
+  content: "\ea4d";
+}
+:where(.keen) .ki-js.ki-outline:before {
+  content: "\ea4e";
+}
+:where(.keen) .ki-kanban.ki-outline:before {
+  content: "\ea4f";
+}
+:where(.keen) .ki-key-square.ki-outline:before {
+  content: "\ea50";
+}
+:where(.keen) .ki-key.ki-outline:before {
+  content: "\ea51";
+}
+:where(.keen) .ki-keyboard.ki-outline:before {
+  content: "\ea52";
+}
+:where(.keen) .ki-laptop.ki-outline:before {
+  content: "\ea53";
+}
+:where(.keen) .ki-laravel.ki-outline:before {
+  content: "\ea54";
+}
+:where(.keen) .ki-left-square.ki-outline:before {
+  content: "\ea55";
+}
+:where(.keen) .ki-left.ki-outline:before {
+  content: "\ea56";
+}
+:where(.keen) .ki-like-2.ki-outline:before {
+  content: "\ea57";
+}
+:where(.keen) .ki-like-folder.ki-outline:before {
+  content: "\ea58";
+}
+:where(.keen) .ki-like-shapes.ki-outline:before {
+  content: "\ea59";
+}
+:where(.keen) .ki-like-tag.ki-outline:before {
+  content: "\ea5a";
+}
+:where(.keen) .ki-like.ki-outline:before {
+  content: "\ea5b";
+}
+:where(.keen) .ki-loading.ki-outline:before {
+  content: "\ea5c";
+}
+:where(.keen) .ki-lock-2.ki-outline:before {
+  content: "\ea5d";
+}
+:where(.keen) .ki-lock-3.ki-outline:before {
+  content: "\ea5e";
+}
+:where(.keen) .ki-lock.ki-outline:before {
+  content: "\ea5f";
+}
+:where(.keen) .ki-logistic.ki-outline:before {
+  content: "\ea60";
+}
+:where(.keen) .ki-lots-shopping.ki-outline:before {
+  content: "\ea61";
+}
+:where(.keen) .ki-lovely.ki-outline:before {
+  content: "\ea62";
+}
+:where(.keen) .ki-lts.ki-outline:before {
+  content: "\ea63";
+}
+:where(.keen) .ki-magnifier.ki-outline:before {
+  content: "\ea64";
+}
+:where(.keen) .ki-map.ki-outline:before {
+  content: "\ea65";
+}
+:where(.keen) .ki-mask.ki-outline:before {
+  content: "\ea66";
+}
+:where(.keen) .ki-maximize.ki-outline:before {
+  content: "\ea67";
+}
+:where(.keen) .ki-medal-star.ki-outline:before {
+  content: "\ea68";
+}
+:where(.keen) .ki-menu.ki-outline:before {
+  content: "\ea69";
+}
+:where(.keen) .ki-message-add.ki-outline:before {
+  content: "\ea6a";
+}
+:where(.keen) .ki-message-edit.ki-outline:before {
+  content: "\ea6b";
+}
+:where(.keen) .ki-message-minus.ki-outline:before {
+  content: "\ea6c";
+}
+:where(.keen) .ki-message-notif.ki-outline:before {
+  content: "\ea6d";
+}
+:where(.keen) .ki-message-programming.ki-outline:before {
+  content: "\ea6e";
+}
+:where(.keen) .ki-message-question.ki-outline:before {
+  content: "\ea6f";
+}
+:where(.keen) .ki-message-text-2.ki-outline:before {
+  content: "\ea70";
+}
+:where(.keen) .ki-message-text.ki-outline:before {
+  content: "\ea71";
+}
+:where(.keen) .ki-messages.ki-outline:before {
+  content: "\ea72";
+}
+:where(.keen) .ki-microsoft.ki-outline:before {
+  content: "\ea73";
+}
+:where(.keen) .ki-milk.ki-outline:before {
+  content: "\ea74";
+}
+:where(.keen) .ki-minus-circle.ki-outline:before {
+  content: "\ea75";
+}
+:where(.keen) .ki-minus-folder.ki-outline:before {
+  content: "\ea76";
+}
+:where(.keen) .ki-minus-square.ki-outline:before {
+  content: "\ea77";
+}
+:where(.keen) .ki-minus.ki-outline:before {
+  content: "\ea78";
+}
+:where(.keen) .ki-monitor-mobile.ki-outline:before {
+  content: "\ea79";
+}
+:where(.keen) .ki-moon.ki-outline:before {
+  content: "\ea7a";
+}
+:where(.keen) .ki-more-2.ki-outline:before {
+  content: "\ea7b";
+}
+:where(.keen) .ki-mouse-circle.ki-outline:before {
+  content: "\ea7c";
+}
+:where(.keen) .ki-mouse-square.ki-outline:before {
+  content: "\ea7d";
+}
+:where(.keen) .ki-mouse.ki-outline:before {
+  content: "\ea7e";
+}
+:where(.keen) .ki-nexo.ki-outline:before {
+  content: "\ea7f";
+}
+:where(.keen) .ki-night-day.ki-outline:before {
+  content: "\ea80";
+}
+:where(.keen) .ki-note-2.ki-outline:before {
+  content: "\ea81";
+}
+:where(.keen) .ki-note.ki-outline:before {
+  content: "\ea82";
+}
+:where(.keen) .ki-notepad-bookmark.ki-outline:before {
+  content: "\ea83";
+}
+:where(.keen) .ki-notepad-edit.ki-outline:before {
+  content: "\ea84";
+}
+:where(.keen) .ki-notepad.ki-outline:before {
+  content: "\ea85";
+}
+:where(.keen) .ki-notification-2.ki-outline:before {
+  content: "\ea86";
+}
+:where(.keen) .ki-notification-bing.ki-outline:before {
+  content: "\ea87";
+}
+:where(.keen) .ki-notification-circle.ki-outline:before {
+  content: "\ea88";
+}
+:where(.keen) .ki-notification-favorite.ki-outline:before {
+  content: "\ea89";
+}
+:where(.keen) .ki-notification-on.ki-outline:before {
+  content: "\ea8a";
+}
+:where(.keen) .ki-notification-status.ki-outline:before {
+  content: "\ea8b";
+}
+:where(.keen) .ki-notification.ki-outline:before {
+  content: "\ea8c";
+}
+:where(.keen) .ki-ocean.ki-outline:before {
+  content: "\ea8d";
+}
+:where(.keen) .ki-office-bag.ki-outline:before {
+  content: "\ea8e";
+}
+:where(.keen) .ki-package.ki-outline:before {
+  content: "\ea8f";
+}
+:where(.keen) .ki-pails.ki-outline:before {
+  content: "\ea90";
+}
+:where(.keen) .ki-paintbucket.ki-outline:before {
+  content: "\ea91";
+}
+:where(.keen) .ki-paper-clip.ki-outline:before {
+  content: "\ea92";
+}
+:where(.keen) .ki-parcel-tracking.ki-outline:before {
+  content: "\ea93";
+}
+:where(.keen) .ki-parcel.ki-outline:before {
+  content: "\ea94";
+}
+:where(.keen) .ki-password-check.ki-outline:before {
+  content: "\ea95";
+}
+:where(.keen) .ki-paypal.ki-outline:before {
+  content: "\ea96";
+}
+:where(.keen) .ki-pencil.ki-outline:before {
+  content: "\ea97";
+}
+:where(.keen) .ki-people.ki-outline:before {
+  content: "\ea98";
+}
+:where(.keen) .ki-percentage.ki-outline:before {
+  content: "\ea99";
+}
+:where(.keen) .ki-phone.ki-outline:before {
+  content: "\ea9a";
+}
+:where(.keen) .ki-photoshop.ki-outline:before {
+  content: "\ea9b";
+}
+:where(.keen) .ki-picture.ki-outline:before {
+  content: "\ea9c";
+}
+:where(.keen) .ki-pill.ki-outline:before {
+  content: "\ea9d";
+}
+:where(.keen) .ki-pin.ki-outline:before {
+  content: "\ea9e";
+}
+:where(.keen) .ki-plus-circle.ki-outline:before {
+  content: "\ea9f";
+}
+:where(.keen) .ki-plus-square.ki-outline:before {
+  content: "\eaa0";
+}
+:where(.keen) .ki-plus.ki-outline:before {
+  content: "\eaa1";
+}
+:where(.keen) .ki-pointers.ki-outline:before {
+  content: "\eaa2";
+}
+:where(.keen) .ki-price-tag.ki-outline:before {
+  content: "\eaa3";
+}
+:where(.keen) .ki-printer.ki-outline:before {
+  content: "\eaa4";
+}
+:where(.keen) .ki-profile-circle.ki-outline:before {
+  content: "\eaa5";
+}
+:where(.keen) .ki-profile-user.ki-outline:before {
+  content: "\eaa6";
+}
+:where(.keen) .ki-pulse.ki-outline:before {
+  content: "\eaa7";
+}
+:where(.keen) .ki-purchase.ki-outline:before {
+  content: "\eaa8";
+}
+:where(.keen) .ki-python.ki-outline:before {
+  content: "\eaa9";
+}
+:where(.keen) .ki-question-2.ki-outline:before {
+  content: "\eaaa";
+}
+:where(.keen) .ki-question.ki-outline:before {
+  content: "\eaab";
+}
+:where(.keen) .ki-questionnaire-tablet.ki-outline:before {
+  content: "\eaac";
+}
+:where(.keen) .ki-ranking.ki-outline:before {
+  content: "\eaad";
+}
+:where(.keen) .ki-react.ki-outline:before {
+  content: "\eaae";
+}
+:where(.keen) .ki-receipt-square.ki-outline:before {
+  content: "\eaaf";
+}
+:where(.keen) .ki-rescue.ki-outline:before {
+  content: "\eab0";
+}
+:where(.keen) .ki-right-left.ki-outline:before {
+  content: "\eab1";
+}
+:where(.keen) .ki-right-square.ki-outline:before {
+  content: "\eab2";
+}
+:where(.keen) .ki-right.ki-outline:before {
+  content: "\eab3";
+}
+:where(.keen) .ki-rocket.ki-outline:before {
+  content: "\eab4";
+}
+:where(.keen) .ki-route.ki-outline:before {
+  content: "\eab5";
+}
+:where(.keen) .ki-router.ki-outline:before {
+  content: "\eab6";
+}
+:where(.keen) .ki-row-horizontal.ki-outline:before {
+  content: "\eab7";
+}
+:where(.keen) .ki-row-vertical.ki-outline:before {
+  content: "\eab8";
+}
+:where(.keen) .ki-safe-home.ki-outline:before {
+  content: "\eab9";
+}
+:where(.keen) .ki-satellite.ki-outline:before {
+  content: "\eaba";
+}
+:where(.keen) .ki-save-2.ki-outline:before {
+  content: "\eabb";
+}
+:where(.keen) .ki-save-deposit.ki-outline:before {
+  content: "\eabc";
+}
+:where(.keen) .ki-scan-barcode.ki-outline:before {
+  content: "\eabd";
+}
+:where(.keen) .ki-scooter-2.ki-outline:before {
+  content: "\eabe";
+}
+:where(.keen) .ki-scooter.ki-outline:before {
+  content: "\eabf";
+}
+:where(.keen) .ki-screen.ki-outline:before {
+  content: "\eac0";
+}
+:where(.keen) .ki-scroll.ki-outline:before {
+  content: "\eac1";
+}
+:where(.keen) .ki-search-list.ki-outline:before {
+  content: "\eac2";
+}
+:where(.keen) .ki-security-check.ki-outline:before {
+  content: "\eac3";
+}
+:where(.keen) .ki-security-user.ki-outline:before {
+  content: "\eac4";
+}
+:where(.keen) .ki-send.ki-outline:before {
+  content: "\eac5";
+}
+:where(.keen) .ki-setting-2.ki-outline:before {
+  content: "\eac6";
+}
+:where(.keen) .ki-setting-3.ki-outline:before {
+  content: "\eac7";
+}
+:where(.keen) .ki-setting-4.ki-outline:before {
+  content: "\eac8";
+}
+:where(.keen) .ki-setting.ki-outline:before {
+  content: "\eac9";
+}
+:where(.keen) .ki-share.ki-outline:before {
+  content: "\eaca";
+}
+:where(.keen) .ki-shield-cross.ki-outline:before {
+  content: "\eacb";
+}
+:where(.keen) .ki-shield-search.ki-outline:before {
+  content: "\eacc";
+}
+:where(.keen) .ki-shield-slash.ki-outline:before {
+  content: "\eacd";
+}
+:where(.keen) .ki-shield-tick.ki-outline:before {
+  content: "\eace";
+}
+:where(.keen) .ki-shield.ki-outline:before {
+  content: "\eacf";
+}
+:where(.keen) .ki-ship.ki-outline:before {
+  content: "\ead0";
+}
+:where(.keen) .ki-shop.ki-outline:before {
+  content: "\ead1";
+}
+:where(.keen) .ki-simcard-2.ki-outline:before {
+  content: "\ead2";
+}
+:where(.keen) .ki-simcard.ki-outline:before {
+  content: "\ead3";
+}
+:where(.keen) .ki-size.ki-outline:before {
+  content: "\ead4";
+}
+:where(.keen) .ki-slack.ki-outline:before {
+  content: "\ead5";
+}
+:where(.keen) .ki-slider-horizontal-2.ki-outline:before {
+  content: "\ead6";
+}
+:where(.keen) .ki-slider-horizontal.ki-outline:before {
+  content: "\ead7";
+}
+:where(.keen) .ki-slider-vertical-2.ki-outline:before {
+  content: "\ead8";
+}
+:where(.keen) .ki-slider-vertical.ki-outline:before {
+  content: "\ead9";
+}
+:where(.keen) .ki-slider.ki-outline:before {
+  content: "\eada";
+}
+:where(.keen) .ki-sms.ki-outline:before {
+  content: "\eadb";
+}
+:where(.keen) .ki-snapchat.ki-outline:before {
+  content: "\eadc";
+}
+:where(.keen) .ki-social-media.ki-outline:before {
+  content: "\eadd";
+}
+:where(.keen) .ki-soft-2.ki-outline:before {
+  content: "\eade";
+}
+:where(.keen) .ki-soft-3.ki-outline:before {
+  content: "\eadf";
+}
+:where(.keen) .ki-soft.ki-outline:before {
+  content: "\eae0";
+}
+:where(.keen) .ki-some-files.ki-outline:before {
+  content: "\eae1";
+}
+:where(.keen) .ki-sort.ki-outline:before {
+  content: "\eae2";
+}
+:where(.keen) .ki-speaker.ki-outline:before {
+  content: "\eae3";
+}
+:where(.keen) .ki-spotify.ki-outline:before {
+  content: "\eae4";
+}
+:where(.keen) .ki-spring-framework.ki-outline:before {
+  content: "\eae5";
+}
+:where(.keen) .ki-square-brackets.ki-outline:before {
+  content: "\eae6";
+}
+:where(.keen) .ki-star.ki-outline:before {
+  content: "\eae7";
+}
+:where(.keen) .ki-status.ki-outline:before {
+  content: "\eae8";
+}
+:where(.keen) .ki-subtitle.ki-outline:before {
+  content: "\eae9";
+}
+:where(.keen) .ki-sun.ki-outline:before {
+  content: "\eaea";
+}
+:where(.keen) .ki-support-24.ki-outline:before {
+  content: "\eaeb";
+}
+:where(.keen) .ki-switch.ki-outline:before {
+  content: "\eaec";
+}
+:where(.keen) .ki-syringe.ki-outline:before {
+  content: "\eaed";
+}
+:where(.keen) .ki-tablet-book.ki-outline:before {
+  content: "\eaee";
+}
+:where(.keen) .ki-tablet-delete.ki-outline:before {
+  content: "\eaef";
+}
+:where(.keen) .ki-tablet-down.ki-outline:before {
+  content: "\eaf0";
+}
+:where(.keen) .ki-tablet-ok.ki-outline:before {
+  content: "\eaf1";
+}
+:where(.keen) .ki-tablet-text-down.ki-outline:before {
+  content: "\eaf2";
+}
+:where(.keen) .ki-tablet-text-up.ki-outline:before {
+  content: "\eaf3";
+}
+:where(.keen) .ki-tablet-up.ki-outline:before {
+  content: "\eaf4";
+}
+:where(.keen) .ki-tablet.ki-outline:before {
+  content: "\eaf5";
+}
+:where(.keen) .ki-tag-cross.ki-outline:before {
+  content: "\eaf6";
+}
+:where(.keen) .ki-tag.ki-outline:before {
+  content: "\eaf7";
+}
+:where(.keen) .ki-teacher.ki-outline:before {
+  content: "\eaf8";
+}
+:where(.keen) .ki-tech-wifi.ki-outline:before {
+  content: "\eaf9";
+}
+:where(.keen) .ki-technology-2.ki-outline:before {
+  content: "\eafa";
+}
+:where(.keen) .ki-technology-3.ki-outline:before {
+  content: "\eafb";
+}
+:where(.keen) .ki-technology-4.ki-outline:before {
+  content: "\eafc";
+}
+:where(.keen) .ki-technology.ki-outline:before {
+  content: "\eafd";
+}
+:where(.keen) .ki-telephone-geolocation.ki-outline:before {
+  content: "\eafe";
+}
+:where(.keen) .ki-test-tubes.ki-outline:before {
+  content: "\eaff";
+}
+:where(.keen) .ki-text-align-center.ki-outline:before {
+  content: "\eb00";
+}
+:where(.keen) .ki-text-align-justify-center.ki-outline:before {
+  content: "\eb01";
+}
+:where(.keen) .ki-text-align-left.ki-outline:before {
+  content: "\eb02";
+}
+:where(.keen) .ki-text-align-right.ki-outline:before {
+  content: "\eb03";
+}
+:where(.keen) .ki-text-bold.ki-outline:before {
+  content: "\eb04";
+}
+:where(.keen) .ki-text-circle.ki-outline:before {
+  content: "\eb05";
+}
+:where(.keen) .ki-text-italic.ki-outline:before {
+  content: "\eb06";
+}
+:where(.keen) .ki-text-number.ki-outline:before {
+  content: "\eb07";
+}
+:where(.keen) .ki-text-strikethrough.ki-outline:before {
+  content: "\eb08";
+}
+:where(.keen) .ki-text-underline.ki-outline:before {
+  content: "\eb09";
+}
+:where(.keen) .ki-text.ki-outline:before {
+  content: "\eb0a";
+}
+:where(.keen) .ki-thermometer.ki-outline:before {
+  content: "\eb0b";
+}
+:where(.keen) .ki-theta.ki-outline:before {
+  content: "\eb0c";
+}
+:where(.keen) .ki-tiktok.ki-outline:before {
+  content: "\eb0d";
+}
+:where(.keen) .ki-time.ki-outline:before {
+  content: "\eb0e";
+}
+:where(.keen) .ki-timer.ki-outline:before {
+  content: "\eb0f";
+}
+:where(.keen) .ki-to-left.ki-outline:before {
+  content: "\eb10";
+}
+:where(.keen) .ki-to-right.ki-outline:before {
+  content: "\eb11";
+}
+:where(.keen) .ki-toggle-off-circle.ki-outline:before {
+  content: "\eb12";
+}
+:where(.keen) .ki-toggle-off.ki-outline:before {
+  content: "\eb13";
+}
+:where(.keen) .ki-toggle-on-circle.ki-outline:before {
+  content: "\eb14";
+}
+:where(.keen) .ki-toggle-on.ki-outline:before {
+  content: "\eb15";
+}
+:where(.keen) .ki-trailer.ki-outline:before {
+  content: "\eb16";
+}
+:where(.keen) .ki-trash-square.ki-outline:before {
+  content: "\eb17";
+}
+:where(.keen) .ki-trash.ki-outline:before {
+  content: "\eb18";
+}
+:where(.keen) .ki-tree.ki-outline:before {
+  content: "\eb19";
+}
+:where(.keen) .ki-trello.ki-outline:before {
+  content: "\eb1a";
+}
+:where(.keen) .ki-triangle.ki-outline:before {
+  content: "\eb1b";
+}
+:where(.keen) .ki-truck.ki-outline:before {
+  content: "\eb1c";
+}
+:where(.keen) .ki-ts.ki-outline:before {
+  content: "\eb1d";
+}
+:where(.keen) .ki-twitch.ki-outline:before {
+  content: "\eb1e";
+}
+:where(.keen) .ki-twitter.ki-outline:before {
+  content: "\eb1f";
+}
+:where(.keen) .ki-two-credit-cart.ki-outline:before {
+  content: "\eb20";
+}
+:where(.keen) .ki-underlining.ki-outline:before {
+  content: "\eb21";
+}
+:where(.keen) .ki-up-down.ki-outline:before {
+  content: "\eb22";
+}
+:where(.keen) .ki-up-square.ki-outline:before {
+  content: "\eb23";
+}
+:where(.keen) .ki-up.ki-outline:before {
+  content: "\eb24";
+}
+:where(.keen) .ki-update-file.ki-outline:before {
+  content: "\eb25";
+}
+:where(.keen) .ki-update-folder.ki-outline:before {
+  content: "\eb26";
+}
+:where(.keen) .ki-user-edit.ki-outline:before {
+  content: "\eb27";
+}
+:where(.keen) .ki-user-square.ki-outline:before {
+  content: "\eb28";
+}
+:where(.keen) .ki-user-tick.ki-outline:before {
+  content: "\eb29";
+}
+:where(.keen) .ki-user.ki-outline:before {
+  content: "\eb2a";
+}
+:where(.keen) .ki-verify.ki-outline:before {
+  content: "\eb2b";
+}
+:where(.keen) .ki-vibe.ki-outline:before {
+  content: "\eb2c";
+}
+:where(.keen) .ki-virus.ki-outline:before {
+  content: "\eb2d";
+}
+:where(.keen) .ki-vue.ki-outline:before {
+  content: "\eb2e";
+}
+:where(.keen) .ki-vuesax.ki-outline:before {
+  content: "\eb2f";
+}
+:where(.keen) .ki-wallet.ki-outline:before {
+  content: "\eb30";
+}
+:where(.keen) .ki-wanchain.ki-outline:before {
+  content: "\eb31";
+}
+:where(.keen) .ki-watch.ki-outline:before {
+  content: "\eb32";
+}
+:where(.keen) .ki-whatsapp.ki-outline:before {
+  content: "\eb33";
+}
+:where(.keen) .ki-wifi-home.ki-outline:before {
+  content: "\eb34";
+}
+:where(.keen) .ki-wifi-square.ki-outline:before {
+  content: "\eb35";
+}
+:where(.keen) .ki-wifi.ki-outline:before {
+  content: "\eb36";
+}
+:where(.keen) .ki-wrench.ki-outline:before {
+  content: "\eb37";
+}
+:where(.keen) .ki-xaomi.ki-outline:before {
+  content: "\eb38";
+}
+:where(.keen) .ki-xd.ki-outline:before {
+  content: "\eb39";
+}
+:where(.keen) .ki-xmr.ki-outline:before {
+  content: "\eb3a";
+}
+:where(.keen) .ki-yii.ki-outline:before {
+  content: "\eb3b";
+}
+:where(.keen) .ki-youtube.ki-outline:before {
+  content: "\eb3c";
+}
+:where(.keen) .tempus-dominus-widget i:not(.ki-outline):not(.ki-solid):not(.ki-duotone) {
+  font-size: 0.9rem !important;
+}
+:where(.keen) .tempus-dominus-widget .toolbar div i:not(.ki-outline):not(.ki-solid):not(.ki-duotone) {
+  font-size: 1.1rem !important;
+}
+:where(.keen) .ki-duotone,
+:where(.keen) .ki-outline,
+:where(.keen) .ki-solid {
+  line-height: 1;
+  font-size: 1rem;
+  color: var(--bs-text-muted);
+}

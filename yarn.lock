@@ -2297,10 +2297,10 @@
   dependencies:
     "@sinonjs/commons" "^3.0.1"
 
-"@smarter.sh/ui-widgets@^0.36.0-alpha.3":
-  version "0.36.0-alpha.3"
-  resolved "https://registry.yarnpkg.com/@smarter.sh/ui-widgets/-/ui-widgets-0.36.0-alpha.3.tgz#0857a176851d45fc87115ceafe5eaa0a9ce47124"
-  integrity sha512-4j+eMGIENRTUUoDUkVpDaYHj5q5FATKFWDkY/AhwEnGjn99ZAJFCy/pYK1EPvrUEeFbs0N4pI0EPhdV31BRMDQ==
+"@smarter.sh/ui-widgets@^0.36.0-alpha.4":
+  version "0.36.0-alpha.4"
+  resolved "https://registry.yarnpkg.com/@smarter.sh/ui-widgets/-/ui-widgets-0.36.0-alpha.4.tgz#b59938dcbedb004045e297cdb1617a1f6b5dbf4c"
+  integrity sha512-XfZ/Yq/crvKor8hByJ8+NNWWv3lHRleGxQV8xBwERqRdsEFoJJpp0kc2pFkDT9iI2PjhrkkFmZ2sevkHaCbNgQ==
 
 "@tailwindcss/forms@^0.5.9":
   version "0.5.11"

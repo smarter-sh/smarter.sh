@@ -7,7 +7,8 @@
 // keen/style.bundle.css is the web console's
 // smarter/smarter/static/assets/css/style.bundle.css. It isn't served.
 //
-// usage: yarn keen (node keen/scope-keen.cjs <in.css> <out.css>)
+// usage: yarn keen (node keen/scope-keen.cjs <out.css> <in.css>...): the inputs are
+// concatenated, in order, into one scoped stylesheet.
 const fs = require('fs')
 const postcss = require('postcss')
 
@@ -22,8 +23,10 @@ const scopeSelector = (sel) => {
   return `${SCOPE} ${s}`
 }
 
-const [input, output] = process.argv.slice(2)
-const root = postcss.parse(fs.readFileSync(input, 'utf8'))
+const [output, ...inputs] = process.argv.slice(2)
+const root = postcss.parse(
+  inputs.map((input) => fs.readFileSync(input, 'utf8')).join('\n')
+)
 root.walkRules((rule) => {
   if (rule.parent.type === 'atrule' && /keyframes$/.test(rule.parent.name)) return
   rule.selectors = rule.selectors.map(scopeSelector)

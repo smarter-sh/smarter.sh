@@ -6,6 +6,8 @@ import { cn } from '@/helpers/cn'
 import { accent } from '@/helpers/accent'
 import { COMMUNITY } from '@/common/constants'
 import { audiences, faqsData, openSource, pilot } from '../data'
+import { SelfHost as SelfHostWidget } from '@smarter.sh/ui-widgets'
+import ConsoleWidgets from '@/components/site/ConsoleWidgets'
 
 // The open-source points, in the theme's divided 2x2 panel.
 export const WhyOpenSource = () => {
@@ -42,6 +44,11 @@ export const WhyOpenSource = () => {
           </div>
         ))}
       </div>
+      <ConsoleWidgets className="mx-auto mt-10 max-w-5xl">
+        <div className="col-12">
+          <SelfHostWidget />
+        </div>
+      </ConsoleWidgets>
       <p className="mx-auto mt-10 max-w-3xl text-center text-default-300">
         Smarter is supported by its community. Organizations that want help installing or
         running it can work with an independent{' '}
