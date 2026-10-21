@@ -15,3 +15,5 @@ export const OPENAPI_DOCS = 'https://ubc.smarter.sh/docs/openapi/'
 export const SMARTER_PROJECT_MCP = 'https://ubc.smarter.sh/api/v1/mcp/smarter-project/'
 export const QUICK_START = `${DOCS}/smarter-platform/installation/quick-start.html`
 export const COMMUNITY = `${GITHUB}/smarter/discussions`
+// An example project to clone or fork: the manifests of a fictional code academy's assistants, managed in git.
+export const STACKADEMY = `${GITHUB}/stackademy`

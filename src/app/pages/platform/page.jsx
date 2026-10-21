@@ -4,7 +4,8 @@ import Section from '@/components/site/Section'
 import FeatureCard from '@/components/site/FeatureCard'
 import Button from '@/components/site/Button'
 import CtaBand from '@/components/site/CtaBand'
-import { DOCS } from '@/common/constants'
+import SmartLink from '@/components/site/SmartLink'
+import { DOCS, STACKADEMY } from '@/common/constants'
 import { chat, layers, manifest } from './data'
 import { WhatsNew as WhatsNewWidget } from '@smarter.sh/ui-widgets'
 import ConsoleWidgets from '@/components/site/ConsoleWidgets'
@@ -58,6 +59,18 @@ const Platform = () => {
             <pre className="overflow-x-auto rounded-lg bg-code-bg px-4 py-3 font-mono text-sm text-orange-300">
               smarter apply -f hr-assistant.yaml
             </pre>
+            <p>
+              To see this in a whole project, clone or fork{' '}
+              <SmartLink href={STACKADEMY} className="text-primary hover:underline">
+                Stackademy
+              </SmartLink>
+              , two course advisors for a fictional code academy. No AI model knows its
+              courses, so the advisors look them up, with tool calls to its own database
+              and web API, and no code. Its assistants, tools, data connections, secrets
+              and budget are all manifests in one GitHub repository, changed through pull
+              requests and checked automatically. Every new Smarter platform loads it, so
+              you can try the advisors first.
+            </p>
           </div>
         </div>
       </Section>

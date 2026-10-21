@@ -15,11 +15,11 @@
 }
 
 .navbar nav .navbar-nav {
-    @apply inline-flex flex-col lg:flex-row gap-y-2 gap-x-4 lg:items-center justify-center mt-4 lg:mt-0;
+    @apply inline-flex flex-col lg:flex-row gap-y-2 gap-x-4 lg:gap-x-1 xl:gap-x-4 lg:items-center justify-center mt-4 lg:mt-0;
 }
 
 .navbar nav .navbar-nav .nav-item .nav-link {
-    @apply block relative tracking-wide py-1 mx-3.5 text-base capitalize font-semibold cursor-pointer transition-all duration-300 bg-transparent text-keen-700 after:transition-all after:duration-500 after:absolute after:-bottom-1 after:h-[2px] after:w-0 after:start-0 after:rounded-full after:bg-transparent;
+    @apply block relative whitespace-nowrap tracking-wide py-1 mx-3.5 lg:mx-2 xl:mx-3.5 text-base lg:text-[15px] xl:text-base capitalize font-semibold cursor-pointer transition-all duration-300 bg-transparent text-keen-700 after:transition-all after:duration-500 after:absolute after:-bottom-1 after:h-[2px] after:w-0 after:start-0 after:rounded-full after:bg-transparent;
 }
 
 .navbar nav .navbar-nav .nav-item .nav-link:active,
