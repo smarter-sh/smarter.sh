@@ -274,22 +274,3 @@ export const logos = [
   { icon: 'simple-icons:shopify', label: 'Shopify' },
   { icon: 'simple-icons:postgresql', label: 'PostgreSQL' },
 ]
-
-export const words = [
-  [
-    'Guardrails',
-    'Budgets',
-    'Audit trail',
-    'Your documents',
-    'Your databases',
-    'Your website',
-  ],
-  [
-    'Any AI vendor',
-    'Self-hosted models',
-    'MCP servers',
-    'Extensions',
-    'No code',
-    'Open source',
-  ],
-]

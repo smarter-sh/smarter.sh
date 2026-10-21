@@ -6,6 +6,8 @@ import Button from '@/components/site/Button'
 import CtaBand from '@/components/site/CtaBand'
 import { DOCS } from '@/common/constants'
 import { chat, layers, manifest } from './data'
+import { WhatsNew as WhatsNewWidget } from '@smarter.sh/ui-widgets'
+import ConsoleWidgets from '@/components/site/ConsoleWidgets'
 
 const Platform = () => {
   return (
@@ -77,6 +79,18 @@ const Platform = () => {
           </div>
         </Section>
       ))}
+
+      <Section
+        eyebrow="What’s new"
+        title="Recent additions to the platform"
+        intro="Every Smarter release adds to the platform. These are some of the latest, each with its documentation."
+      >
+        <ConsoleWidgets rowClassName="justify-content-center">
+          <div className="col-xl-10">
+            <WhatsNewWidget />
+          </div>
+        </ConsoleWidgets>
+      </Section>
 
       <Section eyebrow="Smarter Chat" title={chat.title} intro={chat.text}>
         <div className="flex flex-wrap justify-center gap-4">
