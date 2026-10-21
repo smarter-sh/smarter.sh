@@ -16,13 +16,6 @@ const Extensions = lazy(() => import('@/app/pages/extensions/page'))
 const Integrations = lazy(() => import('@/app/pages/integrations/page'))
 const Sdks = lazy(() => import('@/app/pages/sdks/page'))
 
-//auth pages
-const Login = lazy(() => import('@/app/auth/login/page'))
-const LoginWithQr = lazy(() => import('@/app/auth/qr-login/page'))
-const Register = lazy(() => import('@/app/auth/register/page'))
-const ForgotPassword = lazy(() => import('@/app/auth/password-reset/page'))
-const Logout = lazy(() => import('@/app/auth/logout/page'))
-const Plans = lazy(() => import('@/app/pages/plans/page'))
 const LandingPages = [
   {
     path: '/',
@@ -77,11 +70,6 @@ const StaticPages = [
     element: <DeveloperResources />,
   },
   {
-    path: '/plans',
-    name: 'Plans',
-    element: <Plans />,
-  },
-  {
     path: '/tos',
     name: 'Terms of Service',
     element: <TOS />,
@@ -119,31 +107,4 @@ const StaticPages = [
   },
 ]
 
-const AuthPages = [
-  {
-    path: '/login',
-    name: 'Login',
-    element: <Login />,
-  },
-  {
-    path: '/qr-login',
-    name: 'Login with Qr',
-    element: <LoginWithQr />,
-  },
-  {
-    path: '/register',
-    name: 'Register',
-    element: <Register />,
-  },
-  {
-    path: '/password-reset',
-    name: 'ForgotPassword',
-    element: <ForgotPassword />,
-  },
-  {
-    path: '/logout',
-    name: 'Logout',
-    element: <Logout />,
-  },
-]
-export const appRoutes = [...LandingPages, ...StaticPages, ...AuthPages]
+export const appRoutes = [...LandingPages, ...StaticPages]

@@ -8,6 +8,8 @@ import SmarterChatEmbed from '@/components/site/SmarterChatEmbed'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import { chatbots } from '@/common/chatbots'
 import { COMMUNITY, DOCS } from '@/common/constants'
+import { Instructors as InstructorsWidget } from '@smarter.sh/ui-widgets'
+import ConsoleWidgets from '@/components/site/ConsoleWidgets'
 
 const COURSES = `${DOCS}/smarter-instructors/example-courses`
 
@@ -29,45 +31,6 @@ const why = [
   },
 ]
 
-const courses = [
-  {
-    icon: 'lucide:pen-line',
-    title: 'Prompt Engineering',
-    text: 'For non-programmers: how to instruct an AI model, and how to build a working assistant in the first class.',
-    href: `${COURSES}/micro-courses/prompt-engineering.html`,
-  },
-  {
-    icon: 'lucide:app-window',
-    title: 'AI Applications',
-    text: 'Assistants that use documents, databases, web search and tools, built from manifests, with no code.',
-    href: `${COURSES}/micro-courses/ai-applications.html`,
-  },
-  {
-    icon: 'lucide:landmark',
-    title: 'AI Governance',
-    text: 'For managers: how AI is controlled in practice, related to the NIST AI RMF, ISO/IEC 42001 and the EU AI Act.',
-    href: `${COURSES}/micro-courses/ai-governance.html`,
-  },
-  {
-    icon: 'lucide:calculator',
-    title: 'AI Economics',
-    text: 'What an AI conversation really costs, how to estimate it, and how to choose between vendors and models.',
-    href: `${COURSES}/micro-courses/ai-economics.html`,
-  },
-  {
-    icon: 'lucide:bot',
-    title: 'Agentic Development',
-    text: 'Software development with AI coding agents, taught on a real, large open-source code base.',
-    href: `${COURSES}/micro-courses/agentic-development.html`,
-  },
-  {
-    icon: 'lucide:server-cog',
-    title: 'Self-Hosted Models',
-    text: 'Running open-weight models on your own infrastructure, for privacy, cost and control.',
-    href: `${COURSES}/micro-courses/self-hosted-models.html`,
-  },
-]
-
 const outcomes = [
   'Explain what AI is, and why it sometimes makes things up',
   'Connect an assistant to approved documents and data',
@@ -75,21 +38,6 @@ const outcomes = [
   'Estimate what an AI conversation actually costs',
   'Judge which vendor’s model fits which task',
   'Spot where AI could help their own team',
-]
-
-const formats = [
-  {
-    title: 'One-day bootcamp',
-    text: 'Eight hours of 45-minute lectures and hands-on labs, in a classroom.',
-  },
-  {
-    title: 'Two-week online course',
-    text: 'Six hours of instruction: recorded lectures and a weekly live session.',
-  },
-  {
-    title: 'Four-week online course',
-    text: 'Twelve hours of instruction, with graded assignments and a capstone.',
-  },
 ]
 
 const Education = () => {
@@ -132,41 +80,9 @@ const Education = () => {
         title="21 ready-to-teach course designs"
         intro="Each one comes with schedules, graded assignments and rubrics, capstone projects and reading lists, so an instructor can take a plan, set the dates and teach it. Free and open source, with no seat counts and no sign-up forms."
       >
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-          {courses.map((course) => (
-            <FeatureCard
-              accent="emerald"
-              key={course.title}
-              {...course}
-              linkText="Course design"
-            />
-          ))}
-        </div>
-        <div className="mx-auto mt-12 grid max-w-5xl grid-cols-1 gap-4 md:grid-cols-3">
-          {formats.map((format) => (
-            <div
-              key={format.title}
-              className="rounded-xl bg-default-950/40 p-5 text-center"
-            >
-              <p className="mb-1 font-medium text-white">{format.title}</p>
-              <p className="text-sm text-default-300">{format.text}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mx-auto mt-8 max-w-3xl text-center text-default-300">
-          Plus technical tracks for IT and computer-science students, from Docker,
-          Kubernetes and secure software to full-stack development and a Django master
-          class, all taught on Smarter’s own source code.{' '}
-          <a
-            href={`${COURSES}/index.html`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-primary hover:underline"
-          >
-            See the full catalog
-          </a>
-          .
-        </p>
+        <ConsoleWidgets>
+          <InstructorsWidget className="col-12" />
+        </ConsoleWidgets>
       </Section>
 
       <Section

@@ -1,109 +1,149 @@
-import SmartLink from '@/components/site/SmartLink'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
-import { Glow } from '@/components/site/Section'
-import { COMMUNITY } from '@/common/constants'
-import euclid from '@/assets/images/screens/euclid-chalkboard.webp'
+import { COMMUNITY, DOCS } from '@/common/constants'
 
 const highlights = [
-  { icon: 'lucide:github', text: 'Free and open source', color: 'text-primary' },
-  { icon: 'lucide:server', text: 'Runs on your infrastructure', color: 'text-sky-400' },
-  {
-    icon: 'lucide:graduation-cap',
-    text: 'In teaching use at UBC',
-    color: 'text-emerald-400',
-  },
+  { icon: 'lucide:github', text: 'Free and open source' },
+  { icon: 'lucide:server', text: 'Runs on your infrastructure' },
+  { icon: 'lucide:graduation-cap', text: 'In teaching use at UBC' },
 ]
 
-// The theme's framed, split hero: the message on the left, the product on the right.
+// The courses of the Free Course Catalog that the Learn card lists, each linked to its page.
+const MICRO_COURSES = `${DOCS}/smarter-instructors/example-courses/micro-courses`
+const courses = [
+  { name: 'Prompt engineering', url: `${MICRO_COURSES}/prompt-engineering.html` },
+  { name: 'AI governance', url: `${MICRO_COURSES}/ai-governance.html` },
+  { name: 'AI economics', url: `${MICRO_COURSES}/ai-economics.html` },
+]
+
+// The first lines of a manifest that ships with Smarter, the Weather assistant's
+// (smarter/apps/llmclient/data/llm-clients/llmclient-weather.yaml), as [key, value] lines.
+const manifest = [
+  ['apiVersion', 'smarter.sh/v1'],
+  ['kind', 'LLMClient'],
+  ['metadata', null],
+  ['  name', 'weather'],
+  ['spec', null],
+  ['  extensions', '[weather]'],
+  ['  plugins', '[image_search]'],
+  ['  guardrails', '[prompt_injection_keyword_input]'],
+]
+
+// What the journal keeps of one answer.
+const record = [
+  { icon: 'lucide:shield-check', label: 'Guardrail', value: 'prompt injection: passed' },
+  { icon: 'lucide:wrench', label: 'Tool call', value: 'ext_weather_get_weather' },
+  { icon: 'lucide:coins', label: 'Tokens', value: '2,724, costed' },
+  { icon: 'lucide:gauge', label: 'Budget', value: 'within its monthly cap' },
+]
+
+// The platform as one picture: three cards, one for each of the headline's words.
+const PlatformCards = () => (
+  <div className="home-platform" aria-label="What Smarter does" role="group">
+    <div className="home-platform-card home-platform-learn">
+      <div className="home-platform-head">
+        <span className="home-learn">Learn</span>
+        <span>Free course designs, for instructors</span>
+      </div>
+      <ul className="home-platform-courses">
+        {courses.map((course) => (
+          <li key={course.name}>
+            <a href={course.url} target="_blank" rel="noopener noreferrer">
+              <IconifyIcon icon="lucide:book-open" width={14} height={14} />
+              {course.name}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+    <div className="home-platform-card home-platform-build">
+      <div className="home-platform-head">
+        <span className="home-build">Build</span>
+        <span>An assistant is a manifest</span>
+      </div>
+      <pre className="home-platform-yaml">
+        {manifest.map(([key, value]) => (
+          <div key={key}>
+            <span className="home-yaml-key">{key}:</span>
+            {value && <span className="home-yaml-value"> {value}</span>}
+          </div>
+        ))}
+        <div className="home-yaml-command">
+          <span className="home-yaml-prompt">$</span> smarter apply -f weather.yaml
+        </div>
+      </pre>
+    </div>
+    <div className="home-platform-card home-platform-govern">
+      <div className="home-platform-head">
+        <span className="home-govern">Govern</span>
+        <span>Every answer, recorded</span>
+      </div>
+      <dl className="home-platform-record">
+        {record.map((item) => (
+          <div key={item.label}>
+            <dt>
+              <IconifyIcon icon={item.icon} width={14} height={14} />
+              {item.label}
+            </dt>
+            <dd>{item.value}</dd>
+          </div>
+        ))}
+      </dl>
+    </div>
+  </div>
+)
+
+// The landing page's first card, in the style of the web console's illustrated widgets: the
+// message on the left, and the platform, learn, build and govern, on the right.
 const Hero = () => {
   return (
-    <section id="home" className="relative isolate overflow-hidden pb-10 pt-28">
-      <Glow accent="primary" className="top-24 h-[28rem]" />
-      <div className="px-4 lg:px-6">
-        <div className="relative rounded-3xl border border-white/5 bg-gradient-to-br from-default-950/70 via-default-950/40 to-violet-950/40 backdrop-blur-sm">
-          <div className="-z-1 absolute start-10 top-10 h-14 w-14 animate-[spin_10s_linear_infinite] rounded-2xl rounded-br-none rounded-tl-none bg-primary/10" />
-          <div className="-z-1 absolute bottom-10 end-1/2 h-14 w-14 animate-ping rounded-full bg-amber-400/30" />
-          <div className="container">
-            <div className="grid items-center gap-12 py-14 lg:grid-cols-2 lg:py-20">
-              <div data-aos="fade-right" data-aos-easing="ease" data-aos-duration={900}>
-                <span className="rounded-full border border-primary/40 bg-primary/10 px-4 py-1 text-sm font-semibold uppercase tracking-widest text-primary">
-                  The Smarter Project
-                </span>
-                <h1 className="my-6 text-4xl/tight font-medium text-white md:text-5xl/tight xl:text-6xl/tight">
-                  <span className="text-emerald-400">Learn</span> AI.{' '}
-                  <span className="text-gradient">Build</span> with AI.{' '}
-                  <span className="text-sky-400">Govern</span> AI.
-                </h1>
-                <p className="text-lg text-default-200 md:text-xl">
-                  One open-source platform that takes your organization from its first AI
-                  lesson to governed, production AI, on infrastructure you own.
-                </p>
-                <ul className="mt-6 flex flex-wrap gap-x-6 gap-y-2">
-                  {highlights.map((item) => (
-                    <li
-                      key={item.text}
-                      className="flex items-center gap-2 text-sm text-default-300"
-                    >
-                      <IconifyIcon icon={item.icon} className={`h-4 w-4 ${item.color}`} />
-                      {item.text}
-                    </li>
-                  ))}
-                </ul>
-                <div className="mt-10 flex flex-wrap items-center gap-4">
-                  <a
-                    href="#what-is-smarter"
-                    className="bg-gradient-brand inline-flex items-center gap-2 rounded-full py-1 pe-6 ps-1 text-white shadow-lg shadow-primary/20 transition-all hover:brightness-110"
-                  >
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-white/15">
-                      <IconifyIcon icon="lucide:arrow-down" className="h-5 w-5" />
-                    </span>
-                    What is Smarter?
-                  </a>
-                  <SmartLink
-                    href={COMMUNITY}
-                    className="inline-flex items-center gap-2 rounded-full border border-white/15 py-1 pe-6 ps-1 text-white transition-all hover:border-primary"
-                  >
-                    <span className="flex h-11 w-11 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400">
-                      <IconifyIcon icon="lucide:users" className="h-5 w-5" />
-                    </span>
-                    Join the community
-                  </SmartLink>
-                </div>
+    <div className="col-12">
+      <section
+        id="home"
+        aria-label="The Smarter Project"
+        className="card border-transparent home-hero"
+      >
+        <div className="card-body p-8 p-lg-12">
+          <div className="row g-10 align-items-center">
+            <div className="col-lg-6">
+              <span className="home-eyebrow">The Smarter Project</span>
+              <h1 className="home-hero-title fw-bold text-white mt-5 mb-5">
+                <span className="home-learn">Learn</span> AI.{' '}
+                <span className="home-build">Build</span> with AI.{' '}
+                <span className="home-govern">Govern</span> AI.
+              </h1>
+              <p className="fs-4 home-lede mb-6">
+                One open-source platform that takes your organization from its first AI
+                lesson to governed, production AI, on infrastructure you own.
+              </p>
+              <ul className="home-highlights">
+                {highlights.map((item) => (
+                  <li key={item.text}>
+                    <IconifyIcon icon={item.icon} width={16} height={16} />
+                    {item.text}
+                  </li>
+                ))}
+              </ul>
+              <div className="d-flex flex-wrap gap-3 mt-8">
+                <a href="#what-is-smarter" className="btn fw-semibold home-btn-brand">
+                  What is Smarter?
+                </a>
+                <a
+                  href={COMMUNITY}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn fw-semibold home-btn-white"
+                >
+                  Join the community
+                </a>
               </div>
-              <div
-                className="relative"
-                data-aos="zoom-in"
-                data-aos-easing="ease"
-                data-aos-duration={900}
-              >
-                <div className="overflow-hidden rounded-2xl border border-white/10 shadow-2xl shadow-black/50 lg:rotate-1">
-                  <img
-                    src={euclid}
-                    alt="Euclid, a math tutor built on Smarter, explaining the roots and vertex of a parabola on a chalkboard"
-                    className="w-full"
-                  />
-                </div>
-                <div className="absolute -start-6 top-8 hidden rounded-full border border-white/10 bg-default-950/80 px-5 py-3 text-sm font-medium text-white shadow-xl backdrop-blur-lg md:block">
-                  <IconifyIcon
-                    icon="lucide:sigma"
-                    className="me-2 inline h-4 w-4 text-emerald-400"
-                  />
-                  Typeset math, diagrams and plots
-                </div>
-                <div className="absolute -bottom-6 end-6 hidden rounded-2xl border border-white/10 bg-default-950/80 px-5 py-3 shadow-xl backdrop-blur-lg md:block">
-                  <p className="text-xs uppercase tracking-wider text-default-400">
-                    This answer
-                  </p>
-                  <p className="text-sm font-medium text-white">
-                    2,724 tokens · costed and recorded
-                  </p>
-                </div>
-              </div>
+            </div>
+            <div className="col-lg-6">
+              <PlatformCards />
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   )
 }
 export default Hero

@@ -7,7 +7,12 @@ import Button from '@/components/site/Button'
 import SmarterChatEmbed from '@/components/site/SmarterChatEmbed'
 import { cn } from '@/helpers/cn'
 import { chatbots } from '@/common/chatbots'
-import { DOCS, GITHUB, OPENAPI_DOCS } from '@/common/constants'
+import { DOCS, GITHUB, OPENAPI_DOCS, SMARTER_PROJECT_MCP } from '@/common/constants'
+import {
+  McpServer as McpServerWidget,
+  VSCodeExtension as VSCodeExtensionWidget,
+} from '@smarter.sh/ui-widgets'
+import ConsoleWidgets from '@/components/site/ConsoleWidgets'
 
 const F = `${DOCS}/smarter-framework`
 
@@ -77,13 +82,6 @@ const tools = [
     title: 'JSON Schemas',
     text: 'A published schema for every kind of manifest, the same ones the platform validates with, for editors and CI pipelines.',
     href: `${F}/smarter-manifests.html`,
-  },
-  {
-    icon: 'simple-icons:visualstudiocode',
-    title: 'VS Code extension',
-    text: 'Validation as you type, completion and hover documentation for every manifest, and apply from the editor.',
-    href: 'https://marketplace.visualstudio.com/items?itemName=querium.smarter-manifest',
-    linkText: 'Get the extension',
   },
   {
     icon: 'simple-icons:react',
@@ -190,6 +188,14 @@ const Sdks = () => {
       </Section>
 
       <Section accent="amber" eyebrow="Developer tools" title="The rest of the toolkit">
+        <ConsoleWidgets className="mb-10">
+          <div className="col-xl-8">
+            <VSCodeExtensionWidget />
+          </div>
+          <div className="col-xl-4">
+            <McpServerWidget serverUrl={SMARTER_PROJECT_MCP} />
+          </div>
+        </ConsoleWidgets>
         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {tools.map((item) => (
             <FeatureCard accent="amber" key={item.title} {...item} />

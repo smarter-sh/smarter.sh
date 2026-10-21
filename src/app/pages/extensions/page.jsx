@@ -5,6 +5,8 @@ import FeatureCard from '@/components/site/FeatureCard'
 import Button from '@/components/site/Button'
 import CtaBand from '@/components/site/CtaBand'
 import { DOCS, GITHUB } from '@/common/constants'
+import { Extensions as ExtensionsWidget } from '@smarter.sh/ui-widgets'
+import ConsoleWidgets from '@/components/site/ConsoleWidgets'
 
 const R = `${DOCS}/smarter-resources`
 const F = `${DOCS}/smarter-framework`
@@ -71,30 +73,6 @@ const plugins = [
     text: 'Find pictures and show them in the chat, beside the answer.',
     href: `${R}/llmtool/plugin/image-search.html`,
     badge: 'Experimental',
-  },
-]
-
-const official = [
-  {
-    icon: 'lucide:cloud-sun',
-    title: 'Weather',
-    text: 'The current weather and a 24-hour forecast for any place, the tool that OpenAI’s function-calling guide describes, implemented for real.',
-    href: `${GITHUB}/smarter-extension-weather`,
-    linkText: 'View on GitHub',
-  },
-  {
-    icon: 'lucide:calculator',
-    title: 'Calculator',
-    text: 'Evaluates math expressions exactly, rather than letting the AI guess. Never runs arbitrary code.',
-    href: `${GITHUB}/smarter-extension-calculator`,
-    linkText: 'View on GitHub',
-  },
-  {
-    icon: 'lucide:calendar-days',
-    title: 'Date calculator',
-    text: 'Date arithmetic done exactly: differences, adding days, ordering dates and converting formats.',
-    href: `${GITHUB}/smarter-extension-date-calculator`,
-    linkText: 'View on GitHub',
   },
 ]
 
@@ -173,11 +151,11 @@ const Extensions = () => {
         title="Installable from the web console"
         intro="Published by the Smarter team in the signed Smarter Extension registry, each one is also a worked example of how to build your own."
       >
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
-          {official.map((item) => (
-            <FeatureCard accent="violet" key={item.title} {...item} badge="Official" />
-          ))}
-        </div>
+        <ConsoleWidgets>
+          <div className="col-12">
+            <ExtensionsWidget />
+          </div>
+        </ConsoleWidgets>
       </Section>
 
       <Section

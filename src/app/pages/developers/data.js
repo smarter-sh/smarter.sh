@@ -1,12 +1,8 @@
 import { DOCS, GITHUB } from '@/common/constants'
 
+// Ways to get involved that the Contribute widget (@smarter.sh/ui-widgets) doesn't link to: it has
+// the contributing guide and the open issues.
 export const contribute = [
-  {
-    icon: 'lucide:git-pull-request',
-    title: 'Contributing guide',
-    text: 'How the project works: branches, pull requests, commit messages, tests and code review.',
-    href: `${DOCS}/smarter-framework/guides/contributing.html`,
-  },
   {
     icon: 'lucide:bot',
     title: 'Develop with AI agents',
@@ -18,12 +14,6 @@ export const contribute = [
     title: 'Discussions',
     text: 'Ask questions, propose features and share what you have built.',
     href: `${GITHUB}/smarter/discussions`,
-  },
-  {
-    icon: 'lucide:bug',
-    title: 'Issues',
-    text: 'Report a bug, or pick up an open issue to work on.',
-    href: `${GITHUB}/smarter/issues`,
   },
 ]
 

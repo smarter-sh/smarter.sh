@@ -9,7 +9,6 @@ const AppProviders = ({ children }) => {
   const { pathname, hash } = useLocation()
   useEffect(() => {
     Aos.init()
-    import('preline/preline')
   }, [])
   // a new page opens at its top, or at the section that its url names, e.g. /#try-it.
   useEffect(() => {
@@ -22,11 +21,6 @@ const AppProviders = ({ children }) => {
     }, 300)
     return () => clearTimeout(timer)
   }, [pathname, hash])
-  useEffect(() => {
-    setTimeout(() => {
-      if (window.HSStaticMethods) window.HSStaticMethods.autoInit()
-    }, 400)
-  }, [pathname])
   return (
     <Fragment>
       <HelmetProvider>

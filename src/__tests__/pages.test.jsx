@@ -39,7 +39,7 @@ describe('pages', () => {
       screen.getByText('Two gaps stand between you and the value')
     ).toBeInTheDocument()
     expect(screen.getByText('An ERP for AI resources')).toBeInTheDocument()
-    expect(await screen.findByTestId('chat-preview-math')).toBeInTheDocument()
+    expect(await screen.findByTestId('chat-preview-weather')).toBeInTheDocument()
   })
 
   test.each([

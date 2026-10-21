@@ -1,0 +1,572 @@
+/*
+ * The landing page, laid out as the Smarter web console's dashboard (src/app/pages/home/page.jsx).
+ * The cards are the Keen theme's, in its dark mode (ConsoleDashboard). These rules add what the
+ * dashboard's own widgets add to Keen: illustrated gradient cards, steps, tiles and timelines,
+ * with the theme's variables, so that they follow it. Every class is prefixed home-.
+ */
+
+.console-dashboard {
+  padding: 7.5rem 0 3rem;
+  color: var(--bs-gray-700);
+  font-family: Inter, sans-serif;
+}
+/* a 16px gutter on phones */
+@media (max-width: 575.98px) {
+  .console-dashboard .container-xxl {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+}
+/* below the fixed navigation bar when a link jumps to a card */
+.console-dashboard [id] {
+  scroll-margin-top: 6.5rem;
+}
+
+/* the brand's three words, as in the Smarter logo and the console's widgets */
+.home-learn {
+  color: #3dd68c;
+}
+.home-build {
+  background: linear-gradient(90deg, #ea580c, #fbbf24);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.home-govern {
+  color: #4fa3ff;
+}
+
+/* the hero, like the console's illustrated widgets (SelfHost, MCP Server) */
+.home-hero {
+  background:
+    radial-gradient(
+      circle at 12% 115%,
+      rgba(234, 88, 12, 0.35) 0%,
+      rgba(234, 88, 12, 0) 50%
+    ),
+    radial-gradient(
+      circle at 95% 0%,
+      rgba(114, 57, 234, 0.35) 0%,
+      rgba(114, 57, 234, 0) 45%
+    ),
+    linear-gradient(135deg, #1a1c24 0%, #24203a 100%);
+  overflow: hidden;
+}
+.home-hero-title {
+  font-size: clamp(2.25rem, 4.2vw, 3.6rem);
+  line-height: 1.12;
+  letter-spacing: -0.01em;
+}
+.home-eyebrow {
+  display: inline-block;
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  background-color: rgba(234, 88, 12, 0.18);
+  color: #fdba74;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.home-eyebrow-sky {
+  background-color: rgba(27, 132, 255, 0.2);
+  color: #9cc9ff;
+}
+.home-lede {
+  color: rgba(255, 255, 255, 0.75);
+}
+.home-highlights {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+}
+.home-highlights li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.home-highlights svg {
+  color: #fdba74;
+}
+.home-btn-brand {
+  background-color: #ea580c;
+  color: #ffffff;
+}
+.home-btn-brand:hover,
+.home-btn-brand:focus {
+  background-color: #c2410c;
+  color: #ffffff;
+}
+.home-btn-white {
+  background-color: #ffffff;
+  color: #181c32;
+}
+.home-btn-white:hover,
+.home-btn-white:focus {
+  background-color: #eef0f5;
+  color: #181c32;
+}
+/* the hero's picture of the platform: a card for each of the headline's words, learn, build and
+   govern, stacked and offset like the console's cards */
+.home-platform {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.home-platform-card {
+  padding: 0.9rem 1.25rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--home-platform-accent);
+  border-radius: 0.85rem;
+  background-color: rgba(21, 23, 28, 0.88);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.85rem;
+}
+.home-platform-learn {
+  --home-platform-accent: #3dd68c;
+}
+.home-platform-build {
+  --home-platform-accent: #f59e0b;
+}
+.home-platform-govern {
+  --home-platform-accent: #4fa3ff;
+}
+@media (min-width: 992px) {
+  .home-platform-learn {
+    margin-right: 3rem;
+  }
+  .home-platform-build {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+  }
+  .home-platform-govern {
+    margin-left: 3rem;
+  }
+}
+.home-platform-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 0.75rem;
+  margin-bottom: 0.75rem;
+  color: var(--bs-gray-500);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+.home-platform-head > span:first-child {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.home-platform-courses {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-platform-courses a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.3rem 0.65rem;
+  border-radius: 0.5rem;
+  background-color: rgba(61, 214, 140, 0.12);
+  color: #a7f3d0;
+  font-weight: 600;
+  transition: background-color 0.15s ease;
+}
+.home-platform-courses a:hover,
+.home-platform-courses a:focus-visible {
+  background-color: rgba(61, 214, 140, 0.24);
+  color: #ffffff;
+}
+.home-platform-yaml {
+  margin: 0;
+  padding: 0;
+  overflow-x: auto;
+  background: none;
+  color: rgba(255, 255, 255, 0.85);
+  font-family: var(--bs-font-monospace), monospace;
+  font-size: 0.8rem;
+  line-height: 1.5;
+  white-space: pre;
+}
+.home-yaml-key {
+  color: #fdba74;
+}
+.home-yaml-value {
+  color: #e5e7eb;
+}
+.home-yaml-command {
+  margin-top: 0.5rem;
+  padding-top: 0.5rem;
+  border-top: 1px dashed rgba(255, 255, 255, 0.12);
+  color: #ffffff;
+}
+.home-yaml-prompt {
+  color: #3dd68c;
+}
+.home-platform-record {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.6rem 1.25rem;
+  margin: 0;
+}
+.home-platform-record dt {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--bs-gray-500);
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.home-platform-record dt svg {
+  color: #4fa3ff;
+}
+.home-platform-record dd {
+  margin: 0.1rem 0 0;
+  color: #ffffff;
+  font-weight: 600;
+}
+@media (max-width: 575.98px) {
+  .home-platform-record {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+/* the logos of the vendors and platforms */
+.home-logos {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7.5rem, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-logos li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: var(--bs-gray-700);
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* numbered steps, like the console's Getting Started */
+.home-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-steps li {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+.home-step-number {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  background-color: var(--bs-primary-light);
+  color: var(--bs-primary);
+  font-weight: 700;
+}
+.home-note {
+  padding: 0.9rem 1.1rem;
+  border-left: 3px solid var(--bs-warning);
+  border-radius: 0.5rem;
+  background-color: var(--bs-gray-100);
+  color: var(--bs-gray-900);
+  font-weight: 600;
+}
+
+/* the one-sentence definition, and the three phases */
+.home-sentence {
+  max-width: 56rem;
+  margin: 0.5rem auto 3rem;
+  color: var(--bs-gray-900);
+  font-size: clamp(1.4rem, 2.6vw, 2.1rem);
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+.home-journey {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+.home-journey::before {
+  position: absolute;
+  top: 30px;
+  right: 16.66%;
+  left: 16.66%;
+  border-top: 2px dashed var(--bs-gray-300);
+  content: '';
+}
+.home-journey li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.home-journey .symbol {
+  background-color: var(--bs-body-bg);
+}
+.home-journey-step {
+  margin: 1rem 0 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+@media (max-width: 767.98px) {
+  .home-journey {
+    grid-template-columns: 1fr;
+  }
+  .home-journey::before {
+    display: none;
+  }
+}
+
+/* tiles, lists and checks */
+.home-tile {
+  height: 100%;
+  padding: 1.5rem;
+  border: 1px dashed var(--bs-gray-300);
+  border-radius: 0.75rem;
+}
+.home-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-list li {
+  display: flex;
+  align-items: flex-start;
+}
+.home-checks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-checks li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+  color: var(--bs-gray-800);
+  font-size: 1rem;
+}
+.home-checks svg {
+  flex-shrink: 0;
+  margin-top: 0.15rem;
+}
+.home-checks-light li {
+  color: rgba(255, 255, 255, 0.85);
+}
+.home-checks-light svg {
+  color: #9cc9ff;
+}
+
+/* the console's widgets: the grid's gutters space them here, not their own bottom margins, and
+   they fill their row's height */
+.home #instructors,
+.home #extensions {
+  height: 100%;
+  margin-bottom: 0 !important;
+}
+
+/* an assistant's resources, above its chat and its tree */
+.home-resources {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  gap: 1rem 1.5rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-resources li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+.home-resources .badge {
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+.home-resource-name {
+  display: block;
+  margin-bottom: 0.15rem;
+  color: var(--bs-gray-900);
+  font-family: var(--bs-font-monospace), monospace;
+  font-size: 0.85rem;
+  font-weight: 600;
+  word-break: break-word;
+}
+.home-panel-title {
+  margin-bottom: 0.75rem;
+  color: var(--bs-gray-500);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+/* the tree, on the console's dot-grid canvas, as tall as the chat beside it */
+.home-architecture {
+  height: 600px;
+  padding: 1.5rem;
+  overflow: auto;
+  border: 1px solid var(--bs-gray-200);
+  border-radius: 0.75rem;
+  background-color: var(--bs-gray-100);
+  background-image: radial-gradient(var(--bs-gray-300) 1px, transparent 1px);
+  background-size: 1.25rem 1.25rem;
+}
+@media (max-width: 1199.98px) {
+  .home-architecture {
+    height: auto;
+    max-height: 600px;
+  }
+}
+
+/* the leadership questions, like the console's colored widgets */
+.home-questions {
+  background:
+    radial-gradient(
+      circle at 90% 110%,
+      rgba(114, 57, 234, 0.4) 0%,
+      rgba(114, 57, 234, 0) 55%
+    ),
+    linear-gradient(160deg, #0b2a55 0%, #12346b 100%);
+}
+
+/* the audiences: whole cards are links */
+.home-audience {
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease;
+  text-decoration: none;
+}
+.home-audience:hover {
+  transform: translateY(-4px);
+  border-color: var(--bs-gray-300);
+}
+
+/* the pilot's timeline */
+.home-timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.home-timeline::before {
+  position: absolute;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  left: 1.125rem;
+  border-left: 2px dashed var(--bs-gray-300);
+  content: '';
+}
+.home-timeline li {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+.home-timeline-badge {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  justify-content: center;
+  width: 2.25rem;
+  height: 2.25rem;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+/* the questions, one open at a time */
+.home-faq {
+  border-bottom: 1px dashed var(--bs-gray-300);
+}
+.home-faq:last-child {
+  border-bottom: 0;
+}
+.home-faq-question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 1.1rem 0;
+  border: 0;
+  background: none;
+  color: var(--bs-gray-900);
+  font-size: 1.05rem;
+  font-weight: 600;
+  text-align: left;
+}
+.home-faq-chevron {
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+.home-faq-chevron-open {
+  transform: rotate(180deg);
+}
+
+/* the closing call to action */
+.home-cta {
+  background:
+    radial-gradient(
+      circle at 10% 0%,
+      rgba(234, 88, 12, 0.35) 0%,
+      rgba(234, 88, 12, 0) 50%
+    ),
+    radial-gradient(
+      circle at 90% 100%,
+      rgba(251, 191, 36, 0.25) 0%,
+      rgba(251, 191, 36, 0) 50%
+    ),
+    linear-gradient(135deg, #1a1c24 0%, #2a1f1a 100%);
+}
+
+/* a tool's or resource's name inside a sentence */
+.home-inline-name {
+  color: var(--bs-gray-900);
+  font-family: var(--bs-font-monospace), monospace;
+  font-size: 0.9em;
+  font-weight: 600;
+}

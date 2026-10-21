@@ -1,0 +1,122 @@
+{
+  "kind": "LLMClient",
+  "icon": "artificial-intelligence",
+  "name": "smarter_sdk_guide",
+  "owner": null,
+  "recordLocator": "llmclient-rMTAwMDAxNwx",
+  "url": null,
+  "readable": true,
+  "children": [
+    {
+      "kind": "Guardrail",
+      "icon": "shield-tick",
+      "name": "prompt_injection_keyword_input",
+      "owner": null,
+      "recordLocator": "guardrail-rMTAwMDAxMgx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "Guardrail",
+      "icon": "shield-tick",
+      "name": "script_injection_output",
+      "owner": null,
+      "recordLocator": "guardrail-rMTAwMDAxNQx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "Guardrail",
+      "icon": "shield-tick",
+      "name": "secrets_leak_output",
+      "owner": null,
+      "recordLocator": "guardrail-rMTAwMDAxNgx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "Guardrail",
+      "icon": "shield-tick",
+      "name": "secrets_redaction_input",
+      "owner": null,
+      "recordLocator": "guardrail-rMTAwMDAxNwx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "MCPClient",
+      "icon": "switch",
+      "name": "smarter_project_github",
+      "owner": null,
+      "recordLocator": "mcpclient-rMTAwMDAxNQx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "MCPClient",
+      "icon": "switch",
+      "name": "smarter_project_github_cli",
+      "owner": null,
+      "recordLocator": "mcpclient-rMTAwMDAwOAx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "MCPClient",
+      "icon": "switch",
+      "name": "smarter_project_github_golang",
+      "owner": null,
+      "recordLocator": "mcpclient-rMTAwMDAxMAx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "MCPClient",
+      "icon": "switch",
+      "name": "smarter_project_github_nodejs",
+      "owner": null,
+      "recordLocator": "mcpclient-rMTAwMDAxMgx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "MCPClient",
+      "icon": "switch",
+      "name": "smarter_project_github_python",
+      "owner": null,
+      "recordLocator": "mcpclient-rMTAwMDAxMwx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "Provider",
+      "icon": "cloud",
+      "name": "openai",
+      "owner": null,
+      "recordLocator": "provider-rMTAwMDAwNwx",
+      "url": null,
+      "readable": true,
+      "children": [
+        {
+          "kind": "Secret",
+          "icon": "lock-2",
+          "name": "openai_api_key",
+          "owner": null,
+          "recordLocator": "secret-rMTAwMDAxMQx",
+          "url": null,
+          "readable": true,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

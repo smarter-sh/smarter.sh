@@ -1,0 +1,84 @@
+{
+  "kind": "LLMClient",
+  "icon": "artificial-intelligence",
+  "name": "weather",
+  "owner": null,
+  "recordLocator": "llmclient-rMTAwMDAxOQx",
+  "url": null,
+  "readable": true,
+  "children": [
+    {
+      "kind": "Extension",
+      "icon": "abstract-26",
+      "name": "weather",
+      "owner": null,
+      "recordLocator": "extension-rMTAwMDAwMwx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "Guardrail",
+      "icon": "shield-tick",
+      "name": "prompt_injection_keyword_input",
+      "owner": null,
+      "recordLocator": "guardrail-rMTAwMDAxMgx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "ImageSearchPlugin",
+      "icon": "picture",
+      "name": "image_search",
+      "owner": null,
+      "recordLocator": "pluginmeta-rMTAwMDAwNwx",
+      "url": null,
+      "readable": true,
+      "children": [
+        {
+          "kind": "Provider",
+          "icon": "cloud",
+          "name": "openai",
+          "owner": null,
+          "recordLocator": "provider-rMTAwMDAwNwx",
+          "url": null,
+          "readable": true,
+          "children": [
+            {
+              "kind": "Secret",
+              "icon": "lock-2",
+              "name": "openai_api_key",
+              "owner": null,
+              "recordLocator": "secret-rMTAwMDAxMQx",
+              "url": null,
+              "readable": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Provider",
+      "icon": "cloud",
+      "name": "openai",
+      "owner": null,
+      "recordLocator": "provider-rMTAwMDAwNwx",
+      "url": null,
+      "readable": true,
+      "children": [
+        {
+          "kind": "Secret",
+          "icon": "lock-2",
+          "name": "openai_api_key",
+          "owner": null,
+          "recordLocator": "secret-rMTAwMDAxMQx",
+          "url": null,
+          "readable": true,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

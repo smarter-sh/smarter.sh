@@ -8,6 +8,8 @@ import { chatbots } from '@/common/chatbots'
 import { GITHUB } from '@/common/constants'
 import Badges from './components/Badges'
 import { contribute, resources } from './data'
+import { Contribute as ContributeWidget } from '@smarter.sh/ui-widgets'
+import ConsoleWidgets from '@/components/site/ConsoleWidgets'
 
 const Developers = () => {
   return (
@@ -36,7 +38,12 @@ const Developers = () => {
       <Badges />
 
       <Section accent="amber" eyebrow="Get involved" title="Start contributing">
-        <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <ConsoleWidgets>
+          <div className="col-12">
+            <ContributeWidget />
+          </div>
+        </ConsoleWidgets>
+        <div className="mx-auto mt-6 grid max-w-4xl grid-cols-1 gap-6 sm:grid-cols-2">
           {contribute.map((item) => (
             <FeatureCard accent="amber" key={item.title} {...item} />
           ))}

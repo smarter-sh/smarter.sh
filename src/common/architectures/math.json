@@ -1,0 +1,136 @@
+{
+  "kind": "LLMClient",
+  "icon": "artificial-intelligence",
+  "name": "math",
+  "owner": null,
+  "recordLocator": "llmclient-rMTAwMDAwOAx",
+  "url": null,
+  "readable": true,
+  "children": [
+    {
+      "kind": "Extension",
+      "icon": "abstract-26",
+      "name": "calculator",
+      "owner": null,
+      "recordLocator": "extension-rMTAwMDAwMQx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "Guardrail",
+      "icon": "shield-tick",
+      "name": "moderation_input",
+      "owner": null,
+      "recordLocator": "guardrail-rMTAwMDAwNgx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "Guardrail",
+      "icon": "shield-tick",
+      "name": "moderation_output",
+      "owner": null,
+      "recordLocator": "guardrail-rMTAwMDAwNwx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "Guardrail",
+      "icon": "shield-tick",
+      "name": "self_harm_input",
+      "owner": null,
+      "recordLocator": "guardrail-rMTAwMDAxOAx",
+      "url": null,
+      "readable": true,
+      "children": []
+    },
+    {
+      "kind": "ImageSearchPlugin",
+      "icon": "picture",
+      "name": "diagram_image_search",
+      "owner": null,
+      "recordLocator": "pluginmeta-rMTAwMDAwNAx",
+      "url": null,
+      "readable": true,
+      "children": [
+        {
+          "kind": "Provider",
+          "icon": "cloud",
+          "name": "openai",
+          "owner": null,
+          "recordLocator": "provider-rMTAwMDAwNwx",
+          "url": null,
+          "readable": true,
+          "children": [
+            {
+              "kind": "Secret",
+              "icon": "lock-2",
+              "name": "openai_api_key",
+              "owner": null,
+              "recordLocator": "secret-rMTAwMDAxMQx",
+              "url": null,
+              "readable": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "ImageSearchPlugin",
+      "icon": "picture",
+      "name": "image_search",
+      "owner": null,
+      "recordLocator": "pluginmeta-rMTAwMDAwNwx",
+      "url": null,
+      "readable": true,
+      "children": [
+        {
+          "kind": "Provider",
+          "icon": "cloud",
+          "name": "openai",
+          "owner": null,
+          "recordLocator": "provider-rMTAwMDAwNwx",
+          "url": null,
+          "readable": true,
+          "children": [
+            {
+              "kind": "Secret",
+              "icon": "lock-2",
+              "name": "openai_api_key",
+              "owner": null,
+              "recordLocator": "secret-rMTAwMDAxMQx",
+              "url": null,
+              "readable": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "kind": "Provider",
+      "icon": "cloud",
+      "name": "openai",
+      "owner": null,
+      "recordLocator": "provider-rMTAwMDAwNwx",
+      "url": null,
+      "readable": true,
+      "children": [
+        {
+          "kind": "Secret",
+          "icon": "lock-2",
+          "name": "openai_api_key",
+          "owner": null,
+          "recordLocator": "secret-rMTAwMDAxMQx",
+          "url": null,
+          "readable": true,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

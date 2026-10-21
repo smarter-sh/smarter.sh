@@ -5,9 +5,14 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx,vue,html}",
   ],
   theme: {
+    // A 16px gutter on phones and tablets, so that no page's content touches the screen's edges.
+    container: {
+      padding: { DEFAULT: '1rem', lg: '0rem' },
+    },
     extend: {
       fontFamily: {
-        jost: ['Jost', 'sans-serif'],
+        // The site's font, the web console's (the Keen theme's), loaded in index.html.
+        inter: ['Inter', 'sans-serif'],
         sans: [
           'ui-sans-serif',
           'system-ui',

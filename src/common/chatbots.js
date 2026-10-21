@@ -18,10 +18,24 @@
  */
 
 // the version of @smarter.sh/ui-chat whose embed script the site loads.
-export const UI_CHAT_VERSION = '0.11.0'
+export const UI_CHAT_VERSION = '0.36.1'
 export const UI_CHAT_EMBED_URL = `https://cdn.jsdelivr.net/npm/@smarter.sh/ui-chat@${UI_CHAT_VERSION}/dist/embed.js`
 
 export const chatbots = {
+  weather: {
+    workbenchUrl: 'https://ubc.smarter.sh/workbench/llm-clients/rMTAwMDAxMgx/prompt/',
+    name: 'weather',
+    chatbot: 'https://weather.3141-5926-5359.api.ubc.smarter.sh/',
+    apiKey: '',
+    appName: 'Weather LLMClient',
+    assistant: 'Lawrence',
+    welcome: 'Welcome to the Weather LLMClient! How can I help you today?',
+    examples: [
+      'What is the weather in San Francisco?',
+      'I was born December 31, 1966. How many days old am I?',
+      'What courses does Stackademy offer about web development?',
+    ],
+  },
   math: {
     workbenchUrl: 'https://ubc.smarter.sh/workbench/llm-clients/rMTAwMDAyNAx/prompt/',
     name: 'math',
