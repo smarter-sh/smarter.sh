@@ -2,7 +2,8 @@
  * The Smarter chatbots that smarter.sh embeds with the embed script of @smarter.sh/ui-chat.
  *
  * Each one is a built-in LLMClient of the Smarter platform, whose manifest is in
- * smarter/smarter/apps/llmclient/data/llm-clients/ of github.com/smarter-sh/smarter.
+ * smarter/smarter/apps/llmclient/data/llm-clients/ of github.com/smarter-sh/smarter, or, for the two
+ * Stackademy course advisors, in llm-clients/ of github.com/smarter-sh/stackademy, which the platform loads.
  *
  * `chatbot` is the url of the *deployed* LLMClient on ubc.smarter.sh, where the platform's
  * init job deploys every built-in LLMClient for the Smarter account, 3141-5926-5359. Its manifest
@@ -82,6 +83,34 @@ export const chatbots = {
       "Where is a prompt's tool call dispatched to an MCP server?",
       'How are Celery tasks scheduled, and which queue does each one use?',
       'Which files does the smarter cli change when a new api route is added?',
+    ],
+  },
+  stackademySql: {
+    workbenchUrl: 'https://ubc.smarter.sh/workbench/llm-clients/rMTAwMDAxMwx/prompt/',
+    name: 'stackademy_sql',
+    chatbot: 'https://stackademy-sql.3141-5926-5359.api.ubc.smarter.sh/',
+    apiKey: '',
+    appName: 'Stackademy SQL',
+    assistant: 'Stanley',
+    welcome: 'Welcome to Stackademy! How can I help you today?',
+    examples: [
+      'Do you offer any courses on AI?',
+      'My budget is $1,000. What courses can I take?',
+      'I want to study programming. What do you suggest?',
+    ],
+  },
+  stackademyApi: {
+    workbenchUrl: 'https://ubc.smarter.sh/workbench/llm-clients/rMTAwMDAxNAx/prompt/',
+    name: 'stackademy_api',
+    chatbot: 'https://stackademy-api.3141-5926-5359.api.ubc.smarter.sh/',
+    apiKey: '',
+    appName: 'Stackademy API',
+    assistant: 'Stanley',
+    welcome: 'Welcome to Stackademy! How can I help you today?',
+    examples: [
+      'Do you offer any courses on AI?',
+      'My budget is $1,000. What courses can I take?',
+      'What is the capital of France?',
     ],
   },
 }

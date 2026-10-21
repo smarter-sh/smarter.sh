@@ -15,6 +15,7 @@ const Education = lazy(() => import('@/app/pages/education/page'))
 const Extensions = lazy(() => import('@/app/pages/extensions/page'))
 const Integrations = lazy(() => import('@/app/pages/integrations/page'))
 const Sdks = lazy(() => import('@/app/pages/sdks/page'))
+const StackademyCaseStudy = lazy(() => import('@/app/pages/case-studies/stackademy/page'))
 
 const LandingPages = [
   {
@@ -53,6 +54,11 @@ const StaticPages = [
     path: '/sdks',
     name: 'SDKs',
     element: <Sdks />,
+  },
+  {
+    path: '/case-studies/stackademy',
+    name: 'Case Study: Stackademy',
+    element: <StackademyCaseStudy />,
   },
   {
     path: '/cli',
