@@ -1,3 +1,18 @@
+# [0.13.0](https://github.com/smarter-sh/smarter.sh/compare/v0.12.1...v0.13.0) (2026-10-27)
+
+
+### Bug Fixes
+
+* **developers:** add the ecosystem diagram, open the blog in this tab ([033f58d](https://github.com/smarter-sh/smarter.sh/commit/033f58d0836b5bf0ee0b6fa392680803fcaa89d6))
+* **site:** add the Stackademy case study to the main menu ([6bceaf8](https://github.com/smarter-sh/smarter.sh/commit/6bceaf8afc24a8c0390faed9c866ce7500d3d865))
+* **site:** generate the sitemap from the router's list of pages ([939b461](https://github.com/smarter-sh/smarter.sh/commit/939b461071b92c4b17d45c218313f42370534c54))
+* **site:** require [@smarter](https://github.com/smarter).sh/ui-widgets 0.36.4, for DidYouKnow ([9346e46](https://github.com/smarter-sh/smarter.sh/commit/9346e46f7046a0ccdd5f0e447c2d7b081c65b62c))
+
+
+### Features
+
+* **site:** add the Stackademy case study, with a manifest editor ([22e7560](https://github.com/smarter-sh/smarter.sh/commit/22e756013642304a09faacf4b083704711c41cdc))
+
 ## [0.12.1](https://github.com/smarter-sh/smarter.sh/compare/v0.12.0...v0.12.1) (2026-10-21)
 
 
