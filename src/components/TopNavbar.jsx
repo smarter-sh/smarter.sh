@@ -17,7 +17,8 @@ const navLinks = [
   { label: 'Extensions', link: '/extensions' },
   { label: 'SDKs', link: '/sdks' },
   { label: 'Developers', link: '/developers' },
-  { label: 'Blog', link: BLOG },
+  // the project's own blog, in this tab
+  { label: 'Blog', link: BLOG, newTab: false },
 ]
 
 const TopNavbar = () => {
@@ -70,7 +71,7 @@ const TopNavbar = () => {
                     key={item.link + idx}
                     className={`nav-item ${pathname.startsWith(item.link) ? 'active' : ''}`}
                   >
-                    <SmartLink href={item.link} className="nav-link">
+                    <SmartLink href={item.link} newTab={item.newTab} className="nav-link">
                       {item.label}
                     </SmartLink>
                   </li>

@@ -5,7 +5,9 @@ import FeatureCard from '@/components/site/FeatureCard'
 import Button from '@/components/site/Button'
 import SmarterChatEmbed from '@/components/site/SmarterChatEmbed'
 import { chatbots } from '@/common/chatbots'
-import { GITHUB } from '@/common/constants'
+import SmartLink from '@/components/site/SmartLink'
+import { DOCS, GITHUB } from '@/common/constants'
+import ecosystem from '@/assets/images/smarter-ecosystem.svg'
 import Badges from './components/Badges'
 import { contribute, resources } from './data'
 import { Contribute as ContributeWidget } from '@smarter.sh/ui-widgets'
@@ -62,7 +64,22 @@ const Developers = () => {
         </div>
       </Section>
 
-      <Section accent="amber" eyebrow="Resources" title="A complete developer ecosystem">
+      <Section
+        accent="amber"
+        eyebrow="Resources"
+        title="A complete developer ecosystem"
+        intro="Around the platform is a family of open-source packages, each published to the registry its users already know: PyPI, npm, Homebrew, APT, Chocolatey, the VS Code Marketplace, Docker Hub, Artifact Hub and Go modules. Every one is a client of the same Smarter API and its OpenAPI contract, or a building block that they share."
+      >
+        <figure className="mx-auto mb-12 max-w-5xl">
+          <SmartLink href={`${DOCS}/smarter-framework.html`}>
+            <img
+              src={ecosystem}
+              alt="The Smarter platform at the center, surrounded by its open-source packages: the CLI and VS Code extension, the Python, Go and Node.js SDKs, the shared Python libraries smarter-types and cache-results, the npm chat and widget components, the website integrations, Smarter Extensions, and the platform's Docker image and Helm chart."
+              className="h-auto w-full rounded-xl shadow-card"
+              loading="lazy"
+            />
+          </SmartLink>
+        </figure>
         <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {resources.map((item) => (
             <FeatureCard

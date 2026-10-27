@@ -33,4 +33,19 @@ describe('navigation bar', () => {
     expect(link).toHaveAttribute('href', '/case-studies/stackademy')
     expect(link.closest('li')).toHaveClass('active')
   })
+
+  test('opens the blog in this tab, and GitHub in a new one', () => {
+    render(
+      <MemoryRouter initialEntries={['/']}>
+        <TopNavbar />
+      </MemoryRouter>
+    )
+    const blog = screen.getByRole('link', { name: 'Blog' })
+    expect(blog).toHaveAttribute('href', 'https://blog.smarter.sh/')
+    expect(blog).not.toHaveAttribute('target')
+    expect(screen.getByRole('link', { name: 'Smarter on GitHub' })).toHaveAttribute(
+      'target',
+      '_blank'
+    )
+  })
 })
