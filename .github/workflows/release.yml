@@ -1,0 +1,78 @@
+---
+#------------------------------------------------------------------------------
+# Release
+#
+# Deploy a built dist/ to the environment's AWS S3 bucket and invalidate its
+# CloudFront distribution, with release.js. The bucket and distribution are
+# chosen by branch: alpha, beta or main (production).
+#
+# - Called by pushMain.yml with the "dist" artifact that build.yml uploaded.
+# - Run by hand from the Actions tab, it builds dist/ itself, from the branch
+#   it is run on. Use this to deploy alpha or beta.
+#
+# Secrets: AWS_ACCESS_KEY_ID and AWS_SECRET_ACCESS_KEY, for an IAM user that
+# may sync the buckets and create CloudFront invalidations, and optionally
+# AWS_REGION.
+#------------------------------------------------------------------------------
+name: Release
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      branch:
+        description: 'The environment to deploy to: alpha, beta or main'
+        required: true
+        type: string
+      artifact:
+        description: 'The name of the build artifact that holds dist/'
+        required: false
+        type: string
+        default: 'dist'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: release-${{ inputs.branch || github.ref_name }}
+  cancel-in-progress: false
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    env:
+      RELEASE_BRANCH: ${{ inputs.branch || github.ref_name }}
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: yarn
+
+      - name: Download dist
+        # A called workflow sees its caller's event, so its inputs tell the two cases apart.
+        if: inputs.branch != ''
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ inputs.artifact }}
+          path: dist/
+
+      - name: Build
+        if: inputs.branch == ''
+        run: |
+          yarn install --frozen-lockfile
+          make build
+
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION || 'us-east-1' }}
+
+      - name: Deploy to S3 and invalidate CloudFront
+        run: node release.js --skip-build

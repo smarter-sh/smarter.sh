@@ -1,0 +1,54 @@
+---
+#------------------------------------------------------------------------------
+# Build
+#
+# Build the production bundle of the React app (make build) and upload dist/
+# as the "dist" artifact, for release.yml to deploy.
+#
+# - Called by pushMain.yml after semantic-release, from the branch's latest
+#   commit, so that the bundle carries the version that was just released.
+# - Can be run by hand from the Actions tab, on any branch.
+#------------------------------------------------------------------------------
+name: Build
+
+on:
+  workflow_dispatch:
+  workflow_call:
+    inputs:
+      ref:
+        description: 'The branch, tag or commit to build'
+        required: false
+        type: string
+        default: ''
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          ref: ${{ inputs.ref }}
+          persist-credentials: false
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Build
+        run: make build
+
+      - name: Upload dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
