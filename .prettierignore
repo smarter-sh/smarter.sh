@@ -1,2 +1,9 @@
 src/service-worker.js
 src/assets/
+
+# third-party Keen theme, and the copy that yarn keen generates from it
+keen/
+public/keen/
+
+# written by semantic-release
+CHANGELOG.md

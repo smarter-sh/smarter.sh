@@ -8,15 +8,24 @@
  *             2. Upload to AWS S3
  *             3. Invalidate all items in the AWS Cloudfront CDN.
  *
+ *             The environment is the RELEASE_BRANCH environment
+ *             variable (alpha, beta or main), or else the current
+ *             git branch. --skip-build deploys the existing dist/,
+ *             e.g. the one built by .github/workflows/build.yml.
+ *
  * Note: requires node v24 or later.
  *---------------------------------------------------------*/
 
 import { execSync } from 'child_process'
+import { existsSync } from 'fs'
 import { APP_CONFIG } from './src/shared/constants.js'
 
 console.log(`Domain Name: ${APP_CONFIG.root_domain}`)
 
-const branch = execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
+const skipBuild = process.argv.includes('--skip-build')
+const branch =
+  process.env.RELEASE_BRANCH ||
+  execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
 console.log(`Releasing branch: ${branch}`)
 
 let s3Path = 's3://reactjs.' + branch + '.' + APP_CONFIG.root_domain + '/'
@@ -35,7 +44,13 @@ if (branch === 'alpha') {
   throw new Error(`Unknown branch: ${branch}`)
 }
 
-execSync('yarn build', { stdio: 'inherit' })
+if (skipBuild) {
+  if (!existsSync('./dist/index.html')) {
+    throw new Error('--skip-build was given, but there is no dist/index.html')
+  }
+} else {
+  execSync('yarn build', { stdio: 'inherit' })
+}
 execSync(`aws s3 sync ./dist/ ${s3Path} --acl public-read --delete`, {
   stdio: 'inherit',
 })
