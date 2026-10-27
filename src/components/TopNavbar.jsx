@@ -63,13 +63,17 @@ const TopNavbar = () => {
             <div
               ref={navRef}
               id="mobileMenu"
-              className={`mx-auto mt-2 ${menuOpen ? 'block' : 'hidden'} grow basis-full items-center justify-center transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto`}
+              className={`mx-auto mt-2 ${
+                menuOpen ? 'block' : 'hidden'
+              } grow basis-full items-center justify-center transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto`}
             >
               <ul id="navbar-navlist" className="navbar-nav">
                 {navLinks.map((item, idx) => (
                   <li
                     key={item.link + idx}
-                    className={`nav-item ${pathname.startsWith(item.link) ? 'active' : ''}`}
+                    className={`nav-item ${
+                      pathname.startsWith(item.link) ? 'active' : ''
+                    }`}
                   >
                     <SmartLink href={item.link} newTab={item.newTab} className="nav-link">
                       {item.label}

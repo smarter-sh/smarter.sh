@@ -1,8 +1,10 @@
 ---
 #------------------------------------------------------------------------------
-# Run pre-commit
+# Merge one branch into another, preferring the source branch's changes
+# on conflict, and push the result.
 #------------------------------------------------------------------------------
 name: Merge
+description: Merge one branch into another and push the result
 branding:
   icon: 'git-pull-request'
   color: 'orange'
@@ -21,17 +23,12 @@ inputs:
     required: true
     type: string
 
-  python-version:
-    description: 'The version of Python to use, such as 3.11.0'
-    required: true
-    type: string
-
 runs:
   using: 'composite'
   steps:
     - name: Checkout code
       id: checkout
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
       with:
         fetch-depth: 0
         persist-credentials: false

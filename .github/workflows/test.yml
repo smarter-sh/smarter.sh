@@ -1,0 +1,43 @@
+---
+#------------------------------------------------------------------------------
+# Test
+#
+# Run the Jest unit tests.
+#
+# - Runs on every pull request to main, so that a pull request is tested
+#   before it is merged. Make this check required in main's branch
+#   protection to block merging a pull request whose tests fail.
+# - Called by pushMain.yml as the first step after a merge to main.
+# - Can be run by hand from the Actions tab, on any branch.
+#------------------------------------------------------------------------------
+name: Test
+
+on:
+  workflow_dispatch:
+  workflow_call:
+  pull_request:
+    branches:
+      - main
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+        with:
+          persist-credentials: false
+
+      - name: Setup Node.js environment
+        uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: yarn
+
+      - name: Install dependencies
+        run: yarn install --frozen-lockfile
+
+      - name: Run unit tests
+        run: yarn test

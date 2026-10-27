@@ -66,7 +66,9 @@ export const ErpForAi = () => (
           {resources.map((name, idx) => (
             <span
               key={name}
-              className={`badge badge-light-${toneOf(accentCycle[idx % accentCycle.length])} fs-7 fw-semibold`}
+              className={`badge badge-light-${toneOf(
+                accentCycle[idx % accentCycle.length]
+              )} fs-7 fw-semibold`}
             >
               {name}
             </span>
