@@ -55,6 +55,17 @@ describe('pages', () => {
     expect(screen.getByRole('heading', { level: 1, name: title })).toBeInTheDocument()
   })
 
+  test('the developers page shows the ecosystem diagram, linked to its documentation', () => {
+    renderPage(Developers, '/developers')
+    const diagram = screen.getByRole('img', {
+      name: /The Smarter platform at the center/,
+    })
+    expect(diagram.closest('a')).toHaveAttribute(
+      'href',
+      'https://docs.smarter.sh/smarter-framework.html'
+    )
+  })
+
   test('the Stackademy case study teaches the case, with both advisors and its manifests', async () => {
     renderPage(StackademyCaseStudy, '/case-studies/stackademy')
     expect(
