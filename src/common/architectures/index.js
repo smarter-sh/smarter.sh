@@ -54,7 +54,7 @@ const manifestUrl = ({ kind, name }) => {
  */
 export const withPublicUrls = (node) => ({
   ...node,
-  url: node.readable ? (manifestUrl(node) ?? kindInfo(node.kind).docsUrl) : null,
+  url: node.readable ? manifestUrl(node) ?? kindInfo(node.kind).docsUrl : null,
   children: node.children.map(withPublicUrls),
 })
 

@@ -23,7 +23,7 @@ const OSCard = ({ icon, operating_system, download_instructions, more_link }) =>
         style={{
           whiteSpace: 'pre',
           fontFamily:
-            'SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", \"Courier New\", monospace',
+            'SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
         }}
       >
         {download_instructions}

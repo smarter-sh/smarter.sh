@@ -54,7 +54,9 @@ export const WhoItsFor = () =>
           <h3 className="fs-4 fw-bold text-gray-900 mt-6 mb-2">{item.title}</h3>
           <p className="text-gray-700 fs-7 mb-6">{item.text}</p>
           <span
-            className={`mt-auto d-inline-flex align-items-center gap-2 fw-semibold fs-6 text-${toneOf(item.accent)}`}
+            className={`mt-auto d-inline-flex align-items-center gap-2 fw-semibold fs-6 text-${toneOf(
+              item.accent
+            )}`}
           >
             {item.linkText}
             <IconifyIcon icon="lucide:move-right" width={16} height={16} />
