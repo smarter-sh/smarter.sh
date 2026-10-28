@@ -9,6 +9,11 @@ updates:
       - 'automated pr'
     schedule:
       interval: 'monthly'
+    # Tailwind CSS 4 needs a migration (its PostCSS plugin is @tailwindcss/postcss, and its
+    # configuration moves to CSS), so its major versions are left to a manual upgrade.
+    ignore:
+      - dependency-name: 'tailwindcss'
+        update-types: ['version-update:semver-major']
     assignees:
       - 'lpm0073'
     reviewers:

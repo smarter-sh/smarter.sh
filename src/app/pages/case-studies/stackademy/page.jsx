@@ -12,8 +12,20 @@ import {
 } from '@/components/manifest/ManifestViewer'
 import { chatbots } from '@/common/chatbots'
 import { DOCS, QUICK_START } from '@/common/constants'
-import { Callout, Code, Contents, Part } from './components/Teaching'
-import SequenceDiagram from './components/SequenceDiagram'
+import {
+  Callout,
+  CardGrid,
+  Code,
+  Contents,
+  Exercises,
+  Experiments,
+  Glance,
+  Part,
+  Questions,
+  ReadingList,
+  Steps,
+} from '../components/Teaching'
+import SequenceDiagram from '../components/SequenceDiagram'
 import DependencyDiagram from './components/DependencyDiagram'
 import {
   actors,
@@ -85,55 +97,6 @@ const QueryBlock = () => (
   </figure>
 )
 
-const Glance = () => (
-  <section className="pb-6" aria-label="The case at a glance">
-    <div className="container">
-      <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-[3fr_2fr]">
-        <div className="rounded-xl border border-emerald-200 bg-white p-6 shadow-card md:p-8">
-          <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-emerald-700">
-            <IconifyIcon icon="lucide:target" className="h-4 w-4" />
-            Learning objectives
-          </p>
-          <p className="mb-4 text-keen-700">
-            After working through this case, you will be able to:
-          </p>
-          <ol className="space-y-3">
-            {objectives.map((objective, i) => (
-              <li key={objective} className="flex gap-3 text-[15px] text-keen-800">
-                <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200">
-                  {i + 1}
-                </span>
-                {objective}
-              </li>
-            ))}
-          </ol>
-        </div>
-        <div className="rounded-xl border border-keen-300 bg-white p-6 shadow-card md:p-8">
-          <p className="mb-4 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-keen-600">
-            <IconifyIcon icon="lucide:clipboard-list" className="h-4 w-4" />
-            Case facts
-          </p>
-          <dl className="divide-y divide-keen-200">
-            {facts.map(([term, value]) => (
-              <div
-                key={term}
-                className="grid grid-cols-[7.5rem_1fr] gap-3 py-2.5 text-sm"
-              >
-                <dt className="font-medium text-keen-600">{term}</dt>
-                <dd className="text-keen-900">{value}</dd>
-              </div>
-            ))}
-          </dl>
-          <p className="mt-5 flex items-center gap-2 text-sm text-keen-600">
-            <IconifyIcon icon="lucide:clock" className="h-4 w-4" />
-            About 45 minutes, with both labs.
-          </p>
-        </div>
-      </div>
-    </div>
-  </section>
-)
-
 const Advisor = ({ bot, title, tool, path }) => (
   <div className="flex min-w-0 flex-col">
     <div className="mb-3">
@@ -172,7 +135,11 @@ const Stackademy = () => {
           </Button>
         </PageHero>
 
-        <Glance />
+        <Glance
+          objectives={objectives}
+          facts={facts}
+          duration="About 45 minutes, with both labs."
+        />
 
         <div className="container">
           <div className="mx-auto mt-4 max-w-6xl rounded-lg border border-keen-300 bg-keen-100 px-5 py-3 text-sm text-keen-700">
@@ -282,7 +249,17 @@ const Stackademy = () => {
                   which values. The application runs it, and hands the result back, and
                   the model answers from those facts.
                 </p>
-                <SequenceDiagram actors={actors} steps={sequence} />
+                <SequenceDiagram
+                  actors={actors}
+                  steps={sequence}
+                  caption={
+                    <>
+                      <strong className="text-keen-800">Figure 1.</strong> One tool call.
+                      The model never touches the database: it asks Stanley to run the
+                      tool (step 3), and answers from what comes back (step 7).
+                    </>
+                  }
+                />
                 <Callout type="term" title="Tool calling (or function calling)">
                   <p>
                     A protocol between an application and an AI model. The application
@@ -311,29 +288,7 @@ const Stackademy = () => {
                   someone has to write, secure and maintain, and it’s different for every
                   database, every web API and every AI provider:
                 </p>
-                <div className="my-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                  {challenges.map((challenge, i) => (
-                    <div
-                      key={challenge.title}
-                      className="rounded-xl border border-keen-300 bg-white p-5 shadow-card"
-                    >
-                      <div className="mb-3 flex items-center gap-3">
-                        <span className="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-keen-100 text-keen-800">
-                          <IconifyIcon icon={challenge.icon} className="h-5 w-5" />
-                        </span>
-                        <span className="text-xs font-semibold text-keen-500">
-                          {String(i + 1).padStart(2, '0')}
-                        </span>
-                      </div>
-                      <h3 className="mb-1.5 font-semibold text-keen-900">
-                        {challenge.title}
-                      </h3>
-                      <p className="text-sm leading-relaxed text-keen-600">
-                        {challenge.text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
+                <CardGrid cards={challenges} numbered />
                 <p>
                   It’s a software project in its own right. That’s why most teams that
                   want an AI assistant over their own data never finish one.
@@ -412,27 +367,7 @@ const Stackademy = () => {
                   />
                 </div>
                 <h3>Experiments</h3>
-                <ol className="max-w-3xl space-y-4">
-                  {experiments.map((experiment, i) => (
-                    <li
-                      key={experiment.prompt}
-                      className="rounded-xl border border-keen-300 bg-white p-5 shadow-card"
-                    >
-                      <p className="mb-2 flex items-start gap-3">
-                        <span className="inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200">
-                          {i + 1}
-                        </span>
-                        <span className="font-medium text-keen-900">
-                          Ask: <em>“{experiment.prompt}”</em>
-                        </span>
-                      </p>
-                      <p className="ps-9 text-[15px] leading-relaxed text-keen-700">
-                        <strong className="text-keen-800">Observe. </strong>
-                        {experiment.observe}
-                      </p>
-                    </li>
-                  ))}
-                </ol>
+                <Experiments experiments={experiments} />
                 <Callout type="exercise" title="Compare">
                   <p>
                     Put Stanley’s answer to the $1,000 question beside the one you saved
@@ -601,22 +536,7 @@ const Stackademy = () => {
                   <ManifestLab initialPath="llm-clients/stackademy-sql.yaml" />
                 </div>
                 <h3>Exercises</h3>
-                <ol className="mb-6 max-w-3xl space-y-3">
-                  {labExercises.map((exercise, i) => (
-                    <li
-                      key={exercise.title}
-                      className="flex gap-3 text-[15px] leading-relaxed"
-                    >
-                      <span className="mt-0.5 inline-flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-emerald-50 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-200">
-                        {String.fromCharCode(97 + i)}
-                      </span>
-                      <span className="text-keen-700">
-                        <strong className="text-keen-900">{exercise.title}. </strong>
-                        {exercise.text}
-                      </span>
-                    </li>
-                  ))}
-                </ol>
+                <Exercises exercises={labExercises} />
                 <Callout type="idea" title="Validation is not verification">
                   <p>
                     A schema can tell you that <Code>defaultTemperature</Code> must be a
@@ -659,24 +579,7 @@ const Stackademy = () => {
                   ))}
                 </div>
                 <h3>A change, the GitHub way</h3>
-                <ol className="mb-6 max-w-3xl space-y-0">
-                  {pullRequest.map((step, i) => (
-                    <li key={step} className="relative flex gap-4 pb-5 last:pb-0">
-                      {i < pullRequest.length - 1 && (
-                        <span
-                          aria-hidden="true"
-                          className="absolute left-[13px] top-7 h-[calc(100%-1.5rem)] border-s-2 border-keen-300"
-                        />
-                      )}
-                      <span className="relative z-10 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-keen-900 text-xs font-semibold text-white">
-                        {i + 1}
-                      </span>
-                      <p className="pt-0.5 text-[15px] leading-relaxed text-keen-700">
-                        {step}
-                      </p>
-                    </li>
-                  ))}
-                </ol>
+                <Steps steps={pullRequest} />
                 <p>
                   Spending is governed too.{' '}
                   <ManifestLink path="budgets/stackademy-project.yaml" /> caps the
@@ -698,37 +601,11 @@ const Stackademy = () => {
 
               <Part id="discussion" number={12} title="Discussion questions">
                 <p>For a classroom, a study group, or your own notes.</p>
-                <ol className="max-w-3xl space-y-4">
-                  {discussion.map((question, i) => (
-                    <li key={question} className="flex gap-4">
-                      <span className="font-mono text-sm font-semibold text-emerald-600">
-                        Q{i + 1}
-                      </span>
-                      <p className="text-[16px] leading-relaxed text-keen-800">
-                        {question}
-                      </p>
-                    </li>
-                  ))}
-                </ol>
+                <Questions questions={discussion} />
               </Part>
 
               <Part id="reading-list" number={13} title="Further reading">
-                <ul className="grid max-w-3xl gap-2 sm:grid-cols-2">
-                  {readingList.map((item) => (
-                    <li key={item.url}>
-                      <SmartLink
-                        href={item.url}
-                        className="group flex items-center gap-2 rounded-lg border border-keen-300 bg-white px-4 py-3 text-sm text-keen-800 transition-colors hover:border-primary hover:text-primary"
-                      >
-                        <IconifyIcon
-                          icon="lucide:book-open"
-                          className="h-4 w-4 shrink-0 text-keen-500 group-hover:text-primary"
-                        />
-                        {item.title}
-                      </SmartLink>
-                    </li>
-                  ))}
-                </ul>
+                <ReadingList items={readingList} />
               </Part>
             </article>
           </div>

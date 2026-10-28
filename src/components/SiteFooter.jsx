@@ -10,7 +10,7 @@ export const footerLinks = [
       { name: 'Platform', url: '/platform' },
       { name: 'For Education', url: '/education' },
       { name: 'Integrations', url: '/integrations' },
-      { name: 'Case study: Stackademy', url: '/case-studies/stackademy' },
+      { name: 'Case studies', url: '/case-studies' },
       { name: 'Partners', url: '/partners' },
       { name: 'Get started', url: QUICK_START },
     ],

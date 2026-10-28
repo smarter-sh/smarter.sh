@@ -1,19 +1,15 @@
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import { cn } from '@/helpers/cn'
 
-const actorColors = {
-  student: 'bg-keen-200 text-keen-800',
-  stanley: 'bg-orange-100 text-primary',
-  model: 'bg-violet-100 text-violet-700',
-  db: 'bg-teal-100 text-teal-700',
-}
+// an actor's colors: its own `color`, or a neutral gray.
+const colorOf = (actor) => actor.color ?? 'bg-keen-200 text-keen-800'
 
 const Actor = ({ actor }) => (
   <div className="flex flex-col items-center text-center">
     <span
       className={cn(
         'inline-flex h-10 w-10 items-center justify-center rounded-full',
-        actorColors[actor.id]
+        colorOf(actor)
       )}
     >
       <IconifyIcon icon={actor.icon} className="h-5 w-5" />
@@ -37,8 +33,11 @@ const Label = ({ step }) => (
 /*
  * A UML sequence diagram of a tool call: the participants across the top, each with its lifeline, and the
  * messages between them, in order, as arrows. On a phone, the same messages as a numbered list.
+ *
+ * `actors` are {id, label, sub?, icon, color?}; `steps` are {from, to, text, code?}; `caption` is the
+ * figure's caption.
  */
-const SequenceDiagram = ({ actors, steps }) => {
+const SequenceDiagram = ({ actors, steps, caption }) => {
   const index = Object.fromEntries(actors.map((actor, i) => [actor.id, i]))
   const n = actors.length
   return (
@@ -126,14 +125,14 @@ const SequenceDiagram = ({ actors, steps }) => {
               </span>
               <div>
                 <p className="mb-1 flex flex-wrap items-center gap-1.5 text-xs font-semibold">
-                  <span className={cn('rounded px-1.5 py-0.5', actorColors[from.id])}>
+                  <span className={cn('rounded px-1.5 py-0.5', colorOf(from))}>
                     {from.label}
                   </span>
                   <IconifyIcon
                     icon="lucide:arrow-right"
                     className="h-3 w-3 text-keen-600"
                   />
-                  <span className={cn('rounded px-1.5 py-0.5', actorColors[to.id])}>
+                  <span className={cn('rounded px-1.5 py-0.5', colorOf(to))}>
                     {to.label}
                   </span>
                 </p>
@@ -143,11 +142,11 @@ const SequenceDiagram = ({ actors, steps }) => {
           )
         })}
       </ol>
-      <figcaption className="mt-6 border-t border-keen-200 pt-4 text-sm text-keen-600">
-        <strong className="text-keen-800">Figure 1.</strong> One tool call. The model
-        never touches the database: it asks Stanley to run the tool (step 3), and answers
-        from what comes back (step 7).
-      </figcaption>
+      {caption && (
+        <figcaption className="mt-6 border-t border-keen-200 pt-4 text-sm text-keen-600">
+          {caption}
+        </figcaption>
+      )}
     </figure>
   )
 }
