@@ -1,3 +1,10 @@
+# [0.14.0](https://github.com/smarter-sh/smarter.sh/compare/v0.13.0...v0.14.0) (2026-10-28)
+
+
+### Features
+
+* **case-studies:** add six case studies and a case studies index page ([b2f6c1b](https://github.com/smarter-sh/smarter.sh/commit/b2f6c1ba47c7410e8331659ed8a06c8e825721ae))
+
 # [0.13.0](https://github.com/smarter-sh/smarter.sh/compare/v0.12.1...v0.13.0) (2026-10-27)
 
 
