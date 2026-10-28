@@ -18,10 +18,41 @@ export const pages = [
   { path: '/extensions', name: 'Extensions', page: 'extensions' },
   { path: '/integrations', name: 'Integrations', page: 'integrations' },
   { path: '/sdks', name: 'SDKs', page: 'sdks' },
+  { path: '/case-studies', name: 'Case Studies', page: 'case-studies' },
   {
     path: '/case-studies/stackademy',
     name: 'Case Study: Stackademy',
     page: 'case-studies/stackademy',
+  },
+  {
+    path: '/case-studies/mcp-server',
+    name: 'Case Study: The Smarter Project MCP Server',
+    page: 'case-studies/mcp-server',
+  },
+  {
+    path: '/case-studies/guardrails',
+    name: 'Case Study: Guardrails',
+    page: 'case-studies/guardrails',
+  },
+  {
+    path: '/case-studies/ai-coding-agents',
+    name: 'Case Study: Converge or Diverge, AI Coding Agents',
+    page: 'case-studies/ai-coding-agents',
+  },
+  {
+    path: '/case-studies/multi-tenancy',
+    name: 'Case Study: One Platform, Many Tenants',
+    page: 'case-studies/multi-tenancy',
+  },
+  {
+    path: '/case-studies/deploy',
+    name: 'Case Study: What Happens When You Click Deploy',
+    page: 'case-studies/deploy',
+  },
+  {
+    path: '/case-studies/api-contract',
+    name: 'Case Study: One Contract, Five Clients',
+    page: 'case-studies/api-contract',
   },
   { path: '/cli', name: 'CLI', page: 'cli' },
   { path: '/about', name: 'About', page: 'about' },

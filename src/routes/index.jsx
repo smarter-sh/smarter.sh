@@ -11,6 +11,23 @@ const components = {
   extensions: lazy(() => import('@/app/pages/extensions/page')),
   integrations: lazy(() => import('@/app/pages/integrations/page')),
   sdks: lazy(() => import('@/app/pages/sdks/page')),
+  'case-studies': lazy(() => import('@/app/pages/case-studies/page')),
+  'case-studies/mcp-server': lazy(
+    () => import('@/app/pages/case-studies/mcp-server/page')
+  ),
+  'case-studies/guardrails': lazy(
+    () => import('@/app/pages/case-studies/guardrails/page')
+  ),
+  'case-studies/ai-coding-agents': lazy(
+    () => import('@/app/pages/case-studies/ai-coding-agents/page')
+  ),
+  'case-studies/multi-tenancy': lazy(
+    () => import('@/app/pages/case-studies/multi-tenancy/page')
+  ),
+  'case-studies/deploy': lazy(() => import('@/app/pages/case-studies/deploy/page')),
+  'case-studies/api-contract': lazy(
+    () => import('@/app/pages/case-studies/api-contract/page')
+  ),
   'case-studies/stackademy': lazy(
     () => import('@/app/pages/case-studies/stackademy/page')
   ),
