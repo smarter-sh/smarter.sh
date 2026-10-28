@@ -23,16 +23,19 @@ describe('navigation bar', () => {
     expect(menu).toHaveClass('hidden')
   })
 
-  test('links to the Stackademy case study, marked active on its page', () => {
-    render(
-      <MemoryRouter initialEntries={['/case-studies/stackademy']}>
-        <TopNavbar />
-      </MemoryRouter>
-    )
-    const link = screen.getByRole('link', { name: 'Case Study' })
-    expect(link).toHaveAttribute('href', '/case-studies/stackademy')
-    expect(link.closest('li')).toHaveClass('active')
-  })
+  test.each(['/case-studies', '/case-studies/stackademy', '/case-studies/mcp-server'])(
+    'links to the case studies, marked active on %s',
+    (path) => {
+      render(
+        <MemoryRouter initialEntries={[path]}>
+          <TopNavbar />
+        </MemoryRouter>
+      )
+      const link = screen.getByRole('link', { name: 'Case Studies' })
+      expect(link).toHaveAttribute('href', '/case-studies')
+      expect(link.closest('li')).toHaveClass('active')
+    }
+  )
 
   test('opens the blog in this tab, and GitHub in a new one', () => {
     render(

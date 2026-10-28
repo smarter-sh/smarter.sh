@@ -7,7 +7,18 @@ describe('sitemap', () => {
     for (const page of pages) {
       expect(listed.has(page.path)).toBe(page.sitemap !== false)
     }
+    expect(listed.has('/case-studies')).toBe(true)
     expect(listed.has('/case-studies/stackademy')).toBe(true)
+    for (const slug of [
+      'mcp-server',
+      'guardrails',
+      'ai-coding-agents',
+      'multi-tenancy',
+      'deploy',
+      'api-contract',
+    ]) {
+      expect(listed.has(`/case-studies/${slug}`)).toBe(true)
+    }
     expect(listed.has('/home')).toBe(false)
   })
 

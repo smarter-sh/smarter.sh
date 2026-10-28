@@ -12,7 +12,7 @@ import useScrollEvent from '@/hooks/useScrollEvent'
 const navLinks = [
   { label: 'Platform', link: '/platform' },
   { label: 'Education', link: '/education' },
-  { label: 'Case Study', link: '/case-studies/stackademy' },
+  { label: 'Case Studies', link: '/case-studies' },
   { label: 'Integrations', link: '/integrations' },
   { label: 'Extensions', link: '/extensions' },
   { label: 'SDKs', link: '/sdks' },
