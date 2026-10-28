@@ -92,15 +92,33 @@ export const facts = [
 
 // The tool call, step by step, between the four participants of the sequence diagram.
 export const actors = [
-  { id: 'student', label: 'Student', icon: 'lucide:user-round' },
+  {
+    id: 'student',
+    label: 'Student',
+    icon: 'lucide:user-round',
+    color: 'bg-keen-200 text-keen-800',
+  },
   {
     id: 'stanley',
     label: 'Stanley',
     sub: 'Smarter LLMClient',
     icon: 'lucide:graduation-cap',
+    color: 'bg-orange-100 text-primary',
   },
-  { id: 'model', label: 'AI model', sub: 'e.g. OpenAI', icon: 'lucide:sparkles' },
-  { id: 'db', label: 'Course database', sub: 'private', icon: 'lucide:database' },
+  {
+    id: 'model',
+    label: 'AI model',
+    sub: 'e.g. OpenAI',
+    icon: 'lucide:sparkles',
+    color: 'bg-violet-100 text-violet-700',
+  },
+  {
+    id: 'db',
+    label: 'Course database',
+    sub: 'private',
+    icon: 'lucide:database',
+    color: 'bg-teal-100 text-teal-700',
+  },
 ]
 
 export const sequence = [
