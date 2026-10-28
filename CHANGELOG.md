@@ -1,3 +1,10 @@
+## [0.14.1](https://github.com/smarter-sh/smarter.sh/compare/v0.14.0...v0.14.1) (2026-10-28)
+
+
+### Bug Fixes
+
+* **deps:** pin tailwindcss to v3 to fix the build ([d2a93ca](https://github.com/smarter-sh/smarter.sh/commit/d2a93ca1006e525850db6c76005a48bb5f37fc4f))
+
 # [0.14.0](https://github.com/smarter-sh/smarter.sh/compare/v0.13.0...v0.14.0) (2026-10-28)
 
 
