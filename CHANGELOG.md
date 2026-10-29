@@ -1,3 +1,11 @@
+## [0.15.1](https://github.com/smarter-sh/smarter.sh/compare/v0.15.0...v0.15.1) (2026-10-29)
+
+
+### Bug Fixes
+
+* email address ([b8b8a43](https://github.com/smarter-sh/smarter.sh/commit/b8b8a439ddb0c62cd146c2f4260a0121a2952525))
+* privacy policy ([59eea81](https://github.com/smarter-sh/smarter.sh/commit/59eea81d5abb7d6e0e18e17ce0db9cad63b3c0d7))
+
 # [0.15.0](https://github.com/smarter-sh/smarter.sh/compare/v0.14.1...v0.15.0) (2026-10-29)
 
 
