@@ -1,3 +1,17 @@
+# [0.15.0](https://github.com/smarter-sh/smarter.sh/compare/v0.14.1...v0.15.0) (2026-10-29)
+
+
+### Bug Fixes
+
+* **deps:** restore valid json in package.json after the vite bump ([481c433](https://github.com/smarter-sh/smarter.sh/commit/481c433d2320fff44737c4f9e3357d8baff06cb2))
+* **privacy:** update the mailing address and contact wording ([f086bee](https://github.com/smarter-sh/smarter.sh/commit/f086bee449c1014c55e109f552ed12f35d1ddd8f))
+
+
+### Features
+
+* **mail:** receive and forward mail for smarter.sh with ses and lambda ([a0a489c](https://github.com/smarter-sh/smarter.sh/commit/a0a489cdba0d8ee41b6f8a364b3b2d1e2e573999))
+* **site:** add a cookie notice with a link to the privacy policy ([95b0e38](https://github.com/smarter-sh/smarter.sh/commit/95b0e382b6a2bb6a6f99bac7ca95823f076c0ff8))
+
 ## [0.14.1](https://github.com/smarter-sh/smarter.sh/compare/v0.14.0...v0.14.1) (2026-10-28)
 
 
