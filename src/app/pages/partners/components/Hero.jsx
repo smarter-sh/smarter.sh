@@ -19,7 +19,7 @@ const Hero = () => {
                 Partner Program
               </h1>
               <p className="text-sm font-medium text-keen-700">
-                Contact <a href="mailto:lawrence@opencogent.ai">lawrence@opencogent.ai</a>{' '}
+                Contact <a href="mailto:lawrence@smarter.sh">lawrence@smarter.sh</a>{' '}
                 about partnering with The Smarter Project.
               </p>
             </div>
