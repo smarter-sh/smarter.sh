@@ -1,0 +1,6 @@
+{
+  "name": "smarter-sh-mail-forwarder",
+  "private": true,
+  "type": "module",
+  "main": "index.js"
+}

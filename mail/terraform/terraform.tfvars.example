@@ -1,0 +1,5 @@
+# Optional. Every variable has a default (variables.tf); copy this to
+# terraform.tfvars (gitignored) only to override one.
+# forward_to   = ["someone@example.com"]
+# aws_region   = "us-east-1"
+# dmarc_policy = "none"

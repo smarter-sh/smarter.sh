@@ -149,6 +149,14 @@ describe('ManifestLab', () => {
     Object.assign(navigator, { clipboard: { writeText } })
     URL.createObjectURL = jest.fn(() => 'blob:manifest')
     URL.revokeObjectURL = jest.fn()
+    // The download clicks a hidden link to a blob url, and jsdom can't follow a link: record the
+    // click instead of letting jsdom log "Not implemented: navigation".
+    const clickLink = jest
+      .spyOn(HTMLAnchorElement.prototype, 'click')
+      .mockImplementation(function () {
+        expect(this.download).toBe('password.yaml')
+        expect(this.href).toBe('blob:manifest')
+      })
     renderWith(<ManifestLab />)
     await screen.findByLabelText('manifest')
     await act(async () => {
@@ -158,6 +166,9 @@ describe('ManifestLab', () => {
     expect(screen.getByRole('button', { name: 'Copied' })).toBeInTheDocument()
     fireEvent.click(screen.getByRole('button', { name: 'Download password.yaml' }))
     expect(URL.createObjectURL).toHaveBeenCalled()
+    expect(clickLink).toHaveBeenCalledTimes(1)
+    expect(URL.revokeObjectURL).toHaveBeenCalledWith('blob:manifest')
+    clickLink.mockRestore()
     expect(screen.getByRole('link', { name: /Open on GitHub/ })).toHaveAttribute(
       'href',
       repo.pageUrl('secrets/password.yaml')

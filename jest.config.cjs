@@ -18,6 +18,8 @@ module.exports = {
   testMatch: [
     '<rootDir>/src/**/__tests__/**/*.{js,jsx}',
     '<rootDir>/src/**/*.{test,spec}.{js,jsx}',
+    // The Lambda function that forwards mail for @smarter.sh (mail/README.md).
+    '<rootDir>/mail/**/*.test.js',
   ],
   // Fix for naming collisions
   modulePathIgnorePatterns: ['<rootDir>/dist/', '<rootDir>/webai/'],
