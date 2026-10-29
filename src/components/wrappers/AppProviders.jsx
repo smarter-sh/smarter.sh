@@ -3,6 +3,7 @@
 import { Fragment, useEffect } from 'react'
 import Aos from 'aos'
 import BackToTop from '../BackToTop'
+import CookieNotice from '../CookieNotice'
 import { useLocation } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 const AppProviders = ({ children }) => {
@@ -26,6 +27,7 @@ const AppProviders = ({ children }) => {
       <HelmetProvider>
         {children}
         <BackToTop />
+        <CookieNotice />
       </HelmetProvider>
     </Fragment>
   )
