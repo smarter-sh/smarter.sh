@@ -219,6 +219,20 @@ describe('home', () => {
     expect(names.size).toBe(4)
   })
 
+  test('the hero and the closing call to action link to the Slack workspace', () => {
+    renderHome()
+    const hero = screen.getByRole('region', { name: 'The Smarter Project' })
+    const cta = screen.getByRole('region', { name: 'Get started' })
+    for (const section of [hero, cta]) {
+      const slack = within(section).getByRole('link', { name: /Join us on Slack/ })
+      expect(slack).toHaveAttribute(
+        'href',
+        'https://join.slack.com/t/thesmarterproject/shared_invite/zt-4f0t6v46q-e2c5Of4hS4fBr_XwfQARCw'
+      )
+      expect(slack).toHaveAttribute('target', '_blank')
+    }
+  })
+
   test('the hero pictures the platform: learn, build and govern', () => {
     renderHome()
     const platform = screen.getByRole('group', { name: 'What Smarter does' })

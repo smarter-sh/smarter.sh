@@ -3,7 +3,7 @@ import { SelfHost as SelfHostWidget } from '@smarter.sh/ui-widgets'
 import SmartLink from '@/components/site/SmartLink'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import { ConsoleCard, Symbol, toneOf } from '@/components/site/ConsoleCard'
-import { COMMUNITY, QUICK_START } from '@/common/constants'
+import { COMMUNITY, QUICK_START, SLACK } from '@/common/constants'
 import { audiences, faqsData, openSource, pilot } from '../data'
 
 // Why Smarter is free and open source, beside the console's Self Host widget.
@@ -172,6 +172,15 @@ export const Cta = () => (
           className="btn fw-semibold home-btn-white"
         >
           Join the community
+        </a>
+        <a
+          href={SLACK}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="btn fw-semibold home-btn-slack"
+        >
+          <IconifyIcon icon="simple-icons:slack" width={16} height={16} />
+          Join us on Slack
         </a>
       </div>
     </div>
