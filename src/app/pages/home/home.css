@@ -70,7 +70,8 @@
   --home-text: rgba(255, 255, 255, 0.75);
   --home-muted: var(--bs-gray-500);
   border: 0;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 12% 115%,
       rgba(234, 88, 12, 0.55) 0%,
       rgba(234, 88, 12, 0.2) 45%,
@@ -87,7 +88,8 @@
 /* on phones and tablets the card is tall and narrow: the brick rises beside the headline */
 @media (max-width: 991.98px) {
   .home-hero {
-    background: radial-gradient(
+    background:
+      radial-gradient(
         circle at 0% 40%,
         rgba(234, 88, 12, 0.55) 0%,
         rgba(234, 88, 12, 0.2) 35%,
@@ -105,7 +107,8 @@
    Extensions, SDKs and Contribute widgets */
 .home-questions {
   border: 1px solid var(--bs-gray-200);
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 90% 110%,
       rgba(114, 57, 234, 0.1) 0%,
       rgba(114, 57, 234, 0) 55%
@@ -114,7 +117,8 @@
 }
 .home-cta {
   border: 1px solid #fed7aa;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 90% 100%,
       rgba(251, 191, 36, 0.25) 0%,
       rgba(251, 191, 36, 0) 50%
@@ -122,7 +126,8 @@
     linear-gradient(135deg, #fff7ed 0%, #ffedd5 60%, #fed7aa 100%);
 }
 [data-bs-theme='dark'] .home-questions {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 90% 110%,
       rgba(114, 57, 234, 0.4) 0%,
       rgba(114, 57, 234, 0) 55%
@@ -130,7 +135,8 @@
     linear-gradient(160deg, #0b2a55 0%, #12346b 100%);
 }
 [data-bs-theme='dark'] .home-cta {
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at 10% 0%,
       rgba(234, 88, 12, 0.35) 0%,
       rgba(234, 88, 12, 0) 50%
@@ -212,6 +218,19 @@
   border-color: #eef0f5 !important;
   background-color: #eef0f5;
   color: #181c32;
+}
+/* the Slack button: Slack's own aubergine, with its logo, so that it reads as Slack at a glance */
+.home-btn-slack {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #4a154b;
+  color: #ffffff;
+}
+.home-btn-slack:hover,
+.home-btn-slack:focus {
+  background-color: #611f69;
+  color: #ffffff;
 }
 /* the hero's picture of the platform: a card for each of the headline's words, learn, build and
    govern, stacked and offset like the console's cards */

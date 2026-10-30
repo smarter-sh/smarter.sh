@@ -1,5 +1,5 @@
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
-import { COMMUNITY, DOCS } from '@/common/constants'
+import { COMMUNITY, DOCS, SLACK } from '@/common/constants'
 
 const highlights = [
   { icon: 'lucide:github', text: 'Free and open source' },
@@ -134,6 +134,15 @@ const Hero = () => {
                   className="btn fw-semibold home-btn-white"
                 >
                   Join the community
+                </a>
+                <a
+                  href={SLACK}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="btn fw-semibold home-btn-slack"
+                >
+                  <IconifyIcon icon="simple-icons:slack" width={16} height={16} />
+                  Join us on Slack
                 </a>
               </div>
             </div>
