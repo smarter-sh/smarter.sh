@@ -1,3 +1,10 @@
+## [0.15.2](https://github.com/smarter-sh/smarter.sh/compare/v0.15.1...v0.15.2) (2026-10-30)
+
+
+### Bug Fixes
+
+* **home:** link to the Slack workspace from the hero and the cta ([015643d](https://github.com/smarter-sh/smarter.sh/commit/015643d2d9ccd63f18c9b4c55da61a2dc6f8b4bf))
+
 ## [0.15.1](https://github.com/smarter-sh/smarter.sh/compare/v0.15.0...v0.15.1) (2026-10-29)
 
 
