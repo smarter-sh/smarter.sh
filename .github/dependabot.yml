@@ -14,10 +14,6 @@ updates:
     ignore:
       - dependency-name: 'tailwindcss'
         update-types: ['version-update:semver-major']
-    assignees:
-      - 'lpm0073'
-    reviewers:
-      - 'lpm0073'
   - package-ecosystem: 'github-actions'
     directory: '/'
     target-branch: 'alpha'
@@ -26,7 +22,3 @@ updates:
       - 'automated pr'
     schedule:
       interval: 'monthly'
-    assignees:
-      - 'lpm0073'
-    reviewers:
-      - 'lpm0073'
