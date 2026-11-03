@@ -1,5 +1,12 @@
 import { appRoutes } from '@/routes/index'
-import { pages, redirects, sitemapPaths, sitemapXml, SITE_URL } from '@/routes/pages'
+import {
+  canonicalUrl,
+  pages,
+  redirects,
+  sitemapPaths,
+  sitemapXml,
+  SITE_URL,
+} from '@/routes/pages'
 
 describe('sitemap', () => {
   test('lists every page that the router serves, except those left out', () => {
@@ -42,5 +49,21 @@ describe('sitemap', () => {
     const locs = Array.from(doc.getElementsByTagName('loc')).map((loc) => loc.textContent)
     expect(locs).toEqual(sitemapPaths().map((path) => `${SITE_URL}${path}`))
     expect(new Set(locs).size).toBe(locs.length)
+  })
+})
+
+describe('canonicalUrl', () => {
+  test('is the sitemap url of every listed page', () => {
+    for (const path of sitemapPaths())
+      expect(canonicalUrl(path)).toBe(`${SITE_URL}${path}`)
+  })
+
+  test('drops a trailing slash, except the home page', () => {
+    expect(canonicalUrl('/platform/')).toBe(`${SITE_URL}/platform`)
+    expect(canonicalUrl('/')).toBe(`${SITE_URL}/`)
+  })
+
+  test('points a duplicate page at the page it duplicates', () => {
+    expect(canonicalUrl('/home')).toBe(`${SITE_URL}/`)
   })
 })

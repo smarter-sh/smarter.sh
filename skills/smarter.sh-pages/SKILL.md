@@ -48,8 +48,12 @@ const Pricing = () => (
 )
 ```
 
-- `PageShell` gives the metadata (`<title>Smarter | ...</title>` and the description, through
-  `PageMetaData` and react-helmet-async), the navbar and the footer. Use it for every new page.
+- `PageShell` gives the metadata (`<title>Smarter | ...</title>`, the description, and the
+  canonical url and `og:url`, through `PageMetaData` and react-helmet-async), the navbar and the
+  footer. Use it for every new page. The canonical url comes from `canonicalUrl()` in `pages.js`;
+  a page that duplicates another names the original with `canonical: '/path'` (see `/home`).
+  Never put a canonical or `og:url` in `index.html`: it is served for every path, so it would
+  mark every page a copy of the home page.
   Older pages (legal, about) assemble these by hand; don't copy them.
 - `Section` is a page section with an optional eyebrow, title and intro, and the AOS fade.
 - **Accents** (`src/helpers/accent.js`): each topic keeps one color everywhere: `primary` (Smarter

@@ -1,3 +1,10 @@
+## [0.15.3](https://github.com/smarter-sh/smarter.sh/compare/v0.15.2...v0.15.3) (2026-11-03)
+
+
+### Bug Fixes
+
+* **site:** give each page its own canonical url, not the home page's ([fca31e4](https://github.com/smarter-sh/smarter.sh/commit/fca31e44f4ba9ad3e52bb5fd3d3e960632bea493))
+
 ## [0.15.2](https://github.com/smarter-sh/smarter.sh/compare/v0.15.1...v0.15.2) (2026-10-30)
 
 

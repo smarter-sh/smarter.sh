@@ -5,14 +5,15 @@
  * Plain JavaScript, without JSX, so that vite.config.js can import it in Node.
  *
  * `page` is the folder of the page's component in src/app/pages. `sitemap: false` leaves a page out
- * of the sitemap, e.g. /home, which shows the same page as /.
+ * of the sitemap, e.g. /home, which shows the same page as /. `canonical` names the path that search
+ * engines should index instead, for a page that duplicates another.
  */
 
 export const SITE_URL = 'https://smarter.sh'
 
 export const pages = [
   { path: '/', name: 'root', page: 'home' },
-  { path: '/home', name: 'Home', page: 'home', sitemap: false },
+  { path: '/home', name: 'Home', page: 'home', sitemap: false, canonical: '/' },
   { path: '/platform', name: 'Platform', page: 'platform' },
   { path: '/education', name: 'Education', page: 'education' },
   { path: '/extensions', name: 'Extensions', page: 'extensions' },
@@ -74,6 +75,14 @@ export const redirects = [
 // The paths that the sitemap lists.
 export const sitemapPaths = () =>
   pages.filter((page) => page.sitemap !== false).map((page) => page.path)
+
+// A page's canonical url, the one search engines should index: the site url plus the path, without a
+// trailing slash (as the sitemap lists it), or the path the page names as its `canonical`.
+export const canonicalUrl = (pathname) => {
+  const path = pathname.length > 1 ? pathname.replace(/\/+$/, '') || '/' : pathname
+  const page = pages.find((p) => p.path === path)
+  return `${SITE_URL}${page?.canonical ?? path}`
+}
 
 // The sitemap, https://www.sitemaps.org/protocol.html. Without lastmod, which is optional, and which
 // search engines use only when it's consistently accurate.
