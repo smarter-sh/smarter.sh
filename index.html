@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="canonical" href="https://smarter.sh/" />
+    <!-- No canonical or og:url here: this file is served for every page, so each page sets its own
+         (src/components/PageMetaData.jsx). A static one would mark every page a copy of the home page. -->
     <link rel="icon" type="image/png" href="/favicon.png" />
     <!-- Inter, the site's font and the web console's. -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -34,7 +35,6 @@
     <meta property="og:type" content="website" />
     <meta property="og:title" content="The Smarter Project" />
     <meta property="og:site_name" content="The Smarter Project" />
-    <meta property="og:url" content="https://smarter.sh/" />
     <meta
       property="og:description"
       content="Learn AI. Build with AI. Govern AI. One open-source platform that takes an organization from its first AI lesson to governed, production AI, on infrastructure it owns."
