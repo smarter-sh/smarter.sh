@@ -40,16 +40,17 @@ jobs:
   semantic-release:
     needs: test
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     outputs:
       new_release_published: ${{ steps.semantic.outputs.new_release_published }}
       new_release_version: ${{ steps.semantic.outputs.new_release_version }}
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
       - name: Setup Node.js environment
-        uses: actions/setup-node@v7
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
         with:
           node-version: 24
           cache: yarn
@@ -58,7 +59,7 @@ jobs:
         run: yarn install --frozen-lockfile
 
       - name: Semantic Release
-        uses: cycjimmy/semantic-release-action@v8
+        uses: cycjimmy/semantic-release-action@ad51787758d9654d5a75150a89a6fa9b3ccef95e # v8.1.4
         id: semantic
         env:
           GITHUB_TOKEN: ${{ secrets.PAT }}
@@ -88,8 +89,9 @@ jobs:
   merge-main:
     needs: release
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
-      - uses: actions/checkout@v7
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
         with:
           persist-credentials: false
 
