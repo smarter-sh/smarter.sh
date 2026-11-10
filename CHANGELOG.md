@@ -1,3 +1,10 @@
+## [0.15.4](https://github.com/smarter-sh/smarter.sh/compare/v0.15.3...v0.15.4) (2026-11-10)
+
+
+### Bug Fixes
+
+* **site:** load the latest ui-chat embed script instead of 0.36.1 ([898c244](https://github.com/smarter-sh/smarter.sh/commit/898c2441feaa3fcab97eac72fae6c77f140aad41))
+
 ## [0.15.3](https://github.com/smarter-sh/smarter.sh/compare/v0.15.2...v0.15.3) (2026-11-03)
 
 
