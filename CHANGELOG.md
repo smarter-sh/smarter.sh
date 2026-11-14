@@ -1,3 +1,10 @@
+# [0.16.0](https://github.com/smarter-sh/smarter.sh/compare/v0.15.4...v0.16.0) (2026-11-14)
+
+
+### Features
+
+* **home:** weave the pitch deck's look and graphics into the home page ([19eac37](https://github.com/smarter-sh/smarter.sh/commit/19eac37850fd2bc1006521d3b365b6831e3512d6))
+
 ## [0.15.4](https://github.com/smarter-sh/smarter.sh/compare/v0.15.3...v0.15.4) (2026-11-10)
 
 
