@@ -5,29 +5,39 @@ import {
 } from '@smarter.sh/ui-widgets'
 import PageShell from '@/components/site/PageShell'
 import { ConsoleDashboard } from '@/components/site/ConsoleCard'
-import Hero from './components/Hero'
-import { Problem, WhatIsSmarter, WorksWith } from './components/Story'
+import Cover from './components/story/Cover'
+import { Problem, WorksWith } from './components/Story'
+import OneSentence from './components/story/OneSentence'
 import TryIt from './components/TryIt'
-import { ErpForAi, SafeByDefault, WhatYouBuild } from './components/Governance'
-import { Cta, Faqs, Pilot, WhoItsFor, WhyOpenSource } from './components/Adoption'
+import { SafeByDefault, WhatYouBuild } from './components/Governance'
+import ThirtyDays from './components/story/ThirtyDays'
+import { WhoItsFor, WhyOpenSource } from './components/Adoption'
+import Faqs from './components/story/Faqs'
 import './home.css'
+import './story.css'
 
-// The landing page, laid out as the Smarter web console's dashboard, in its default light mode:
-// rows of cards on the console's grid, with the console's own widgets (@smarter.sh/ui-widgets)
-// where the story calls for them. Below the hero, as below the console's title, is the fact of the
-// day: the same Did you know? fact that the console shows today.
+// The landing page. It opens with the cover of the Smarter pitch deck, a dark band as wide as the
+// window, then lays out as the Smarter web console's dashboard, in its default light mode: rows of
+// cards on the console's grid, with the console's own widgets (@smarter.sh/ui-widgets) where the
+// story calls for them. Below the cover, as below the console's title, is the fact of the day: the
+// same Did you know? fact that the console shows today. Then the story, in its order: the
+// problem, the solution, then the project itself. Where the deck pictures a point the page makes,
+// the card is a dark one in the deck's look (components/story/, story.css).
 const Home = () => {
   return (
     <PageShell>
-      <ConsoleDashboard className="home">
+      <Cover />
+      <ConsoleDashboard className="home home-after-cover">
         <div className="row g-5 g-xl-10">
-          <Hero />
           <div className="col-12">
             <DidYouKnowWidget />
           </div>
-          <WorksWith />
+          {/* the problem */}
           <Problem />
-          <WhatIsSmarter />
+          {/* the solution */}
+          <div className="col-12">
+            <OneSentence />
+          </div>
           <InstructorsWidget className="col-xl-6" />
           <div className="col-xl-6">
             <WhatYouBuild />
@@ -39,15 +49,15 @@ const Home = () => {
           <div id="extend" className="col-xl-6">
             <ExtensionsWidget />
           </div>
-          <ErpForAi />
+          {/* the project: what it works with, how it's licensed and run, who it's for */}
+          <WorksWith />
           <WhyOpenSource />
           <WhoItsFor />
-          <div className="col-xl-6 d-flex flex-column gap-5 gap-xl-10">
-            <Pilot />
-            <Cta />
-          </div>
-          <div className="col-xl-6">
+          <div className="col-12">
             <Faqs />
+          </div>
+          <div className="col-12">
+            <ThirtyDays />
           </div>
         </div>
       </ConsoleDashboard>

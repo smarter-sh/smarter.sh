@@ -32,16 +32,11 @@ describe('pages', () => {
   test('the home page answers what Smarter is and what problem it solves', async () => {
     renderPage(Home)
     expect(
-      screen.getByRole('heading', {
-        level: 1,
-        name: /Learn AI\. Build with AI\. Govern AI\./,
-      })
+      screen.getByRole('heading', { level: 1, name: 'Build AI without engineers' })
     ).toBeInTheDocument()
     expect(screen.getByText('AI is already inside your organization')).toBeInTheDocument()
-    expect(
-      screen.getByText('Two gaps stand between you and the value')
-    ).toBeInTheDocument()
-    expect(screen.getByText('An ERP for AI resources')).toBeInTheDocument()
+    expect(screen.getByText('Three ways to respond')).toBeInTheDocument()
+    expect(screen.getByText('What can leadership see?')).toBeInTheDocument()
     expect(await screen.findByTestId('chat-preview-weather')).toBeInTheDocument()
   })
 

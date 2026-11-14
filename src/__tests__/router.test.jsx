@@ -26,7 +26,7 @@ describe('router', () => {
       expect(
         await screen.findByRole('heading', {
           level: 1,
-          name: /Learn AI\. Build with AI\. Govern AI\./,
+          name: 'Build AI without engineers',
         })
       ).toBeInTheDocument()
     }
