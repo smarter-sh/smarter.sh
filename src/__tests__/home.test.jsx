@@ -21,21 +21,30 @@ beforeEach(() => {
 })
 
 describe('home', () => {
-  test("is a dashboard in the Keen theme's light mode", () => {
+  test("opens with the cover, then is a dashboard in the Keen theme's light mode", () => {
     renderHome()
-    const hero = screen.getByRole('heading', { level: 1 })
-    expect(hero.closest('[data-bs-theme="light"]')).not.toBeNull()
-    expect(hero.closest('[data-bs-theme="dark"]')).toBeNull()
-    expect(hero.closest('.keen')).not.toBeNull()
+    // the cover is the pitch deck's dark band, above the dashboard
+    const hero = screen.getByRole('heading', {
+      level: 1,
+      name: 'Build AI without engineers',
+    })
+    expect(hero.closest('.keen')).toBeNull()
+    const logos = screen.getByRole('region', {
+      name: 'Works with the AI and the platforms you already use',
+    })
+    expect(logos.closest('[data-bs-theme="light"]')).not.toBeNull()
+    expect(logos.closest('[data-bs-theme="dark"]')).toBeNull()
+    expect(logos.closest('.keen')).not.toBeNull()
     for (const title of [
+      'AI is already inside your organization',
+      'Three ways to respond',
       'Works with the AI and the platforms you already use',
       'Smarter, in one sentence',
       'What your people will build',
       'Assistants built on Smarter',
       'Safe by default, not by policy memo',
-      'Questions leadership can finally answer',
       'Free and open source, for everyone',
-      'A practical first step',
+      'Thirty days, with real cases',
       'Common questions',
     ]) {
       expect(screen.getByRole('region', { name: title })).toBeInTheDocument()
@@ -219,35 +228,104 @@ describe('home', () => {
     expect(names.size).toBe(4)
   })
 
-  test('the hero and the closing call to action link to the Slack workspace', () => {
+  test('the hero links to the Slack workspace', () => {
     renderHome()
     const hero = screen.getByRole('region', { name: 'The Smarter Project' })
-    const cta = screen.getByRole('region', { name: 'Get started' })
-    for (const section of [hero, cta]) {
-      const slack = within(section).getByRole('link', { name: /Join us on Slack/ })
-      expect(slack).toHaveAttribute(
-        'href',
-        'https://join.slack.com/t/thesmarterproject/shared_invite/zt-4f0t6v46q-e2c5Of4hS4fBr_XwfQARCw'
-      )
-      expect(slack).toHaveAttribute('target', '_blank')
+    const slack = within(hero).getByRole('link', { name: /Join us on Slack/ })
+    expect(slack).toHaveAttribute(
+      'href',
+      'https://join.slack.com/t/thesmarterproject/shared_invite/zt-4f0t6v46q-e2c5Of4hS4fBr_XwfQARCw'
+    )
+    expect(slack).toHaveAttribute('target', '_blank')
+  })
+
+  test('how to start: thirty days, in four phases, and what you have at the end', () => {
+    renderHome()
+    const card = screen.getByRole('region', { name: 'Thirty days, with real cases' })
+    for (const when of ['Days 1 to 7', 'Days 8 to 14', 'Days 15 to 29', 'Day 30']) {
+      expect(within(card).getByText(when, { selector: 'p' })).toBeInTheDocument()
+    }
+    // the bar's last day is the phases' total
+    expect(within(card).getByText('Day 30', { selector: 'span' })).toBeInTheDocument()
+    expect(within(card).getByText('Real cost and usage data')).toBeInTheDocument()
+  })
+
+  test('the cover pictures the platform: learn, build and govern', () => {
+    renderHome()
+    const cover = screen.getByRole('region', { name: 'The Smarter Project' })
+    expect(
+      within(cover).getByRole('img', { name: 'The Smarter loop: learn, build, govern' })
+    ).toBeInTheDocument()
+    for (const word of ['Simple.', 'Fast.', 'In control.']) {
+      expect(within(cover).getByText(word)).toBeInTheDocument()
+    }
+    expect(within(cover).getByRole('link', { name: 'What is Smarter?' })).toHaveAttribute(
+      'href',
+      '#what-is-smarter'
+    )
+    expect(document.getElementById('what-is-smarter')).not.toBeNull()
+  })
+
+  test('Smarter in one sentence: simple, fast and in control', () => {
+    renderHome()
+    const card = screen.getByRole('region', { name: 'Smarter, in one sentence' })
+    expect(card).toHaveAttribute('id', 'what-is-smarter')
+    expect(
+      within(card).getByRole('heading', {
+        name: /An open-source platform where your people/,
+      })
+    ).toBeInTheDocument()
+    for (const word of ['Simple', 'Fast', 'In control', 'Free and open source']) {
+      expect(within(card).getByText(word)).toBeInTheDocument()
     }
   })
 
-  test('the hero pictures the platform: learn, build and govern', () => {
+  test('the visitor picks one of the three ways to respond', async () => {
+    const user = userEvent.setup()
     renderHome()
-    const platform = screen.getByRole('group', { name: 'What Smarter does' })
-    for (const word of ['Learn', 'Build', 'Govern']) {
-      expect(within(platform).getByText(word)).toBeInTheDocument()
-    }
+    const group = screen.getByRole('group', { name: 'Three ways to respond' })
+    const [ignore, , enable] = within(group).getAllByRole('button')
+    expect(ignore).toHaveAttribute('aria-pressed', 'true')
+    await user.click(enable)
+    expect(enable).toHaveAttribute('aria-pressed', 'true')
+    expect(ignore).toHaveAttribute('aria-pressed', 'false')
     expect(
-      within(platform).getByText(/smarter apply -f weather\.yaml/)
+      screen.getByRole('img', { name: /Now showing: Enable it/ })
     ).toBeInTheDocument()
-    for (const course of ['prompt-engineering', 'ai-governance', 'ai-economics']) {
-      const link = within(platform)
-        .getAllByRole('link')
-        .find((a) => a.getAttribute('href').endsWith(`/micro-courses/${course}.html`))
-      expect(link).toHaveAttribute('target', '_blank')
+  })
+
+  test('the problem pictures what people have already built', () => {
+    renderHome()
+    const problem = screen.getByRole('region', {
+      name: 'AI is already inside your organization',
+    })
+    expect(
+      within(problem).getByRole('img', { name: /Sales bot for quotes/ })
+    ).toBeInTheDocument()
+    expect(within(problem).getAllByRole('listitem')).toHaveLength(3)
+  })
+
+  test('safe by default shows a message that passes, one that is blocked, and its four controls', () => {
+    renderHome()
+    const card = screen.getByRole('region', {
+      name: 'Safe by default, not by policy memo',
+    })
+    expect(
+      within(card).getByRole('list', { name: 'One message’s way through Smarter' })
+    ).toBeInTheDocument()
+    expect(
+      within(card).getByText(/answer delivered · cost 0\.004 USD/)
+    ).toBeInTheDocument()
+    expect(within(card).getByText(/card number detected/)).toBeInTheDocument()
+    for (const name of [
+      'Guardrails on every message',
+      'The AI never holds the passwords',
+      'Spending caps',
+      'A complete record',
+    ]) {
+      expect(within(card).getByRole('link', { name }).getAttribute('href')).toMatch(
+        /^https:\/\/docs\.smarter\.sh\//
+      )
     }
-    expect(screen.queryByRole('img', { name: /Euclid/ })).not.toBeInTheDocument()
   })
 })
