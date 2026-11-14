@@ -6,7 +6,7 @@ Official website: https://smarter.sh/
 
 ## For decision makers
 
-- https://smarter.sh/: what Smarter is, the problem it solves, and a 12-week pilot
+- https://smarter.sh/: what Smarter is, the problem it solves, and how to start in thirty days
 - https://smarter.sh/platform: the platform's capabilities
 - https://smarter.sh/education: teaching AI with Smarter, and 21 free course designs
 - https://smarter.sh/integrations: WordPress, Drupal, Shopify, Google Tag Manager, Docusaurus, MkDocs, Sphinx, VitePress and any web page

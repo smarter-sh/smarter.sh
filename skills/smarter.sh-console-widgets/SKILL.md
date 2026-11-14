@@ -51,7 +51,13 @@ this for every page that uses one. Add new pages there.
   changing the Jest config.
 - **The home page** (`src/app/pages/home/`) is laid out as the console's dashboard, with Keen cards
   and its own `home.css` (every class prefixed `home-`, using Keen's css variables). Change it in
-  that style, not in Tailwind.
+  that style, not in Tailwind. A few parts take the look of the Smarter pitch deck instead
+  (`components/story/`, `story.css`, scoped to `.home-dark`): the cover above the dashboard, and
+  the dark cards for the problem, Smarter in one sentence, Safe by default and the thirty
+  days. Their entrances and canvases
+  start as each card scrolls into view (`motion.js`, `scenes.js`). Use that look only where the
+  deck pictures a point the page already makes; the page's story and its cards stay. Jest has no
+  IntersectionObserver, so tests see each card's final state.
 - **Upgrading `@smarter.sh/ui-widgets`:** read its changelog in the smarter repository, run the
   tests, then build and look at each page that uses a widget (`grep -rn "ui-widgets" src`), since a
   widget may use Keen classes the safelist doesn't know.

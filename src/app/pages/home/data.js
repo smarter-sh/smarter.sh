@@ -15,43 +15,56 @@ export const situation = [
   },
 ]
 
-export const gaps = [
+// Three ways to respond to people building with AI on their own, from the pitch deck, and what
+// the dots on its canvas are doing in each.
+export const responses = [
   {
-    icon: 'lucide:graduation-cap',
-    title: 'The literacy gap',
-    accent: 'emerald',
-    text: 'Most people don’t yet know what AI can do, what it can’t, or how to use it safely with real information.',
+    accent: 'amber',
+    title: 'Ignore it',
+    text: 'Everyone keeps building on their own. Nothing is shared and nobody sees it.',
   },
   {
-    icon: 'lucide:eye-off',
-    title: 'The control gap',
-    accent: 'sky',
-    text: 'Leadership can’t see which AI is in use, who owns it, what data it touches, or what it costs.',
+    accent: 'gray',
+    title: 'Ban it',
+    text: 'Some people stop. Others go around the rule. The business slows down.',
+  },
+  {
+    accent: 'green',
+    title: 'Enable it',
+    text: 'Give people one place to build. The easy path is also the governed one.',
   },
 ]
+export const flowLabels = {
+  noRecord: 'No support, no record',
+  banned: 'Banned',
+  stopped: 'Stopped',
+  around: 'Going around the rule',
+  onePlace: 'One place to build',
+  rules: 'Rules',
+  live: 'Live, with a record',
+}
 
-export const journey = [
+export const oneSentenceWords = [
   {
-    step: 'Phase 1',
-    icon: 'lucide:book-open',
-    title: 'Literacy',
-    accent: 'emerald',
-    text: 'Staff learn how AI works by building with it, from the first class. No programming required.',
+    word: 'Simple',
+    accent: 'green',
+    text: 'An AI app is a short text file. You fill it in like a form. No code.',
   },
   {
-    step: 'Phase 2',
-    icon: 'lucide:rocket',
-    title: 'Production',
-    accent: 'violet',
-    text: 'The same people build real solutions for the organization, on the same platform. Nothing is rewritten.',
+    word: 'Fast',
+    accent: 'amber',
+    text: 'The file a person writes on day one is the one that goes live. Nothing is rewritten.',
   },
   {
-    step: 'The result',
-    icon: 'lucide:layout-grid',
-    title: 'An ERP for AI',
-    accent: 'sky',
-    text: 'One system of record for every AI resource you own: who built it, what it reaches, what it costs.',
+    word: 'In control',
+    accent: 'blue',
+    text: 'Rules, budgets and a full record apply to every app, whoever built it.',
   },
+]
+export const oneSentenceFacts = [
+  'Free and open source',
+  'Runs on your infrastructure',
+  'Works with the models you already use',
 ]
 
 export const examples = [
@@ -106,37 +119,6 @@ export const safety = [
     text: 'Every conversation is recorded, and traceable to the person and budget that allowed it.',
     href: `${DOCS}/smarter-resources/smarter-prompt.html`,
   },
-]
-
-export const resources = [
-  'AI models and vendors',
-  'Credentials',
-  'Data sources',
-  'Tools',
-  'Guardrails',
-  'Budgets',
-  'AI assistants',
-  'Conversations',
-]
-
-export const erp = [
-  ['Approved suppliers', 'Approved AI vendors, and models you host yourself'],
-  [
-    'Budgets and cost centers',
-    'Spending caps, and the cost of every conversation by team',
-  ],
-  ['Roles and permissions', 'Who may build, use and change each AI resource'],
-  ['Asset register', 'Every assistant, data connection and tool, each with an owner'],
-  ['Audit trail', 'Every conversation, traced to who authorized it and what it cost'],
-]
-
-export const questions = [
-  'What AI are we running, and who owns it?',
-  'What data can each assistant reach?',
-  'What did it say, and why?',
-  'What is it costing us, and where?',
-  'Which vendors do we depend on, and could we switch?',
-  'Is it following our policies?',
 ]
 
 export const openSource = [
@@ -201,27 +183,6 @@ export const audiences = [
   },
 ]
 
-export const pilot = [
-  {
-    when: 'Weeks 1–4',
-    title: 'Pilot cohort',
-    accent: 'emerald',
-    text: '20–30 staff from several departments take one course on a shared installation.',
-  },
-  {
-    when: 'Weeks 5–10',
-    title: 'First real solution',
-    accent: 'violet',
-    text: 'The cohort builds one assistant for a problem they chose, and puts it in front of real users.',
-  },
-  {
-    when: 'Week 12',
-    title: 'Governance review',
-    accent: 'sky',
-    text: 'Leadership reviews actual costs, usage and the audit trail, and decides how far to scale.',
-  },
-]
-
 export const faqsData = [
   {
     question: 'What is Smarter, in plain terms?',
@@ -242,6 +203,11 @@ export const faqsData = [
     question: 'Where does our data go?',
     answer:
       'Smarter runs on your own computers or in your own cloud account, so conversations, documents and credentials stay there. Questions are sent only to the AI vendors you approve, and, for sensitive work, Smarter can use AI models that you host yourself, so the data never leaves your network.',
+  },
+  {
+    question: 'What can leadership see?',
+    answer:
+      'Every AI resource is a named, owned, recorded item, so leadership can answer the questions it usually can’t: what AI the organization is running and who owns it, what data each assistant can reach, what it said and why, what it is costing and where, which vendors the organization depends on and whether it could switch, and whether it is following policy.',
   },
   {
     question: 'Which AI vendors does it work with?',
@@ -273,4 +239,90 @@ export const logos = [
   { icon: 'simple-icons:drupal', label: 'Drupal' },
   { icon: 'simple-icons:shopify', label: 'Shopify' },
   { icon: 'simple-icons:postgresql', label: 'PostgreSQL' },
+]
+
+// From the Smarter pitch deck, woven into the page's own story (components/story/).
+
+// The cover's highlights, under its headline.
+export const highlights = [
+  { icon: 'lucide:github', text: 'Free and open source' },
+  { icon: 'lucide:server', text: 'Runs on your infrastructure' },
+  { icon: 'lucide:graduation-cap', text: 'In teaching use at UBC' },
+]
+
+// What people have already built on their own, named on the dot grid at these places (fractions
+// of its width and height), each on its own row so that the labels don't overlap in a half-width
+// card. A phone shows the first four.
+export const alreadyBuilt = [
+  { text: 'Sales bot for quotes', x: 0.22, y: 0.3 },
+  { text: 'Agent connected to the ERP', x: 0.42, y: 0.5 },
+  { text: 'GPT with the price list', x: 0.88, y: 0.67, left: true },
+  { text: 'Script that sends emails', x: 0.12, y: 0.84 },
+  { text: 'Macro that summarizes contracts', x: 0.12, y: 1 },
+  { text: 'Invoice automation', x: 0.9, y: 0.17, left: true },
+]
+
+// One message's way through Smarter, and the record it leaves: a question that passes, then one
+// that a guardrail stops.
+export const pipeline = [
+  { title: 'Person', text: 'Types a question', accent: 'amber' },
+  { title: 'Guardrail', text: 'Checks the message', accent: 'blue' },
+  { title: 'Smarter', text: 'Uses the stored credential', accent: 'blue' },
+  { title: 'AI model', text: 'Generates the answer', accent: 'amber' },
+  { title: 'Guardrail', text: 'Checks the reply', accent: 'blue' },
+  { title: 'Answer', text: 'Delivered and recorded', accent: 'green' },
+]
+export const pipelineLog = {
+  ok: [
+    ['09:14:02', 'ana.r · hr-helpdesk · message received'],
+    ['09:14:02', 'guardrail in · nothing found'],
+    ['09:14:02', 'smarter · stored credential applied'],
+    ['09:14:04', 'model · answer generated'],
+    ['09:14:04', 'guardrail out · nothing found'],
+    ['09:14:04', 'answer delivered · cost 0.004 USD', 'ok'],
+  ],
+  blocked: [
+    ['09:15:31', 'luis.m · sales-quotes · message received'],
+    ['09:15:31', 'guardrail in · card number detected', 'bad'],
+    ['09:15:31', 'message blocked · event logged', 'bad'],
+  ],
+}
+
+// How to start, in thirty days: the phases, of so many days each, and what you have at the end.
+export const thirtyDays = [
+  {
+    days: 7,
+    when: 'Days 1 to 7',
+    accent: 'blue',
+    title: 'Platform ready',
+    text: 'Smarter is installed. IT sets roles, rules and budgets.',
+  },
+  {
+    days: 7,
+    when: 'Days 8 to 14',
+    accent: 'green',
+    title: 'Your team learns by building',
+    text: 'A hands-on course for business people. Each one builds a first AI app.',
+  },
+  {
+    days: 15,
+    when: 'Days 15 to 29',
+    accent: 'amber',
+    title: 'Real cases',
+    text: 'The team builds apps for the problems it chose, with company data. Real users try them.',
+  },
+  {
+    days: 1,
+    when: 'Day 30',
+    accent: 'purple',
+    title: 'Review with leadership',
+    text: 'The team shows what it built. Leadership sees real costs and usage, and decides how far to scale.',
+  },
+]
+export const thirtyDayOutcomes = [
+  'Platform running',
+  'Rules and budgets set',
+  'A team that can build',
+  'Real apps working',
+  'Real cost and usage data',
 ]
