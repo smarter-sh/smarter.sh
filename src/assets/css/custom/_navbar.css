@@ -2,8 +2,10 @@
    app-header): white, with the header's soft shadow, dark links and the brand color for the
    active and hovered one. It is opaque at every scroll position. */
 
+/* visible overflow on a desktop, so a dropdown menu's panel (NavDropdown) can hang below the
+   bar; on a phone the menu opens inside the bar, which stays clipped */
 .navbar {
-    @apply block overflow-hidden fixed top-0 inset-x-0 z-40 w-full bg-white shadow-header transition-all duration-500;
+    @apply block overflow-hidden lg:overflow-visible fixed top-0 inset-x-0 z-40 w-full bg-white shadow-header transition-all duration-500;
 }
 
 .navbar nav {
