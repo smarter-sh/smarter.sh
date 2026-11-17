@@ -1,72 +1,5 @@
 import { DOCS } from '@/common/constants'
 
-export const situation = [
-  {
-    icon: 'lucide:smartphone',
-    text: 'Staff use public AI tools with work information, often on personal accounts.',
-  },
-  {
-    icon: 'lucide:shopping-cart',
-    text: 'Departments buy AI features one vendor at a time, each with its own rules.',
-  },
-  {
-    icon: 'lucide:circle-help',
-    text: 'Few leaders can say what it all costs, what data it saw, or what it said.',
-  },
-]
-
-// Three ways to respond to people building with AI on their own, from the pitch deck, and what
-// the dots on its canvas are doing in each.
-export const responses = [
-  {
-    accent: 'amber',
-    title: 'Ignore it',
-    text: 'Everyone keeps building on their own. Nothing is shared and nobody sees it.',
-  },
-  {
-    accent: 'gray',
-    title: 'Ban it',
-    text: 'Some people stop. Others go around the rule. The business slows down.',
-  },
-  {
-    accent: 'green',
-    title: 'Enable it',
-    text: 'Give people one place to build. The easy path is also the governed one.',
-  },
-]
-export const flowLabels = {
-  noRecord: 'No support, no record',
-  banned: 'Banned',
-  stopped: 'Stopped',
-  around: 'Going around the rule',
-  onePlace: 'One place to build',
-  rules: 'Rules',
-  live: 'Live, with a record',
-}
-
-export const oneSentenceWords = [
-  {
-    word: 'Simple',
-    accent: 'green',
-    text: 'An AI app is a short text file. You fill it in like a form. No code.',
-  },
-  {
-    word: 'Fast',
-    accent: 'amber',
-    text: 'The file a person writes on day one is the one that goes live. Nothing is rewritten.',
-  },
-  {
-    word: 'In control',
-    accent: 'blue',
-    text: 'Rules, budgets and a full record apply to every app, whoever built it.',
-  },
-]
-export const oneSentenceFacts = [
-  'Free and open source',
-  'Runs on your infrastructure',
-  'Works with the models you already use',
-]
-
 export const examples = [
   {
     icon: 'lucide:book-marked',
@@ -248,18 +181,6 @@ export const highlights = [
   { icon: 'lucide:github', text: 'Free and open source' },
   { icon: 'lucide:server', text: 'Runs on your infrastructure' },
   { icon: 'lucide:graduation-cap', text: 'In teaching use at UBC' },
-]
-
-// What people have already built on their own, named on the dot grid at these places (fractions
-// of its width and height), each on its own row so that the labels don't overlap in a half-width
-// card. A phone shows the first four.
-export const alreadyBuilt = [
-  { text: 'Sales bot for quotes', x: 0.22, y: 0.3 },
-  { text: 'Agent connected to the ERP', x: 0.42, y: 0.5 },
-  { text: 'GPT with the price list', x: 0.88, y: 0.67, left: true },
-  { text: 'Script that sends emails', x: 0.12, y: 0.84 },
-  { text: 'Macro that summarizes contracts', x: 0.12, y: 1 },
-  { text: 'Invoice automation', x: 0.9, y: 0.17, left: true },
 ]
 
 // One message's way through Smarter, and the record it leaves: a question that passes, then one

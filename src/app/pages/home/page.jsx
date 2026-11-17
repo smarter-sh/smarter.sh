@@ -7,8 +7,7 @@ import PageShell from '@/components/site/PageShell'
 import { ConsoleDashboard } from '@/components/site/ConsoleCard'
 import Cover from './components/story/Cover'
 import Video from './components/story/Video'
-import { Problem, WorksWith } from './components/Story'
-import OneSentence from './components/story/OneSentence'
+import { WorksWith } from './components/Story'
 import TryIt from './components/TryIt'
 import { SafeByDefault, WhatYouBuild } from './components/Governance'
 import ThirtyDays from './components/story/ThirtyDays'
@@ -21,9 +20,10 @@ import './story.css'
 // window, then lays out as the Smarter web console's dashboard, in its default light mode: rows of
 // cards on the console's grid, with the console's own widgets (@smarter.sh/ui-widgets) where the
 // story calls for them. Below the cover, as below the console's title, is the fact of the day: the
-// same Did you know? fact that the console shows today, then the five-minute explainer video.
-// Then the story, in its order: the problem, the solution, then the project itself. Where the deck pictures a point the page makes,
-// the card is a dark one in the deck's look (components/story/, story.css).
+// same Did you know? fact that the console shows today, then the five-minute explainer video,
+// which tells the problem and the solution. The cards after it show the solution at work, then
+// the project itself. Where the deck pictures a point the page makes, the card is a dark one in
+// the deck's look (components/story/, story.css).
 const Home = () => {
   return (
     <PageShell>
@@ -33,16 +33,11 @@ const Home = () => {
           <div className="col-12">
             <DidYouKnowWidget />
           </div>
-          {/* the whole story, in five minutes of video */}
+          {/* the problem and the solution, in five minutes of video */}
           <div className="col-12">
             <Video />
           </div>
-          {/* the problem */}
-          <Problem />
-          {/* the solution */}
-          <div className="col-12">
-            <OneSentence />
-          </div>
+          {/* the solution at work */}
           <InstructorsWidget className="col-xl-6" />
           <div className="col-xl-6">
             <WhatYouBuild />
