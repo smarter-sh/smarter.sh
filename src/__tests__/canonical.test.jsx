@@ -40,5 +40,10 @@ describe('canonical url', () => {
         document.head.querySelector('meta[property="og:url"]').getAttribute('content')
       ).toBe(url)
     })
+    // A case study's manifest lab is still reading from GitHub, which doesn't answer in tests.
+    // Wait for it to give up, or its state update lands after the test, outside act().
+    await waitFor(() =>
+      expect(screen.queryByText(/from GitHub…/)).not.toBeInTheDocument()
+    )
   })
 })

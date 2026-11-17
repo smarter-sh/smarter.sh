@@ -46,7 +46,7 @@ describe('the guardrails case study', () => {
     expect(screen.getByRole('dialog')).toHaveTextContent('fifteen well-known injection')
   })
 
-  test('the pipeline lab shows each verdict, and changes with the text and monitor mode', () => {
+  test('the pipeline lab shows each verdict, and changes with the text and monitor mode', async () => {
     renderPage()
     const input = screen.getByLabelText('The visitor’s message')
     const stage = input.closest('div')
@@ -80,6 +80,10 @@ describe('the guardrails case study', () => {
     expect(
       within(output).getByText(/Try this: <img src=x \[script removed\]"alert\(1\)">/)
     ).toBeInTheDocument()
+
+    // the page's manifest lab gives up on GitHub, which doesn't answer in tests; waiting for it
+    // keeps its state update inside the test, and inside act()
+    expect(await screen.findByText(/GitHub didn’t answer/)).toBeInTheDocument()
   })
 })
 

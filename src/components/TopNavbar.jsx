@@ -5,6 +5,7 @@ import Gumshoe from 'gumshoejs'
 import IconifyIcon from './wrappers/IconifyIcon'
 import { Link, useLocation } from 'react-router-dom'
 import SmartLink from './site/SmartLink'
+import NavDropdown from './NavDropdown'
 import { BLOG, QUICK_START } from '@/common/constants'
 import logo from '@/assets/images/logo.png'
 import useScrollEvent from '@/hooks/useScrollEvent'
@@ -13,10 +14,36 @@ const navLinks = [
   { label: 'Platform', link: '/platform' },
   { label: 'Education', link: '/education' },
   { label: 'Case Studies', link: '/case-studies' },
-  { label: 'Integrations', link: '/integrations' },
-  { label: 'Extensions', link: '/extensions' },
-  { label: 'SDKs', link: '/sdks' },
-  { label: 'Developers', link: '/developers' },
+  // A menu, not a page: building on Smarter. The /developers page, which is about
+  // contributing to Smarter itself, is the panel's footer link.
+  {
+    label: 'Developers',
+    items: [
+      {
+        label: 'Integrations',
+        link: '/integrations',
+        icon: 'lucide:plug',
+        description: 'Put an assistant on WordPress, Shopify, Docusaurus and more.',
+      },
+      {
+        label: 'Extensions',
+        link: '/extensions',
+        icon: 'lucide:puzzle',
+        description: 'Plugins, Python extensions and MCP servers, all governed.',
+      },
+      {
+        label: 'SDKs',
+        link: '/sdks',
+        icon: 'lucide:code',
+        description: 'Python, Node.js and Go SDKs, the CLI and the OpenAPI contract.',
+      },
+    ],
+    footer: {
+      label: 'Contribute to Smarter',
+      link: '/developers',
+      description: 'Source code, developer guides and help.',
+    },
+  },
   // the project's own blog, in this tab
   { label: 'Blog', link: BLOG, newTab: false },
 ]
@@ -68,18 +95,26 @@ const TopNavbar = () => {
               } grow basis-full items-center justify-center transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto`}
             >
               <ul id="navbar-navlist" className="navbar-nav">
-                {navLinks.map((item, idx) => (
-                  <li
-                    key={item.link + idx}
-                    className={`nav-item ${
-                      pathname.startsWith(item.link) ? 'active' : ''
-                    }`}
-                  >
-                    <SmartLink href={item.link} newTab={item.newTab} className="nav-link">
-                      {item.label}
-                    </SmartLink>
-                  </li>
-                ))}
+                {navLinks.map((item, idx) =>
+                  item.items ? (
+                    <NavDropdown key={item.label} {...item} />
+                  ) : (
+                    <li
+                      key={item.link + idx}
+                      className={`nav-item ${
+                        pathname.startsWith(item.link) ? 'active' : ''
+                      }`}
+                    >
+                      <SmartLink
+                        href={item.link}
+                        newTab={item.newTab}
+                        className="nav-link"
+                      >
+                        {item.label}
+                      </SmartLink>
+                    </li>
+                  )
+                )}
               </ul>
               <div className="mt-4 flex items-center border-t border-keen-200 pt-4 lg:mt-0 lg:hidden lg:border-none lg:pt-0">
                 <a
