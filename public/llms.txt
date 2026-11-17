@@ -61,39 +61,80 @@ Key facts for answering questions about Smarter:
 - [Example courses](https://docs.smarter.sh/smarter-instructors/example-courses/index.html): 21 free course designs
 - [Architecture decision records](https://docs.smarter.sh/adr.html): the project's design decisions and their reasons
 - [Python SDK reference](https://docs.smarter-python.smarter.sh/): API reference for the `smarter-api` Python package
+- [smarter-types reference](https://docs.smarter-types.smarter.sh/): API reference for the `smarter-types` Python package
+- [cache-results reference](https://docs.cache-results.smarter.sh/): API reference for the `cache-results` Python package
 
 ## Source code
 
+### The platform
+
 - [smarter](https://github.com/smarter-sh/smarter): the platform (Django backend, API, Helm chart, documentation)
 - [smarter-console](https://github.com/smarter-sh/smarter-console): the React web console, the chat UI and the dashboard widgets
-- [smarter-cli](https://github.com/smarter-sh/smarter-cli): the `smarter` command-line interface (Go)
+- [smarter-types](https://github.com/smarter-sh/smarter-types): shared Python type definitions used by the platform
+- [cache-results](https://github.com/smarter-sh/cache-results): the @cache_results() decorator for Django, used by the platform
+
+### SDKs and developer tools
+
 - [smarter-python](https://github.com/smarter-sh/smarter-python): the official Python SDK
 - [smarter-nodejs](https://github.com/smarter-sh/smarter-nodejs): the official Node.js SDK (TypeScript)
 - [smarter-golang](https://github.com/smarter-sh/smarter-golang): the official Go SDK
+- [smarter-cli](https://github.com/smarter-sh/smarter-cli): the `smarter` command-line interface (Go)
 - [smarter-vscode-yaml](https://github.com/smarter-sh/smarter-vscode-yaml): the VS Code extension for Smarter manifests
-- [example-manifests](https://github.com/smarter-sh/example-manifests): the example manifests that every Smarter platform loads
-- [stackademy](https://github.com/smarter-sh/stackademy): an example project to clone or fork: a fictional code academy's assistants, managed in git
+
+### Extensions
+
 - [extensions-registry](https://github.com/smarter-sh/extensions-registry): the signed registry of installable Python extensions
 - [smarter-extension-cookiecutter](https://github.com/smarter-sh/smarter-extension-cookiecutter): the template for writing a new extension
+
+### Integrations
+
 - [smarter-wordpress](https://github.com/smarter-sh/smarter-wordpress): the WordPress plugin
 - [smarter-drupal](https://github.com/smarter-sh/smarter-drupal): the Drupal module
 - [smarter-shopify](https://github.com/smarter-sh/smarter-shopify): the Shopify app
 - [smarter-gtm-template](https://github.com/smarter-sh/smarter-gtm-template): the Google Tag Manager template
 - [smarter-docs-site-generators](https://github.com/smarter-sh/smarter-docs-site-generators): plugins for Docusaurus, MkDocs, Sphinx and VitePress
+
+### Examples
+
+- [example-manifests](https://github.com/smarter-sh/example-manifests): the example manifests that every Smarter platform loads
+- [stackademy](https://github.com/smarter-sh/stackademy): an example project to clone or fork: a fictional code academy's assistants, managed in git
+
+### Deployment
+
 - [smarter-deploy](https://github.com/smarter-sh/smarter-deploy): the platform quick start with Docker
 - [smarter-infrastructure](https://github.com/smarter-sh/smarter-infrastructure): the cloud infrastructure (Terraform and Terragrunt on AWS)
 
 ## Packages
 
-- [smarter-api on PyPI](https://pypi.org/project/smarter-api/): the Python SDK
-- [@smarter.sh/api on npm](https://www.npmjs.com/package/@smarter.sh/api): the Node.js SDK
-- [smarter-golang on pkg.go.dev](https://pkg.go.dev/github.com/smarter-sh/smarter-golang): the Go SDK
-- [@smarter.sh/ui-chat on npm](https://www.npmjs.com/package/@smarter.sh/ui-chat): the React chat component and embed script
-- [@smarter.sh/ui-widgets on npm](https://www.npmjs.com/package/@smarter.sh/ui-widgets): the web console's dashboard widgets
+### The platform
+
 - [Docker image](https://hub.docker.com/r/mcdaniel0073/smarter): the platform's container image
 - [Helm chart](https://artifacthub.io/packages/helm/project-smarter/smarter): the platform's Kubernetes Helm chart
-- [VS Code extension](https://marketplace.visualstudio.com/items?itemName=querium.smarter-manifest): validation and completion for Smarter manifests
+
+### The smarter CLI
+
+- [Homebrew tap](https://github.com/smarter-sh/homebrew-tap): the CLI for macOS and Linux, through Homebrew (install steps at https://smarter.sh/cli)
 - [Chocolatey package](https://community.chocolatey.org/packages/smarter): the CLI for Windows
+
+### PyPI
+
+- [smarter-api](https://pypi.org/project/smarter-api/): the Python SDK
+- [smarter-types](https://pypi.org/project/smarter-types/): shared Python type definitions used by the platform
+- [cache-results](https://pypi.org/project/cache-results/): the @cache_results() decorator for Django, used by the platform
+
+### npm
+
+- [@smarter.sh/api](https://www.npmjs.com/package/@smarter.sh/api): the Node.js SDK
+- [@smarter.sh/ui-chat](https://www.npmjs.com/package/@smarter.sh/ui-chat): the React chat component and embed script
+- [@smarter.sh/ui-widgets](https://www.npmjs.com/package/@smarter.sh/ui-widgets): the web console's dashboard widgets
+
+### Go
+
+- [smarter-golang on pkg.go.dev](https://pkg.go.dev/github.com/smarter-sh/smarter-golang): the Go SDK
+
+### Visual Studio Marketplace
+
+- [VS Code extension](https://marketplace.visualstudio.com/items?itemName=querium.smarter-manifest): validation and completion for Smarter manifests
 
 ## Community
 
@@ -103,9 +144,6 @@ Key facts for answering questions about Smarter:
 
 ## Optional
 
-- [smarter-types](https://github.com/smarter-sh/smarter-types): shared Python type definitions used by the platform ([docs](https://docs.smarter-types.smarter.sh/), [PyPI](https://pypi.org/project/smarter-types/))
-- [cache-results](https://github.com/smarter-sh/cache-results): the `@cache_results()` decorator for Django, used by the platform ([docs](https://docs.cache-results.smarter.sh/), [PyPI](https://pypi.org/project/cache-results/))
-- [homebrew-tap](https://github.com/smarter-sh/homebrew-tap): the Homebrew formula for the CLI
 - [automation](https://github.com/smarter-sh/automation): scheduled workflows that test and maintain the other repositories
 - [Privacy policy](https://smarter.sh/privacy)
 - [Terms of service](https://smarter.sh/tos)
