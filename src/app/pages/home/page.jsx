@@ -6,6 +6,7 @@ import {
 import PageShell from '@/components/site/PageShell'
 import { ConsoleDashboard } from '@/components/site/ConsoleCard'
 import Cover from './components/story/Cover'
+import Video from './components/story/Video'
 import { Problem, WorksWith } from './components/Story'
 import OneSentence from './components/story/OneSentence'
 import TryIt from './components/TryIt'
@@ -20,8 +21,8 @@ import './story.css'
 // window, then lays out as the Smarter web console's dashboard, in its default light mode: rows of
 // cards on the console's grid, with the console's own widgets (@smarter.sh/ui-widgets) where the
 // story calls for them. Below the cover, as below the console's title, is the fact of the day: the
-// same Did you know? fact that the console shows today. Then the story, in its order: the
-// problem, the solution, then the project itself. Where the deck pictures a point the page makes,
+// same Did you know? fact that the console shows today, then the five-minute explainer video.
+// Then the story, in its order: the problem, the solution, then the project itself. Where the deck pictures a point the page makes,
 // the card is a dark one in the deck's look (components/story/, story.css).
 const Home = () => {
   return (
@@ -31,6 +32,10 @@ const Home = () => {
         <div className="row g-5 g-xl-10">
           <div className="col-12">
             <DidYouKnowWidget />
+          </div>
+          {/* the whole story, in five minutes of video */}
+          <div className="col-12">
+            <Video />
           </div>
           {/* the problem */}
           <Problem />

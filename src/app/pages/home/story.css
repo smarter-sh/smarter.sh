@@ -496,6 +496,24 @@
   line-height: 1.4;
 }
 
+/* Smarter in five minutes: the explainer video, 16:9 at every width */
+.home-dark .home-video {
+  position: relative;
+  width: 100%;
+  max-width: 60rem;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border-radius: 0.75rem;
+  background: #000;
+}
+.home-dark .home-video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
 /* Smarter in one sentence: the definition, its three words, three facts */
 .home-dark .home-dark-sentence {
   max-width: 62rem;

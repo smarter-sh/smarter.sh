@@ -266,6 +266,18 @@ describe('home', () => {
     expect(document.getElementById('what-is-smarter')).not.toBeNull()
   })
 
+  test('the explainer video plays from YouTube, lazily and without cookies', () => {
+    renderHome()
+    const card = screen.getByRole('region', { name: 'Smarter, in five minutes' })
+    const player = within(card).getByTitle('The Smarter Project, in five minutes')
+    expect(player).toHaveAttribute(
+      'src',
+      'https://www.youtube-nocookie.com/embed/u82i4m7a6VQ'
+    )
+    expect(player).toHaveAttribute('loading', 'lazy')
+    expect(player).toHaveAttribute('allowfullscreen')
+  })
+
   test('Smarter in one sentence: simple, fast and in control', () => {
     renderHome()
     const card = screen.getByRole('region', { name: 'Smarter, in one sentence' })
