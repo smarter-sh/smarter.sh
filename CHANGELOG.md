@@ -1,3 +1,10 @@
+## [0.16.2](https://github.com/smarter-sh/smarter.sh/compare/v0.16.1...v0.16.2) (2026-11-17)
+
+
+### Bug Fixes
+
+* **site:** group llms.txt repos and packages, move core out of optional ([afb4a21](https://github.com/smarter-sh/smarter.sh/commit/afb4a219d74a9f6db4b42c6ea5adb710d3ad5499))
+
 ## [0.16.1](https://github.com/smarter-sh/smarter.sh/compare/v0.16.0...v0.16.1) (2026-11-17)
 
 
