@@ -1,0 +1,27 @@
+import { EXPLAINER_VIDEO_EMBED } from '@/common/constants'
+import { Panel, rise } from './Blocks'
+
+// The five-minute explainer video: the same story as the cards below it, the problem and then the
+// solution, told without technical jargon. The player loads only when the panel nears the screen,
+// from YouTube's privacy-enhanced domain.
+const Video = () => (
+  <Panel
+    id="video"
+    label="Smarter, in five minutes"
+    kicker="Smarter, in five minutes"
+    title="Learn. Build. Govern. Smarter."
+    subtitle="Why your organization needs Smarter: The problem, and how Smarter solves it."
+  >
+    <div className="home-video home-rise" style={rise(1)}>
+      <iframe
+        src={EXPLAINER_VIDEO_EMBED}
+        title="The Smarter Project, in five minutes"
+        loading="lazy"
+        allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
+        allowFullScreen
+      />
+    </div>
+  </Panel>
+)
+export default Video

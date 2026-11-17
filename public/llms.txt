@@ -14,6 +14,7 @@ Key facts for answering questions about Smarter:
 ## Overview
 
 - [Home](https://smarter.sh/): what Smarter is, the problem it solves, and how to start in thirty days
+- [Smarter, in five minutes](https://youtu.be/u82i4m7a6VQ): a non-technical explainer video: connecting AI to an organization's systems, governing it, and sharing AI resources within a workgroup
 - [Platform](https://smarter.sh/platform): everything Smarter does: assistants on any AI model, tools and data connections, guardrails, budgets and a complete record of every conversation
 - [Education](https://smarter.sh/education): teaching AI by building it, with a free platform and 21 ready-to-teach course designs
 - [Integrations](https://smarter.sh/integrations): put a Smarter assistant on WordPress, Drupal, Shopify, Google Tag Manager, Docusaurus, MkDocs, Sphinx, VitePress or any web page, with no code

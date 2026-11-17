@@ -20,3 +20,8 @@ export const SLACK =
   'https://join.slack.com/t/thesmarterproject/shared_invite/zt-4f0t6v46q-e2c5Of4hS4fBr_XwfQARCw'
 // An example project to clone or fork: the manifests of a fictional code academy's assistants, managed in git.
 export const STACKADEMY = `${GITHUB}/stackademy`
+// The five-minute explainer video on YouTube: the problem and the solution, with no technical
+// jargon. EXPLAINER_VIDEO_EMBED is its privacy-enhanced player, which sets no cookies until it plays.
+export const EXPLAINER_VIDEO_ID = 'u82i4m7a6VQ'
+export const EXPLAINER_VIDEO = `https://youtu.be/${EXPLAINER_VIDEO_ID}`
+export const EXPLAINER_VIDEO_EMBED = `https://www.youtube-nocookie.com/embed/${EXPLAINER_VIDEO_ID}`
