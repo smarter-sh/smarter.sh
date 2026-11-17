@@ -34,8 +34,8 @@ describe('pages', () => {
     expect(
       screen.getByRole('heading', { level: 1, name: 'Build AI without engineers' })
     ).toBeInTheDocument()
-    expect(screen.getByText('AI is already inside your organization')).toBeInTheDocument()
-    expect(screen.getByText('Three ways to respond')).toBeInTheDocument()
+    // the problem and the solution are told by the explainer video
+    expect(screen.getByTitle('The Smarter Project, in five minutes')).toBeInTheDocument()
     expect(screen.getByText('What can leadership see?')).toBeInTheDocument()
     expect(await screen.findByTestId('chat-preview-weather')).toBeInTheDocument()
   })

@@ -36,10 +36,7 @@ describe('home', () => {
     expect(logos.closest('[data-bs-theme="dark"]')).toBeNull()
     expect(logos.closest('.keen')).not.toBeNull()
     for (const title of [
-      'AI is already inside your organization',
-      'Three ways to respond',
       'Works with the AI and the platforms you already use',
-      'Smarter, in one sentence',
       'What your people will build',
       'Assistants built on Smarter',
       'Safe by default, not by policy memo',
@@ -261,9 +258,9 @@ describe('home', () => {
     }
     expect(within(cover).getByRole('link', { name: 'What is Smarter?' })).toHaveAttribute(
       'href',
-      '#what-is-smarter'
+      '#video'
     )
-    expect(document.getElementById('what-is-smarter')).not.toBeNull()
+    expect(document.getElementById('video')).not.toBeNull()
   })
 
   test('the explainer video plays from YouTube, lazily and without cookies', () => {
@@ -276,45 +273,6 @@ describe('home', () => {
     )
     expect(player).toHaveAttribute('loading', 'lazy')
     expect(player).toHaveAttribute('allowfullscreen')
-  })
-
-  test('Smarter in one sentence: simple, fast and in control', () => {
-    renderHome()
-    const card = screen.getByRole('region', { name: 'Smarter, in one sentence' })
-    expect(card).toHaveAttribute('id', 'what-is-smarter')
-    expect(
-      within(card).getByRole('heading', {
-        name: /An open-source platform where your people/,
-      })
-    ).toBeInTheDocument()
-    for (const word of ['Simple', 'Fast', 'In control', 'Free and open source']) {
-      expect(within(card).getByText(word)).toBeInTheDocument()
-    }
-  })
-
-  test('the visitor picks one of the three ways to respond', async () => {
-    const user = userEvent.setup()
-    renderHome()
-    const group = screen.getByRole('group', { name: 'Three ways to respond' })
-    const [ignore, , enable] = within(group).getAllByRole('button')
-    expect(ignore).toHaveAttribute('aria-pressed', 'true')
-    await user.click(enable)
-    expect(enable).toHaveAttribute('aria-pressed', 'true')
-    expect(ignore).toHaveAttribute('aria-pressed', 'false')
-    expect(
-      screen.getByRole('img', { name: /Now showing: Enable it/ })
-    ).toBeInTheDocument()
-  })
-
-  test('the problem pictures what people have already built', () => {
-    renderHome()
-    const problem = screen.getByRole('region', {
-      name: 'AI is already inside your organization',
-    })
-    expect(
-      within(problem).getByRole('img', { name: /Sales bot for quotes/ })
-    ).toBeInTheDocument()
-    expect(within(problem).getAllByRole('listitem')).toHaveLength(3)
   })
 
   test('safe by default shows a message that passes, one that is blocked, and its four controls', () => {

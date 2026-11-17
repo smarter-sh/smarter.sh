@@ -1,3 +1,10 @@
+## [0.16.4](https://github.com/smarter-sh/smarter.sh/compare/v0.16.3...v0.16.4) (2026-11-17)
+
+
+### Bug Fixes
+
+* **home:** remove the three story panels that the video now tells ([9db1b7b](https://github.com/smarter-sh/smarter.sh/commit/9db1b7ba11c586583b927336e55288269a493166)), closes [#what-is-smarter](https://github.com/smarter-sh/smarter.sh/issues/what-is-smarter) [#video](https://github.com/smarter-sh/smarter.sh/issues/video) [#video](https://github.com/smarter-sh/smarter.sh/issues/video)
+
 ## [0.16.3](https://github.com/smarter-sh/smarter.sh/compare/v0.16.2...v0.16.3) (2026-11-17)
 
 
