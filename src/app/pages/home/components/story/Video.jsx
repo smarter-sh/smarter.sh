@@ -10,8 +10,8 @@ const Video = () => (
     id="video"
     label="Smarter, in five minutes"
     kicker="Smarter, in five minutes"
-    title="Learn. Build. Govern. Smarter."
-    subtitle="Why your organization needs Smarter: The problem, and how Smarter solves it."
+    title="Learn. Build. Govern."
+    subtitle="Why your organization probably needs Smarter."
   >
     <div className="home-video home-rise" style={rise(1)}>
       <iframe
