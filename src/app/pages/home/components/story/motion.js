@@ -102,19 +102,3 @@ export const rng = (seed) => () => {
 }
 
 export const clamp = (v, a, b) => Math.max(a, Math.min(b, v))
-
-// Moves through count steps every ms milliseconds while running, until the visitor picks one.
-export const useAutoStep = (count, ms, running) => {
-  const [step, setStep] = useState(0)
-  const [held, setHeld] = useState(false)
-  useEffect(() => {
-    if (!running || held || !canAnimate) return
-    const id = setInterval(() => setStep((s) => (s + 1) % count), ms)
-    return () => clearInterval(id)
-  }, [count, ms, running, held])
-  const pick = (s) => {
-    setHeld(true)
-    setStep(s)
-  }
-  return [step, pick]
-}

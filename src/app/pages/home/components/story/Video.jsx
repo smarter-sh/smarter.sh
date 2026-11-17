@@ -1,9 +1,10 @@
 import { EXPLAINER_VIDEO_EMBED } from '@/common/constants'
 import { Panel, rise } from './Blocks'
 
-// The five-minute explainer video: the same story as the cards below it, the problem and then the
-// solution, told without technical jargon. The player loads only when the panel nears the screen,
-// from YouTube's privacy-enhanced domain.
+// The five-minute explainer video: the problem, then the solution, told without technical jargon.
+// It is the page's whole case for Smarter; the cards below it show the solution at work. The
+// cover's What is Smarter? button links here. The player loads only when the panel nears the
+// screen, from YouTube's privacy-enhanced domain.
 const Video = () => (
   <Panel
     id="video"
