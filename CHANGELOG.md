@@ -1,3 +1,10 @@
+## [0.16.5](https://github.com/smarter-sh/smarter.sh/compare/v0.16.4...v0.16.5) (2026-11-17)
+
+
+### Bug Fixes
+
+* **home:** shorten the video panel's title and subtitle ([f857070](https://github.com/smarter-sh/smarter.sh/commit/f857070ac27880d2d0b7f866f6b33fb0ce6babfd))
+
 ## [0.16.4](https://github.com/smarter-sh/smarter.sh/compare/v0.16.3...v0.16.4) (2026-11-17)
 
 
