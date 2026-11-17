@@ -195,7 +195,7 @@ const local = fs.existsSync(SAM) && fs.existsSync(STACKADEMY)
   test.each([
     ['llm-clients/stackademy-sql.yaml', 'LLMClient'],
     ['plugins/sql/stackademy-sql.yaml', 'SqlPlugin'],
-    ['connections/api/smarter-test-api.yaml.tpl', 'ApiConnection'],
+    ['connections/api/stackademy-catalog-api.yaml.tpl', 'ApiConnection'],
     ['budgets/stackademy-project.yaml', 'Budget'],
   ])('%s is a valid %s', (file, kind) => {
     const real = JSON.parse(fs.readFileSync(`${SAM}/${kind}.schema.json`, 'utf8'))

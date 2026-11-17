@@ -1,3 +1,11 @@
+## [0.16.1](https://github.com/smarter-sh/smarter.sh/compare/v0.16.0...v0.16.1) (2026-11-17)
+
+
+### Bug Fixes
+
+* **site:** group the developer pages under a Developers navbar menu ([cca3639](https://github.com/smarter-sh/smarter.sh/commit/cca363945b21206d79f5e3a61ca95ec5dab75039))
+* **site:** rewrite llms.txt in the llmstxt.org format ([70e59bb](https://github.com/smarter-sh/smarter.sh/commit/70e59bbd969ea4104ab7b421fdf66fe3a1963a86))
+
 # [0.16.0](https://github.com/smarter-sh/smarter.sh/compare/v0.15.4...v0.16.0) (2026-11-14)
 
 

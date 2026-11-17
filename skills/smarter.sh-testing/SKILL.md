@@ -63,6 +63,11 @@ Pages use `Link`, so they need a router; `PageMetaData` needs `HelmetProvider`.
   `Error: Not implemented: navigation`. Stub it with
   `jest.spyOn(HTMLAnchorElement.prototype, 'click')`, assert on the link's `download` and `href`,
   and restore it (see the download test in `ManifestViewer.test.jsx`).
+- **"An update to ManifestEditor ... was not wrapped in act(...)"** comes from a test that
+  renders a page with a manifest lab and ends before the offline GitHub fetch rejects. Whether
+  it shows up depends on timing. End such a test with
+  `await screen.findByText(/GitHub didn’t answer/)` (or, for any route, wait until
+  `queryByText(/from GitHub…/)` is gone, as `canonical.test.jsx` does).
 - **AOS and `window.scrollTo`** are no-ops in jsdom; `AppProviders` calls `scrollTo?.()` for that
   reason.
 - **A test that passes alone and fails in the suite** usually leaks `fetch` or `localStorage`

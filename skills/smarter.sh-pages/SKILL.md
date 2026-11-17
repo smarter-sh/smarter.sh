@@ -16,7 +16,10 @@ description: Use when adding, renaming, removing or redirecting a page of smarte
 3. **`src/routes/index.jsx`:** add the page's `lazy(() => import(...))` to `components`, keyed by the
    same `page` value. `sitemap.test.js` fails when a route is in one list and not the other.
 4. **Links:** add it to the navbar (`navLinks` in `src/components/TopNavbar.jsx`) or the footer
-   (`footerLinks` in `src/components/SiteFooter.jsx`) if it should be found, and to
+   (`footerLinks` in `src/components/SiteFooter.jsx`) if it should be found. A `navLinks` entry
+   with `items` (and an optional `footer` link) is a dropdown menu (`NavDropdown.jsx`), e.g.
+   Developers: Integrations, Extensions, SDKs, with `/developers` as its footer. Its trigger is a
+   button, so a hub page goes in the footer, not behind the label. Add it to
    `public/llms.txt` under the right audience.
 5. **Test:** add the page to `src/__tests__/pages.test.jsx` (its `<h1>` at least), or give it its own
    `page.test.jsx` beside it when it has behavior worth testing.
