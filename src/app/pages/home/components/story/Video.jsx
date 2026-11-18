@@ -8,8 +8,6 @@ import { Panel, rise } from './Blocks'
 const Video = () => (
   <Panel
     id="video"
-    label="Smarter, in five minutes"
-    kicker="Smarter, in five minutes"
     title="Learn. Build. Govern."
     subtitle="Why your organization probably needs Smarter."
   >

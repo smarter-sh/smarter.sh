@@ -265,7 +265,7 @@ describe('home', () => {
 
   test('the explainer video plays from YouTube, lazily and without cookies', () => {
     renderHome()
-    const card = screen.getByRole('region', { name: 'Smarter, in five minutes' })
+    const card = screen.getByRole('region', { name: 'Learn. Build. Govern.' })
     const player = within(card).getByTitle('The Smarter Project, in five minutes')
     expect(player).toHaveAttribute(
       'src',
