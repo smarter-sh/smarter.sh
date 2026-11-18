@@ -1,3 +1,10 @@
+## [0.16.6](https://github.com/smarter-sh/smarter.sh/compare/v0.16.5...v0.16.6) (2026-11-18)
+
+
+### Bug Fixes
+
+* **home:** remove the video panel's kicker and redundant label ([b0e9ee5](https://github.com/smarter-sh/smarter.sh/commit/b0e9ee526e28fba8385431dde8d658bd6a256d9a))
+
 ## [0.16.5](https://github.com/smarter-sh/smarter.sh/compare/v0.16.4...v0.16.5) (2026-11-17)
 
 
