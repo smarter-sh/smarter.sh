@@ -55,12 +55,18 @@ describe('navigation bar', () => {
     const hrefs = Array.from(panel.querySelectorAll('a')).map((a) =>
       a.getAttribute('href')
     )
-    expect(hrefs).toEqual(['/integrations', '/extensions', '/sdks', '/developers'])
+    expect(hrefs).toEqual([
+      '/integrations',
+      '/plugins',
+      '/extensions',
+      '/sdks',
+      '/developers',
+    ])
     await user.keyboard('{Escape}')
     expect(panel).toHaveClass('hidden')
   })
 
-  test.each(['/integrations', '/extensions', '/sdks', '/developers'])(
+  test.each(['/integrations', '/plugins', '/extensions', '/sdks', '/developers'])(
     'marks the Developers menu active on %s',
     (path) => {
       render(

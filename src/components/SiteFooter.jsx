@@ -19,6 +19,7 @@ export const footerLinks = [
     title: 'Build',
     links: [
       { name: 'SDKs and APIs', url: '/sdks' },
+      { name: 'Plugins', url: '/plugins' },
       { name: 'Extensions', url: '/extensions' },
       { name: 'Command-line interface', url: '/cli' },
       { name: 'API reference (OpenAPI)', url: OPENAPI_DOCS },

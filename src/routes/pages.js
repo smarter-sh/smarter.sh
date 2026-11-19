@@ -17,6 +17,7 @@ export const pages = [
   { path: '/platform', name: 'Platform', page: 'platform' },
   { path: '/education', name: 'Education', page: 'education' },
   { path: '/extensions', name: 'Extensions', page: 'extensions' },
+  { path: '/plugins', name: 'Plugins', page: 'plugins' },
   { path: '/integrations', name: 'Integrations', page: 'integrations' },
   { path: '/sdks', name: 'SDKs', page: 'sdks' },
   { path: '/case-studies', name: 'Case Studies', page: 'case-studies' },
