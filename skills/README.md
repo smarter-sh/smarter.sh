@@ -24,6 +24,7 @@ says which narrower skill to load.
 | `smarter.sh-chatbots`        | You're embedding a Smarter chatbot or changing `chatbots.js`.     |
 | `smarter.sh-testing`         | You're writing or fixing Jest tests.                              |
 | `smarter.sh-git-commits`     | You've been asked to write a commit message.                      |
+| `smarter.sh-pull-requests`   | You've been asked to create or write a pull request.              |
 
 ## Keeping them current
 

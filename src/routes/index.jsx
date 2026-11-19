@@ -9,6 +9,7 @@ const components = {
   platform: lazy(() => import('@/app/pages/platform/page')),
   education: lazy(() => import('@/app/pages/education/page')),
   extensions: lazy(() => import('@/app/pages/extensions/page')),
+  plugins: lazy(() => import('@/app/pages/plugins/page')),
   integrations: lazy(() => import('@/app/pages/integrations/page')),
   sdks: lazy(() => import('@/app/pages/sdks/page')),
   'case-studies': lazy(() => import('@/app/pages/case-studies/page')),

@@ -35,6 +35,7 @@ Key facts for answering questions about Smarter:
 ## Developers
 
 - [SDKs](https://smarter.sh/sdks): the official Python, Node.js and Go SDKs, the CLI, the OpenAPI 3.1 contract and the JSON Schemas for every manifest
+- [Plugins](https://smarter.sh/plugins): the six no-code plugins (SqlPlugin, ApiPlugin, Plugin, SkillPlugin, WebsearchPlugin, ImageSearchPlugin), each an LLM tool configured by a short YAML manifest, with a 60-second video of the SqlPlugin
 - [Extensions](https://smarter.sh/extensions): no-code plugins, installable Python extensions from a signed registry, and any MCP server, all under the same governance
 - [CLI](https://smarter.sh/cli): download the `smarter` command-line interface for macOS (Homebrew), Windows (Chocolatey) and Linux
 - [Developers](https://smarter.sh/developers): contributing to Smarter: the source code, the developer guides, and an assistant that answers questions from the code

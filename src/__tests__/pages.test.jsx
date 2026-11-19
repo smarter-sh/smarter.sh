@@ -1,4 +1,4 @@
-import { fireEvent, render, screen } from '@testing-library/react'
+import { fireEvent, render, screen, within } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import { HelmetProvider } from 'react-helmet-async'
 import Home from '@/app/pages/home/page'
@@ -6,6 +6,7 @@ import Platform from '@/app/pages/platform/page'
 import Education from '@/app/pages/education/page'
 import Extensions from '@/app/pages/extensions/page'
 import Integrations from '@/app/pages/integrations/page'
+import Plugins from '@/app/pages/plugins/page'
 import Sdks from '@/app/pages/sdks/page'
 import Developers from '@/app/pages/developers/page'
 import CaseStudies, { cases } from '@/app/pages/case-studies/page'
@@ -60,6 +61,47 @@ describe('pages', () => {
     expect(diagram.closest('a')).toHaveAttribute(
       'href',
       'https://docs.smarter.sh/smarter-framework.html'
+    )
+  })
+
+  test('the plugins page shows all six plugins, the SqlPlugin video and their manifests', async () => {
+    renderPage(Plugins, '/plugins')
+    expect(
+      screen.getByRole('heading', { level: 1, name: /Wire up tool calls/ })
+    ).toBeInTheDocument()
+    for (const kind of [
+      'SqlPlugin',
+      'ApiPlugin',
+      'Plugin',
+      'SkillPlugin',
+      'WebsearchPlugin',
+      'ImageSearchPlugin',
+    ]) {
+      expect(
+        within(screen.getByRole('navigation', { name: 'The plugins' })).getByText(kind)
+      ).toBeInTheDocument()
+      expect(screen.getByText(`kind: ${kind}`)).toBeInTheDocument()
+    }
+    // the video is with the SqlPlugin, lazily and without cookies
+    const video = within(document.getElementById('sql')).getByTitle(
+      'The SqlPlugin in 60 seconds'
+    )
+    expect(video).toHaveAttribute(
+      'src',
+      'https://www.youtube-nocookie.com/embed/CmIQVkFM7OI'
+    )
+    expect(video).toHaveAttribute('loading', 'lazy')
+    // a plugin's whole manifest opens in the editor, read from its own repository
+    fireEvent.click(
+      within(document.getElementById('api')).getByRole('button', {
+        name: 'Open the whole manifest',
+      })
+    )
+    const dialog = screen.getByRole('dialog')
+    expect(dialog).toHaveTextContent('stackademy_api')
+    expect(await within(dialog).findByText(/GitHub didn’t answer/)).toBeInTheDocument()
+    expect(global.fetch).toHaveBeenCalledWith(
+      'https://raw.githubusercontent.com/smarter-sh/stackademy/main/plugins/api/stackademy-api.yaml'
     )
   })
 
