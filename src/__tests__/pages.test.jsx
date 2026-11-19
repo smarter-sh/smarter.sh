@@ -75,6 +75,12 @@ describe('pages', () => {
       'https://www.youtube-nocookie.com/embed/El8L6zgGyRU'
     )
     expect(video).toHaveAttribute('loading', 'lazy')
+    // the developer onboarding video is in a section of its own, after the quick start
+    expect(
+      within(document.getElementById('developer-setup')).getByTitle(
+        'Smarter developer onboarding: the development environment'
+      )
+    ).toHaveAttribute('src', 'https://www.youtube-nocookie.com/embed/POjSx6mpTq8')
   })
 
   test('the developers page shows the ecosystem diagram, linked to its documentation', () => {

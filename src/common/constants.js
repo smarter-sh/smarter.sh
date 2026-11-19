@@ -37,3 +37,6 @@ export const QUICK_START_VIDEO_ID = 'El8L6zgGyRU'
 // The seven-minute introduction to LLM tool calling: what it is for, and why questions about data
 // that changes, like the weather, need a tool. It belongs in the /plugins page's How it works.
 export const TOOL_CALLING_VIDEO_ID = 'sbp_n9ULr8g'
+// The eight-minute developer onboarding video: the development environment, from cloning
+// smarter-sh/smarter to running it locally. It belongs on the /developers page, for contributors.
+export const DEVELOPER_SETUP_VIDEO_ID = 'POjSx6mpTq8'
