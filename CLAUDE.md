@@ -3,8 +3,9 @@
 Guidance for Claude Code (and other coding agents) working in this repository.
 
 smarter.sh is the marketing website of The Smarter Project (github.com/smarter-sh/smarter): a
-single-page React 19 app built with Vite, styled with Tailwind CSS v3, tested with Jest, and
-deployed to AWS S3 and CloudFront on every merge to main. It shows the platform's own pieces live:
+React 19 app built with Vite, pre-rendered to static HTML page by page and hydrated in the
+browser, styled with Tailwind CSS v3, tested with Jest, and deployed to AWS S3 and CloudFront on
+every merge to main. It shows the platform's own pieces live:
 the web console's widgets (`@smarter.sh/ui-widgets`), deployed Smarter chatbots
 (`@smarter.sh/ui-chat`), and real manifests from GitHub.
 
