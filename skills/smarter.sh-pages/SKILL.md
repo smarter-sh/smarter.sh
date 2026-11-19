@@ -55,8 +55,17 @@ const Pricing = () => (
   canonical url and `og:url`, through `PageMetaData` and react-helmet-async), the navbar and the
   footer. Use it for every new page. The canonical url comes from `canonicalUrl()` in `pages.js`;
   a page that duplicates another names the original with `canonical: '/path'` (see `/home`).
-  Never put a canonical or `og:url` in `index.html`: it is served for every path, so it would
-  mark every page a copy of the home page.
+  Never put a canonical or `og:url` in `index.html`: it is the template of every page's
+  pre-rendered HTML, so it would mark every page a copy of the home page.
+- **Every page is pre-rendered** when the site is built (`yarn build`: `src/entry-server.jsx`,
+  `scripts/prerender.mjs`, `src/routes/prerender.js`), so search engines and link previews get its
+  content and metadata without JavaScript, and the browser hydrates it. A new page in `pages.js`
+  is pre-rendered, uploaded to its own S3 key by `release.js`, and tested by
+  `src/__tests__/entryServer.test.jsx`, with nothing else to do. Its first render must be the same
+  in Node and in the browser: never read `window`, `document` or `matchMedia` when a module is
+  imported or in a `useState` initializer. Read them in an effect, and import browser-only
+  libraries there too (as `GlightBox.jsx` does). After a build, check a page's HTML in
+  `dist/<path>/index.html`.
   Older pages (legal, about) assemble these by hand; don't copy them.
 - `Section` is a page section with an optional eyebrow, title and intro, and the AOS fade.
 - **Accents** (`src/helpers/accent.js`): each topic keeps one color everywhere: `primary` (Smarter

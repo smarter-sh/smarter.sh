@@ -5,8 +5,9 @@ description: Start here for any change to smarter.sh, the marketing website of T
 
 # smarter.sh Development
 
-smarter.sh is the marketing website of The Smarter Project: a single-page React app, built
-with Vite and styled with Tailwind CSS v3, served from an AWS S3 bucket behind CloudFront. It
+smarter.sh is the marketing website of The Smarter Project: a React app, built with Vite,
+pre-rendered to static HTML page by page (see `smarter.sh-pages`) and styled with Tailwind CSS v3,
+served from an AWS S3 bucket behind CloudFront. It
 explains the Smarter platform (github.com/smarter-sh/smarter) to decision makers, educators and
 developers, and shows the platform's own pieces live: the web console's dashboard widgets
 (`@smarter.sh/ui-widgets`), deployed Smarter chatbots (`@smarter.sh/ui-chat`'s embed script) and
@@ -40,6 +41,7 @@ real manifests from GitHub in a Monaco editor.
 | ------------------------------------------ | -------------------------------------------------------------------------------- | --- | -------- | ------------------------------------------------------------------------- |
 | `src/routes/pages.js`                      | Every page and redirect: the one list the router and the sitemap are built from  |
 | `src/routes/index.jsx`                     | Each page's lazily loaded component, by its folder in `src/app/pages`            |
+| `src/entry-server.jsx`, `scripts/`         | The build's pre-render of every page; `src/routes/prerender.js` has its helpers  |
 | `src/app/pages/<page>/page.jsx`            | One folder per page, with its `components/`, `data.js` and css                   |
 | `src/app/pages/case-studies/`              | The teaching cases, and their shared components (`components/Teaching.jsx`)      |
 | `src/components/site/`                     | The site's building blocks: PageShell, PageHero, Section, Button, SmartLink, ... |

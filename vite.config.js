@@ -95,4 +95,9 @@ export default defineConfig(({ command, isPreview }) => ({
   server: {
     proxy: chatbotProxy,
   },
+  // The pre-render's server build (src/entry-server.jsx) loads its dependencies from node_modules at
+  // run time, which Node can't do for those that import css: they are bundled instead.
+  ssr: {
+    noExternal: ['@smarter.sh/ui-widgets'],
+  },
 }))

@@ -1,3 +1,10 @@
+# [0.18.0](https://github.com/smarter-sh/smarter.sh/compare/v0.17.0...v0.18.0) (2026-11-19)
+
+
+### Features
+
+* **site:** pre-render every page to static html for search engines ([7214dc1](https://github.com/smarter-sh/smarter.sh/commit/7214dc14540878bdf364f7f301480ae77ee969a3))
+
 # [0.17.0](https://github.com/smarter-sh/smarter.sh/compare/v0.16.6...v0.17.0) (2026-11-19)
 
 

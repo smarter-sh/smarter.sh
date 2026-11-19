@@ -1,11 +1,11 @@
 {
   "name": "smarter.sh",
-  "version": "0.17.0",
+  "version": "0.18.0",
   "description": "An AI resource orchestration platform.",
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "vite build && node keen/purge-keen.mjs",
+    "build": "vite build && vite build --ssr src/entry-server.jsx --outDir dist-ssr && node scripts/prerender.mjs && node keen/purge-keen.mjs",
     "lint": "eslint .",
     "preview": "vite preview",
     "format": "prettier --write 'src/**/*.{ts,tsx,js,jsx}'",

@@ -19,6 +19,7 @@
 import { execSync } from 'child_process'
 import { existsSync } from 'fs'
 import { APP_CONFIG } from './src/shared/constants.js'
+import { outputFile, prerenderPaths, s3Key } from './src/routes/prerender.js'
 
 console.log(`Domain Name: ${APP_CONFIG.root_domain}`)
 
@@ -51,9 +52,23 @@ if (skipBuild) {
 } else {
   execSync('yarn build', { stdio: 'inherit' })
 }
-execSync(`aws s3 sync ./dist/ ${s3Path} --acl public-read --delete`, {
+// Each page's pre-rendered HTML (scripts/prerender.mjs) is uploaded to the key of its url's path,
+// e.g. case-studies/stackademy, with no extension: CloudFront asks the bucket for that key, and
+// serves index.html, rendered for /, only for urls that have no page. The sync leaves those keys
+// alone (--exclude also keeps --delete from removing them), and the pages are uploaded after it.
+const pageKeys = prerenderPaths()
+  .map((path) => ({ path, key: s3Key(path) }))
+  .filter(({ key }) => key !== 'index.html')
+const excludes = pageKeys.map(({ key }) => `--exclude "${key}"`).join(' ')
+execSync(`aws s3 sync ./dist/ ${s3Path} --acl public-read --delete ${excludes}`, {
   stdio: 'inherit',
 })
+for (const { path, key } of pageKeys) {
+  execSync(
+    `aws s3 cp ./dist/${outputFile(path)} ${s3Path}${key} --acl public-read --content-type "text/html"`,
+    { stdio: 'inherit' }
+  )
+}
 execSync(
   `aws cloudfront create-invalidation --distribution-id ${distributionID} --paths "${cloudfrontPaths}"`,
   { stdio: 'inherit' }
