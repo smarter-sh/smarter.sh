@@ -1,3 +1,10 @@
+## [0.18.4](https://github.com/smarter-sh/smarter.sh/compare/v0.18.3...v0.18.4) (2026-11-19)
+
+
+### Bug Fixes
+
+* **plugins:** show the introduction to tool calling video ([26d8342](https://github.com/smarter-sh/smarter.sh/commit/26d83424187a9f087f3ee8067e75fee7684b9eb1))
+
 ## [0.18.3](https://github.com/smarter-sh/smarter.sh/compare/v0.18.2...v0.18.3) (2026-11-19)
 
 
