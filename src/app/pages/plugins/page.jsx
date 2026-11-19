@@ -10,6 +10,8 @@ import { ManifestProvider } from '@/components/manifest/ManifestViewer'
 import PluginShowcase from './components/PluginShowcase'
 import YamlBlock from './components/YamlBlock'
 import { examples, files, included, PLUGIN_DOCS, plugins, steps } from './data'
+import YouTubeVideo from '@/components/site/YouTubeVideo'
+import { TOOL_CALLING_VIDEO_ID } from '@/common/constants'
 
 /*
  * The no-code plugins: Smarter's six off-the-shelf kinds of LLM tool, each configured by a short
@@ -64,6 +66,17 @@ const Plugins = () => {
               </li>
             ))}
           </ol>
+          <figure className="mx-auto mt-12 max-w-4xl">
+            <YouTubeVideo
+              id={TOOL_CALLING_VIDEO_ID}
+              title="An introduction to LLM tool calling"
+            />
+            <figcaption className="mt-3 text-center text-sm text-keen-600">
+              New to tool calling? Seven minutes on what it is, and why a question about
+              data that changes, like the weather forecast, needs a tool, with Smarter
+              showing each tool call as it happens.
+            </figcaption>
+          </figure>
         </Section>
 
         <Section

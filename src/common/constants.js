@@ -34,3 +34,6 @@ export const CLASSROOM_VIDEO_ID = 'E5L-mMbJHcA'
 // The quick start video: cloning smarter-deploy, configuring it and running Smarter locally in less
 // than 10 minutes. It belongs on the /developers page, with the Quick start resource.
 export const QUICK_START_VIDEO_ID = 'El8L6zgGyRU'
+// The seven-minute introduction to LLM tool calling: what it is for, and why questions about data
+// that changes, like the weather, need a tool. It belongs in the /plugins page's How it works.
+export const TOOL_CALLING_VIDEO_ID = 'sbp_n9ULr8g'
