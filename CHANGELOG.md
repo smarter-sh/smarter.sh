@@ -1,3 +1,11 @@
+## [0.18.1](https://github.com/smarter-sh/smarter.sh/compare/v0.18.0...v0.18.1) (2026-11-19)
+
+
+### Bug Fixes
+
+* **home:** point the cover's first button at the live assistants ([e904cfe](https://github.com/smarter-sh/smarter.sh/commit/e904cfec6684395e690d0c6edb4b7ea10e23102f)), closes [#try-it](https://github.com/smarter-sh/smarter.sh/issues/try-it)
+* **release:** find the branch's cloudfront distribution by its bucket ([2daf752](https://github.com/smarter-sh/smarter.sh/commit/2daf752be93b22311c53675e67847fd4ffb3ae93))
+
 # [0.18.0](https://github.com/smarter-sh/smarter.sh/compare/v0.17.0...v0.18.0) (2026-11-19)
 
 
