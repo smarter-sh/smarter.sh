@@ -31,3 +31,6 @@ export const SQL_PLUGIN_VIDEO_ID = 'CmIQVkFM7OI'
 // The 60-second classroom video: Smarter used to teach advanced LLM prompting techniques. It is
 // for instructors, so it belongs on the /education page.
 export const CLASSROOM_VIDEO_ID = 'E5L-mMbJHcA'
+// The quick start video: cloning smarter-deploy, configuring it and running Smarter locally in less
+// than 10 minutes. It belongs on the /developers page, with the Quick start resource.
+export const QUICK_START_VIDEO_ID = 'El8L6zgGyRU'
