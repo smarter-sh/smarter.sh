@@ -256,11 +256,13 @@ describe('home', () => {
     for (const word of ['Simple.', 'Fast.', 'In control.']) {
       expect(within(cover).getByText(word)).toBeInTheDocument()
     }
-    expect(within(cover).getByRole('link', { name: 'What is Smarter?' })).toHaveAttribute(
+    expect(within(cover).getByRole('link', { name: 'Try it out' })).toHaveAttribute(
       'href',
-      '#video'
+      '#try-it'
     )
-    expect(document.getElementById('video')).not.toBeNull()
+    expect(
+      screen.getByRole('region', { name: 'Assistants built on Smarter' })
+    ).toHaveAttribute('id', 'try-it')
   })
 
   test('the explainer video plays from YouTube, lazily and without cookies', () => {
