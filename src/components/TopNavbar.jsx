@@ -26,6 +26,12 @@ const navLinks = [
         description: 'Put an assistant on WordPress, Shopify, Docusaurus and more.',
       },
       {
+        label: 'Plugins',
+        link: '/plugins',
+        icon: 'lucide:file-code-2',
+        description: 'Wire up tool calls to a database, an API or the web, in YAML.',
+      },
+      {
         label: 'Extensions',
         link: '/extensions',
         icon: 'lucide:puzzle',

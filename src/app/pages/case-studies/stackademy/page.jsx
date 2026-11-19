@@ -486,7 +486,13 @@ const Stackademy = () => {
                   , each with a description in plain words, and decides from them, and
                   from the student’s question, what to fill in.{' '}
                   <em>“My budget is $1,000”</em> becomes <Code>max_cost: 1000</Code>.
-                  Writing those descriptions well is prompt engineering too.
+                  Writing those descriptions well is prompt engineering too. The SqlPlugin
+                  is one of six off-the-shelf plugins; see them all, and a 60-second video
+                  of this one, on the{' '}
+                  <SmartLink href="/plugins" className="text-primary hover:underline">
+                    plugins page
+                  </SmartLink>
+                  .
                 </p>
                 <h3>Two safety mechanisms</h3>
                 <p>

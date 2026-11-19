@@ -25,3 +25,6 @@ export const STACKADEMY = `${GITHUB}/stackademy`
 export const EXPLAINER_VIDEO_ID = 'u82i4m7a6VQ'
 export const EXPLAINER_VIDEO = `https://youtu.be/${EXPLAINER_VIDEO_ID}`
 export const EXPLAINER_VIDEO_EMBED = `https://www.youtube-nocookie.com/embed/${EXPLAINER_VIDEO_ID}`
+// The 60-second SqlPlugin video: an assistant answering from a database through a declared query.
+// It belongs with the SqlPlugin on the /plugins page, not on the home page.
+export const SQL_PLUGIN_VIDEO_ID = 'CmIQVkFM7OI'

@@ -16,7 +16,8 @@ const ways = [
     icon: 'lucide:file-code-2',
     title: 'Plugins: configured, not coded',
     text: 'A prompt engineer writes a short manifest that configures one of Smarter’s built-in tool patterns. Nothing is installed, and no code is written.',
-    href: `${R}/smarter-llmtool.html`,
+    href: '/plugins',
+    linkText: 'See the six plugins',
     badge: 'No code',
   },
   {
@@ -142,6 +143,11 @@ const Extensions = () => {
           {plugins.map((item) => (
             <FeatureCard accent="violet" key={item.title} {...item} />
           ))}
+        </div>
+        <div className="mt-10 flex justify-center">
+          <Button href="/plugins" icon="lucide:file-code-2">
+            How plugins work, with their manifests
+          </Button>
         </div>
       </Section>
 

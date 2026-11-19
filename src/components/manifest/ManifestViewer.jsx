@@ -87,7 +87,9 @@ const ManifestDialog = ({ repo, file, onClose }) => {
  *
  * @param {object} props
  * @param {object} props.repo - githubRepository() of manifests.js
- * @param {Array<{path: string, kind: string, name: string, role?: string}>} props.files
+ * @param {Array<{path: string, kind: string, name: string, role?: string, repo?: object}>} props.files
+ *   A file's own `repo`, when it has one, is where it is read from instead: for a page whose
+ *   manifests come from more than one repository.
  */
 export const ManifestProvider = ({ repo, files, children }) => {
   const [openPath, setOpenPath] = useState(null)
@@ -97,7 +99,7 @@ export const ManifestProvider = ({ repo, files, children }) => {
   return (
     <ManifestContext.Provider value={{ repo, files, open }}>
       {children}
-      {file && <ManifestDialog repo={repo} file={file} onClose={close} />}
+      {file && <ManifestDialog repo={file.repo ?? repo} file={file} onClose={close} />}
     </ManifestContext.Provider>
   )
 }
