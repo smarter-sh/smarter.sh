@@ -29,21 +29,27 @@ const branch =
   execSync('git rev-parse --abbrev-ref HEAD').toString().trim()
 console.log(`Releasing branch: ${branch}`)
 
-let s3Path = 's3://reactjs.' + branch + '.' + APP_CONFIG.root_domain + '/'
+const bucket = `reactjs.${branch}.${APP_CONFIG.root_domain}`
+const s3Path = `s3://${bucket}/`
 console.log(`S3 Path: ${s3Path}`)
 
-let cloudfrontPaths = '/*'
-let distributionID = 'E2C4U4X1Z0FNSI'
+const cloudfrontPaths = '/*'
 
-if (branch === 'alpha') {
-  distributionID = 'E2C4U4X1Z0FNSI'
-} else if (branch === 'beta') {
-  distributionID = 'E12GP2JL74BU7K'
-} else if (branch === 'main') {
-  distributionID = 'E29VD2O44QR728'
-} else {
-  throw new Error(`Unknown branch: ${branch}`)
+// The distribution whose S3 origin is this branch's bucket. An S3 origin's domain name starts with
+// the bucket's name (<bucket>.s3.amazonaws.com, or <bucket>.s3-website-<region>.amazonaws.com), and
+// the trailing dot keeps one bucket's name from matching another that starts with it.
+const distributionID = execSync(
+  'aws cloudfront list-distributions --output text --query ' +
+    `"DistributionList.Items[?Origins.Items[?starts_with(DomainName, '${bucket}.')]].Id"`
+)
+  .toString()
+  .trim()
+if (!distributionID || distributionID === 'None' || /\s/.test(distributionID)) {
+  throw new Error(
+    `Expected one CloudFront distribution with an origin in ${bucket}, found: "${distributionID}"`
+  )
 }
+console.log(`CloudFront distribution: ${distributionID}`)
 
 if (skipBuild) {
   if (!existsSync('./dist/index.html')) {

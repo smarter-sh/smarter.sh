@@ -58,8 +58,8 @@ const Cover = () => (
         ))}
       </ul>
       <div className="home-cover-buttons home-rise" style={rise(14)}>
-        <a href="#video" className="home-dark-btn home-dark-btn-brand">
-          What is Smarter?
+        <a href="#try-it" className="home-dark-btn home-dark-btn-brand">
+          Try it out
         </a>
         <a
           href={COMMUNITY}
