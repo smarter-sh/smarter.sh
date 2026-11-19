@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useEffect, useLayoutEffect, useRef, useState } from 'react'
 
 // The story's animations start when a slide scrolls into view, and its canvases draw only while
 // they are on screen. Where IntersectionObserver is missing (Jest's jsdom, very old browsers),
@@ -12,27 +12,42 @@ const prefersReduced = () =>
   typeof window.matchMedia === 'function' &&
   window.matchMedia(reducedQuery).matches
 
-// Whether the visitor asked their system for less motion. Timed sequences jump to their end.
+// Whether the visitor asked their system for less motion. Timed sequences jump to their end. False
+// at first, as in the page's pre-rendered HTML (scripts/prerender.mjs), which the first render
+// must match; the effect then reads the visitor's setting.
 export const useReducedMotion = () => {
-  const [reduced, setReduced] = useState(prefersReduced)
+  const [reduced, setReduced] = useState(false)
   useEffect(() => {
     if (typeof window === 'undefined' || typeof window.matchMedia !== 'function') return
     const query = window.matchMedia(reducedQuery)
     const onChange = () => setReduced(query.matches)
+    setReduced(prefersReduced())
     query.addEventListener?.('change', onChange)
     return () => query.removeEventListener?.('change', onChange)
   }, [])
   return reduced
 }
 
+// The layout effect, which runs before the browser paints, in the browser only.
+const useBrowserLayoutEffect = typeof window !== 'undefined' ? useLayoutEffect : useEffect
+
 // seen: the element has been on screen at least once (entrances play once). visible: it is on
 // screen now (loops and timers run only then).
+//
+// Both start true, the finished state that the page's pre-rendered HTML shows, because the first
+// render in the browser must match that HTML. Before the browser paints, an element that is below
+// the fold is put back to its starting state, so that it still rises into place when it scrolls
+// into view; one that is already on screen stays as it is, rather than vanish and rise again.
 export const useInView = (threshold = 0.25) => {
   const ref = useRef(null)
-  const [state, setState] = useState({ seen: !canAnimate, visible: !canAnimate })
-  useEffect(() => {
+  const [state, setState] = useState({ seen: true, visible: true })
+  useBrowserLayoutEffect(() => {
     const el = ref.current
     if (!canAnimate || !el) return
+    const rect = el.getBoundingClientRect()
+    if (rect.top >= window.innerHeight || rect.bottom <= 0) {
+      setState({ seen: false, visible: false })
+    }
     const observer = new window.IntersectionObserver(
       ([entry]) =>
         setState((prev) => ({

@@ -19,7 +19,8 @@ const SafeByDefault = () => {
   const { visible } = usePanel()
   const reduced = useReducedMotion()
   const instant = !canAnimate || reduced
-  const [step, setStep] = useState(instant ? STEPS.length - 1 : 0)
+  // The last step, the whole picture, as the pre-rendered HTML shows it; the loop goes on from there.
+  const [step, setStep] = useState(STEPS.length - 1)
   useEffect(() => {
     if (instant || !visible) return
     const id = setTimeout(() => setStep((s) => (s + 1) % STEPS.length), STEPS[step][2])
