@@ -7,9 +7,10 @@ import CtaBand from '@/components/site/CtaBand'
 import SmarterChatEmbed from '@/components/site/SmarterChatEmbed'
 import IconifyIcon from '@/components/wrappers/IconifyIcon'
 import { chatbots } from '@/common/chatbots'
-import { COMMUNITY, DOCS } from '@/common/constants'
+import { CLASSROOM_VIDEO_ID, COMMUNITY, DOCS } from '@/common/constants'
 import { Instructors as InstructorsWidget } from '@smarter.sh/ui-widgets'
 import ConsoleWidgets from '@/components/site/ConsoleWidgets'
+import YouTubeVideo from '@/components/site/YouTubeVideo'
 
 const COURSES = `${DOCS}/smarter-instructors/example-courses`
 
@@ -71,6 +72,25 @@ const Education = () => {
             <FeatureCard accent="emerald" key={item.title} {...item} />
           ))}
         </div>
+      </Section>
+
+      <Section
+        accent="emerald"
+        id="classroom"
+        eyebrow="In the classroom"
+        title="Advanced prompting, taught on a real platform"
+        intro="Students change the system prompt, the model and the temperature in a short manifest, and see every request the model receives beside the chat. One minute on how Smarter is used to teach advanced LLM prompting techniques."
+      >
+        <figure className="mx-auto max-w-4xl">
+          <YouTubeVideo
+            id={CLASSROOM_VIDEO_ID}
+            title="Teaching advanced LLM prompting with Smarter, in 60 seconds"
+          />
+          <figcaption className="mt-3 text-center text-sm text-keen-600">
+            The Prompt Engineering course design has an eight-hour bootcamp and two- and
+            four-week online plans, free to teach.
+          </figcaption>
+        </figure>
       </Section>
 
       <Section
