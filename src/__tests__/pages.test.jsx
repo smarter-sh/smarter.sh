@@ -65,6 +65,18 @@ describe('pages', () => {
     expect(video).toHaveAttribute('loading', 'lazy')
   })
 
+  test('the developers page shows the quick start video, lazily and without cookies', () => {
+    renderPage(Developers, '/developers')
+    const video = within(document.getElementById('quick-start')).getByTitle(
+      'Up and running in less than 10 minutes'
+    )
+    expect(video).toHaveAttribute(
+      'src',
+      'https://www.youtube-nocookie.com/embed/El8L6zgGyRU'
+    )
+    expect(video).toHaveAttribute('loading', 'lazy')
+  })
+
   test('the developers page shows the ecosystem diagram, linked to its documentation', () => {
     renderPage(Developers, '/developers')
     const diagram = screen.getByRole('img', {

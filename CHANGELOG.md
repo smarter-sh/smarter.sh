@@ -1,3 +1,10 @@
+## [0.18.3](https://github.com/smarter-sh/smarter.sh/compare/v0.18.2...v0.18.3) (2026-11-19)
+
+
+### Bug Fixes
+
+* **developers:** show the up-and-running in 10 minutes video ([ae9fcd8](https://github.com/smarter-sh/smarter.sh/commit/ae9fcd8ba649302a7d7167e8d1d08c3f351120ea))
+
 ## [0.18.2](https://github.com/smarter-sh/smarter.sh/compare/v0.18.1...v0.18.2) (2026-11-19)
 
 
