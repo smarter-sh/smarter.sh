@@ -53,6 +53,18 @@ describe('pages', () => {
     expect(screen.getByRole('heading', { level: 1, name: title })).toBeInTheDocument()
   })
 
+  test('the education page shows the classroom video, lazily and without cookies', () => {
+    renderPage(Education, '/education')
+    const video = within(document.getElementById('classroom')).getByTitle(
+      'Teaching advanced LLM prompting with Smarter, in 60 seconds'
+    )
+    expect(video).toHaveAttribute(
+      'src',
+      'https://www.youtube-nocookie.com/embed/E5L-mMbJHcA'
+    )
+    expect(video).toHaveAttribute('loading', 'lazy')
+  })
+
   test('the developers page shows the ecosystem diagram, linked to its documentation', () => {
     renderPage(Developers, '/developers')
     const diagram = screen.getByRole('img', {
