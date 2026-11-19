@@ -28,3 +28,6 @@ export const EXPLAINER_VIDEO_EMBED = `https://www.youtube-nocookie.com/embed/${E
 // The 60-second SqlPlugin video: an assistant answering from a database through a declared query.
 // It belongs with the SqlPlugin on the /plugins page, not on the home page.
 export const SQL_PLUGIN_VIDEO_ID = 'CmIQVkFM7OI'
+// The 60-second classroom video: Smarter used to teach advanced LLM prompting techniques. It is
+// for instructors, so it belongs on the /education page.
+export const CLASSROOM_VIDEO_ID = 'E5L-mMbJHcA'

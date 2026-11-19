@@ -1,3 +1,10 @@
+## [0.18.2](https://github.com/smarter-sh/smarter.sh/compare/v0.18.1...v0.18.2) (2026-11-19)
+
+
+### Bug Fixes
+
+* **education:** show the 60-second classroom prompting video ([50a40ff](https://github.com/smarter-sh/smarter.sh/commit/50a40ffcf3e6367b1a4f06a65b60e0468dc70330))
+
 ## [0.18.1](https://github.com/smarter-sh/smarter.sh/compare/v0.18.0...v0.18.1) (2026-11-19)
 
 
