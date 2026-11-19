@@ -99,6 +99,7 @@ beta. `release.yml` can also be run by hand to deploy alpha or beta.
 | `smarter.sh-chatbots`        | Embedding a Smarter chatbot, or changing `src/common/chatbots.js`        |
 | `smarter.sh-testing`         | Writing or fixing Jest tests                                             |
 | `smarter.sh-git-commits`     | Asked to write a commit message                                          |
+| `smarter.sh-pull-requests`   | Asked to create, open or write a pull request                            |
 
 ## Definition of done
 
