@@ -115,6 +115,12 @@ describe('pages', () => {
       'https://www.youtube-nocookie.com/embed/CmIQVkFM7OI'
     )
     expect(video).toHaveAttribute('loading', 'lazy')
+    // the introduction to tool calling is in How it works
+    expect(
+      within(document.getElementById('how')).getByTitle(
+        'An introduction to LLM tool calling'
+      )
+    ).toHaveAttribute('src', 'https://www.youtube-nocookie.com/embed/sbp_n9ULr8g')
     // a plugin's whole manifest opens in the editor, read from its own repository
     fireEvent.click(
       within(document.getElementById('api')).getByRole('button', {
