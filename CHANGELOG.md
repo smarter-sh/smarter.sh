@@ -1,3 +1,10 @@
+# [0.17.0](https://github.com/smarter-sh/smarter.sh/compare/v0.16.6...v0.17.0) (2026-11-19)
+
+
+### Features
+
+* **plugins:** add a plugins page with the six no-code plugins ([32d4c8a](https://github.com/smarter-sh/smarter.sh/commit/32d4c8ab617014157d3f9816859cfdfada5e6f14))
+
 ## [0.16.6](https://github.com/smarter-sh/smarter.sh/compare/v0.16.5...v0.16.6) (2026-11-18)
 
 
