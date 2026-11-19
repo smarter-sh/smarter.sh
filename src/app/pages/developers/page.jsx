@@ -6,7 +6,12 @@ import Button from '@/components/site/Button'
 import SmarterChatEmbed from '@/components/site/SmarterChatEmbed'
 import { chatbots } from '@/common/chatbots'
 import SmartLink from '@/components/site/SmartLink'
-import { DOCS, GITHUB, QUICK_START_VIDEO_ID } from '@/common/constants'
+import {
+  DEVELOPER_SETUP_VIDEO_ID,
+  DOCS,
+  GITHUB,
+  QUICK_START_VIDEO_ID,
+} from '@/common/constants'
 import YouTubeVideo from '@/components/site/YouTubeVideo'
 import ecosystem from '@/assets/images/smarter-ecosystem.svg'
 import Badges from './components/Badges'
@@ -58,7 +63,7 @@ const Developers = () => {
         id="quick-start"
         eyebrow="Quick start"
         title="Up and running in less than 10 minutes"
-        intro="Clone smarter-deploy, add your API keys to its .env file, and run the whole platform on your own computer with Docker."
+        intro="Run the whole platform on your own computer from the pre-built images on Docker Hub: clone smarter-deploy, add your API keys to its .env file, and start it."
       >
         <figure className="mx-auto max-w-4xl">
           <YouTubeVideo
@@ -72,6 +77,31 @@ const Developers = () => {
               className="font-semibold text-primary"
             >
               Quick Start Guide
+            </SmartLink>
+            .
+          </figcaption>
+        </figure>
+      </Section>
+
+      <Section
+        accent="amber"
+        id="developer-setup"
+        eyebrow="Developer onboarding"
+        title="Set up the development environment"
+        intro="To change Smarter’s code, build it from source instead of running the pre-built images. This eight-minute walkthrough takes you from cloning smarter-sh/smarter to a development environment running on your own computer."
+      >
+        <figure className="mx-auto max-w-4xl">
+          <YouTubeVideo
+            id={DEVELOPER_SETUP_VIDEO_ID}
+            title="Smarter developer onboarding: the development environment"
+          />
+          <figcaption className="mt-3 text-center text-sm text-keen-600">
+            Every step, and the tools it needs, is in the{' '}
+            <SmartLink
+              href={`${DOCS}/smarter-framework/guides/developer-setup.html`}
+              className="font-semibold text-primary"
+            >
+              Developer Setup Guide
             </SmartLink>
             .
           </figcaption>

@@ -1,3 +1,10 @@
+## [0.18.5](https://github.com/smarter-sh/smarter.sh/compare/v0.18.4...v0.18.5) (2026-11-19)
+
+
+### Bug Fixes
+
+* **developers:** show the developer onboarding video ([9292198](https://github.com/smarter-sh/smarter.sh/commit/92921981445d3f02ca90334565760a9e4ac36e0e))
+
 ## [0.18.4](https://github.com/smarter-sh/smarter.sh/compare/v0.18.3...v0.18.4) (2026-11-19)
 
 
