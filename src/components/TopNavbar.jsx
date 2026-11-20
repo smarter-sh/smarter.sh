@@ -50,6 +50,7 @@ const navLinks = [
       description: 'Source code, developer guides and help.',
     },
   },
+  { label: 'Partners', link: '/partners' },
   // the project's own blog, in this tab
   { label: 'Blog', link: BLOG, newTab: false },
 ]
