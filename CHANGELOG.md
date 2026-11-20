@@ -1,3 +1,10 @@
+## [0.18.6](https://github.com/smarter-sh/smarter.sh/compare/v0.18.5...v0.18.6) (2026-11-20)
+
+
+### Bug Fixes
+
+* **site:** put the Partners page back on the main menu ([420a6fc](https://github.com/smarter-sh/smarter.sh/commit/420a6fcb5495ef0e42ea6ba9936daf2ef81e6401))
+
 ## [0.18.5](https://github.com/smarter-sh/smarter.sh/compare/v0.18.4...v0.18.5) (2026-11-19)
 
 
