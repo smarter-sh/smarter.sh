@@ -80,6 +80,17 @@ describe('navigation bar', () => {
     }
   )
 
+  test('links to the partners page, marked active there', () => {
+    render(
+      <MemoryRouter initialEntries={['/partners']}>
+        <TopNavbar />
+      </MemoryRouter>
+    )
+    const link = screen.getByRole('link', { name: 'Partners' })
+    expect(link).toHaveAttribute('href', '/partners')
+    expect(link.closest('li')).toHaveClass('active')
+  })
+
   test('opens the blog in this tab, and GitHub in a new one', () => {
     render(
       <MemoryRouter initialEntries={['/']}>
